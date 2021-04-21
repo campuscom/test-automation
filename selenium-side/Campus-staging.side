@@ -1,0 +1,3892 @@
+{
+  "id": "87edb3e2-06e8-4a05-a5a9-fc2db8031bd9",
+  "version": "2.0",
+  "name": "Campus-staging",
+  "url": "https://staging.campus.com",
+  "tests": [{
+    "id": "171373cc-61c1-40b1-afe3-961a1647134b",
+    "name": "Browse home page",
+    "commands": [{
+      "id": "4b34bd96-62a0-49cc-a0e6-067728418f26",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d88f1aaa-d709-49a0-a19a-7e2e1080ca3c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3388f697-c303-4d1e-a5c3-a5f72dfa199f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,800)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83a2fb49-4467-48a0-8837-106f76a9621a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,100)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "873c98ac-7cbb-4508-a696-ef28717183ac",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c45efa2-8a23-4307-b404-b25093d8acb9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fac1237d-0405-40fa-bcfa-1b171260a5df",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=About",
+      "targets": [
+        ["linkText=About", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'About')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/about')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'About')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "acea4b6c-cc10-4630-9416-73da85bdde0a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "306af8c1-caaf-440a-97cc-a547698252ce",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Agile Project Management",
+      "targets": [
+        ["linkText=Agile Project Management", "linkText"],
+        ["css=.submenu-item:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Agile Project Management')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/subjects/agile-project-management')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Agile Project Management')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e82ba1d-833d-460b-8351-b33fbaaa4208",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c45df52b-6c5b-4737-a00c-4e3f255d128c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07626b69-fa74-41f7-88bd-bc300abb5b11",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4cf0725f-aa50-43ca-8eee-123769ccfa67",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3fb37617-efe5-4d74-a660-3835937f7cda",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=View All Courses",
+      "targets": [
+        ["linkText=View All Courses", "linkText"],
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'View All Courses')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/courses?courseSort=relevance')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View All Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c6a7790-cf5c-451a-80ba-246fa2bf9820",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "linkText=View All Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91a85e44-7870-4328-aeca-e8b995b45a6b",
+      "comment": "",
+      "command": "//mouseOut",
+      "target": "linkText=View All Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "604223e3-2824-46d5-b867-1a7ef1ec0a14",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.card:nth-child(4) .title",
+      "targets": [
+        ["css=.card:nth-child(4) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[4]/div/div", "xpath:idRelative"],
+        ["xpath=//a[4]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "df136060-6afa-45e5-9a8b-0deb025a2b1b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.card:nth-child(4) .title",
+      "targets": [
+        ["css=.card:nth-child(4) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[4]/div/div", "xpath:idRelative"],
+        ["xpath=//a[4]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d99b8ed-c652-43bf-922b-81c38cce5737",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,508)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f445d5c-11b7-42d5-8cfe-f2d132ca19d2",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1295)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5bdf01a-23af-43f8-b01d-2de164c2abd7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,706)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec317e9f-0727-4ccd-b7b0-41c5986b0b24",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,175)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2cf8ab9f-b6e1-44c3-81f4-0f20f27d0fc5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title",
+      "targets": [
+        ["css=.card:nth-child(1) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4254bfc4-469b-4dd6-933c-76654085bfe6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df0846fe-633f-4f83-898b-ddf00655130a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "559cd57a-d096-4d04-824b-66af58c71da0",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c848cbe1-e014-45be-aca9-06915bdacc70",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Careers",
+      "targets": [
+        ["linkText=Careers", "linkText"],
+        ["css=.navbar-nav > a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Careers')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/careers?careerSort=relevance')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Careers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "50bc32fa-0331-4a14-88c6-1bb3543ee13b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b16072b-707c-4883-a355-308ab44e27aa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=About",
+      "targets": [
+        ["linkText=About", "linkText"],
+        ["css=a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'About')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/about')]", "xpath:href"],
+        ["xpath=//a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'About')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "82a61c1f-9422-4984-aa71-9da3371a58af",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "adf1d587-97f0-47c0-9ecb-7fabd36df42c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fddcab30-607c-4529-8e40-6ba64262ef53",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "28cb2352-a484-43db-ab31-d726fdd379b3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "78856d47-b9e2-4f21-830d-c95aa0a4216e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=All Subjects",
+      "targets": [
+        ["linkText=All Subjects", "linkText"],
+        ["css=.submenu-item--link > a", "css:finder"],
+        ["xpath=//a[contains(text(),'All Subjects')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div[2]/div/div[32]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[34]", "xpath:href"],
+        ["xpath=//div[32]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'All Subjects')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "135180c9-e666-46d6-9c98-420c1035536f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9177e81-3d53-4078-baa5-9b07155bc33c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce88c046-b3f1-4f68-ac12-4fb70ad057fc",
+      "comment": "",
+      "command": "type",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='a']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "beff5866-e5e3-4edb-875d-dcb4117dc07e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-autosuggest__footer",
+      "targets": [
+        ["css=.react-autosuggest__footer", "css:finder"],
+        ["xpath=//li[@id='react-autowhatever-1-section-2-item-3']/span", "xpath:idRelative"],
+        ["xpath=//li[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'View all results for a')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2130e4fc-614e-4db7-a0c1-04bcbcd92d2e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,3)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d66d80ed-6086-4171-ba26-4f895d347f5d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(2) .title:nth-child(2)",
+      "targets": [
+        ["css=.card:nth-child(2) .title:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[2]/div/div", "xpath:idRelative"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a3d2022-b5c1-446c-92aa-cbd787c19f1e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.icon-instagram",
+      "targets": [
+        ["css=.icon-instagram", "css:finder"],
+        ["xpath=//div[@id='__next']/footer/section/div/div/div[2]/ul/li[4]/a/i", "xpath:idRelative"],
+        ["xpath=//li[4]/a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acead303-3eb3-4863-97b7-c33444a56853",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0440202-ea1c-4c5a-b443-0053239296ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e23e516-67ee-4571-8e23-10248809ebb7",
+      "comment": "",
+      "command": "type",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='a']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "de16470c-7f52-4aa7-b366-a471007a5ab5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#react-autowhatever-1-section-0-item-1 > span",
+      "targets": [
+        ["css=#react-autowhatever-1-section-0-item-1 > span", "css:finder"],
+        ["xpath=//li[@id='react-autowhatever-1-section-0-item-1']/span", "xpath:idRelative"],
+        ["xpath=//li[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Data Analytics')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7184c9d-d91e-4610-9e65-d6915b55a513",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) > .card-header",
+      "targets": [
+        ["css=.card:nth-child(1) > .card-header", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a/div", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bffa2e8-8f90-4d59-8444-e1754ea0c530",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38ab1e9e-20cf-427b-bd7b-659fe849b5aa",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4157b5cb-f3f7-44e3-b2ab-81f7b0885b5a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5d41186-604a-4532-8d7c-c2c24e489426",
+      "comment": "",
+      "command": "type",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='a']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "b3187c08-b4dd-4fc5-9a3e-3558c642fe40",
+      "comment": "",
+      "command": "click",
+      "target": "css=#react-autowhatever-1-section-1-item-1 > span",
+      "targets": [
+        ["css=#react-autowhatever-1-section-1-item-1 > span", "css:finder"],
+        ["xpath=//li[@id='react-autowhatever-1-section-1-item-1']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9db83eab-a985-44d2-ab21-13eb27f81aa4",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9708c547-734e-4a48-9f6c-d187ff132920",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24245c49-f9e5-4dbb-acf8-cab5e0c31858",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7b46488-091e-49cf-9890-210bece6393e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da98a1cc-58a6-4631-8e68-1fb11e0a9a63",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9816832d-a226-4c49-9518-c717c7e326f4",
+      "comment": "",
+      "command": "type",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='a']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "71b382d6-683c-4507-9996-7f478e1b902e",
+      "comment": "",
+      "command": "click",
+      "target": "css=#react-autowhatever-1-section-2-item-2 > span",
+      "targets": [
+        ["css=#react-autowhatever-1-section-2-item-2 > span", "css:finder"],
+        ["xpath=//li[@id='react-autowhatever-1-section-2-item-2']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/ul/li[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Administrative Law Judges, Adjudicators, and Hearing Officers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cae6bec5-e5fb-40dc-b743-9661f5e190ea",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69775bbd-7432-4b6a-a5b0-24463d42e410",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaExploreCareers",
+      "targets": [
+        ["id=ctaExploreCareers", "id"],
+        ["linkText=Explore Careers »", "linkText"],
+        ["css=#ctaExploreCareers", "css:finder"],
+        ["xpath=//a[contains(text(),'Explore Careers »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaExploreCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div[2]/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/careers')])[2]", "xpath:href"],
+        ["xpath=//div[2]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Explore Careers »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3116a0c8-7524-4bb6-a7a4-6850802cf8d1",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4112c6d9-0c6e-4e08-9e38-85b12ca9b6cb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "426a2dfd-6e0a-4003-8887-6683cf053962",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5e38296-9384-40b0-ae4e-aa5ecb4f876c",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4369d3bf-6d8e-4d5d-a1e0-2e5f5702f930",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaExploreCourses",
+      "targets": [
+        ["id=ctaExploreCourses", "id"],
+        ["linkText=Explore Courses »", "linkText"],
+        ["css=#ctaExploreCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Explore Courses »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaExploreCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div[3]/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[35]", "xpath:href"],
+        ["xpath=//div[3]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Explore Courses »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45487dce-0fd8-4e3a-9d3d-b609855a14ed",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=ctaExploreCourses",
+      "targets": [
+        ["id=ctaExploreCourses", "id"],
+        ["linkText=Explore Courses »", "linkText"],
+        ["css=#ctaExploreCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Explore Courses »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaExploreCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div[3]/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[35]", "xpath:href"],
+        ["xpath=//div[3]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Explore Courses »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aae71097-38b3-402a-a6e0-1cb9c7f1ec7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(16) img",
+      "targets": [
+        ["css=.card:nth-child(16) img", "css:finder"],
+        ["xpath=(//img[@alt='catalog-image'])[16]", "xpath:img"],
+        ["xpath=//div[@id='tabList']/div/section/div/div/a[16]/div[2]/div/img", "xpath:idRelative"],
+        ["xpath=//a[16]/div[2]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e991d65-0bf5-4ce1-b1be-9e2b6243f2a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(5) .title",
+      "targets": [
+        ["css=.card:nth-child(5) .title", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a[5]/div/div", "xpath:idRelative"],
+        ["xpath=//a[5]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee9949c5-5365-49b3-aff1-4904c0019e4a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4332167e-f634-48a3-8bfd-75c9a685901f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b48eabb-5709-42e3-8cbb-1b3b73f1a713",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.false", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62d74ac1-4974-4975-92f5-7b568e5e9096",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaSearchAllCourses",
+      "targets": [
+        ["id=ctaSearchAllCourses", "id"],
+        ["linkText=Search All Courses »", "linkText"],
+        ["css=#ctaSearchAllCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Search All Courses »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaSearchAllCourses']", "xpath:attributes"],
+        ["xpath=//section[@id='courses']/div/p/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/courses')])[6]", "xpath:href"],
+        ["xpath=//section[3]/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Search All Courses »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdb64714-4cb9-473f-9403-6f03ae7cde89",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "id=ctaSearchAllCourses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5dccb480-1590-4047-90b2-956ea4745b4e",
+      "comment": "",
+      "command": "//mouseOut",
+      "target": "id=ctaSearchAllCourses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59a1771e-1a44-49d9-97be-dbf5c4ffa585",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bdc976b6-dab5-4b43-85a5-c03ad6d92d1e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.card:nth-child(3) > .card-header",
+      "targets": [
+        ["css=.card:nth-child(3) > .card-header", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[3]/div", "xpath:idRelative"],
+        ["xpath=//a[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbc57b82-c832-4505-af02-4fae2c2a6f11",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.card:nth-child(3) > .card-header",
+      "targets": [
+        ["css=.card:nth-child(3) > .card-header", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[3]/div", "xpath:idRelative"],
+        ["xpath=//a[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c716e8a-1e5e-4c33-b224-9fd72c0af8a3",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,493)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7f5b7a5e-2375-4f07-abc7-800b562a5910",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,800)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34db7bc8-2e82-494b-8db8-7935023a910c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(10) .title",
+      "targets": [
+        ["css=.card:nth-child(10) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[10]/div/div", "xpath:idRelative"],
+        ["xpath=//a[10]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e957b3f-0eab-435e-95a9-432cad68197e",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "css=.card:nth-child(10) .title",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a66f86f2-5174-466d-aa1c-89fccecc1c91",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99125793-7ec2-49f2-833e-109e1595f4d5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3033d37-e3ca-49bc-93a1-7e876ad13f2a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "461fe19c-6b50-48a6-af2c-c0c27f017c15",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "656ba8a0-7a48-439b-a95c-44ee834bbdef",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaSearchAllCareers",
+      "targets": [
+        ["id=ctaSearchAllCareers", "id"],
+        ["linkText=Search All Careers »", "linkText"],
+        ["css=#ctaSearchAllCareers", "css:finder"],
+        ["xpath=//a[contains(text(),'Search All Careers »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaSearchAllCareers']", "xpath:attributes"],
+        ["xpath=//section[@id='careers']/div/p/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/careers')])[6]", "xpath:href"],
+        ["xpath=//section[4]/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Search All Careers »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fe5b210-628b-422b-ab4a-cf76bd399e45",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "id=ctaSearchAllCareers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "415905d6-f3f5-4405-a19c-cc3928fa9bac",
+      "comment": "",
+      "command": "//mouseOut",
+      "target": "id=ctaSearchAllCareers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f47fe0c5-5171-4b78-a75b-ee75cb7a17e7",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b249bd35-f5cd-4e77-8b17-6e0662399031",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(2) .title",
+      "targets": [
+        ["css=.card:nth-child(2) .title", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div[2]/div/a[2]/div/div", "xpath:idRelative"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f22c5985-9303-4426-a38d-0ec1c54912cf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab67d764-e264-43c0-b6ff-e16a176121c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaTakeCareerQuiz",
+      "targets": [
+        ["id=ctaTakeCareerQuiz", "id"],
+        ["linkText=Take Quiz »", "linkText"],
+        ["css=#ctaTakeCareerQuiz", "css:finder"],
+        ["xpath=//a[contains(text(),'Take Quiz »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaTakeCareerQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div/div/p[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Take Quiz »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "913a6ec6-0369-47cc-b940-545fef608467",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaShortQuiz",
+      "targets": [
+        ["id=ctaShortQuiz", "id"],
+        ["css=#ctaShortQuiz", "css:finder"],
+        ["xpath=//button[@id='ctaShortQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='modalChooseQuiz']/div/div[2]/section/div/div/button", "xpath:idRelative"],
+        ["xpath=//section/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Quick Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4e7d3b32-6401-439c-b2d6-0dc6cbebefa1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(2) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(2) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Like')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "58983ec1-02a4-463f-b39d-c34f12869030",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(3) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Neutral')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a827ae14-b85c-4c44-80bd-13294bdc8a22",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(4) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(4) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Not Really')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ffb91f9b-40f9-4193-9fdf-7fcbc4bba016",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(5) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(5) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dislike')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8870336c-4a5b-47cc-95d3-5d053f895204",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(3) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Neutral')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a6a4c09a-1790-4d30-9882-e4511d14fb31",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(2) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(2) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Like')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4463c534-6a50-413e-87ea-0525b535e49b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.close > span:nth-child(1)",
+      "targets": [
+        ["css=.close > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='modalQuizResults']/div/div/button/span", "xpath:idRelative"],
+        ["xpath=//div/button/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bf7080d-e693-4454-8f42-4832d8e85fa3",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.navbar--action__sign-in",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2bd0df5a-7b96-4a57-8969-998759e8905a",
+    "name": "Check Career Quiz",
+    "commands": [{
+      "id": "d7b8cd46-c69c-432b-ac32-2da0bf34624b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8837282c-55d4-4074-9a0a-8d820803719c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b27b2000-d172-40de-bab9-3bd0b33d1cfc",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaTakeCareerQuiz",
+      "targets": [
+        ["id=ctaTakeCareerQuiz", "id"],
+        ["linkText=Take Quiz »", "linkText"],
+        ["css=#ctaTakeCareerQuiz", "css:finder"],
+        ["xpath=//a[contains(text(),'Take Quiz »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaTakeCareerQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div/div/p[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Take Quiz »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b18bf799-a9cb-4058-8c91-4b8ff1800e95",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaShortQuiz",
+      "targets": [
+        ["id=ctaShortQuiz", "id"],
+        ["css=#ctaShortQuiz", "css:finder"],
+        ["xpath=//button[@id='ctaShortQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='modalChooseQuiz']/div/div[2]/section/div/div/button", "xpath:idRelative"],
+        ["xpath=//section/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Quick Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fff8b331-9b22-4741-bb88-c041d4b03528",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(1) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Love')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5a7d2a3-7c87-4f20-9531-c9b4d7dca271",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.col-12:nth-child(1) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Love')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2d6bba7-eee4-4a53-953f-0c3f083f8045",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(1) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Love')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e934f533-1255-45e8-b607-db254db9f08f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.col-12:nth-child(1) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(1) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Love')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8503750e-2ac4-4a91-a04f-f72ad5ec5164",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(2) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(2) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Like')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba002a6f-a0a8-445e-878d-287453be9c7f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(2) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(2) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Like')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6ef253b-b535-4c7c-979f-b5dcf0038a0b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(5) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(5) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dislike')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b92dde23-159a-457b-af4b-ab4cbd692f8f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-12:nth-child(5) > .btn",
+      "targets": [
+        ["css=.col-12:nth-child(5) > .btn", "css:finder"],
+        ["xpath=//div[@id='modalShortQuiz']/div/div[2]/div[2]/div[5]/button", "xpath:idRelative"],
+        ["xpath=//div[5]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Dislike')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "406f0323-d5bc-457f-9655-f23764a95f12",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaQuizMatchingCareers",
+      "targets": [
+        ["id=ctaQuizMatchingCareers", "id"],
+        ["linkText=Find Matching Careers »", "linkText"],
+        ["css=#ctaQuizMatchingCareers", "css:finder"],
+        ["xpath=//a[contains(text(),'Find Matching Careers »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaQuizMatchingCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='modalQuizResults']/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/careers?quiz=true&careerSort=quiz_result')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find Matching Careers »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b75250a8-5716-483d-b7c5-992544aed43c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,513)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67ea3bed-6c4d-42fb-94ae-e515d142b002",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,300)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6577f16-b55e-4e20-8aca-6267d61af8fb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.card:nth-child(1) > .card-header",
+      "targets": [
+        ["css=.card:nth-child(1) > .card-header", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div[2]/div/a/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a35b554-be66-4ffe-a4da-d56c37bf7340",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "768e5e42-9baf-4f1c-a251-a0a21da5493f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "afbc6b44-dfb1-48a8-b815-75b8d8b5a412",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaQuizResult",
+      "targets": [
+        ["id=ctaQuizResult", "id"],
+        ["css=#ctaQuizResult", "css:finder"],
+        ["xpath=//button[@id='ctaQuizResult']", "xpath:attributes"],
+        ["xpath=//div[@id='quizFilter']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View Results')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "1b7adf6f-0d5e-45c8-824b-68a8b346d093",
+    "name": "Check Courses",
+    "commands": [{
+      "id": "5d512375-1687-4daa-998f-6f0073479310",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "568c2763-155c-4dff-9bb1-a22fd0546b0b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "98ea6572-4f29-409a-8e30-ceb8186e5263",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37e3e578-869e-434c-8899-012e1c77eea8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=View All Courses",
+      "targets": [
+        ["linkText=View All Courses", "linkText"],
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'View All Courses')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/courses?courseSort=relevance')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View All Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02571a42-4eb1-47ab-8d74-79e249ee55d0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ce487b07-4404-4235-bed2-720c18853148",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1099)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1e74ab82-ae18-42b9-a1c3-1219a96e9039",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,835)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4dd57443-dea9-4735-b529-73ee4484c1da",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,300)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "263939f4-90ff-49b9-814a-d6bcc9ad3d61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.input-group > .form-control",
+      "targets": [
+        ["css=.input-group > .form-control", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b390b12e-2490-4fb0-aa18-c22ade9b9b1b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.input-group > .form-control",
+      "targets": [
+        ["css=.input-group > .form-control", "css:finder"],
+        ["xpath=//input[@value='a']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "5187c80a-4fc2-432b-a627-a8070119e00c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pt-1",
+      "targets": [
+        ["css=.pt-1", "css:finder"],
+        ["xpath=//div[@id='courses']/section", "xpath:idRelative"],
+        ["xpath=//div/section", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "959296de-b066-41bd-8f6f-9c37c3702eb9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-light-primary",
+      "targets": [
+        ["css=.btn-light-primary", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Clear All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2f55b695-43a1-4f8b-802c-49cb00b75396",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSkills",
+      "targets": [
+        ["id=btnSkills", "id"],
+        ["css=#btnSkills", "css:finder"],
+        ["xpath=//button[@id='btnSkills']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Skills')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d360a43c-5f67-4921-a5ba-2e4173121474",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSkills",
+      "targets": [
+        ["id=btnSkills", "id"],
+        ["css=#btnSkills", "css:finder"],
+        ["xpath=//button[@id='btnSkills']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Skills')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7d7c131-1d76-4251-bb21-f69b01ca9bab",
+      "comment": "",
+      "command": "click",
+      "target": "id=5e56025a467fb556add3c009",
+      "targets": [
+        ["id=5e56025a467fb556add3c009", "id"],
+        ["name=Document management software", "name"],
+        ["css=#\\35 e56025a467fb556add3c009", "css:finder"],
+        ["xpath=//input[@id='5e56025a467fb556add3c009']", "xpath:attributes"],
+        ["xpath=//div[@id='skillsFilter']/div[8]/input", "xpath:idRelative"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a26f7f8-f7aa-401a-8fa1-e691ecbc11a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4094e38c-d432-4e19-91c9-190665e14dad",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-close",
+      "targets": [
+        ["css=.btn-close", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div/div/span", "xpath:idRelative"],
+        ["xpath=//div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0e6da3c8-778f-42d7-ae5f-33a794305fa2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSkills",
+      "targets": [
+        ["id=btnSkills", "id"],
+        ["css=#btnSkills", "css:finder"],
+        ["xpath=//button[@id='btnSkills']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Skills')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60e726f7-2172-4629-9408-47d7addfde66",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSkills",
+      "targets": [
+        ["id=btnSkills", "id"],
+        ["css=#btnSkills", "css:finder"],
+        ["xpath=//button[@id='btnSkills']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Skills')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c001b9b8-8fb6-45fa-8b09-1a108aea9e8f",
+      "comment": "",
+      "command": "click",
+      "target": "id=5e56025a467fb556add3c00c",
+      "targets": [
+        ["id=5e56025a467fb556add3c00c", "id"],
+        ["name=Electronic mail software", "name"],
+        ["css=#\\35 e56025a467fb556add3c00c", "css:finder"],
+        ["xpath=//input[@id='5e56025a467fb556add3c00c']", "xpath:attributes"],
+        ["xpath=//div[@id='skillsFilter']/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "806fd337-bb4d-451f-ab63-8de2d2c739b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d4a29ebe-1459-4ab9-838f-aeb75b538156",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title",
+      "targets": [
+        ["css=.card:nth-child(1) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e8964a6-9410-4daf-b0e9-07f573177383",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b10eab26-c0c8-4dc3-a122-c3bee9a2b34f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnCareers",
+      "targets": [
+        ["id=btnCareers", "id"],
+        ["css=#btnCareers", "css:finder"],
+        ["xpath=//button[@id='btnCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Careers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e2f4150a-6311-478b-8b1d-b544da22a203",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnCareers",
+      "targets": [
+        ["id=btnCareers", "id"],
+        ["css=#btnCareers", "css:finder"],
+        ["xpath=//button[@id='btnCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Careers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80cce04a-d227-419b-8f4f-660f1e992727",
+      "comment": "",
+      "command": "click",
+      "target": "css=#careerFilter > .form-check:nth-child(2) > .form-check-label",
+      "targets": [
+        ["css=#careerFilter > .form-check:nth-child(2) > .form-check-label", "css:finder"],
+        ["xpath=//div[@id='careerFilter']/div/label", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a321751-3d31-4c49-9720-c87c848b31dd",
+      "comment": "",
+      "command": "click",
+      "target": "css=#careerFilter > .form-check:nth-child(2) > .form-check-label",
+      "targets": [
+        ["css=#careerFilter > .form-check:nth-child(2) > .form-check-label", "css:finder"],
+        ["xpath=//div[@id='careerFilter']/div[2]/label", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[2]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9e1d75e-f2b1-4b90-a64a-097e14d7401c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f04aadeb-f442-480a-97f4-de007ddade45",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(2) .title",
+      "targets": [
+        ["css=.card:nth-child(2) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[2]/div/div", "xpath:idRelative"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "945e976e-e312-42c7-a329-7242c12f198c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.card:nth-child(2) .title",
+      "targets": [
+        ["css=.card:nth-child(2) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[2]/div/div", "xpath:idRelative"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9f0283b-95bb-44d5-91c2-38d865767939",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Skills')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#skills')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb4d21c3-73db-4eb5-82c7-5916193d9ed2",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2949)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe03193d-376a-423d-a7ba-9ce12265a661",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title",
+      "targets": [
+        ["css=.card:nth-child(1) .title", "css:finder"],
+        ["xpath=//section[@id='careers']/div/div[2]/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7af2fcc-d96d-4851-a51f-68b95c9d1bd9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=(//a[contains(text(),'Careers')])[2]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#careers')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ec9a200-9ff5-4f39-bd33-5c055678d87c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-light-primary",
+      "targets": [
+        ["css=.btn-light-primary", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Clear All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60b0f6f0-430b-4ed3-8c23-e1246f514776",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSortCourses",
+      "targets": [
+        ["id=btnSortCourses", "id"],
+        ["css=#btnSortCourses", "css:finder"],
+        ["xpath=//button[@id='btnSortCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "042e2e04-c4ac-4b09-8a4d-e474aba224cf",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnSortCourses",
+      "targets": [
+        ["id=btnSortCourses", "id"],
+        ["css=#btnSortCourses", "css:finder"],
+        ["xpath=//button[@id='btnSortCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "88750d14-88aa-42d9-af32-8864c1baa5b8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnMode",
+      "targets": [
+        ["id=btnMode", "id"],
+        ["css=#btnMode", "css:finder"],
+        ["xpath=//button[@id='btnMode']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Modes & Instruction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7863fa5-fdf9-4698-b8f7-231c68471f71",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnMode",
+      "targets": [
+        ["id=btnMode", "id"],
+        ["css=#btnMode", "css:finder"],
+        ["xpath=//button[@id='btnMode']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Modes & Instruction')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "966b9608-36c0-46e1-a6a7-7a612d131b0a",
+      "comment": "",
+      "command": "click",
+      "target": "css=#modeFilter > .form-check:nth-child(2) > .form-check-label",
+      "targets": [
+        ["css=#modeFilter > .form-check:nth-child(2) > .form-check-label", "css:finder"],
+        ["xpath=//div[@id='modeFilter']/div[2]/label", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Instructor Led (223)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e0e7f90-0dec-4ba5-9e61-d27cec36d04c",
+      "comment": "",
+      "command": "click",
+      "target": "css=#modeFilter > .form-check:nth-child(1) > .form-check-label",
+      "targets": [
+        ["css=#modeFilter > .form-check:nth-child(1) > .form-check-label", "css:finder"],
+        ["xpath=//div[@id='modeFilter']/div/label", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Online (223)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0bf9a922-c17c-4f30-ac3d-ccb0eeef59a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-light-primary",
+      "targets": [
+        ["css=.btn-light-primary", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Clear All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "627e2cfc-c0ed-4fd2-ab01-9238c61917fa",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSortCourses",
+      "targets": [
+        ["id=btnSortCourses", "id"],
+        ["css=#btnSortCourses", "css:finder"],
+        ["xpath=//button[@id='btnSortCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6322cdfe-c9fb-45cc-a9b5-2c2b413f5bf8",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnSortCourses",
+      "targets": [
+        ["id=btnSortCourses", "id"],
+        ["css=#btnSortCourses", "css:finder"],
+        ["xpath=//button[@id='btnSortCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b114edd0-c4ad-4c6b-9636-8ca82e40dad8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnInstitutions",
+      "targets": [
+        ["id=btnInstitutions", "id"],
+        ["css=#btnInstitutions", "css:finder"],
+        ["xpath=//button[@id='btnInstitutions']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div[5]/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Institutions')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "befb7c5a-f4b1-4592-be38-63d8dc47925c",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnInstitutions",
+      "targets": [
+        ["id=btnInstitutions", "id"],
+        ["css=#btnInstitutions", "css:finder"],
+        ["xpath=//button[@id='btnInstitutions']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div[5]/div/button", "xpath:idRelative"],
+        ["xpath=//div[5]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Institutions')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7659a7ad-f1fb-457d-ad30-de1631675af6",
+      "comment": "",
+      "command": "click",
+      "target": "css=#institutionsFilter .form-check-label",
+      "targets": [
+        ["css=#institutionsFilter .form-check-label", "css:finder"],
+        ["xpath=//div[@id='institutionsFilter']/div/label", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'MindEdge (223)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "777608ed-a435-4d82-a737-77191ecf8c69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-close",
+      "targets": [
+        ["css=.btn-close", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div/div/span", "xpath:idRelative"],
+        ["xpath=//div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4454e6b1-19cd-44aa-a3d8-e25e11c54d1e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnLocation",
+      "targets": [
+        ["id=btnLocation", "id"],
+        ["css=#btnLocation", "css:finder"],
+        ["xpath=//button[@id='btnLocation']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div[6]/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Locations')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d716453f-1aa7-4f55-a9f9-1f87ba989d35",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnLocation",
+      "targets": [
+        ["id=btnLocation", "id"],
+        ["css=#btnLocation", "css:finder"],
+        ["xpath=//button[@id='btnLocation']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCourse']/div[6]/div/button", "xpath:idRelative"],
+        ["xpath=//div[6]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Locations')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3be80709-7f25-4c43-9a76-18308681b784",
+      "comment": "",
+      "command": "click",
+      "target": "css=.align-items-baseline",
+      "targets": [
+        ["css=.align-items-baseline", "css:finder"],
+        ["xpath=//div[@id='courses']/section/div/div", "xpath:idRelative"],
+        ["xpath=//div/section/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33979083-7664-4131-ac08-56f393aab9e9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSortCourses",
+      "targets": [
+        ["id=btnSortCourses", "id"],
+        ["css=#btnSortCourses", "css:finder"],
+        ["xpath=//button[@id='btnSortCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff37022f-79a3-4c99-bece-fb65fc0dfb63",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSortCourses",
+      "targets": [
+        ["id=btnSortCourses", "id"],
+        ["css=#btnSortCourses", "css:finder"],
+        ["xpath=//button[@id='btnSortCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9da233cc-f8ce-4aca-baf4-576d6123c496",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Distance (Nearest)",
+      "targets": [
+        ["linkText=Distance (Nearest)", "linkText"],
+        ["css=.dropdown-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Distance (Nearest)')]", "xpath:link"],
+        ["xpath=//div[@id='sortCoursesDD']/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/courses?courseSort=relevance')])[3]", "xpath:href"],
+        ["xpath=//section[2]/div/div/div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Distance (Nearest)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "533968e3-989b-436a-8c83-b81bc11b1505",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.card:nth-child(4) > .card-header",
+      "targets": [
+        ["css=.card:nth-child(4) > .card-header", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[4]/div", "xpath:idRelative"],
+        ["xpath=//a[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b08bc6c-f681-4dae-bfc6-25e7eeb0239f",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.card:nth-child(4) > .card-header",
+      "targets": [
+        ["css=.card:nth-child(4) > .card-header", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[4]/div", "xpath:idRelative"],
+        ["xpath=//a[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "65ce3c6e-9920-4b60-96ed-417c18a92bb2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Toastify__toast",
+      "targets": [
+        ["css=.Toastify__toast", "css:finder"],
+        ["xpath=//div[@id='__next']/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "879820e9-e8d1-44e4-9aca-84a569a18eaf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title",
+      "targets": [
+        ["css=.card:nth-child(1) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdce32eb-46fd-47a3-90da-433562c8f117",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=MindEdge",
+      "targets": [
+        ["linkText=MindEdge", "linkText"],
+        ["css=.col:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'MindEdge')]", "xpath:link"],
+        ["xpath=//section[@id='about']/div/div/div[2]/div/div/div[3]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/courses?institutions=5ea1ba80086ab20c43a9b4b9')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'MindEdge')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c3a85b3-a61a-4566-898c-89f71e276710",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=MindEdge",
+      "targets": [
+        ["linkText=MindEdge", "linkText"],
+        ["css=.col:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'MindEdge')]", "xpath:link"],
+        ["xpath=//section[@id='about']/div/div/div[2]/div/div/div[3]/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/courses?institutions=5ea1ba80086ab20c43a9b4b9')]", "xpath:href"],
+        ["xpath=//div[3]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'MindEdge')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ece6e23-268a-4927-b8ef-93409adba04c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0ca26aa0-54b3-41cd-943a-eac96416598a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-light-primary",
+      "targets": [
+        ["css=.btn-light-primary", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Clear All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a97d87c-fe3b-4a8e-b79a-106b6d71ab47",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSortCourses",
+      "targets": [
+        ["id=btnSortCourses", "id"],
+        ["css=#btnSortCourses", "css:finder"],
+        ["xpath=//button[@id='btnSortCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0af769d-8b53-4c57-ae3c-f2a2ec448d28",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnSortCourses",
+      "targets": [
+        ["id=btnSortCourses", "id"],
+        ["css=#btnSortCourses", "css:finder"],
+        ["xpath=//button[@id='btnSortCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "106f4a95-6be1-44dd-adeb-a9a609b8b4f0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.false", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8cbbaa32-c49c-4ba0-b73e-59e183f7fcf5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.false", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "595ca574-80fd-4f5c-acdc-88240fc3dee9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=All Subjects",
+      "targets": [
+        ["linkText=All Subjects", "linkText"],
+        ["css=.submenu-item--link > a", "css:finder"],
+        ["xpath=//a[contains(text(),'All Subjects')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div[2]/div/div[32]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[34]", "xpath:href"],
+        ["xpath=//div[32]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'All Subjects')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0993ec5-4355-450c-9040-e8cf6ac417a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(5) img",
+      "targets": [
+        ["css=.card:nth-child(5) img", "css:finder"],
+        ["xpath=(//img[@alt='catalog-image'])[5]", "xpath:img"],
+        ["xpath=//div[@id='tabList']/div/section/div/div/a[5]/div[2]/div/img", "xpath:idRelative"],
+        ["xpath=//a[5]/div[2]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "80005e96-e1c0-48a3-871e-8c0a92e83f2e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.card:nth-child(5) img",
+      "targets": [
+        ["css=.card:nth-child(5) img", "css:finder"],
+        ["xpath=(//img[@alt='catalog-image'])[5]", "xpath:img"],
+        ["xpath=//div[@id='tabList']/div/section/div/div/a[5]/div[2]/div/img", "xpath:idRelative"],
+        ["xpath=//a[5]/div[2]/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a23ac27b-2f30-4af9-bf46-bc6badfff6a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(9) .separator-circle",
+      "targets": [
+        ["css=.card:nth-child(9) .separator-circle", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a[9]/div[2]/p/small/span", "xpath:idRelative"],
+        ["xpath=//a[9]/div[2]/p/small/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdf7c360-5343-4474-9d50-df58cab3bdf5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "81abbb07-1bc5-4917-b3ef-8d65b50dad31",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.false", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a68a1d95-97a6-4eaa-ad7c-2852bb99c5d6",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Web Design",
+      "targets": [
+        ["linkText=Web Design", "linkText"],
+        ["css=.submenu-item:nth-child(30) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Web Design')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div[2]/div/div[30]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/subjects/web-design')]", "xpath:href"],
+        ["xpath=//div[30]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Web Design')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bf86b16-e52a-4866-8aed-ae661bd24f72",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title",
+      "targets": [
+        ["css=.card:nth-child(1) .title", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cf1e9ae-19e0-440b-bf13-41e2842a28de",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7452b9f-0065-46e9-b15b-abd78bfd7646",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,300)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a88062d-7de1-4262-aea7-115727f22e3f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "87d41a92-4f13-465b-9e7c-60f387e3d95a",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaExploreCourses",
+      "targets": [
+        ["id=ctaExploreCourses", "id"],
+        ["linkText=Explore Courses »", "linkText"],
+        ["css=#ctaExploreCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Explore Courses »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaExploreCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div[3]/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[35]", "xpath:href"],
+        ["xpath=//div[3]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Explore Courses »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d9e118f-536f-4a24-829e-76fdd43b85f5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=ctaExploreCourses",
+      "targets": [
+        ["id=ctaExploreCourses", "id"],
+        ["linkText=Explore Courses »", "linkText"],
+        ["css=#ctaExploreCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Explore Courses »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaExploreCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div[3]/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[35]", "xpath:href"],
+        ["xpath=//div[3]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Explore Courses »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a9a74300-67c9-4607-bc6e-eb5a6acc0115",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c46c490-7684-4f19-a60d-00bd2ac15223",
+      "comment": "",
+      "command": "click",
+      "target": "css=.section:nth-child(2)",
+      "targets": [
+        ["css=.section:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='__next']/main/section[2]", "xpath:idRelative"],
+        ["xpath=//section[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa18d6e5-105b-4a71-9751-4fa98f8dbd2b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title:nth-child(2)",
+      "targets": [
+        ["css=.card:nth-child(1) .title:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f9bcaf15-b1ff-4627-bb9c-b3c0018ea98d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "22e550c7-8674-4415-8139-0e47711d497d",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaSearchAllCourses",
+      "targets": [
+        ["id=ctaSearchAllCourses", "id"],
+        ["linkText=Search All Courses »", "linkText"],
+        ["css=#ctaSearchAllCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Search All Courses »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaSearchAllCourses']", "xpath:attributes"],
+        ["xpath=//section[@id='courses']/div/p/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/courses')])[6]", "xpath:href"],
+        ["xpath=//section[3]/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Search All Courses »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a23b9b5-159a-45dc-92b6-042511c5309e",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "44bc8407-75ea-41ac-bf1c-36463bd6e7c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(7) .title",
+      "targets": [
+        ["css=.card:nth-child(7) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[7]/div/div", "xpath:idRelative"],
+        ["xpath=//a[7]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4765be6e-49cf-4ab0-9353-1861d8339dbc",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8dda15fc-b854-4441-92b3-0136a46a7298",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaEnrollCoursePrimary",
+      "targets": [
+        ["id=ctaEnrollCoursePrimary", "id"],
+        ["linkText=Enroll Now", "linkText"],
+        ["css=#ctaEnrollCoursePrimary", "css:finder"],
+        ["xpath=//a[contains(text(),'Enroll Now')]", "xpath:link"],
+        ["xpath=//a[@id='ctaEnrollCoursePrimary']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://enrollment.staging.campus.com/MINDEDGE/online-learning-accessibility')]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Enroll Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07c3f71a-65ae-4058-ae14-eaecb95e8f5e",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "id=btnSortCourses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc0fc2fd-4989-4a0e-a456-2a6b3f130020",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnSortCourses",
+      "targets": [
+        ["id=btnSortCourses", "id"],
+        ["css=#btnSortCourses", "css:finder"],
+        ["xpath=//button[@id='btnSortCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='courses']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "4ce88409-74d6-437b-bd02-f76279b43738",
+    "name": "Check Career",
+    "commands": [{
+      "id": "eddabdf5-fe11-495a-834f-4ac06b21c019",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cdae84b2-9ede-4985-b221-61be9d693cf4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9152000b-382d-402c-8dc9-5adeb2e95184",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Careers')]",
+      "targets": [
+        ["linkText=Careers", "linkText"],
+        ["css=.navbar-nav > a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Careers')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/careers?careerSort=relevance')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Careers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b49159f6-2fff-4593-9641-9ab2541fa295",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Careers",
+      "targets": [
+        ["linkText=Careers", "linkText"],
+        ["css=.navbar-nav > a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Careers')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/careers?careerSort=relevance')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Careers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c70f737-7e83-494e-b9ea-d9a7b74d7497",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Careers",
+      "targets": [
+        ["linkText=Careers", "linkText"],
+        ["css=.active:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Careers')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/careers?careerSort=relevance')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Careers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9dd45856-169f-4666-892f-cfdbee71a042",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "57bab880-b39e-4c01-a003-a30cef7fbd2f",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bebd7af2-e896-445b-a68d-79711a251e90",
+      "comment": "",
+      "command": "click",
+      "target": "id=filter1",
+      "targets": [
+        ["id=filter1", "id"],
+        ["name=filter1", "name"],
+        ["css=#filter1", "css:finder"],
+        ["xpath=//input[@id='filter1']", "xpath:attributes"],
+        ["xpath=//div[@id='quizFilter']/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fa88bc4-bed2-4d68-a771-a28975341f5b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-md",
+      "targets": [
+        ["css=.col-md", "css:finder"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//section/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "85852f71-bcc7-4393-8e6c-e3ea2f1e3ecf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-close",
+      "targets": [
+        ["css=.btn-close", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div/div/span", "xpath:idRelative"],
+        ["xpath=//div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67717e9f-8174-4228-a003-296521832763",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e642236c-0ba2-4d29-9c5a-52e75029b36b",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b64336c1-aa66-479a-bbaf-d2e069bf2de5",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaQuizResult",
+      "targets": [
+        ["id=ctaQuizResult", "id"],
+        ["css=#ctaQuizResult", "css:finder"],
+        ["xpath=//button[@id='ctaQuizResult']", "xpath:attributes"],
+        ["xpath=//div[@id='quizFilter']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'View Results')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "129d8b42-602f-47fc-8341-10cca3513117",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaQuizMatchingCareers",
+      "targets": [
+        ["id=ctaQuizMatchingCareers", "id"],
+        ["linkText=Find Matching Careers »", "linkText"],
+        ["css=#ctaQuizMatchingCareers", "css:finder"],
+        ["xpath=//a[contains(text(),'Find Matching Careers »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaQuizMatchingCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='modalQuizResults']/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/careers?quiz=true&careerSort=quiz_result')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find Matching Careers »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f4e74c32-cd2f-4ea7-8948-dcaf9a3e885d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a3d25c9-938c-4d93-9996-cf4d02b809c5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-close",
+      "targets": [
+        ["css=.btn-close", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div/div/span", "xpath:idRelative"],
+        ["xpath=//div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "25b2a78d-b032-4e62-9544-7568ec7d9619",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8f82fbc-417d-42ab-94c4-40c4332067e7",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d7dd4e8-5ee5-4718-8d47-765d48a780de",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSalary",
+      "targets": [
+        ["id=btnSalary", "id"],
+        ["css=#btnSalary", "css:finder"],
+        ["xpath=//button[@id='btnSalary']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Salaries')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ceaeb0d-c578-4ced-af0a-756c0622d080",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSalary",
+      "targets": [
+        ["id=btnSalary", "id"],
+        ["css=#btnSalary", "css:finder"],
+        ["xpath=//button[@id='btnSalary']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Salaries')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b27bf942-10e4-4528-b1e0-03c8984724a1",
+      "comment": "",
+      "command": "//click",
+      "target": "id=3",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2870bc76-b703-45ce-a0d1-05a413ec8697",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='salaryFilter']/div",
+      "targets": [
+        ["css=.form-check:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='salaryFilter']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "37213107-7b47-4eca-b45e-6c86599a08a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2792e950-e932-42ab-b0eb-37a70285aead",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSalary",
+      "targets": [
+        ["id=btnSalary", "id"],
+        ["css=#btnSalary", "css:finder"],
+        ["xpath=//button[@id='btnSalary']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salaries')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ad32a30-b76c-401c-ae0a-ae334059eb65",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-check:nth-child(1)",
+      "targets": [
+        ["css=.form-check:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='salaryFilter']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77b39a40-c4af-447f-9b82-776e1948a7f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-check:nth-child(1)",
+      "targets": [
+        ["css=.form-check:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='salaryFilter']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1da946f4-dc0a-4bfa-bf0b-9634642d8f2a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-check:nth-child(1)",
+      "targets": [
+        ["css=.form-check:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='salaryFilter']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7310df7b-d76a-4c45-bd02-623d6ad683db",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-check:nth-child(1)",
+      "targets": [
+        ["css=.form-check:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='salaryFilter']/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0070315-a934-4416-a0de-4f13744cf0ce",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7fe1022d-6195-4157-8158-66fa2801535d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fbfc084-6bdf-4885-b65e-81b9ff869da4",
+      "comment": "",
+      "command": "click",
+      "target": "id=careerCount",
+      "targets": [
+        ["id=careerCount", "id"],
+        ["css=#careerCount", "css:finder"],
+        ["xpath=//span[@id='careerCount']", "xpath:attributes"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'19 Results')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bb64dc3-641c-4de4-8dd8-5bf29713df69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4bd0cbb7-b1d5-4c9b-aa08-93295e3ccdfd",
+      "comment": "",
+      "command": "//storeText",
+      "target": "css=.form-check:nth-child(1) > .form-check-label",
+      "targets": [],
+      "value": "Salary_200K+"
+    }, {
+      "id": "f8b21261-5fa6-4e24-a7f6-473737e4f9be",
+      "comment": "",
+      "command": "//echo",
+      "target": "${Salary_200K+}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "aa42922a-11bd-4671-b57f-c6e526c338cf",
+      "comment": "",
+      "command": "storeText",
+      "target": "id=careerCount",
+      "targets": [
+        ["id=careerCount", "id"],
+        ["css=#careerCount", "css:finder"],
+        ["xpath=//span[@id='careerCount']", "xpath:attributes"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div/span", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'19 Results')]", "xpath:innerText"]
+      ],
+      "value": "Results"
+    }, {
+      "id": "07b6ed31-7179-4aaf-9a60-ef2f3d1f5e26",
+      "comment": "",
+      "command": "echo",
+      "target": "${Results}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "000a6f61-4e71-4f7d-9bd5-5204cf4c1e85",
+      "comment": "",
+      "command": "//verify",
+      "target": "Results",
+      "targets": [],
+      "value": "${Salary_200K+}"
+    }, {
+      "id": "4b1bbacf-9765-4f78-81cd-bb249ef4e275",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "linkText=Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6721ab58-e892-4db3-b8a3-110af88fdb3e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSalary",
+      "targets": [
+        ["id=btnSalary", "id"],
+        ["css=#btnSalary", "css:finder"],
+        ["xpath=//button[@id='btnSalary']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salaries')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8b26778-70d6-49f7-8615-6463f8b5a33d",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSalary",
+      "targets": [
+        ["id=btnSalary", "id"],
+        ["css=#btnSalary", "css:finder"],
+        ["xpath=//button[@id='btnSalary']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Salaries')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "813856bf-fe1b-4f3b-8b02-fe65738b47d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=3",
+      "targets": [
+        ["id=3", "id"],
+        ["name=$200K+", "name"],
+        ["css=#\\33", "css:finder"],
+        ["xpath=//input[@id='3']", "xpath:attributes"],
+        ["xpath=//div[@id='salaryFilter']/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc4d6284-699a-4c01-834c-6fe3877e6e54",
+      "comment": "",
+      "command": "click",
+      "target": "css=.align-items-baseline",
+      "targets": [
+        ["css=.align-items-baseline", "css:finder"],
+        ["xpath=//div[@id='careers']/section/div/div", "xpath:idRelative"],
+        ["xpath=//div/section/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c894b70a-f705-42aa-b403-6483926f3874",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSkills",
+      "targets": [
+        ["id=btnSkills", "id"],
+        ["css=#btnSkills", "css:finder"],
+        ["xpath=//button[@id='btnSkills']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Skills')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "60c70e4e-3508-430e-b6e7-9fe3ba5b59e8",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSkills",
+      "targets": [
+        ["id=btnSkills", "id"],
+        ["css=#btnSkills", "css:finder"],
+        ["xpath=//button[@id='btnSkills']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Skills')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2ff6e018-8a01-4606-9044-a20cbe26b4a4",
+      "comment": "",
+      "command": "click",
+      "target": "css=#skillsFilter > .form-check:nth-child(2) > .form-check-label",
+      "targets": [
+        ["css=#skillsFilter > .form-check:nth-child(2) > .form-check-label", "css:finder"],
+        ["xpath=//div[@id='skillsFilter']/div/label", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div/div/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "079abedd-f39d-4f25-be1e-c8b7ab7c75f2",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnEntryLevels",
+      "targets": [
+        ["id=btnEntryLevels", "id"],
+        ["css=#btnEntryLevels", "css:finder"],
+        ["xpath=//button[@id='btnEntryLevels']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Entry Levels')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1aa8fe1d-0920-4987-8427-c2a665819891",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnEntryLevels",
+      "targets": [
+        ["id=btnEntryLevels", "id"],
+        ["css=#btnEntryLevels", "css:finder"],
+        ["xpath=//button[@id='btnEntryLevels']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Entry Levels')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7e9659d-20d2-4ddc-bbb8-a2f8f10e597e",
+      "comment": "",
+      "command": "click",
+      "target": "id=Doctoral or professional degree",
+      "targets": [
+        ["id=Doctoral or professional degree", "id"],
+        ["name=Doctoral or professional degree", "name"],
+        ["css=#Doctoral\\ or\\ professional\\ degree", "css:finder"],
+        ["xpath=//input[@id='Doctoral or professional degree']", "xpath:attributes"],
+        ["xpath=//div[@id='levelFilter']/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd551361-07e4-4cd8-bf2e-cabfe64134cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-light-primary",
+      "targets": [
+        ["css=.btn-light-primary", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Clear All')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9491fc4e-131b-4d3f-8535-1db456b89a9a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSortCareers",
+      "targets": [
+        ["id=btnSortCareers", "id"],
+        ["css=#btnSortCareers", "css:finder"],
+        ["xpath=//button[@id='btnSortCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d09550bb-2526-433d-87a8-edee4ce8651b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=btnSortCareers",
+      "targets": [
+        ["id=btnSortCareers", "id"],
+        ["css=#btnSortCareers", "css:finder"],
+        ["xpath=//button[@id='btnSortCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f06ac22-4c28-49e8-b102-b6ad92b0a4fb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) p",
+      "targets": [
+        ["css=.card:nth-child(1) p", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div[2]/div/a/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b703781-5a52-424c-a087-e25bfa541077",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.card:nth-child(1) p",
+      "targets": [
+        ["css=.card:nth-child(1) p", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div[2]/div/a/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div[2]/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "98f0ef1b-46bf-445c-baad-d0857e8ddb26",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Skills')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#skills')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f853e6c-7306-472d-8afb-0d579c83ea8b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Skills')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#skills')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a84fef3d-71c7-43bf-8b9a-23cdc1e05431",
+      "comment": "",
+      "command": "click",
+      "target": "css=.active:nth-child(1)",
+      "targets": [
+        ["css=.active:nth-child(1)", "css:finder"],
+        ["xpath=(//a[contains(text(),'About')])[2]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#about')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7cda18f-766c-4462-8d1b-e911fffc738c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Skills')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#skills')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9008bdb0-9966-491a-abef-3b76f850f453",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Skills')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#skills')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c745560-6dc9-4b14-8713-c5892ef0b4be",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Related Careers')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#careers')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c34ef62b-6658-42d6-a915-0f163153383e",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaFindRelatedCourses",
+      "targets": [
+        ["id=ctaFindRelatedCourses", "id"],
+        ["linkText=Find Related Courses", "linkText"],
+        ["css=#ctaFindRelatedCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Find Related Courses')]", "xpath:link"],
+        ["xpath=//a[@id='ctaFindRelatedCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/courses?careers=5e560263467fb556add3c09e')]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find Related Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "339f0906-0cb7-4d39-968c-e82513d9625c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-close",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "66c991ec-6d83-4d8f-bb9b-6275a7c942d3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a250bbae-cc3a-407b-b45e-5c431c88aa6e",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "linkText=Sign In",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "913d3b8c-169c-4b2b-b533-3f1a68e6e6d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaSearchAllCareers",
+      "targets": [
+        ["id=ctaSearchAllCareers", "id"],
+        ["linkText=Search All Careers »", "linkText"],
+        ["css=#ctaSearchAllCareers", "css:finder"],
+        ["xpath=//a[contains(text(),'Search All Careers »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaSearchAllCareers']", "xpath:attributes"],
+        ["xpath=//section[@id='careers']/div/p/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/careers')])[6]", "xpath:href"],
+        ["xpath=//section[4]/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Search All Careers »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "341628b0-5e7e-4b90-85a2-0c01a1e1b071",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95445a19-62a8-44c7-8f5f-d719ce1346b0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1461acb2-a37e-4c88-a357-cfeae80bb112",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ece0806-2ec6-4a70-82e4-3cc8cb50343a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a47a711-4e02-48bc-97e1-2eb393b059a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaExploreCareers",
+      "targets": [
+        ["id=ctaExploreCareers", "id"],
+        ["linkText=Explore Careers »", "linkText"],
+        ["css=#ctaExploreCareers", "css:finder"],
+        ["xpath=//a[contains(text(),'Explore Careers »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaExploreCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div[2]/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/careers')])[2]", "xpath:href"],
+        ["xpath=//div[2]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Explore Careers »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "33a98b93-8475-4f52-8f54-32e0a7211049",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "id=ctaExploreCareers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d654f7f4-8687-49b1-83f2-7150e4d60495",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fce3d4d8-3e52-4253-8cc6-15de134ae84a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .icon",
+      "targets": [
+        ["css=.card:nth-child(1) .icon", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div[2]/div/a/div[2]/p/small/i", "xpath:idRelative"],
+        ["xpath=//small/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9ff57e8-5fdd-4706-a172-35dbec351ab8",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaFindRelatedCourses",
+      "targets": [
+        ["id=ctaFindRelatedCourses", "id"],
+        ["linkText=Find Related Courses", "linkText"],
+        ["css=#ctaFindRelatedCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Find Related Courses')]", "xpath:link"],
+        ["xpath=//a[@id='ctaFindRelatedCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/courses?careers=5e560263467fb556add3c09e')]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find Related Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "62e285c9-a77c-41ef-8a5d-7fba82f3c043",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "id=ctaFindRelatedCourses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0600e777-b33d-487c-8b00-36b339d8ff98",
+      "comment": "",
+      "command": "click",
+      "target": "css=.title",
+      "targets": [
+        ["css=.title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c530b56-9e24-4789-b2c6-992ce3ca86e1",
+      "comment": "",
+      "command": "click",
+      "target": "id=showSummary",
+      "targets": [
+        ["id=showSummary", "id"],
+        ["css=#showSummary", "css:finder"],
+        ["xpath=//button[@id='showSummary']", "xpath:attributes"],
+        ["xpath=//section[@id='skills']/div/div/div[2]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Summary View')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9eda856a-8b21-4bc6-9f60-1d8d28d31a6b",
+      "comment": "",
+      "command": "click",
+      "target": "id=showDetails",
+      "targets": [
+        ["id=showDetails", "id"],
+        ["css=#showDetails", "css:finder"],
+        ["xpath=//button[@id='showDetails']", "xpath:attributes"],
+        ["xpath=//section[@id='skills']/div/div/div[2]/div/div/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"],
+        ["xpath=//button[contains(.,'Detailed View')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "814c18b0-0e87-4665-b5de-dfc22024b481",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "157d7180-0a2f-4ee8-a3de-d97eda43d638",
+    "name": "Check prices in 2 pages",
+    "commands": [{
+      "id": "78f97031-7bbb-4c20-945b-f6a35e69a781",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae4330f6-aba0-45d9-8ebc-e68a5875eb17",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63b018a7-910c-4040-b6d7-0fc1c57f4210",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a72f5067-0c02-4566-9dda-a47c9ede7aa0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff123e45-8af5-43c8-baf7-9aac5c725a31",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=View All Courses",
+      "targets": [
+        ["linkText=View All Courses", "linkText"],
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'View All Courses')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/courses?courseSort=relevance')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View All Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cce912d6-d2ed-4be6-b364-ed3431697f44",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=View All Courses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2523bfd7-51c4-4a9e-8b49-acd00f67fa97",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-outline-primary",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae3c90b5-919f-465d-9347-c39bf942961d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,521)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63282400-aaff-4db2-a2e4-dc049bbc9723",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.card:nth-child(6) .title",
+      "targets": [
+        ["css=.card:nth-child(6) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[6]/div/div", "xpath:idRelative"],
+        ["xpath=//a[6]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e48dd3b6-0bc6-4e88-a4b8-bef5f40033b1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(6) .title",
+      "targets": [
+        ["css=.card:nth-child(6) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[6]/div/div", "xpath:idRelative"],
+        ["xpath=//a[6]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbf160b0-7b9b-46f2-81a4-0967cb68a835",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b22a5214-2a3e-438f-a189-e900ecb976ca",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.row:nth-child(1) > .col:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(1) > .col:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='about']/div/div/div[2]/div/div/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/div[2]", "xpath:position"]
+      ],
+      "value": "course_price"
+    }, {
+      "id": "56f98ae7-355d-4d53-9852-be29782cf7a4",
+      "comment": "",
+      "command": "echo",
+      "target": "${course_price}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03ac173a-de8b-4163-9cfd-fc8255781dba",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaEnrollCoursePrimary",
+      "targets": [
+        ["id=ctaEnrollCoursePrimary", "id"],
+        ["linkText=Enroll Now", "linkText"],
+        ["css=#ctaEnrollCoursePrimary", "css:finder"],
+        ["xpath=//a[contains(text(),'Enroll Now')]", "xpath:link"],
+        ["xpath=//a[@id='ctaEnrollCoursePrimary']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://enrollment.staging.campus.com/MINDEDGE/narrative-learning')]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Enroll Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "34a687b6-75ad-415a-8a96-cb4f05577ce1",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//span[contains(.,'$ 79')]",
+      "targets": [
+        ["css=h6:nth-child(3) > .float-right", "css:finder"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/div/div[2]/div[3]/h6[2]/span", "xpath:idRelative"],
+        ["xpath=//h6[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'$ 79')]", "xpath:innerText"]
+      ],
+      "value": "course_enroll_price"
+    }, {
+      "id": "bd4f68ef-6d11-4c06-88e4-3892b606e2aa",
+      "comment": "",
+      "command": "echo",
+      "target": "${course_enroll_price}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "24f9b094-d3c7-4c7c-ba8f-9d1cad7a283c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${course_enroll_price}.replace(\" \", \"\");",
+      "targets": [],
+      "value": "course_enroll_price2"
+    }, {
+      "id": "d98f77d0-cf7e-4a6b-b344-ca20cb36a292",
+      "comment": "",
+      "command": "echo",
+      "target": "${course_enroll_price2}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9f8cb972-1c6f-4954-8708-789126d614b8",
+      "comment": "",
+      "command": "verify",
+      "target": "course_price",
+      "targets": [],
+      "value": "${course_enroll_price2}"
+    }]
+  }, {
+    "id": "06eab0cf-f4e6-44cf-8ff1-0be0a60d0a3b",
+    "name": "Course upto enroll",
+    "commands": [{
+      "id": "6d708667-e58a-4e9a-9cc4-34e28bcd50f6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08a0b543-cf04-4616-8c03-aa225fd141c2",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e94bc0e-941e-4349-a4e8-a9febcbe403c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c11830b-cf27-467b-b88e-218307ad7c32",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b918603c-0d93-4e81-9a6d-23f70a266c17",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=View All Courses",
+      "targets": [
+        ["linkText=View All Courses", "linkText"],
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'View All Courses')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/courses?courseSort=relevance')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View All Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9d45863c-9847-41ab-992a-24580aeafa0b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,524)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fc7ee6fe-6c71-4ed3-8ece-ffa74432c499",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,700)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4498703b-df15-4d32-8e15-0f3ebc289936",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(9) .title",
+      "targets": [
+        ["css=.card:nth-child(9) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a[9]/div/div", "xpath:idRelative"],
+        ["xpath=//a[9]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c440fe2-93b3-44ea-925a-600d398dffd6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "36a64458-6d61-4bb1-9a1d-85a33cac51f7",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaEnrollCoursePrimary",
+      "targets": [
+        ["id=ctaEnrollCoursePrimary", "id"],
+        ["linkText=Enroll Now", "linkText"],
+        ["css=#ctaEnrollCoursePrimary", "css:finder"],
+        ["xpath=//a[contains(text(),'Enroll Now')]", "xpath:link"],
+        ["xpath=//a[@id='ctaEnrollCoursePrimary']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://enrollment.staging.campus.com/MINDEDGE/six-sigma-yellow-belt-certification-exam')]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Enroll Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f034d3e7-078b-47b6-ace5-b2739d145f37",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//h4[contains(.,'Continue with Google')]",
+      "targets": [
+        ["css=.cta-group__cta:nth-child(3) > .cta-group__cta-text", "css:finder"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/div[2]/div/a[3]/h4", "xpath:idRelative"],
+        ["xpath=//a[3]/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Continue with Google')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "129c8c27-1e51-494a-a52a-475138b47e63",
+      "comment": "",
+      "command": "click",
+      "target": "css=.JDAKTe:nth-child(3) #profileIdentifier",
+      "targets": [
+        ["css=.JDAKTe:nth-child(3) #profileIdentifier", "css:finder"],
+        ["xpath=(//div[@id='profileIdentifier'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/ul/li[3]/div/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//li[3]/div/div/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "54e3ca35-6c91-4d57-b9cb-977d27a942ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-control:nth-child(2)",
+      "targets": [
+        ["css=.form-control:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/div/div[2]/div[3]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a6bf292-c3f2-482f-ac2d-81236e47a73c",
+      "comment": "",
+      "command": "type",
+      "target": "css=.form-control:nth-child(2)",
+      "targets": [
+        ["css=.form-control:nth-child(2)", "css:finder"],
+        ["xpath=//input[@value='MINDEDGE']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/div/div[2]/div[3]/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "MINDEDGE"
+    }, {
+      "id": "53774acf-d348-4b42-830f-600fda8db7b0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ml-2",
+      "targets": [
+        ["css=.ml-2", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/div/div[2]/div[3]/div/div/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Apply')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "710567ef-0a81-41c0-bcae-a8bcb93603bc",
+      "comment": "",
+      "command": "click",
+      "target": "css=h6:nth-child(2)",
+      "targets": [
+        ["css=h6:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/div[2]/div[2]/div/div/div/label/div/h6", "xpath:idRelative"],
+        ["xpath=//label/div/h6", "xpath:position"],
+        ["xpath=//h6[contains(.,'Pay with Authorize.Net')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f7d7ad8-bbaa-40b2-a8f3-1403bc1fe9c2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.proceed-action",
+      "targets": [
+        ["css=.proceed-action", "css:finder"],
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue with payment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c6f5224-3bdf-40e0-98af-c6011ffeb008",
+      "comment": "",
+      "command": "click",
+      "target": "id=cancelBtn",
+      "targets": [
+        ["id=cancelBtn", "id"],
+        ["css=#cancelBtn", "css:finder"],
+        ["xpath=//button[@id='cancelBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='controlBtn']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cancel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6f490d96-3385-49e9-8f9f-871a9a1d9d3b",
+    "name": "Suite-Browse campus",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 600,
+    "tests": ["171373cc-61c1-40b1-afe3-961a1647134b", "2bd0df5a-7b96-4a57-8969-998759e8905a"]
+  }],
+  "urls": ["https://staging.campus.com/"],
+  "plugins": []
+}
