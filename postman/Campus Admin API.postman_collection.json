@@ -209,13 +209,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/courses/b150290d-204c-49f2-be4f-eeb0ed999f1a",
+							"raw": "{{baseurl}}/courses/91251a10-aeea-4721-8bab-6a2a659bf9c7",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"courses",
-								"b150290d-204c-49f2-be4f-eeb0ed999f1a"
+								"91251a10-aeea-4721-8bab-6a2a659bf9c7"
 							]
 						},
 						"description": "Show individual course\n\n**URL** : `/courses/<course_id>`\n\n**Method** : `GET`\n\n**Responses**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/courses/b150290d-204c-49f2-be4f-eeb0ed999f1a/\",\n    \"date_time\": \"2021-06-16T04:36:48.502835Z\",\n    \"data\": {\n        \"id\": \"b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n        \"provider\": {\n            \"id\": \"cad53a7e-d178-49d6-8630-7f7113b6acfc\",\n            \"name\": \"Asher Hartman\"\n        },\n        \"_is_deleted\": false,\n        \"deleted\": false,\n        \"created_at\": \"2021-04-20T08:30:29.512000Z\",\n        \"updated_at\": \"2021-06-09T10:06:25.432000Z\",\n        \"deleted_at\": null,\n        \"published_at\": null,\n        \"version\": 26,\n        \"from_importer\": false,\n        \"external_id\": \"body-language-for-women-in-businesses\",\n        \"external_url\": \"http://google.com\",\n        \"external_version_id\": null,\n        \"code\": \"elit\",\n        \"title\": \"Automate Your Testing\",\n        \"slug\": \"automate-your-testing\",\n        \"description\": \"<p>Automate Your Testing</p>\",\n        \"_is_published\": true,\n        \"learning_outcome\": \"<p>a lo</p>\",\n        \"image\": {\n            \"original\": \"uploads/d6f94d19-8092-4f1d-921a-87267b7c6bb3.jpeg\"\n        },\n        \"default_image\": {},\n        \"summary\": \"Provident excepturi\",\n        \"syllabus_url\": \"syll\",\n        \"level\": \"beginner\",\n        \"inquiry_url\": \"http://google.com\",\n        \"overrides\": {},\n        \"sections\": [\n            {\n                \"code\": \"Last Section\",\n                \"external_version_id\": null,\n                \"description\": \"\",\n                \"registration_url\": \"\",\n                \"inquiry_url\": null,\n                \"details_url\": null,\n                \"start_date\": \"2021-04-01T08:57:14Z\",\n                \"end_date\": \"2022-05-01T12:00:00Z\",\n                \"num_seats\": 200,\n                \"available_seats\": 90,\n                \"is_active\": true,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2022-04-30T12:00:00Z\",\n                \"instructors\": [],\n                \"credit_hours\": 12.0,\n                \"ceu_hours\": 85.0,\n                \"clock_hours\": 0.0,\n                \"load_hours\": 0.0,\n                \"credit_unit\": null,\n                \"total_credits\": null,\n                \"schedules\": [],\n                \"execution_site\": null,\n                \"course_fee\": {\n                    \"amount\": 100.0,\n                    \"currency\": \"USD\"\n                },\n                \"registration_form_data\": null\n            }\n        ],\n        \"programs\": [],\n        \"required_courses\": [],\n        \"recommended_courses\": [],\n        \"subjects\": [],\n        \"keywords\": [],\n        \"careers\": [\n            \"5e70bec987f7b325dfa1be1e\",\n            \"5e70b71287f7b325df9d275e\",\n            \"5e70ad9d87f7b325df977361\"\n        ],\n        \"skills\": [\n            \"5e70ad9a87f7b325df97711d\",\n            \"5e70ad9a87f7b325df97712c\",\n            \"5e70ad9a87f7b325df977127\",\n            \"5e70ad9b87f7b325df97719f\",\n            \"5e70ad9b87f7b325df9771c2\",\n            \"5e70ad9c87f7b325df9772ee\",\n            \"5e70ae7287f7b325df97f921\",\n            \"5e70ad9a87f7b325df9770ff\"\n        ],\n        \"_cls\": \"Course\",\n        \"created_by\": null,\n        \"updated_by\": null,\n        \"deleted_by\": null,\n        \"published_by\": null,\n        \"course_image_uri\": \"https://static.dev.campus.com/uploads/d6f94d19-8092-4f1d-921a-87267b7c6bb3.jpeg\",\n        \"content_ready\": true\n    }\n}\n```"
@@ -307,6 +307,19 @@
 				},
 				{
 					"name": "Edit Course",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -403,56 +416,7 @@
 						},
 						"description": "Get Tagged Careers to a course\n\n**URL** : `/tagged-course-careers/?id=<course_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/tagged-course-careers/?id=b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n    \"date_time\": \"2021-04-25T05:24:10.236075Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 3,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"5e70ad9887f7b325df976fec\",\n            \"name\": \"Accountants\",\n            \"soc_code\": \"13-2011.01\",\n            \"bright_outlook\": \"True\",\n            \"green\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9d87f7b325df977361\",\n            \"name\": \"Actors\",\n            \"soc_code\": \"27-2011.00\",\n            \"bright_outlook\": \"False\",\n            \"green\": \"False\"\n        },\n        {\n            \"id\": \"5e70ada187f7b325df9775ec\",\n            \"name\": \"Actuaries\",\n            \"soc_code\": \"15-2011.00\",\n            \"bright_outlook\": \"True\",\n            \"green\": \"False\"\n        }\n    ]\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/tagged-careers/?id=e9f342fa-3e18-4450-b745-534894fd0250",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"tagged-careers",
-										""
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": "e9f342fa-3e18-4450-b745-534894fd0250"
-										}
-									]
-								},
-								"description": "Get tagged-careers\n\n**URL** : `/tagged-careers/?id=e9f342fa-3e18-4450-b745-534894fd0250`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/tagged-careers/?id=e9f342fa-3e18-4450-b745-534894fd0250\",\n  \"date_time\": \"2021-03-02T20:04:44.360569Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": null,\n    \"total\": 0,\n    \"limit\": 10\n  },\n  \"data\": []\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Get Tagged Skills of a Course",
@@ -505,52 +469,7 @@
 						},
 						"description": "Get tagged skills to a course\n\n**URL** : `/tagged-course-skills/?id=<course_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n {\n    \"url\": \"https://api.admin.dev.campus.com/tagged-course-skills/?id=b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n    \"date_time\": \"2021-04-25T05:25:25.706897Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 10,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"5e70ad9a87f7b325df97711d\",\n            \"name\": \"Administration and Management\",\n            \"skill_type\": \"knowledge\",\n            \"example\": \"[]\",\n            \"hot\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9a87f7b325df97710e\",\n            \"name\": \"Clerical\",\n            \"skill_type\": \"knowledge\",\n            \"example\": \"[]\",\n            \"hot\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9b87f7b325df9771bd\",\n            \"name\": \"Speaking\",\n            \"skill_type\": \"skill\",\n            \"example\": \"[]\",\n            \"hot\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9b87f7b325df977203\",\n            \"name\": \"Systems Evaluation\",\n            \"skill_type\": \"skill\",\n            \"example\": \"[]\",\n            \"hot\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9c87f7b325df9772a8\",\n            \"name\": \"Fluency of Ideas\",\n            \"skill_type\": \"ability\",\n            \"example\": \"[]\",\n            \"hot\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9b87f7b325df977258\",\n            \"name\": \"Mathematical Reasoning\",\n            \"skill_type\": \"ability\",\n            \"example\": \"[]\",\n            \"hot\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9987f7b325df97702d\",\n            \"name\": \"Accounting software\",\n            \"skill_type\": \"technology\",\n            \"example\": \"[<OccupationSkillExample: OccupationSkillExample object>, <OccupationSkillExample: OccupationSkillExample object>, <OccupationSkillExample: OccupationSkillExample object>]\",\n            \"hot\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9987f7b325df97708a\",\n            \"name\": \"Desktop publishing software\",\n            \"skill_type\": \"technology\",\n            \"example\": \"[<OccupationSkillExample: OccupationSkillExample object>, <OccupationSkillExample: OccupationSkillExample object>, <OccupationSkillExample: OccupationSkillExample object>]\",\n            \"hot\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9e87f7b325df9773f7\",\n            \"name\": \"Digital camcorders or video cameras\",\n            \"skill_type\": \"tool\",\n            \"example\": \"[<OccupationSkillExample: OccupationSkillExample object>]\",\n            \"hot\": \"False\"\n        },\n        {\n            \"id\": \"5e70ad9a87f7b325df9770f5\",\n            \"name\": \"Desktop computers\",\n            \"skill_type\": \"tool\",\n            \"example\": \"[]\",\n            \"hot\": \"False\"\n        }\n    ]\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/tagged-skills/?id=e9f342fa-3e18-4450-b745-534894fd0250",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"tagged-skills",
-										""
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": "e9f342fa-3e18-4450-b745-534894fd0250"
-										}
-									]
-								},
-								"description": "Get tagged-skills\n\n**URL** : `/tagged-skills/?id=e9f342fa-3e18-4450-b745-534894fd0250`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n {\n  \"url\": \"http://api.admin.dev.campus.com/tagged-skills/?id=e9f342fa-3e18-4450-b745-534894fd0250\",\n  \"date_time\": \"2021-03-02T19:57:11.130436Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": null,\n    \"total\": 0,\n    \"limit\": 10\n  },\n  \"data\": []\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Get Tagged  Careers and Skills of a Course",
@@ -615,52 +534,7 @@
 						},
 						"description": "Get tagged careers-skills of a course \n\n**URL** : `/tagged-course-careers-skills/?course_id=<course_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/tagged-course-careers-skills/?course_id=b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n    \"date_time\": \"2021-07-07T08:27:02.174586Z\",\n    \"data\": {\n        \"course_id\": \"b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n        \"careers\": [\n            {\n                \"id\": \"5e70bec987f7b325dfa1be1e\",\n                \"name\": \"Software Quality Assurance Engineers and Testers\"\n            },\n            {\n                \"id\": \"5e70b71287f7b325df9d275e\",\n                \"name\": \"Inspectors, Testers, Sorters, Samplers, and Weighers\"\n            },\n            {\n                \"id\": \"5e70ad9d87f7b325df977361\",\n                \"name\": \"Actors\"\n            }\n        ],\n        \"skills\": [\n            {\n                \"id\": \"5e70ad9a87f7b325df97711d\",\n                \"name\": \"Administration and Management\"\n            },\n            {\n                \"id\": \"5e70ad9a87f7b325df97712c\",\n                \"name\": \"Communications and Media\"\n            },\n            {\n                \"id\": \"5e70ad9a87f7b325df977127\",\n                \"name\": \"Computers and Electronics\"\n            },\n            {\n                \"id\": \"5e70ad9b87f7b325df97719f\",\n                \"name\": \"Fine Arts\"\n            },\n            {\n                \"id\": \"5e70ad9b87f7b325df9771c2\",\n                \"name\": \"Writing\"\n            },\n            {\n                \"id\": \"5e70ad9c87f7b325df9772ee\",\n                \"name\": \"Arm-Hand Steadiness\"\n            },\n            {\n                \"id\": \"5e70ae7287f7b325df97f921\",\n                \"name\": \"Access software\"\n            },\n            {\n                \"id\": \"5e70ad9a87f7b325df9770ff\",\n                \"name\": \"Tablet computers\"\n            }\n        ],\n        \"recommended_careers\": [],\n        \"matched_keywords\": []\n    }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/tagged-skills/?id=e9f342fa-3e18-4450-b745-534894fd0250",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"tagged-skills",
-										""
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": "e9f342fa-3e18-4450-b745-534894fd0250"
-										}
-									]
-								},
-								"description": "Get tagged-skills\n\n**URL** : `/tagged-skills/?id=e9f342fa-3e18-4450-b745-534894fd0250`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n {\n  \"url\": \"http://api.admin.dev.campus.com/tagged-skills/?id=e9f342fa-3e18-4450-b745-534894fd0250\",\n  \"date_time\": \"2021-03-02T19:57:11.130436Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": null,\n    \"total\": 0,\n    \"limit\": 10\n  },\n  \"data\": []\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Tag Careers and Skills to a  Course",
@@ -722,55 +596,23 @@
 						},
 						"description": "Tag careers-skills to a course \n\n**URL** : `/tagged-course-skills/?course_id=<course_id>`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n{\n    \"careers\": [\n        \"5e70bec987f7b325dfa1be1e\",\n        \"5e70b71287f7b325df9d275e\"\n    ],\n    \"matched_keywords\": [],\n    \n    \"skills\": [\"5e70ad9a87f7b325df97711d\", \"5e70ad9a87f7b325df97712c\", \"5e70ad9a87f7b325df977127\"]\n\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/tagged-course-careers-skills/?course_id=b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n    \"date_time\": \"2021-04-28T09:04:11.928594Z\",\n    \"data\": {\n        \"course_id\": \"b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n        \"careers\": [\n            {\n                \"id\": \"5e70bec987f7b325dfa1be1e\",\n                \"name\": \"Software Quality Assurance Engineers and Testers\"\n            },\n            {\n                \"id\": \"5e70b71287f7b325df9d275e\",\n                \"name\": \"Inspectors, Testers, Sorters, Samplers, and Weighers\"\n            }\n        ],\n        \"skills\": [\n            {\n                \"id\": \"5e70ad9a87f7b325df97711d\",\n                \"name\": \"Administration and Management\"\n            },\n            {\n                \"id\": \"5e70ad9a87f7b325df97712c\",\n                \"name\": \"Communications and Media\"\n            },\n            {\n                \"id\": \"5e70ad9a87f7b325df977127\",\n                \"name\": \"Computers and Electronics\"\n            }\n        ]\n    }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/tagged-skills/?id=e9f342fa-3e18-4450-b745-534894fd0250",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"tagged-skills",
-										""
-									],
-									"query": [
-										{
-											"key": "id",
-											"value": "e9f342fa-3e18-4450-b745-534894fd0250"
-										}
-									]
-								},
-								"description": "Get tagged-skills\n\n**URL** : `/tagged-skills/?id=e9f342fa-3e18-4450-b745-534894fd0250`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n {\n  \"url\": \"http://api.admin.dev.campus.com/tagged-skills/?id=e9f342fa-3e18-4450-b745-534894fd0250\",\n  \"date_time\": \"2021-03-02T19:57:11.130436Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": null,\n    \"total\": 0,\n    \"limit\": 10\n  },\n  \"data\": []\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Career Suggestion",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -795,10 +637,10 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"recommended_careers\": [\r\n    {\r\n      \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\"\r\n    },\r\n    {\r\n      \"id\": \"419db1d8-6049-4d94-9c3e-286a71aac9c6\"\r\n    }\r\n  ],\r\n  \"matched_keywords\": [\r\n    \"keyword1\",\r\n    \"keyword2\"\r\n  ]\r\n}"
+							"raw": "{\r\n  \"recommended_careers\": [\r\n    {\r\n      \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\"\r\n    },\r\n    {\r\n      \"id\": \"419db1d8-6049-4d94-9c3e-286a71aac9c6\"\r\n    }\r\n  ],\r\n  \"matched_keywords\": [\r\n    \"test\",\r\n    \"keyword2\"\r\n  ]\r\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/career-suggested/?course_id=5846ed5b-f2df-46a7-8e2d-6221a28a3b37",
+							"raw": "{{baseurl}}/career-suggested/?course_id=91251a10-aeea-4721-8bab-6a2a659bf9c7",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -809,66 +651,13 @@
 							"query": [
 								{
 									"key": "course_id",
-									"value": "5846ed5b-f2df-46a7-8e2d-6221a28a3b37"
+									"value": "91251a10-aeea-4721-8bab-6a2a659bf9c7"
 								}
 							]
 						},
-						"description": "Recommend career suggestion for a course\n\n**URL** : `/career-suggested/?course_id=5846ed5b-f2df-46a7-8e2d-6221a28a3b37`\n\n**Method** : `POST`\n\n**Payload** :\n\n```\n{\"recommended_careers\": \n [\n\t { \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\"}, \n\t{\"id\": \"419db1d8-6049-4d94-9c3e-286a71aac9c6\"}\n ],\n \n \"matched_keywords\": [\"keyword1\", \"keyword2\"]\n}\n\n```\n\n\n**Response** :\n\n```json\n{\n  \"recommended_careers\": [\n    {\n      \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\"\n    },\n    {\n      \"id\": \"419db1d8-6049-4d94-9c3e-286a71aac9c6\"\n    }\n  ],\n  \"course_keywords\": [\n    {\n      \"score\": 4.0,\n      \"keyword\": \"test 3\"\n    },\n    {\n      \"score\": 1.0,\n      \"keyword\": \"t3\"\n    }\n  ],\n  \"matched_keywords\": []\n}\n```"
+						"description": "Recommend career suggestion for a course\n\n**URL** : `/career-suggested/?course_id=<course_id>`\n\n**Method** : `POST`\n\n**Payload** :\n\n```\n{\"recommended_careers\": \n [\n\t { \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\"}, \n\t{\"id\": \"419db1d8-6049-4d94-9c3e-286a71aac9c6\"}\n ],\n \n \"matched_keywords\": [\"keyword1\", \"keyword2\"]\n}\n\n```\n\n\n**Response** :\n\n```json\n{\n    \"recommended_careers\": [\n        {\n            \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\"\n        },\n        {\n            \"id\": \"419db1d8-6049-4d94-9c3e-286a71aac9c6\"\n        }\n    ],\n    \"course_keywords\": [\n        {\n            \"score\": 61.0,\n            \"keyword\": \"supportedvideo contenttopicsdouble standardssecond shiftstressburnoutprioritizationrelaxation strategiessetting personal goalsoffice houseworkwork\"\n        },\n        {\n            \"score\": 40.888888888888886,\n            \"keyword\": \"life balancecertificationscapm ®/ pmp ®/ pgmp ®\"\n        },\n        {\n            \"score\": 16.0,\n            \"keyword\": \"short careerdescribe ways companies\"\n        },\n        {\n            \"score\": 9.0,\n            \"keyword\": \"opportunitiesconsider various strategies\"\n        },\n        {\n            \"score\": 9.0,\n            \"keyword\": \"goalsdescribe double standards\"\n        },\n        {\n            \"score\": 9.0,\n            \"keyword\": \"even health problems\"\n        },\n        {\n            \"score\": 9.0,\n            \"keyword\": \"avoiding burnoutidentify strategies\"\n        },\n        {\n            \"score\": 8.8,\n            \"keyword\": \"3 creditstechnical pdus\"\n        },\n        {\n            \"score\": 8.8,\n            \"keyword\": \"25 creditstechnical pdus\"\n        },\n        {\n            \"score\": 8.333333333333334,\n            \"keyword\": \"quality time mythsidentify\"\n        },\n        {\n            \"score\": 8.333333333333334,\n            \"keyword\": \"make time later\"\n        },\n        {\n            \"score\": 8.333333333333334,\n            \"keyword\": \"5 creditspfmp ®\"\n        },\n        {\n            \"score\": 8.317460317460316,\n            \"keyword\": \"life balance possible\"\n        },\n        {\n            \"score\": 8.317460317460316,\n            \"keyword\": \"life balance conflictdiscuss\"\n        },\n        {\n            \"score\": 8.317460317460316,\n            \"keyword\": \"life balance challenges\"\n        },\n        {\n            \"score\": 8.317460317460316,\n            \"keyword\": \"life balance benefitsoutcomesidentify\"\n        },\n        {\n            \"score\": 8.3,\n            \"keyword\": \"75 creditsleadership pdus\"\n        },\n        {\n            \"score\": 8.0,\n            \"keyword\": \"organizations make work\"\n        },\n        {\n            \"score\": 7.8,\n            \"keyword\": \"0 creditsleadership pdus\"\n        },\n        {\n            \"score\": 7.0,\n            \"keyword\": \"personal work\"\n        },\n        {\n            \"score\": 5.317460317460317,\n            \"keyword\": \"life balance\"\n        },\n        {\n            \"score\": 5.0,\n            \"keyword\": \"sp ®\"\n        },\n        {\n            \"score\": 5.0,\n            \"keyword\": \"rmp ®\"\n        },\n        {\n            \"score\": 5.0,\n            \"keyword\": \"pba ®\"\n        },\n        {\n            \"score\": 5.0,\n            \"keyword\": \"acp ®\"\n        },\n        {\n            \"score\": 4.888888888888889,\n            \"keyword\": \"life priorities\"\n        },\n        {\n            \"score\": 4.888888888888889,\n            \"keyword\": \"life balanceexplain\"\n        },\n        {\n            \"score\": 4.5,\n            \"keyword\": \"75 creditsstrategic\"\n        },\n        {\n            \"score\": 4.428571428571429,\n            \"keyword\": \"achieve balance\"\n        },\n        {\n            \"score\": 4.333333333333334,\n            \"keyword\": \"5 creditspmi\"\n        },\n        {\n            \"score\": 4.333333333333334,\n            \"keyword\": \"5 credits\"\n        },\n        {\n            \"score\": 4.3,\n            \"keyword\": \"business pdus\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"support employees\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"prioritizing things\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"managing stress\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"major sources\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"left unaddressed\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"introduces techniques\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"help individuals\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"exacerbate work\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"everyone finds\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"decreased productivity\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"course explores\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"cause stress\"\n        },\n        {\n            \"score\": 4.0,\n            \"keyword\": \"awardingfully accessiblegames\"\n        },\n        {\n            \"score\": 3.5,\n            \"keyword\": \"women face\"\n        },\n        {\n            \"score\": 3.5,\n            \"keyword\": \"including balancing\"\n        },\n        {\n            \"score\": 2.888888888888889,\n            \"keyword\": \"life\"\n        },\n        {\n            \"score\": 2.4285714285714284,\n            \"keyword\": \"balance\"\n        },\n        {\n            \"score\": 2.3333333333333335,\n            \"keyword\": \"time\"\n        },\n        {\n            \"score\": 2.0,\n            \"keyword\": \"work\"\n        },\n        {\n            \"score\": 2.0,\n            \"keyword\": \"0\"\n        },\n        {\n            \"score\": 1.5,\n            \"keyword\": \"women\"\n        },\n        {\n            \"score\": 1.5,\n            \"keyword\": \"including\"\n        },\n        {\n            \"score\": 1.5,\n            \"keyword\": \"business\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"year\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"week\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"via\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"unbalanced\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"stereotypes\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"say\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"pursuit\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"myths\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"men\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"mdash\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"matters\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"matter\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"lack\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"labor\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"important\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"importance\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"home\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"friendlyaudio\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"flashcardsexpert\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"featuresmobile\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"expectations\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"enabledbadge\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"division\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"credit\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"comes\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"2\"\n        },\n        {\n            \"score\": 1.0,\n            \"keyword\": \"1\"\n        }\n    ],\n    \"matched_keywords\": []\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"recommended_careers\": [\r\n    {\r\n      \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\"\r\n    },\r\n    {\r\n      \"id\": \"419db1d8-6049-4d94-9c3e-286a71aac9c6\"\r\n    }\r\n  ],\r\n  \"matched_keywords\": [\r\n    \"keyword1\",\r\n    \"keyword2\"\r\n  ]\r\n}"
-								},
-								"url": {
-									"raw": "{{baseurl}}/career-suggested/?course_id=5846ed5b-f2df-46a7-8e2d-6221a28a3b37",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"career-suggested",
-										""
-									],
-									"query": [
-										{
-											"key": "course_id",
-											"value": "5846ed5b-f2df-46a7-8e2d-6221a28a3b37"
-										}
-									]
-								},
-								"description": "Recommend career suggestion for a course\n\n**URL** : `/career-suggested/?course_id=5846ed5b-f2df-46a7-8e2d-6221a28a3b37`\n\n**Method** : `POST`\n\n**Payload** :\n\n```\n{\"recommended_careers\": \n [\n\t { \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\"}, \n\t{\"id\": \"419db1d8-6049-4d94-9c3e-286a71aac9c6\"}\n ],\n \n \"matched_keywords\": [\"keyword1\", \"keyword2\"]\n}\n\n```\n\n\n**Response** :\n\n```json\n{\n  \"recommended_careers\": [\n    {\n      \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\"\n    },\n    {\n      \"id\": \"419db1d8-6049-4d94-9c3e-286a71aac9c6\"\n    }\n  ],\n  \"course_keywords\": [\n    {\n      \"score\": 4.0,\n      \"keyword\": \"test 3\"\n    },\n    {\n      \"score\": 1.0,\n      \"keyword\": \"t3\"\n    }\n  ],\n  \"matched_keywords\": []\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Get Store Featured Courses",
@@ -978,50 +767,7 @@
 						},
 						"description": "Get section list\n\n**URL** : `/section/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/sections/\",\n  \"date_time\": \"2021-03-02T20:44:38.432247Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 2467,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"191b79a0-ba5d-4731-a47a-1724e5957a87\",\n      \"course\": {\n        \"id\": \"639df70b-b05a-4b31-aea6-8e09867db743\",\n        \"title\": \"Party Decoration\"\n      },\n      \"name\": \"PD1\",\n      \"fee\": 20.0,\n      \"seat_capacity\": 20,\n      \"available_seat\": 11,\n      \"execution_mode\": \"instructor-led\",\n      \"registration_deadline\": \"2021-03-10T07:20:51Z\",\n      \"content_db_reference\": \"60374e561e87234b52273e7c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"7b7e49fb-720a-46fa-9500-187153420f92\",\n      \"course\": {\n        \"id\": \"5f7e0c9b-0eb2-4d33-b8c7-dfdd310fa95e\",\n        \"title\": \"Automated UI Testing\"\n      },\n      \"name\": \"Automated UI Testing 01\",\n      \"fee\": 100.0,\n      \"seat_capacity\": 29,\n      \"available_seat\": 20,\n      \"execution_mode\": \"instructor-led\",\n      \"registration_deadline\": \"2021-03-11T06:00:10Z\",\n      \"content_db_reference\": \"6028e4dad3cc1b04be37fff9\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"6fe7f20f-8c25-4a10-8704-aadce4e23e8f\",\n      \"course\": {\n        \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\",\n        \"title\": \"Learn Testing\"\n      },\n      \"name\": \"LT03\",\n      \"fee\": 150.0,\n      \"seat_capacity\": 20,\n      \"available_seat\": 12,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2011-02-27T09:25:10Z\",\n      \"content_db_reference\": \"5ff2df0bb5f24c5128ef272e\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"61daa432-17e1-46d1-8dd5-3c40ff0f4dda\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"Test 6\",\n      \"fee\": 5.0,\n      \"seat_capacity\": 14,\n      \"available_seat\": 5,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2021-02-11T08:46:07Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"b85edf25-5bcf-426d-a576-8d262ff4e6bd\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"AT 04\",\n      \"fee\": 200.0,\n      \"seat_capacity\": 15,\n      \"available_seat\": 10,\n      \"execution_mode\": \"instructor-led\",\n      \"registration_deadline\": \"2011-02-27T08:22:49Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"a10d471b-ae29-4d17-b2c3-b2ce5261551e\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"AT 03\",\n      \"fee\": 200.0,\n      \"seat_capacity\": 15,\n      \"available_seat\": 9,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2009-02-27T06:44:57Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"7505fc00-c599-49cd-950a-337c158b0415\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"Test Section Name 2\",\n      \"fee\": 7.0,\n      \"seat_capacity\": 10,\n      \"available_seat\": 2,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2021-02-15T05:03:22Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"65a5093d-edc2-4b4c-bbc3-12c53249c3e5\",\n      \"course\": {\n        \"id\": \"5846ed5b-f2df-46a7-8e2d-6221a28a3b37\",\n        \"title\": \"t3\"\n      },\n      \"name\": \"Test Section 1\",\n      \"fee\": 100.0,\n      \"seat_capacity\": 20,\n      \"available_seat\": 10,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2021-03-05T03:42:06Z\",\n      \"content_db_reference\": \"5ff6aa1c60f8f8273b0b6c09\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"2939ea02-9b8a-4d1a-b4e8-5076a665a1c2\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"AT 03\",\n      \"fee\": 200.0,\n      \"seat_capacity\": 15,\n      \"available_seat\": 9,\n      \"execution_mode\": \"instructor-led\",\n      \"registration_deadline\": \"2008-02-25T17:05:51Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"5aa8775e-6f0a-48b2-990a-183c49f8a85f\",\n      \"course\": {\n        \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\",\n        \"title\": \"Learn Testing\"\n      },\n      \"name\": \"LT2\",\n      \"fee\": 100.0,\n      \"seat_capacity\": 20,\n      \"available_seat\": 12,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2021-02-10T12:12:47Z\",\n      \"content_db_reference\": \"5ff2df0bb5f24c5128ef272e\",\n      \"is_active\": true\n    }\n  ]\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/sections/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"sections",
-										""
-									]
-								},
-								"description": "Get section list\n\n**URL** : `/section/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/sections/\",\n  \"date_time\": \"2021-03-02T20:44:38.432247Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 2467,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"191b79a0-ba5d-4731-a47a-1724e5957a87\",\n      \"course\": {\n        \"id\": \"639df70b-b05a-4b31-aea6-8e09867db743\",\n        \"title\": \"Party Decoration\"\n      },\n      \"name\": \"PD1\",\n      \"fee\": 20.0,\n      \"seat_capacity\": 20,\n      \"available_seat\": 11,\n      \"execution_mode\": \"instructor-led\",\n      \"registration_deadline\": \"2021-03-10T07:20:51Z\",\n      \"content_db_reference\": \"60374e561e87234b52273e7c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"7b7e49fb-720a-46fa-9500-187153420f92\",\n      \"course\": {\n        \"id\": \"5f7e0c9b-0eb2-4d33-b8c7-dfdd310fa95e\",\n        \"title\": \"Automated UI Testing\"\n      },\n      \"name\": \"Automated UI Testing 01\",\n      \"fee\": 100.0,\n      \"seat_capacity\": 29,\n      \"available_seat\": 20,\n      \"execution_mode\": \"instructor-led\",\n      \"registration_deadline\": \"2021-03-11T06:00:10Z\",\n      \"content_db_reference\": \"6028e4dad3cc1b04be37fff9\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"6fe7f20f-8c25-4a10-8704-aadce4e23e8f\",\n      \"course\": {\n        \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\",\n        \"title\": \"Learn Testing\"\n      },\n      \"name\": \"LT03\",\n      \"fee\": 150.0,\n      \"seat_capacity\": 20,\n      \"available_seat\": 12,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2011-02-27T09:25:10Z\",\n      \"content_db_reference\": \"5ff2df0bb5f24c5128ef272e\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"61daa432-17e1-46d1-8dd5-3c40ff0f4dda\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"Test 6\",\n      \"fee\": 5.0,\n      \"seat_capacity\": 14,\n      \"available_seat\": 5,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2021-02-11T08:46:07Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"b85edf25-5bcf-426d-a576-8d262ff4e6bd\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"AT 04\",\n      \"fee\": 200.0,\n      \"seat_capacity\": 15,\n      \"available_seat\": 10,\n      \"execution_mode\": \"instructor-led\",\n      \"registration_deadline\": \"2011-02-27T08:22:49Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"a10d471b-ae29-4d17-b2c3-b2ce5261551e\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"AT 03\",\n      \"fee\": 200.0,\n      \"seat_capacity\": 15,\n      \"available_seat\": 9,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2009-02-27T06:44:57Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"7505fc00-c599-49cd-950a-337c158b0415\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"Test Section Name 2\",\n      \"fee\": 7.0,\n      \"seat_capacity\": 10,\n      \"available_seat\": 2,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2021-02-15T05:03:22Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"65a5093d-edc2-4b4c-bbc3-12c53249c3e5\",\n      \"course\": {\n        \"id\": \"5846ed5b-f2df-46a7-8e2d-6221a28a3b37\",\n        \"title\": \"t3\"\n      },\n      \"name\": \"Test Section 1\",\n      \"fee\": 100.0,\n      \"seat_capacity\": 20,\n      \"available_seat\": 10,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2021-03-05T03:42:06Z\",\n      \"content_db_reference\": \"5ff6aa1c60f8f8273b0b6c09\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"2939ea02-9b8a-4d1a-b4e8-5076a665a1c2\",\n      \"course\": {\n        \"id\": \"8e8071f0-65f4-4b96-b4f0-53680d803052\",\n        \"title\": \"Automation Testing\"\n      },\n      \"name\": \"AT 03\",\n      \"fee\": 200.0,\n      \"seat_capacity\": 15,\n      \"available_seat\": 9,\n      \"execution_mode\": \"instructor-led\",\n      \"registration_deadline\": \"2008-02-25T17:05:51Z\",\n      \"content_db_reference\": \"601aaf25b96884729e81688c\",\n      \"is_active\": true\n    },\n    {\n      \"id\": \"5aa8775e-6f0a-48b2-990a-183c49f8a85f\",\n      \"course\": {\n        \"id\": \"08328aff-7adf-4019-86ec-7b363bf64819\",\n        \"title\": \"Learn Testing\"\n      },\n      \"name\": \"LT2\",\n      \"fee\": 100.0,\n      \"seat_capacity\": 20,\n      \"available_seat\": 12,\n      \"execution_mode\": \"self-paced\",\n      \"registration_deadline\": \"2021-02-10T12:12:47Z\",\n      \"content_db_reference\": \"5ff2df0bb5f24c5128ef272e\",\n      \"is_active\": true\n    }\n  ]\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "View Individual Section",
@@ -1058,60 +804,34 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/sections/191b79a0-ba5d-4731-a47a-1724e5957a87",
+							"raw": "{{baseurl}}/sections/362c6e96-b17e-4f3d-800a-9caa711b61c8",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"sections",
-								"191b79a0-ba5d-4731-a47a-1724e5957a87"
+								"362c6e96-b17e-4f3d-800a-9caa711b61c8"
 							]
 						},
 						"description": "View a particular section details\n\n**URL** : `/sections/<section_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n {\n  \"url\": \"http://api.admin.dev.campus.com/sections/191b79a0-ba5d-4731-a47a-1724e5957a87/\",\n  \"date_time\": \"2021-03-02T20:48:22.851650Z\",\n  \"data\": {\n    \"course_fee\": {\n      \"amount\": 20.0,\n      \"currency\": \"USD\"\n    },\n    \"instructors\": [\n      {\n        \"id\": \"6036ab4971576ef69dd9a4ac\",\n        \"name\": \"Daniel Newman\"\n      }\n    ],\n    \"code\": \"PD1\",\n    \"external_version_id\": null,\n    \"description\": \"description\",\n    \"registration_url\": \"https://campus.com\",\n    \"inquiry_url\": null,\n    \"details_url\": \"https://campus.com\",\n    \"start_date\": \"2021-03-10T07:19:34Z\",\n    \"end_date\": \"2021-05-31T07:20:33Z\",\n    \"num_seats\": 20,\n    \"available_seats\": 11,\n    \"is_active\": true,\n    \"execution_mode\": \"instructor-led\",\n    \"registration_deadline\": \"2021-03-10T07:20:51Z\",\n    \"credit_hours\": 20.0,\n    \"ceu_hours\": 2.0,\n    \"clock_hours\": 0.0,\n    \"load_hours\": 0.0,\n    \"credit_unit\": null,\n    \"total_credits\": null,\n    \"schedules\": [],\n    \"execution_site\": null,\n    \"registration_form_data\": null,\n    \"name\": \"PD1\",\n    \"fee\": 20.0,\n    \"seat_capacity\": 20,\n    \"available_seat\": 11,\n    \"course\": {\n      \"id\": \"639df70b-b05a-4b31-aea6-8e09867db743\",\n      \"title\": \"Party Decoration\"\n    },\n    \"id\": \"191b79a0-ba5d-4731-a47a-1724e5957a87\"\n  }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/sections/191b79a0-ba5d-4731-a47a-1724e5957a87",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"sections",
-										"191b79a0-ba5d-4731-a47a-1724e5957a87"
-									]
-								},
-								"description": "View a particular section details\n\n**URL** : `/sections/<section_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n {\n  \"url\": \"http://api.admin.dev.campus.com/sections/191b79a0-ba5d-4731-a47a-1724e5957a87/\",\n  \"date_time\": \"2021-03-02T20:48:22.851650Z\",\n  \"data\": {\n    \"course_fee\": {\n      \"amount\": 20.0,\n      \"currency\": \"USD\"\n    },\n    \"instructors\": [\n      {\n        \"id\": \"6036ab4971576ef69dd9a4ac\",\n        \"name\": \"Daniel Newman\"\n      }\n    ],\n    \"code\": \"PD1\",\n    \"external_version_id\": null,\n    \"description\": \"description\",\n    \"registration_url\": \"https://campus.com\",\n    \"inquiry_url\": null,\n    \"details_url\": \"https://campus.com\",\n    \"start_date\": \"2021-03-10T07:19:34Z\",\n    \"end_date\": \"2021-05-31T07:20:33Z\",\n    \"num_seats\": 20,\n    \"available_seats\": 11,\n    \"is_active\": true,\n    \"execution_mode\": \"instructor-led\",\n    \"registration_deadline\": \"2021-03-10T07:20:51Z\",\n    \"credit_hours\": 20.0,\n    \"ceu_hours\": 2.0,\n    \"clock_hours\": 0.0,\n    \"load_hours\": 0.0,\n    \"credit_unit\": null,\n    \"total_credits\": null,\n    \"schedules\": [],\n    \"execution_site\": null,\n    \"registration_form_data\": null,\n    \"name\": \"PD1\",\n    \"fee\": 20.0,\n    \"seat_capacity\": 20,\n    \"available_seat\": 11,\n    \"course\": {\n      \"id\": \"639df70b-b05a-4b31-aea6-8e09867db743\",\n      \"title\": \"Party Decoration\"\n    },\n    \"id\": \"191b79a0-ba5d-4731-a47a-1724e5957a87\"\n  }\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Create Section",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1136,7 +856,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"course\":\"639df70b-b05a-4b31-aea6-8e09867db743\",\r\n \"name\":\"Test Section\",\r\n \"fee\":\"500\",\r\n \"seat_capacity\":\"10\",\r\n \"available_seat\":\"2\",\r\n \"instructors\":[\"603e682c19611fbeb25180e8\"],\r\n \"execution_mode\":\"self-paced\",\r\n \"credit_hours\":\"5\",\r\n \"ceu_hours\":\"10\",\r\n \"start_date\":\"2021-04-06T14:48:06+06:00\",\r\n \"end_date\":\"2021-04-10T14:48:13+06:00\",\r\n \"registration_deadline\":\"2021-04-07T14:48:18+06:00\"}"
+							"raw": "{\"course\":\"b2d97d72-067f-47e6-a426-4e2ae451c005\",\r\n \"name\":\"Test Section\",\r\n \"fee\":\"500\",\r\n \"seat_capacity\":\"10\",\r\n \"available_seat\":\"2\",\r\n \"instructors\":[\"603e682c19611fbeb25180e8\"],\r\n \"execution_mode\":\"self-paced\",\r\n \"credit_hours\":\"5\",\r\n \"ceu_hours\":\"10\",\r\n \"start_date\":\"2021-04-06T14:48:06+06:00\",\r\n \"end_date\":\"2022-04-10T14:48:13+06:00\",\r\n \"registration_deadline\":\"2021-04-07T14:48:18+06:00\"}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/sections/",
@@ -1150,57 +870,23 @@
 						},
 						"description": "Create a section\n\n**URL** : `/sections/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\"course\":\"639df70b-b05a-4b31-aea6-8e09867db743\",\n \"name\":\"Test Section\",\n \"fee\":\"500\",\n \"seat_capacity\":\"10\",\n \"available_seat\":\"2\",\n \"instructors\":[\"603e682c19611fbeb25180e8\"],\n \"execution_mode\":\"self-paced\",\n \"credit_hours\":\"5\",\n \"ceu_hours\":\"10\",\n \"start_date\":\"2021-04-06T14:48:06+06:00\",\n \"end_date\":\"2021-04-10T14:48:13+06:00\",\n \"registration_deadline\":\"2021-04-07T14:48:18+06:00\"}\n\n```\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/sections/\",\n  \"date_time\": \"2021-03-03T08:50:33.262094Z\",\n  \"data\": {\n    \"course_fee\": {\n      \"amount\": 500.0,\n      \"currency\": \"USD\"\n    },\n    \"instructors\": [\n      {\n        \"id\": \"603e682c19611fbeb25180e8\",\n        \"name\": \"Sully Mander\"\n      }\n    ],\n    \"code\": \"Test Section\",\n    \"external_version_id\": null,\n    \"description\": \"description\",\n    \"registration_url\": \"https://campus.com\",\n    \"inquiry_url\": null,\n    \"details_url\": \"https://campus.com\",\n    \"start_date\": \"2021-04-06T08:48:06Z\",\n    \"end_date\": \"2021-04-10T08:48:13Z\",\n    \"num_seats\": 10,\n    \"available_seats\": 2,\n    \"is_active\": true,\n    \"execution_mode\": \"self-paced\",\n    \"registration_deadline\": \"2021-04-07T08:48:18Z\",\n    \"credit_hours\": 5.0,\n    \"ceu_hours\": 10.0,\n    \"clock_hours\": 0.0,\n    \"load_hours\": 0.0,\n    \"credit_unit\": null,\n    \"total_credits\": null,\n    \"schedules\": [],\n    \"execution_site\": null,\n    \"registration_form_data\": null,\n    \"name\": \"Test Section\",\n    \"fee\": 500.0,\n    \"seat_capacity\": 10,\n    \"available_seat\": 2,\n    \"course\": {\n      \"id\": \"639df70b-b05a-4b31-aea6-8e09867db743\",\n      \"title\": \"Party Decoration\"\n    },\n    \"id\": \"346de89b-e52c-444c-969a-589a51586edf\"\n  }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"course\": \"6fee0c32-44c0-47c6-9c9b-fe2b4d0df3ab\",\r\n  \"name\": \"123A\",\r\n  \"fee\": \"72\",\r\n  \"seat_capacity\": \"100\",\r\n  \"available_seat\": \"27\",\r\n  \"registration_url\": \"https://www.registration.com\",\r\n  \"description\": \"<p>desc</p>\",\r\n  \"instructors\": [\r\n    \"5fc622b8a355adcfe307cfc1\",\r\n    \"5fc73bd5e66a4216032a6362\"\r\n  ],\r\n  \"execution_mode\": \"self-paced\",\r\n  \"credit_hours\": \"7\",\r\n  \"ceu_hours\": \"46\",\r\n  \"clock_hours\": \"67\",\r\n  \"load_hours\": \"14\",\r\n  \"start_date\": \"2020-12-31T14:54:19+06:00\",\r\n  \"end_date\": \"2021-12-31T14:54:28+06:00\",\r\n  \"registration_deadline\": \"2020-12-26T14:54:35+06:00\",\r\n  \"details_url\": \"https://www.instructor.com\"\r\n}"
-								},
-								"url": {
-									"raw": "{{baseurl}}/sections/34a0f946-a18e-4230-9352-3ef511ac98ab/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"sections",
-										"34a0f946-a18e-4230-9352-3ef511ac98ab",
-										""
-									]
-								}
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Update Section",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1225,69 +911,22 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"course\":\"639df70b-b05a-4b31-aea6-8e09867db743\",\r\n \"name\":\"Test Section31\",\r\n \"fee\":\"500\",\r\n \"seat_capacity\":\"10\",\r\n \"available_seat\":\"2\",\r\n \"instructors\":[\"603e682c19611fbeb25180e8\"],\r\n \"execution_mode\":\"self-paced\",\r\n \"credit_hours\":\"5\",\r\n \"ceu_hours\":\"10\",\r\n \"start_date\":\"2021-04-06T14:48:06+06:00\",\r\n \"end_date\":\"2021-04-10T14:48:13+06:00\",\r\n \"registration_deadline\":\"2021-04-07T14:48:18+06:00\"}"
+							"raw": "{\r\n \"name\":\"Test Section5\",\r\n \"fee\":\"300\",\r\n \"available_seat\":\"2\",\r\n \"seat_capacity\":\"10\",\r\n \"execution_mode\":\"self-paced\",\r\n \"credit_hours\":\"30\",\r\n \"ceu_hours\":\"1.0\",\r\n \"start_date\":\"2021-04-06T14:48:06+06:00\",\r\n \"end_date\":\"2022-04-10T14:48:13+06:00\",\r\n \"registration_deadline\":\"2022-01-01T14:48:18+06:00\"\r\n }"
 						},
 						"url": {
-							"raw": "{{baseurl}}/sections/346de89b-e52c-444c-969a-589a51586edf/",
+							"raw": "{{baseurl}}/sections/a035cbbf-175a-4ea8-acaa-bd747a190fd3/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"sections",
-								"346de89b-e52c-444c-969a-589a51586edf",
+								"a035cbbf-175a-4ea8-acaa-bd747a190fd3",
 								""
 							]
 						},
-						"description": "Edit a section\n\n**URL** : `/sections/<section_id>/`\n\n**Method** : `PATCH`\n\n**Payload**\n\n```json\n\n{\"course\":\"639df70b-b05a-4b31-aea6-8e09867db743\",\n \"name\":\"Test Section31\",\n \"fee\":\"500\",\n \"seat_capacity\":\"10\",\n \"available_seat\":\"2\",\n \"instructors\":[\"603e682c19611fbeb25180e8\"],\n \"execution_mode\":\"self-paced\",\n \"credit_hours\":\"5\",\n \"ceu_hours\":\"10\",\n \"start_date\":\"2021-04-06T14:48:06+06:00\",\n \"end_date\":\"2021-04-10T14:48:13+06:00\",\n \"registration_deadline\":\"2021-04-07T14:48:18+06:00\"}\n\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"http://api.admin.dev.campus.com/sections/346de89b-e52c-444c-969a-589a51586edf/\",\n    \"date_time\": \"2021-03-03T17:39:20.542443Z\",\n    \"data\": {\n        \"course_fee\": {\n            \"amount\": 500.0,\n            \"currency\": \"USD\"\n        },\n        \"instructors\": [\n            {\n                \"id\": \"603e682c19611fbeb25180e8\",\n                \"name\": \"Sully Mander\"\n            }\n        ],\n        \"code\": \"Test Section31\",\n        \"external_version_id\": null,\n        \"description\": \"description\",\n        \"registration_url\": \"https://campus.com\",\n        \"inquiry_url\": null,\n        \"details_url\": \"https://campus.com\",\n        \"start_date\": \"2021-04-06T08:48:06Z\",\n        \"end_date\": \"2021-04-10T08:48:13Z\",\n        \"num_seats\": 10,\n        \"available_seats\": 2,\n        \"is_active\": true,\n        \"execution_mode\": \"self-paced\",\n        \"registration_deadline\": \"2021-04-07T08:48:18Z\",\n        \"credit_hours\": 5.0,\n        \"ceu_hours\": 10.0,\n        \"clock_hours\": 0.0,\n        \"load_hours\": 0.0,\n        \"credit_unit\": null,\n        \"total_credits\": null,\n        \"schedules\": [],\n        \"execution_site\": null,\n        \"registration_form_data\": null,\n        \"name\": \"Test Section31\",\n        \"fee\": 500.0,\n        \"seat_capacity\": 10,\n        \"available_seat\": 2,\n        \"course\": {\n            \"id\": \"639df70b-b05a-4b31-aea6-8e09867db743\",\n            \"title\": \"Party Decoration\"\n        },\n        \"id\": \"346de89b-e52c-444c-969a-589a51586edf\"\n    }\n}\n```"
+						"description": "Edit a section\n\n**URL** : `/sections/<section_id>/`\n\n**Method** : `PATCH`\n\n**Payload**\n\n```json\n{\n \"name\":\"Test Section5\",\n \"fee\":\"300\",\n \"available_seat\":\"2\",\n \"seat_capacity\":\"10\",\n \"execution_mode\":\"self-paced\",\n \"credit_hours\":\"30\",\n \"ceu_hours\":\"1.0\",\n \"start_date\":\"2021-04-06T14:48:06+06:00\",\n \"end_date\":\"2022-04-10T14:48:13+06:00\",\n \"registration_deadline\":\"2022-01-01T14:48:18+06:00\"\n }\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/sections/a035cbbf-175a-4ea8-acaa-bd747a190fd3/\",\n    \"date_time\": \"2021-07-07T16:03:29.199350Z\",\n    \"data\": {\n        \"course_fee\": {\n            \"amount\": 300.0,\n            \"currency\": \"USD\"\n        },\n        \"instructors\": [],\n        \"code\": \"Test Section5\",\n        \"external_version_id\": null,\n        \"description\": \"\",\n        \"registration_url\": \"\",\n        \"inquiry_url\": null,\n        \"details_url\": null,\n        \"start_date\": \"2021-04-06T08:48:06Z\",\n        \"end_date\": \"2022-04-10T08:48:13Z\",\n        \"num_seats\": 10,\n        \"available_seats\": 2,\n        \"is_active\": true,\n        \"execution_mode\": \"self-paced\",\n        \"registration_deadline\": \"2022-01-01T08:48:18Z\",\n        \"credit_hours\": 30.0,\n        \"ceu_hours\": 1.0,\n        \"clock_hours\": 0.0,\n        \"load_hours\": 0.0,\n        \"credit_unit\": null,\n        \"total_credits\": null,\n        \"schedules\": [],\n        \"execution_site\": null,\n        \"registration_form_data\": null,\n        \"name\": \"Test Section5\",\n        \"fee\": 300.0,\n        \"seat_capacity\": 10,\n        \"available_seat\": 2,\n        \"course\": {\n            \"id\": \"b2d97d72-067f-47e6-a426-4e2ae451c005\",\n            \"title\": \"Test Course\"\n        },\n        \"id\": \"a035cbbf-175a-4ea8-acaa-bd747a190fd3\"\n    }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"course\": \"e9f342fa-3e18-4450-b745-534894fd0250\",\r\n  \"name\": \"test\",\r\n  \"fee\": \"33\",\r\n  \"seat_capacity\": \"147\",\r\n  \"available_seat\": \"21\",\r\n  \"registration_url\": \"https://www.registration.com\",\r\n  \"description\": \"<p>desc</p>\",\r\n  \"execution_mode\": \"self-paced\",\r\n  \"credit_hours\": \"94\",\r\n  \"ceu_hours\": \"33\",\r\n  \"clock_hours\": \"89\",\r\n  \"load_hours\": \"32\",\r\n  \"start_date\": \"2020-12-31T15:38:08+06:00\",\r\n  \"end_date\": \"2021-11-31T15:38:14+06:00\",\r\n  \"registration_deadline\": \"2020-12-26T15:38:23+06:00\",\r\n  \"registration_end_date\": \"2020-11-26T15:38:27+06:00\",\r\n  \"details_url\": \"https://www.instructor.com\"\r\n}"
-								},
-								"url": {
-									"raw": "{{baseurl}}/sections/191b79a0-ba5d-4731-a47a-1724e5957a87/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"sections",
-										"191b79a0-ba5d-4731-a47a-1724e5957a87",
-										""
-									]
-								}
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				}
 			],
 			"description": "Here you can get *Section* related endpoints."
@@ -1329,7 +968,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e",
+							"raw": "{{baseurl}}/schedules/?section__id=362c6e96-b17e-4f3d-800a-9caa711b61c8",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -1339,62 +978,30 @@
 							],
 							"query": [
 								{
-									"key": "section_id",
-									"value": "0a20cf7e-4381-47f2-bdb1-3302310e5d2e"
+									"key": "section__id",
+									"value": "362c6e96-b17e-4f3d-800a-9caa711b61c8"
 								}
 							]
 						},
-						"description": "Get schedules\n\n**URL** : `/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e\",\n  \"date_time\": \"2021-03-02T20:05:57.787887Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": null,\n    \"total\": 0,\n    \"limit\": 10\n  },\n  \"data\": []\n}\n```"
+						"description": "Get schedules\n\n**URL** : `/schedules/?section__id=<section_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e\",\n  \"date_time\": \"2021-03-02T20:05:57.787887Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": null,\n    \"total\": 0,\n    \"limit\": 10\n  },\n  \"data\": []\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"schedules",
-										""
-									],
-									"query": [
-										{
-											"key": "section_id",
-											"value": "0a20cf7e-4381-47f2-bdb1-3302310e5d2e"
-										}
-									]
-								},
-								"description": "Get schedules\n\n**URL** : `/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e\",\n  \"date_time\": \"2021-03-02T20:05:57.787887Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": null,\n    \"total\": 0,\n    \"limit\": 10\n  },\n  \"data\": []\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Create Schedule",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1410,7 +1017,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\"section\":\"191b79a0-ba5d-4731-a47a-1724e5957a87\",\r\n \"name\":\"Test Schedule2\",\r\n \"section_type\":\"Urgent\",\r\n \"start_at\":\"2021-03-04T14:37:13+06:00\",\r\n \"end_at\":\"2021-03-27T14:37:18+06:00\",\r\n \"building_name\":\"North Building\",\r\n \"building_code\":\"NB1\",\r\n \"room_name\":\"303\"}",
+							"raw": "{\"section\":\"362c6e96-b17e-4f3d-800a-9caa711b61c8\",\r\n \"name\":\"Test Schedule2\",\r\n \"section_type\":\"Urgent\",\r\n \"start_at\":\"2021-03-04T14:37:13+06:00\",\r\n \"end_at\":\"2021-03-27T14:37:18+06:00\",\r\n \"building_name\":\"North Building\",\r\n \"building_code\":\"NB1\",\r\n \"room_name\":\"303\"}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1418,104 +1025,18 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e",
+							"raw": "{{baseurl}}/schedules/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"schedules",
 								""
-							],
-							"query": [
-								{
-									"key": "section_id",
-									"value": "0a20cf7e-4381-47f2-bdb1-3302310e5d2e"
-								}
 							]
 						},
-						"description": "Create a Schedule\n\n**URL** : `/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e\",\n  \"date_time\": \"2021-03-03T08:38:55.843330Z\",\n  \"data\": {\n    \"section_type\": \"Urgent\",\n    \"external_version_id\": null,\n    \"name\": \"Test Schedule\",\n    \"description\": null,\n    \"start_at\": \"2021-03-04T08:37:13Z\",\n    \"end_at\": \"2021-03-27T08:37:18Z\",\n    \"building_name\": \"North Building\",\n    \"building_code\": \"NB1\",\n    \"room_name\": \"303\",\n    \"location\": \"303, North Building(NB1)\",\n    \"section\": \"191b79a0-ba5d-4731-a47a-1724e5957a87\"\n  }\n}\n```"
+						"description": "Create a Schedule\n\n**URL** : `/schedules/`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n{\n\"section\":\"362c6e96-b17e-4f3d-800a-9caa711b61c8\",\n \"name\":\"Test Schedule2\",\n \"section_type\":\"Urgent\",\n \"start_at\":\"2021-03-04T14:37:13+06:00\",\n \"end_at\":\"2021-03-27T14:37:18+06:00\",\n \"building_name\":\"North Building\",\n \"building_code\":\"NB1\",\n \"room_name\":\"303\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/schedules/\",\n    \"date_time\": \"2021-07-07T16:08:29.681432Z\",\n    \"data\": {\n        \"section_type\": \"Urgent\",\n        \"external_version_id\": null,\n        \"name\": \"Test Schedule2\",\n        \"description\": null,\n        \"start_at\": \"2021-03-04T08:37:13Z\",\n        \"end_at\": \"2021-03-27T08:37:18Z\",\n        \"building_name\": \"North Building\",\n        \"building_code\": \"NB1\",\n        \"room_name\": \"303\",\n        \"location\": \"303, North Building(NB1)\",\n        \"section\": \"362c6e96-b17e-4f3d-800a-9caa711b61c8\"\n    }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Create Schedule",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\"section\":\"191b79a0-ba5d-4731-a47a-1724e5957a87\",\r\n \"name\":\"Test Schedule2\",\r\n \"section_type\":\"Urgent\",\r\n \"start_at\":\"2021-03-04T14:37:13+06:00\",\r\n \"end_at\":\"2021-03-27T14:37:18+06:00\",\r\n \"building_name\":\"North Building\",\r\n \"building_code\":\"NB1\",\r\n \"room_name\":\"303\"}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{baseurl}}/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"schedules",
-										""
-									],
-									"query": [
-										{
-											"key": "section_id",
-											"value": "0a20cf7e-4381-47f2-bdb1-3302310e5d2e"
-										}
-									]
-								}
-							},
-							"status": "Created",
-							"code": 201,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Wed, 03 Mar 2021 16:52:03 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "471"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Server",
-									"value": "gunicorn/20.0.4"
-								},
-								{
-									"key": "Vary",
-									"value": "Accept, Origin"
-								},
-								{
-									"key": "Allow",
-									"value": "GET, POST"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "DENY"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "same-origin"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"url\": \"http://api.admin.dev.campus.com/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e\",\n    \"date_time\": \"2021-03-03T16:52:03.556797Z\",\n    \"data\": {\n        \"section_type\": \"Urgent\",\n        \"external_version_id\": null,\n        \"name\": \"Test Schedule2\",\n        \"description\": null,\n        \"start_at\": \"2021-03-04T08:37:13Z\",\n        \"end_at\": \"2021-03-27T08:37:18Z\",\n        \"building_name\": \"North Building\",\n        \"building_code\": \"NB1\",\n        \"room_name\": \"303\",\n        \"location\": \"303, North Building(NB1)\",\n        \"section\": \"191b79a0-ba5d-4731-a47a-1724e5957a87\"\n    }\n}"
-						}
-					]
+					"response": []
 				}
 			],
 			"description": "Here you can get *Schedule* related endpoints."
@@ -1568,46 +1089,7 @@
 						},
 						"description": "Get Instructor list \n\n**URL** : `/instructors/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/instructors/\",\n  \"date_time\": \"2021-03-02T16:12:16.209989Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 910,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"6036ab4971576ef69dd9a4ac\",\n      \"provider\": {\n        \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n        \"name\": \"Mind Edge\",\n        \"code\": \"MINDEDGE\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n        \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n      },\n      \"name\": \"Daniel Newman\",\n      \"external_id\": \"3265\",\n      \"profile_urls\": {\n        \"urls\": [\n          \"profile_urls\"\n        ]\n      },\n      \"image\": {\n        \"original\": \"19db5084-1bdf-4cc3-b7d0-042b6e428f28.png\"\n      },\n      \"short_bio\": \"short_bio\",\n      \"detail_bio\": \"detail_bio\"\n    },\n    {\n      \"id\": \"6036416e0e3b096eb0c62af5\",\n      \"provider\": {\n        \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n        \"name\": \"Mind Edge\",\n        \"code\": \"MINDEDGE\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n        \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n      },\n      \"name\": \"Sully Mander\",\n      \"external_id\": \"0012\",\n      \"profile_urls\": {\n        \"urls\": [\n          \"profile_urls\"\n        ]\n      },\n      \"image\": {\n        \"original\": \"5a14220e-e955-49bf-ae7f-ead31416fdf2.jpeg\"\n      },\n      \"short_bio\": \"short_bio\",\n      \"detail_bio\": \"detail_bio\"\n    }\n  ]\n}\n\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/instructors/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"instructors",
-										""
-									]
-								},
-								"description": "Get Instructor list \n\n**URL** : `/instructors/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/instructors/\",\n  \"date_time\": \"2021-03-02T16:12:16.209989Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 910,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"6036ab4971576ef69dd9a4ac\",\n      \"provider\": {\n        \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n        \"name\": \"Mind Edge\",\n        \"code\": \"MINDEDGE\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n        \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n      },\n      \"name\": \"Daniel Newman\",\n      \"external_id\": \"3265\",\n      \"profile_urls\": {\n        \"urls\": [\n          \"profile_urls\"\n        ]\n      },\n      \"image\": {\n        \"original\": \"19db5084-1bdf-4cc3-b7d0-042b6e428f28.png\"\n      },\n      \"short_bio\": \"short_bio\",\n      \"detail_bio\": \"detail_bio\"\n    },\n    {\n      \"id\": \"6036416e0e3b096eb0c62af5\",\n      \"provider\": {\n        \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n        \"name\": \"Mind Edge\",\n        \"code\": \"MINDEDGE\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n        \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n      },\n      \"name\": \"Sully Mander\",\n      \"external_id\": \"0012\",\n      \"profile_urls\": {\n        \"urls\": [\n          \"profile_urls\"\n        ]\n      },\n      \"image\": {\n        \"original\": \"5a14220e-e955-49bf-ae7f-ead31416fdf2.jpeg\"\n      },\n      \"short_bio\": \"short_bio\",\n      \"detail_bio\": \"detail_bio\"\n    }\n  ]\n}\n\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Get A Particular Instructor",
@@ -1643,62 +1125,35 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/instructors/602d7eab72306dd6ba14d18a/",
+							"raw": "{{baseurl}}/instructors/60e5f50d26fa465229cc9b4f/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"instructors",
-								"602d7eab72306dd6ba14d18a",
+								"60e5f50d26fa465229cc9b4f",
 								""
 							]
 						},
-						"description": "View a particular Instructor \n\n**URL** : `/instructors/<id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/instructors/602d7eab72306dd6ba14d18a/\",\n  \"date_time\": \"2021-03-02T16:18:07.878478Z\",\n  \"data\": {\n    \"id\": \"602d7eab72306dd6ba14d18a\",\n    \"provider\": {\n      \"id\": \"e83e285e-e1f8-4bcb-9d31-156896bca909\",\n      \"name\": \"Graduate School USA\",\n      \"code\": \"GSUSA\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"5e71000f27d47bf3b3a6d1c7\"\n    },\n    \"name\": \"Jane  Edwards\",\n    \"external_id\": \"7535\",\n    \"profile_urls\": {},\n    \"image\": {},\n    \"short_bio\": null,\n    \"detail_bio\": null\n  }\n}\n\n```"
+						"description": "View a particular Instructor \n\n**URL** : `/instructors/<instructor_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/instructors/5ef62aeef1e0f50c12aaa45e/\",\n    \"date_time\": \"2021-07-07T18:34:32.288159Z\",\n    \"data\": {\n        \"id\": \"5ef62aeef1e0f50c12aaa45e\",\n        \"provider\": {},\n        \"name\": \"Abizar A Lakdawalla\",\n        \"external_id\": \"4961\",\n        \"profile_urls\": {},\n        \"image\": {},\n        \"short_bio\": null,\n        \"detail_bio\": null\n    }\n}\n\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/instructors/602d7eab72306dd6ba14d18a/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"instructors",
-										"602d7eab72306dd6ba14d18a",
-										""
-									]
-								},
-								"description": "View a particular Instructor \n\n**URL** : `/instructors/<id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/instructors/602d7eab72306dd6ba14d18a/\",\n  \"date_time\": \"2021-03-02T16:18:07.878478Z\",\n  \"data\": {\n    \"id\": \"602d7eab72306dd6ba14d18a\",\n    \"provider\": {\n      \"id\": \"e83e285e-e1f8-4bcb-9d31-156896bca909\",\n      \"name\": \"Graduate School USA\",\n      \"code\": \"GSUSA\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"5e71000f27d47bf3b3a6d1c7\"\n    },\n    \"name\": \"Jane  Edwards\",\n    \"external_id\": \"7535\",\n    \"profile_urls\": {},\n    \"image\": {},\n    \"short_bio\": null,\n    \"detail_bio\": null\n  }\n}\n\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Create Instructor",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -1727,7 +1182,7 @@
 								},
 								{
 									"key": "provider",
-									"value": "3243fcec-685c-44b5-abf4-7727f395f213",
+									"value": "3c7f0d0c-62b3-4db2-a23a-d36ec70a6377",
 									"type": "text"
 								},
 								{
@@ -1769,86 +1224,7 @@
 						},
 						"description": "Create an Instructor\n\n**URL** : `/instructors/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n{\n    \"name\": \"[unicode 64 chars max]\",\n    \"provider\": \"<course_provider_id> \",\n    \"profile_urls\": \"profile_urls\",\n    \"image\": \"image file\",\n    \"short_bio\": \"[unicode 400 chars max]\",\n    \"detail_bio\": \"[unicode 400 chars max]\",\n    \"external_id\": \"[unicode 400 chars max]\"\n}\n\n```\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/instructors/\",\n  \"date_time\": \"2021-03-02T16:30:36.691540Z\",\n  \"data\": {\n    \"id\": \"603e682c19611fbeb25180e8\",\n    \"provider\": {\n      \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n      \"name\": \"Mind Edge\",\n      \"code\": \"MINDEDGE\",\n      \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n      \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n    },\n    \"name\": \"Sully Mander\",\n    \"external_id\": \"0012\",\n    \"profile_urls\": [\n      \"profile_urls\"\n    ],\n    \"image\": \"https://static.dev.campus.com/uploads/2bacda4f-4eb6-4f45-90b3-3bb7973306f8.jpeg\",\n    \"short_bio\": \"short_bio\",\n    \"detail_bio\": \"detail_bio\"\n  }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "name",
-											"value": "Sully Mander",
-											"type": "text"
-										},
-										{
-											"key": "provider",
-											"value": "3243fcec-685c-44b5-abf4-7727f395f213",
-											"type": "text"
-										},
-										{
-											"key": "profile_urls",
-											"value": "profile_urls",
-											"type": "text"
-										},
-										{
-											"key": "image",
-											"type": "file",
-											"src": []
-										},
-										{
-											"key": "short_bio",
-											"value": "short_bio",
-											"type": "text"
-										},
-										{
-											"key": "detail_bio",
-											"value": "detail_bio",
-											"type": "text"
-										},
-										{
-											"key": "external_id",
-											"value": "0012",
-											"type": "text"
-										}
-									]
-								},
-								"url": {
-									"raw": "{{baseurl}}/instructors/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"instructors",
-										""
-									]
-								},
-								"description": "Create an Instructor\n\n**URL** : `/instructors/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n{\n    \"name\": \"[unicode 64 chars max]\",\n    \"provider\": \"<course_provider_id> \",\n    \"profile_urls\": \"profile_urls\",\n    \"image\": \"image file\",\n    \"short_bio\": \"[unicode 400 chars max]\",\n    \"detail_bio\": \"[unicode 400 chars max]\",\n    \"external_id\": \"[unicode 400 chars max]\"\n}\n\n```\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/instructors/\",\n  \"date_time\": \"2021-03-02T16:30:36.691540Z\",\n  \"data\": {\n    \"id\": \"603e682c19611fbeb25180e8\",\n    \"provider\": {\n      \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n      \"name\": \"Mind Edge\",\n      \"code\": \"MINDEDGE\",\n      \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n      \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n    },\n    \"name\": \"Sully Mander\",\n    \"external_id\": \"0012\",\n    \"profile_urls\": [\n      \"profile_urls\"\n    ],\n    \"image\": \"https://static.dev.campus.com/uploads/2bacda4f-4eb6-4f45-90b3-3bb7973306f8.jpeg\",\n    \"short_bio\": \"short_bio\",\n    \"detail_bio\": \"detail_bio\"\n  }\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Update Instructor",
@@ -1881,89 +1257,31 @@
 								{
 									"key": "provider",
 									"value": "3243fcec-685c-44b5-abf4-7727f395f213",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "image",
 									"type": "file",
-									"src": []
+									"src": [],
+									"disabled": true
 								}
 							]
 						},
 						"url": {
-							"raw": "{{baseurl}}/instructors/60146f2674b296f83f5e9ef4/",
+							"raw": "{{baseurl}}/instructors/60e5f50d26fa465229cc9b4f/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"instructors",
-								"60146f2674b296f83f5e9ef4",
+								"60e5f50d26fa465229cc9b4f",
 								""
 							]
 						},
-						"description": "Update an Instructor. A PATCH request is used to make changes to one or multiple part of the resource at a location.\n\n**URL** : `/instructors/`\n\n**Method** : `PATCH`\n\n**Payload**\n\n```json\n{\n    \"name\": \"[unicode 64 chars max]\",\n    \"provider\": \"<course_provider_id> \",\n    \"profile_urls\": \"profile_urls\",\n    \"image\": \"image_file\",\n    \"short_bio\": \"[unicode 400 chars max]\",\n    \"detail_bio\": \"[unicode 400 chars max]\",\n    \"external_id\": \"[unicode 400 chars max]\"\n}\n\n```\n\n**Data example** : These fields must have entry.\n```json\n{\n  \"name\": \"\",\n  \"provider\": \"<course_provider_id>\",\n  \"image\": \"image_file\"\n}\n```\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/instructors/60146f2674b296f83f5e9ef4/\",\n  \"date_time\": \"2021-03-02T16:39:42.800728Z\",\n  \"data\": {\n    \"id\": \"60146f2674b296f83f5e9ef4\",\n    \"provider\": {\n      \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n      \"name\": \"Mind Edge\",\n      \"code\": \"MINDEDGE\",\n      \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n      \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n    },\n    \"name\": \"Mane Rick\",\n    \"external_id\": null,\n    \"profile_urls\": {},\n    \"image\": \"https://static.dev.campus.com/uploads/52e8cd22-14b7-47ad-ac6b-ae15da4d9b17.png\",\n    \"short_bio\": null,\n    \"detail_bio\": null\n  }\n}\n```"
+						"description": "Update an Instructor. \n\n**URL** : `/instructors/<instructor_id>/`\n\n**Method** : `PATCH`\n\n**Payload**\n\n```json\n{\n  \"name\": \"Mane Rick\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/instructors/60e5f50d26fa465229cc9b4f/\",\n    \"date_time\": \"2021-07-07T18:42:13.275902Z\",\n    \"data\": {\n        \"id\": \"60e5f50d26fa465229cc9b4f\",\n        \"provider\": {\n            \"id\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"name\": \"Mind Edge\",\n            \"code\": \"MINDEDGE\",\n            \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/cc947c82-073c-49c1-9d25-8be63af5afb5.png\",\n            \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n        },\n        \"name\": \"Mane Rick\",\n        \"external_id\": \"0012\",\n        \"profile_urls\": [\n            \"profile_urls\"\n        ],\n        \"image\": {},\n        \"short_bio\": \"short_bio\",\n        \"detail_bio\": \"detail_bio\"\n    }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "name",
-											"value": "Mane Rick",
-											"type": "text"
-										},
-										{
-											"key": "provider",
-											"value": "3243fcec-685c-44b5-abf4-7727f395f213",
-											"type": "text"
-										},
-										{
-											"key": "image",
-											"type": "file",
-											"src": []
-										}
-									]
-								},
-								"url": {
-									"raw": "{{baseurl}}/instructors/60146f2674b296f83f5e9ef4/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"instructors",
-										"60146f2674b296f83f5e9ef4",
-										""
-									]
-								},
-								"description": "Update an Instructor. A PATCH request is used to make changes to one or multiple part of the resource at a location.\n\n**URL** : `/instructors/`\n\n**Method** : `PATCH`\n\n**Payload**\n\n```json\n{\n    \"name\": \"[unicode 64 chars max]\",\n    \"provider\": \"<course_provider_id> \",\n    \"profile_urls\": \"profile_urls\",\n    \"image\": \"image_file\",\n    \"short_bio\": \"[unicode 400 chars max]\",\n    \"detail_bio\": \"[unicode 400 chars max]\",\n    \"external_id\": \"[unicode 400 chars max]\"\n}\n\n```\n\n**Data example** : These fields must have entry.\n```json\n{\n  \"name\": \"\",\n  \"provider\": \"<course_provider_id>\",\n  \"image\": \"image_file\"\n}\n```\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/instructors/60146f2674b296f83f5e9ef4/\",\n  \"date_time\": \"2021-03-02T16:39:42.800728Z\",\n  \"data\": {\n    \"id\": \"60146f2674b296f83f5e9ef4\",\n    \"provider\": {\n      \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n      \"name\": \"Mind Edge\",\n      \"code\": \"MINDEDGE\",\n      \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n      \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n    },\n    \"name\": \"Mane Rick\",\n    \"external_id\": null,\n    \"profile_urls\": {},\n    \"image\": \"https://static.dev.campus.com/uploads/52e8cd22-14b7-47ad-ac6b-ae15da4d9b17.png\",\n    \"short_bio\": null,\n    \"detail_bio\": null\n  }\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				}
 			],
 			"description": "Here you can get *Instructor* related endpoints."
@@ -2016,48 +1334,10 @@
 						},
 						"description": "Show Campus- Course Provider Sites\n\n**URL** : `/course-provider-sites/`\n\n**Method** : `GET`\n\n**Response** :\n\n```\n{\n  \"url\": \"http://api.admin.dev.campus.com/course-provider-sites/\",\n  \"date_time\": \"2021-03-03T08:22:19.420527Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 89,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"6036b962c0ba2be5142cef06\",\n      \"provider\": {\n        \"id\": \"e83e285e-e1f8-4bcb-9d31-156896bca909\",\n        \"name\": \"Graduate School USA\",\n        \"code\": \"GSUSA\",\n        \"course_provider_logo_uri\": null,\n        \"content_db_reference\": \"5e71000f27d47bf3b3a6d1c7\"\n      },\n      \"name\": \"Customer Platform\",\n      \"code\": null\n    },\n    {\n      \"id\": \"6007eccd45388743a3bf0d19\",\n      \"provider\": {\n        \"id\": \"56343945-00de-4770-bb7c-65c950b68fbc\",\n        \"name\": \"Campus.com\",\n        \"code\": \"campus\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/fff143f7-4985-4be9-a9df-992e579e8ce1.png\",\n        \"content_db_reference\": \"5fd747cc07467917d982ff29\"\n      },\n      \"name\": \"Campus2\",\n      \"code\": \"c2\"\n    },\n    {\n      \"id\": \"5fc8d6775e7c7eba97004dbf\",\n      \"provider\": {\n        \"id\": \"51cd0b75-1014-4b55-8cd5-4fd3f6d8dfe1\",\n        \"name\": \"Drexel University\",\n        \"code\": \"drexel\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1b9fe97d-58eb-4958-a8e6-d5807a9cb6aa.png\",\n        \"content_db_reference\": \"5fbce8701aee3c8831b7a62e\"\n      },\n      \"name\": \"DU\",\n      \"code\": \"5635\"\n    },\n    {\n      \"id\": \"5fc5e7c385210d351a100528\",\n      \"provider\": {\n        \"id\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\n        \"name\": \"Simon Fraser University\",\n        \"code\": \"SFUCA\",\n        \"course_provider_logo_uri\": null,\n        \"content_db_reference\": \"5e72482cf069d3ce6d4f24da\"\n      },\n      \"name\": \"Eric Oceanside\",\n      \"code\": \"A083r2\"\n    },\n    {\n      \"id\": \"5fc5e5a973a3680d6383e8a1\",\n      \"provider\": {\n        \"id\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\n        \"name\": \"Simon Fraser University\",\n        \"code\": \"SFUCA\",\n        \"course_provider_logo_uri\": null,\n        \"content_db_reference\": \"5e72482cf069d3ce6d4f24da\"\n      },\n      \"name\": \"Oceanside\",\n      \"code\": \"A083r2\"\n    },\n    {\n      \"id\": \"5fc5e565db8535ca2374f78c\",\n      \"provider\": {\n        \"id\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\n        \"name\": \"Simon Fraser University\",\n        \"code\": \"SFUCA\",\n        \"course_provider_logo_uri\": null,\n        \"content_db_reference\": \"5e72482cf069d3ce6d4f24da\"\n      },\n      \"name\": \"Oceanside\",\n      \"code\": \"A083r2\"\n    },\n    {\n      \"id\": \"5fc4ef73b957046f3502e785\",\n      \"provider\": {\n        \"id\": \"c2679848-7511-48df-be8b-dbd6d50f3e6c\",\n        \"name\": \"UCSC Silicon Valley Extension\",\n        \"code\": \"UCSC\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/3c44bca1-25a4-4f67-a358-b5b57197d06c.png\",\n        \"content_db_reference\": \"5e81d27bf083b65be9afb8ce\"\n      },\n      \"name\": \"UCSC Main Campus\",\n      \"code\": \"XPMHY\"\n    },\n    {\n      \"id\": \"5fc4cbd3a3ba578378aceb78\",\n      \"provider\": {\n        \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n        \"name\": \"Mind Edge\",\n        \"code\": \"MINDEDGE\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n        \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n      },\n      \"name\": \"Mission  Oceanside\",\n      \"code\": \"083r2\"\n    },\n    {\n      \"id\": \"5fc4cb1a5972899523f2bf57\",\n      \"provider\": {\n        \"id\": \"51cd0b75-1014-4b55-8cd5-4fd3f6d8dfe1\",\n        \"name\": \"Drexel University\",\n        \"code\": \"drexel\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1b9fe97d-58eb-4958-a8e6-d5807a9cb6aa.png\",\n        \"content_db_reference\": \"5fbce8701aee3c8831b7a62e\"\n      },\n      \"name\": \"Main Campus\",\n      \"code\": \"601022\"\n    },\n    {\n      \"id\": \"5fc4c8e4a7203aab0749ea22\",\n      \"provider\": {\n        \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n        \"name\": \"Mind Edge\",\n        \"code\": \"MINDEDGE\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n        \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n      },\n      \"name\": \"Mission  Oceanside\",\n      \"code\": \"083r2\"\n    }\n  ]\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/course-provider-sites/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"course-provider-sites",
-										""
-									]
-								}
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
-					"name": "View  Campus- Course Provider Sites",
+					"name": "View  a Particular Campus- Course Provider Sites",
 					"event": [
 						{
 							"listen": "test",
@@ -2102,49 +1382,79 @@
 						},
 						"description": "View a particular Campus- Course Provider Sites\n\n**URL** : `/course-provider-sites/<course-provider-sites_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```\n{\n  \"url\": \"http://api.admin.dev.campus.com/course-provider-sites/\",\n  \"date_time\": \"2021-03-03T08:22:19.420527Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 89,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"6036b962c0ba2be5142cef06\",\n      \"provider\": {\n        \"id\": \"e83e285e-e1f8-4bcb-9d31-156896bca909\",\n        \"name\": \"Graduate School USA\",\n        \"code\": \"GSUSA\",\n        \"course_provider_logo_uri\": null,\n        \"content_db_reference\": \"5e71000f27d47bf3b3a6d1c7\"\n      },\n      \"name\": \"Customer Platform\",\n      \"code\": null\n    },\n    {\n      \"id\": \"6007eccd45388743a3bf0d19\",\n      \"provider\": {\n        \"id\": \"56343945-00de-4770-bb7c-65c950b68fbc\",\n        \"name\": \"Campus.com\",\n        \"code\": \"campus\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/fff143f7-4985-4be9-a9df-992e579e8ce1.png\",\n        \"content_db_reference\": \"5fd747cc07467917d982ff29\"\n      },\n      \"name\": \"Campus2\",\n      \"code\": \"c2\"\n    },\n    {\n      \"id\": \"5fc8d6775e7c7eba97004dbf\",\n      \"provider\": {\n        \"id\": \"51cd0b75-1014-4b55-8cd5-4fd3f6d8dfe1\",\n        \"name\": \"Drexel University\",\n        \"code\": \"drexel\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1b9fe97d-58eb-4958-a8e6-d5807a9cb6aa.png\",\n        \"content_db_reference\": \"5fbce8701aee3c8831b7a62e\"\n      },\n      \"name\": \"DU\",\n      \"code\": \"5635\"\n    },\n    {\n      \"id\": \"5fc5e7c385210d351a100528\",\n      \"provider\": {\n        \"id\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\n        \"name\": \"Simon Fraser University\",\n        \"code\": \"SFUCA\",\n        \"course_provider_logo_uri\": null,\n        \"content_db_reference\": \"5e72482cf069d3ce6d4f24da\"\n      },\n      \"name\": \"Eric Oceanside\",\n      \"code\": \"A083r2\"\n    },\n    {\n      \"id\": \"5fc5e5a973a3680d6383e8a1\",\n      \"provider\": {\n        \"id\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\n        \"name\": \"Simon Fraser University\",\n        \"code\": \"SFUCA\",\n        \"course_provider_logo_uri\": null,\n        \"content_db_reference\": \"5e72482cf069d3ce6d4f24da\"\n      },\n      \"name\": \"Oceanside\",\n      \"code\": \"A083r2\"\n    },\n    {\n      \"id\": \"5fc5e565db8535ca2374f78c\",\n      \"provider\": {\n        \"id\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\n        \"name\": \"Simon Fraser University\",\n        \"code\": \"SFUCA\",\n        \"course_provider_logo_uri\": null,\n        \"content_db_reference\": \"5e72482cf069d3ce6d4f24da\"\n      },\n      \"name\": \"Oceanside\",\n      \"code\": \"A083r2\"\n    },\n    {\n      \"id\": \"5fc4ef73b957046f3502e785\",\n      \"provider\": {\n        \"id\": \"c2679848-7511-48df-be8b-dbd6d50f3e6c\",\n        \"name\": \"UCSC Silicon Valley Extension\",\n        \"code\": \"UCSC\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/3c44bca1-25a4-4f67-a358-b5b57197d06c.png\",\n        \"content_db_reference\": \"5e81d27bf083b65be9afb8ce\"\n      },\n      \"name\": \"UCSC Main Campus\",\n      \"code\": \"XPMHY\"\n    },\n    {\n      \"id\": \"5fc4cbd3a3ba578378aceb78\",\n      \"provider\": {\n        \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n        \"name\": \"Mind Edge\",\n        \"code\": \"MINDEDGE\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n        \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n      },\n      \"name\": \"Mission  Oceanside\",\n      \"code\": \"083r2\"\n    },\n    {\n      \"id\": \"5fc4cb1a5972899523f2bf57\",\n      \"provider\": {\n        \"id\": \"51cd0b75-1014-4b55-8cd5-4fd3f6d8dfe1\",\n        \"name\": \"Drexel University\",\n        \"code\": \"drexel\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1b9fe97d-58eb-4958-a8e6-d5807a9cb6aa.png\",\n        \"content_db_reference\": \"5fbce8701aee3c8831b7a62e\"\n      },\n      \"name\": \"Main Campus\",\n      \"code\": \"601022\"\n    },\n    {\n      \"id\": \"5fc4c8e4a7203aab0749ea22\",\n      \"provider\": {\n        \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n        \"name\": \"Mind Edge\",\n        \"code\": \"MINDEDGE\",\n        \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n        \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n      },\n      \"name\": \"Mission  Oceanside\",\n      \"code\": \"083r2\"\n    }\n  ]\n}\n```"
 					},
-					"response": [
+					"response": []
+				},
+				{
+					"name": "Create Campus- Course Provider Site",
+					"event": [
 						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
 								],
-								"url": {
-									"raw": "{{baseurl}}/course-provider-sites/5e70b453127e8565f14b519f/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"course-provider-sites",
-										"5e70b453127e8565f14b519f",
-										""
-									]
-								}
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
+								"type": "text/javascript"
+							}
 						}
-					]
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"South Building\",\r\n    \"provider\" : \"47fac15b-30f4-4f79-b06e-e0966a1b9d98\",\r\n    \"code\" : \"120\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/course-provider-sites/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"course-provider-sites",
+								""
+							]
+						},
+						"description": "Create a campus-course provider site\n\n**URL** : `/course-provider-sites/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n{\n    \"name\" : \"South Building\",\n    \"provider\" : \"47fac15b-30f4-4f79-b06e-e0966a1b9d98\",\n    \"code\" : \"120\"\n\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/course-provider-sites/\",\n    \"date_time\": \"2021-07-07T18:53:41.808306Z\",\n    \"data\": {\n        \"id\": \"60e5f83526fa465229cc9b51\",\n        \"provider\": {\n            \"id\": \"47fac15b-30f4-4f79-b06e-e0966a1b9d98\",\n            \"name\": \"test\",\n            \"code\": \"code\",\n            \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/af69c370-d242-48a8-8998-a1a4de08a973.png\",\n            \"content_db_reference\": \"60e16b10a16cf33100e29c4c\"\n        },\n        \"name\": \"South Building\",\n        \"code\": \"120\"\n    }\n}\n```"
+					},
+					"response": []
 				},
 				{
 					"name": "Update Campus- Course Provider Sites",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -2169,147 +1479,22 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"id\": \"5fc5e7c385210d351a100528\",\r\n    \"provider\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\r\n    \"name\": \"Simon Fraser University2\",\r\n    \"code\": \"SFUCA\"\r\n}"
+							"raw": "{\r\n    \"name\": \"South Building\",\r\n    \"code\": \"SFUCA\"\r\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/course-provider-sites/5fc5e7c385210d351a100528/",
+							"raw": "{{baseurl}}/course-provider-sites/60e5f83526fa465229cc9b51/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"course-provider-sites",
-								"5fc5e7c385210d351a100528",
+								"60e5f83526fa465229cc9b51",
 								""
 							]
 						},
-						"description": "Update a particular Campus- Course Provider Sites\n\n**URL** : `/course-provider-sites/<course-provider-sites_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```\n{\n  \"url\": \"http://api.admin.dev.campus.com/course-provider-sites/5fc5e7c385210d351a100528/\",\n  \"date_time\": \"2021-03-03T19:09:06.229674Z\",\n  \"data\": {\n    \"id\": \"5fc5e7c385210d351a100528\",\n    \"provider\": {\n      \"id\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\n      \"name\": \"Simon Fraser University\",\n      \"code\": \"SFUCA\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"5e72482cf069d3ce6d4f24da\"\n    },\n    \"name\": \"Simon Fraser University2\",\n    \"code\": \"SFUCA\"\n  }\n}\n```"
+						"description": "Update a particular Campus- Course Provider Sites\n\n**URL** : `/course-provider-sites/<course-provider-sites_id>`\n\n**Method** : `PATCH`\n\n**Payload** :\n```json\n{\n    \"name\": \"South Building\",\n    \"code\": \"SFUCA\"\n}\n```\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/course-provider-sites/5fc5e7c385210d351a100528/\",\n  \"date_time\": \"2021-03-03T19:09:06.229674Z\",\n  \"data\": {\n    \"id\": \"5fc5e7c385210d351a100528\",\n    \"provider\": {\n      \"id\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\n      \"name\": \"Simon Fraser University\",\n      \"code\": \"SFUCA\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"5e72482cf069d3ce6d4f24da\"\n    },\n    \"name\": \"Simon Fraser University2\",\n    \"code\": \"SFUCA\"\n  }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n  \"id\": \"5e70fb83a23dd444bec56087\",\r\n  \"provider\": \"84b41209-b68e-466d-a587-0466935fa7be\",\r\n  \"name\": \"Mission  Oceanside\",\r\n  \"code\": \"083r2\"\r\n}"
-								},
-								"url": {
-									"raw": "{{baseurl}}/course-provider-sites/5e70b453127e8565f14b519f/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"course-provider-sites",
-										"5e70b453127e8565f14b519f",
-										""
-									]
-								}
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						},
-						{
-							"name": "Update Campus",
-							"originalRequest": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Content-Type",
-										"value": "application/json"
-									},
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"id\": \"5fc5e7c385210d351a100528\",\r\n    \"provider\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\r\n    \"name\": \"Simon Fraser University2\",\r\n    \"code\": \"SFUCA\"\r\n}"
-								},
-								"url": {
-									"raw": "{{baseurl}}/course-provider-sites/5fc5e7c385210d351a100528/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"course-provider-sites",
-										"5fc5e7c385210d351a100528",
-										""
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Wed, 03 Mar 2021 19:10:38 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json"
-								},
-								{
-									"key": "Content-Length",
-									"value": "408"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Server",
-									"value": "gunicorn/20.0.4"
-								},
-								{
-									"key": "Vary",
-									"value": "Accept, Origin"
-								},
-								{
-									"key": "Allow",
-									"value": "GET, HEAD, PATCH, UPDATE"
-								},
-								{
-									"key": "X-Frame-Options",
-									"value": "DENY"
-								},
-								{
-									"key": "X-Content-Type-Options",
-									"value": "nosniff"
-								},
-								{
-									"key": "Referrer-Policy",
-									"value": "same-origin"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"url\": \"http://api.admin.dev.campus.com/course-provider-sites/5fc5e7c385210d351a100528/\",\n    \"date_time\": \"2021-03-03T19:10:38.294004Z\",\n    \"data\": {\n        \"id\": \"5fc5e7c385210d351a100528\",\n        \"provider\": {\n            \"id\": \"b6436570-4c52-4a5e-b328-cd01d260c299\",\n            \"name\": \"Simon Fraser University\",\n            \"code\": \"SFUCA\",\n            \"course_provider_logo_uri\": null,\n            \"content_db_reference\": \"5e72482cf069d3ce6d4f24da\"\n        },\n        \"name\": \"Simon Fraser University2\",\n        \"code\": \"SFUCA\"\n    }\n}"
-						}
-					]
+					"response": []
 				}
 			],
 			"description": "Here you can get *Campus-Course provider site* related endpoints.",
@@ -2385,46 +1570,7 @@
 						},
 						"description": "Get Career list \n\n**URL** : `/careers/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/careers/\",\n  \"date_time\": \"2021-03-02T18:47:58.669243Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 974,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"5e70ad9887f7b325df976fec\",\n      \"soc_code\": \"13-2011.01\",\n      \"name\": \"Accountants\",\n      \"bright_outlook\": true,\n      \"green\": false,\n      \"description\": \"Analyze financial information and prepare financial reports to determine or maintain record of assets, liabilities, profit and loss, tax liability, or other financial activities within an organization.\"\n    },\n    {\n      \"id\": \"5e70ad9d87f7b325df977361\",\n      \"soc_code\": \"27-2011.00\",\n      \"name\": \"Actors\",\n      \"bright_outlook\": false,\n      \"green\": false,\n      \"description\": \"Play parts in stage, television, radio, video, motion picture productions, or other settings for entertainment, information, or instruction. Interpret serious or comic role by speech, gesture, and body movement to entertain or inform audience. May dance and sing.\"\n    },\n    {\n      \"id\": \"5e70ada187f7b325df9775ec\",\n      \"soc_code\": \"15-2011.00\",\n      \"name\": \"Actuaries\",\n      \"bright_outlook\": true,\n      \"green\": false,\n      \"description\": \"Analyze statistical data, such as mortality, accident, sickness, disability, and retirement rates and construct probability tables to forecast risk and liability for payment of future benefits. May ascertain insurance rates required and cash reserves necessary to ensure payment of future benefits.\"\n    },\n    {\n      \"id\": \"5e70ada587f7b325df977877\",\n      \"soc_code\": \"29-1199.01\",\n      \"name\": \"Acupuncturists\",\n      \"bright_outlook\": true,\n      \"green\": false,\n      \"description\": \"Provide treatment of symptoms and disorders using needles and small electrical currents. May provide massage treatment. May also provide preventive treatments.\"\n    },\n    {\n      \"id\": \"5e70adaa87f7b325df977bac\",\n      \"soc_code\": \"29-1141.01\",\n      \"name\": \"Acute Care Nurses\",\n      \"bright_outlook\": true,\n      \"green\": false,\n      \"description\": \"Provide advanced nursing care for patients with acute conditions such as heart attacks, respiratory distress syndrome, or shock. May care for pre- and post-operative patients or perform advanced, invasive diagnostic or therapeutic procedures.\"\n    }\n  ]\n}    \n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/careers/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"careers",
-										""
-									]
-								},
-								"description": "Get Career list \n\n**URL** : `/careers/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/careers/\",\n  \"date_time\": \"2021-03-02T18:47:58.669243Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 974,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"5e70ad9887f7b325df976fec\",\n      \"soc_code\": \"13-2011.01\",\n      \"name\": \"Accountants\",\n      \"bright_outlook\": true,\n      \"green\": false,\n      \"description\": \"Analyze financial information and prepare financial reports to determine or maintain record of assets, liabilities, profit and loss, tax liability, or other financial activities within an organization.\"\n    },\n    {\n      \"id\": \"5e70ad9d87f7b325df977361\",\n      \"soc_code\": \"27-2011.00\",\n      \"name\": \"Actors\",\n      \"bright_outlook\": false,\n      \"green\": false,\n      \"description\": \"Play parts in stage, television, radio, video, motion picture productions, or other settings for entertainment, information, or instruction. Interpret serious or comic role by speech, gesture, and body movement to entertain or inform audience. May dance and sing.\"\n    },\n    {\n      \"id\": \"5e70ada187f7b325df9775ec\",\n      \"soc_code\": \"15-2011.00\",\n      \"name\": \"Actuaries\",\n      \"bright_outlook\": true,\n      \"green\": false,\n      \"description\": \"Analyze statistical data, such as mortality, accident, sickness, disability, and retirement rates and construct probability tables to forecast risk and liability for payment of future benefits. May ascertain insurance rates required and cash reserves necessary to ensure payment of future benefits.\"\n    },\n    {\n      \"id\": \"5e70ada587f7b325df977877\",\n      \"soc_code\": \"29-1199.01\",\n      \"name\": \"Acupuncturists\",\n      \"bright_outlook\": true,\n      \"green\": false,\n      \"description\": \"Provide treatment of symptoms and disorders using needles and small electrical currents. May provide massage treatment. May also provide preventive treatments.\"\n    },\n    {\n      \"id\": \"5e70adaa87f7b325df977bac\",\n      \"soc_code\": \"29-1141.01\",\n      \"name\": \"Acute Care Nurses\",\n      \"bright_outlook\": true,\n      \"green\": false,\n      \"description\": \"Provide advanced nursing care for patients with acute conditions such as heart attacks, respiratory distress syndrome, or shock. May care for pre- and post-operative patients or perform advanced, invasive diagnostic or therapeutic procedures.\"\n    }\n  ]\n}    \n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "View Particular Career",
@@ -2472,47 +1618,7 @@
 						},
 						"description": "Get individual Career details\n\n**URL** : `/careers/<id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/careers/5e70ad9887f7b325df976fec/\",\n  \"date_time\": \"2021-03-02T18:51:09.974386Z\",\n  \"data\": {\n    \"id\": \"5e70ad9887f7b325df976fec\",\n    \"soc_code\": \"13-2011.01\",\n    \"skills\": [\n      {\n        \"id\": \"5e70ad9987f7b325df97702d\",\n        \"external_id\": \"43231601\",\n        \"skill_type\": \"technology\",\n        \"name\": \"Accounting software\",\n        \"description\": \"\",\n        \"example\": [\n          {\n            \"name\": \"Fund accounting software\",\n            \"hot_technology\": 0\n          },\n          {\n            \"name\": \"Intuit QuickBooks\",\n            \"hot_technology\": 34\n          },\n          {\n            \"name\": \"Sage 50 Accounting\",\n            \"hot_technology\": 0\n          }\n        ],\n        \"hot\": false\n      },\n      {\n        \"id\": \"5e70ad9987f7b325df977032\",\n        \"external_id\": \"43231603\",\n        \"skill_type\": \"technology\",\n        \"name\": \"Tax preparation software\",\n        \"description\": \"\",\n        \"example\": [\n          {\n            \"name\": \"ATX Total Tax Office\",\n            \"hot_technology\": 0\n          },\n          {\n            \"name\": \"BNA Income Tax Planning Solutions\",\n            \"hot_technology\": 0\n          },\n          {\n            \"name\": \"Intuit Lacerte\",\n            \"hot_technology\": 0\n          },\n          {\n            \"name\": \"Orrtax Software IntelliTax Classic\",\n            \"hot_technology\": 0\n          }\n        ],\n        \"hot\": false\n      },\n      {\n        \"id\": \"5e70ad9987f7b325df97703c\",\n        \"external_id\": \"43231602\",\n        \"skill_type\": \"technology\",\n        \"name\": \"Enterprise resource planning ERP software\",\n        \"description\": \"\",\n        \"example\": [\n          {\n            \"name\": \"SAP software\",\n            \"hot_technology\": 0\n          }\n        ],\n        \"hot\": false\n      },\n      {\n        \"id\": \"5e70ad9987f7b325df977042\",\n        \"external_id\": \"43231604\",\n        \"skill_type\": \"technology\",\n        \"name\": \"Financial analysis software\",\n        \"description\": \"\",\n        \"example\": [\n          {\n            \"name\": \"Delphi Technology\",\n            \"hot_technology\": 0\n          }\n        ],\n        \"hot\": false\n      }\n     ],\n    \"name\": \"Accountants\",\n    \"image\": {},\n    \"default_image\": {\n      \"original\": \"assets/occupation/hero/13-2011.jpg\",\n      \"cover\": \"assets/occupation/card/13-2011.jpg\",\n      \"thumbnail\": null\n    },\n    \"slug\": \"13-2011.01-accountants\",\n    \"description\": \"Analyze financial information and prepare financial reports to determine or maintain record of assets, liabilities, profit and loss, tax liability, or other financial activities within an organization.\",\n    \"bright_outlook\": true,\n    \"green\": false,\n    \"sample_job_titles\": [\n      \"Accountant\",\n      \"Accounting Manager\",\n      \"Accounting Officer\",\n      \"Accounting Supervisor\",\n      \"Business Analyst\",\n      \"Certified Public Accountant (CPA)\",\n      \"Cost Accountant\",\n      \"General Accountant\",\n      \"Project Accountant\",\n      \"Staff Accountant\"\n    ]\n  }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/careers/5e70ad9887f7b325df976fec/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"careers",
-										"5e70ad9887f7b325df976fec",
-										""
-									]
-								},
-								"description": "Get individual Career details\n\n**URL** : `/careers/<id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/careers/5e70ad9887f7b325df976fec/\",\n  \"date_time\": \"2021-03-02T18:51:09.974386Z\",\n  \"data\": {\n    \"id\": \"5e70ad9887f7b325df976fec\",\n    \"soc_code\": \"13-2011.01\",\n    \"skills\": [\n      {\n        \"id\": \"5e70ad9987f7b325df97702d\",\n        \"external_id\": \"43231601\",\n        \"skill_type\": \"technology\",\n        \"name\": \"Accounting software\",\n        \"description\": \"\",\n        \"example\": [\n          {\n            \"name\": \"Fund accounting software\",\n            \"hot_technology\": 0\n          },\n          {\n            \"name\": \"Intuit QuickBooks\",\n            \"hot_technology\": 34\n          },\n          {\n            \"name\": \"Sage 50 Accounting\",\n            \"hot_technology\": 0\n          }\n        ],\n        \"hot\": false\n      },\n      {\n        \"id\": \"5e70ad9987f7b325df977032\",\n        \"external_id\": \"43231603\",\n        \"skill_type\": \"technology\",\n        \"name\": \"Tax preparation software\",\n        \"description\": \"\",\n        \"example\": [\n          {\n            \"name\": \"ATX Total Tax Office\",\n            \"hot_technology\": 0\n          },\n          {\n            \"name\": \"BNA Income Tax Planning Solutions\",\n            \"hot_technology\": 0\n          },\n          {\n            \"name\": \"Intuit Lacerte\",\n            \"hot_technology\": 0\n          },\n          {\n            \"name\": \"Orrtax Software IntelliTax Classic\",\n            \"hot_technology\": 0\n          }\n        ],\n        \"hot\": false\n      },\n      {\n        \"id\": \"5e70ad9987f7b325df97703c\",\n        \"external_id\": \"43231602\",\n        \"skill_type\": \"technology\",\n        \"name\": \"Enterprise resource planning ERP software\",\n        \"description\": \"\",\n        \"example\": [\n          {\n            \"name\": \"SAP software\",\n            \"hot_technology\": 0\n          }\n        ],\n        \"hot\": false\n      },\n      {\n        \"id\": \"5e70ad9987f7b325df977042\",\n        \"external_id\": \"43231604\",\n        \"skill_type\": \"technology\",\n        \"name\": \"Financial analysis software\",\n        \"description\": \"\",\n        \"example\": [\n          {\n            \"name\": \"Delphi Technology\",\n            \"hot_technology\": 0\n          }\n        ],\n        \"hot\": false\n      }\n     ],\n    \"name\": \"Accountants\",\n    \"image\": {},\n    \"default_image\": {\n      \"original\": \"assets/occupation/hero/13-2011.jpg\",\n      \"cover\": \"assets/occupation/card/13-2011.jpg\",\n      \"thumbnail\": null\n    },\n    \"slug\": \"13-2011.01-accountants\",\n    \"description\": \"Analyze financial information and prepare financial reports to determine or maintain record of assets, liabilities, profit and loss, tax liability, or other financial activities within an organization.\",\n    \"bright_outlook\": true,\n    \"green\": false,\n    \"sample_job_titles\": [\n      \"Accountant\",\n      \"Accounting Manager\",\n      \"Accounting Officer\",\n      \"Accounting Supervisor\",\n      \"Business Analyst\",\n      \"Certified Public Accountant (CPA)\",\n      \"Cost Accountant\",\n      \"General Accountant\",\n      \"Project Accountant\",\n      \"Staff Accountant\"\n    ]\n  }\n}\n```"
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				}
 			],
 			"description": "Here you can get *Career* related endpoints."
@@ -5934,46 +5040,7 @@
 						},
 						"description": "Remove courses from a certificate\n\n**URL** : `/delete-certificate-courses/`\n\n**Method** : `DELETE`\n\n**Payload** : \n\n```json\n{\n     \"ids\": [\n        \"<certificate_course_id1>\",\n        \"<certificate_course_id2>\"\n    ]\n}\n\n```\n\n**Example Payload** : \n\n```json\n{\n     \"ids\": [\n        \"0e208597-fbdf-47c8-a711-7d493ec31bed\",\n        \"a64444eb-f4f7-4b55-9bbf-62a052acaa33\"\n    ]\n}\n\n```\n\n**Response** :\n\n```\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-certificate-courses/\",\n    \"date_time\": \"2021-04-22T06:06:02.972168Z\",\n    \"data\": {\n        \"message\": \"CertificateCourse deleted successfully\"\n    }\n}\n```"
 					},
-					"response": [
-						{
-							"name": "Response_200",
-							"originalRequest": {
-								"auth": {
-									"type": "bearer",
-									"bearer": [
-										{
-											"key": "token",
-											"value": "{{token}}",
-											"type": "string"
-										}
-									]
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Accept",
-										"value": "*/*"
-									}
-								],
-								"url": {
-									"raw": "{{baseurl}}/enrollments/",
-									"host": [
-										"{{baseurl}}"
-									],
-									"path": [
-										"enrollments",
-										""
-									]
-								},
-								"description": "Admin will be able to view enrolled profile detail information where the admin has access to.\n\n**URL** : /enrollments/\n\n**Method** : GET\n\n**Response** :\n\n```\n{\n  \"url\": \"http://api.admin.dev.campus.com/enrollments/\",\n  \"date_time\": \"2021-02-28T19:38:06.385808Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 58,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"a25f4ebb-496a-4ba0-80cd-16889adb5c79\",\n      \"profile\": {\n        \"id\": \"1b14a0f7-a22f-427b-a565-923228f37a27\",\n        \"first_name\": \"Chris\",\n        \"last_name\": \"Lemont\",\n        \"formal_name\": \"Lemont, Chris\",\n        \"date_of_birth\": null,\n        \"profile_picture_uri\": null,\n        \"primary_email\": \"lemont@yahoo.com\",\n        \"primary_contact_number\": null,\n        \"terms_accepted\": true\n      },\n      \"course\": {\n        \"id\": \"b0ddb231-2cc3-4ba1-8a2a-f3a9f4f6cdd5\",\n        \"title\": \"Leadership and Management for Women in Business\"\n      },\n      \"section\": {\n        \"id\": \"41a820b6-332a-4d18-86d6-fc49bba93f57\",\n        \"course\": {\n          \"id\": \"b0ddb231-2cc3-4ba1-8a2a-f3a9f4f6cdd5\",\n          \"title\": \"Leadership and Management for Women in Business\"\n        },\n        \"name\": \"1599\",\n        \"fee\": 79.0,\n        \"seat_capacity\": 70,\n        \"available_seat\": 70,\n        \"execution_mode\": \"self-paced\",\n        \"registration_deadline\": \"2021-08-26T20:03:17Z\",\n        \"content_db_reference\": \"5ea0073587f7b325df67ca6f\",\n        \"is_active\": true\n      },\n      \"enrollment_time\": \"2021-02-25T14:26:43.748158Z\",\n      \"application_time\": \"2021-02-25T14:26:43.748170Z\",\n      \"enrollment_status\": \"enrolled\",\n      \"fee\": 79.0,\n      \"currency\": \"USD\",\n      \"store\": {\n        \"id\": \"0dd332c0-4f5b-4dd9-8953-d5e580246979\",\n        \"name\": \"Lifelong Campus\"\n      },\n      \"payment\": null\n    },\n    {\n      \"id\": \"94bc7bb2-2133-4494-ae5b-fe78b6818b17\",\n      \"profile\": {\n        \"id\": \"b3f36452-b251-4bf1-b4f7-c7ebcdd1b17a\",\n        \"first_name\": \"Thomas\",\n        \"last_name\": \"Charles\",\n        \"formal_name\": \"Charles, Thomas\",\n        \"date_of_birth\": \"1971-12-16\",\n        \"profile_picture_uri\": \"https://static.dev.campus.com/uploads/cb19f535-53f7-49a8-b3d0-9553d0cc5272.jpg\",\n        \"primary_email\": \"thomas.charles202129@gmail.com\",\n        \"primary_contact_number\": null,\n        \"terms_accepted\": true\n      },\n      \"course\": {\n        \"id\": \"86754c9c-3d52-4332-b071-35c3551cc3aa\",\n        \"title\": \"A Manager's Guide to Blockchain\"\n      },\n      \"section\": {\n        \"id\": \"ca4c5cf9-2399-4ec9-bfc9-d0efff352b28\",\n        \"course\": {\n          \"id\": \"86754c9c-3d52-4332-b071-35c3551cc3aa\",\n          \"title\": \"A Manager's Guide to Blockchain\"\n        },\n        \"name\": \"1568\",\n        \"fee\": 99.0,\n        \"seat_capacity\": 100,\n        \"available_seat\": 100,\n        \"execution_mode\": \"self-paced\",\n        \"registration_deadline\": \"2021-12-01T20:03:11Z\",\n        \"content_db_reference\": \"5eb85eacdb51f985c733dcaa\",\n        \"is_active\": true\n      },\n      \"enrollment_time\": \"2021-02-25T11:55:33.241711Z\",\n      \"application_time\": \"2021-02-25T11:55:33.241718Z\",\n      \"enrollment_status\": \"enrolled\",\n      \"fee\": 99.0,\n      \"currency\": \"USD\",\n      \"store\": {\n        \"id\": \"0dd332c0-4f5b-4dd9-8953-d5e580246979\",\n        \"name\": \"Lifelong Campus\"\n      },\n      \"payment\": null\n    }\n  ]\n}\n```   "
-							},
-							"code": 200,
-							"_postman_previewlanguage": "Text",
-							"header": [],
-							"cookie": [],
-							"body": ""
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Get Tagged Careers to a Certificate",
@@ -8772,13 +7839,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/payments/ab2704cc-125a-4b3b-a5be-ae3541dcca36",
+							"raw": "{{baseurl}}/payments/286eb8fb-2cfe-4a2c-91ba-9049c1f4ab2b",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"payments",
-								"ab2704cc-125a-4b3b-a5be-ae3541dcca36"
+								"286eb8fb-2cfe-4a2c-91ba-9049c1f4ab2b"
 							]
 						},
 						"description": "View payments details\n\n**URL** : `/payments/<payment_id>/`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/payments/ab2704cc-125a-4b3b-a5be-ae3541dcca36/\",\n    \"date_time\": \"2021-06-28T08:33:09.240112Z\",\n    \"data\": {\n        \"id\": \"ab2704cc-125a-4b3b-a5be-ae3541dcca36\",\n        \"created_at\": \"2021-06-14T10:37:39.930718Z\",\n        \"updated_at\": \"2021-06-14T10:38:30.728664Z\",\n        \"active_status\": true,\n        \"transaction_time\": \"2021-06-14T10:37:39.928448Z\",\n        \"currency_code\": \"USD\",\n        \"amount\": \"99.00\",\n        \"transaction_reference\": \"consumer_api\",\n        \"status\": \"completed\",\n        \"auth_code\": \"default\",\n        \"payment_type\": \"default\",\n        \"bank\": null,\n        \"account_number\": null,\n        \"card_type\": \"Visa\",\n        \"card_number\": \"XXXX1111\",\n        \"reason_code\": \"1\",\n        \"reason_description\": \"Approval\",\n        \"customer_ip\": \"27.147.204.239\",\n        \"transaction_request_id\": 59,\n        \"cart\": {\n            \"id\": \"a8ddad3e-df40-4ff2-842f-3e0c47705cae\",\n            \"created_at\": \"2021-06-14T10:37:13.521822Z\",\n            \"updated_at\": \"2021-06-14T10:38:30.736627Z\",\n            \"active_status\": true,\n            \"status\": \"processed\",\n            \"note\": \"initiated by user in consumer api\",\n            \"extended_amount\": \"99.00\",\n            \"discount_amount\": \"0.00\",\n            \"sales_tax\": \"0.00\",\n            \"total_amount\": \"99.00\",\n            \"profile\": \"bd502357-84b1-4af0-8e75-697cc8a1b258\",\n            \"store\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n            \"coupon\": null\n        },\n        \"store_payment_gateway\": {\n            \"id\": \"26d42711-445e-4a90-910b-22f1e460f0a9\",\n            \"created_at\": \"2021-05-09T06:04:19.273389Z\",\n            \"updated_at\": \"2021-05-09T06:04:19.273413Z\",\n            \"active_status\": true,\n            \"name\": \"Campus Payment Gateway 2\",\n            \"branding\": {},\n            \"payment_gateway\": \"5d36f3b2-a442-4f09-bd19-0fa41f6da27b\",\n            \"store\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n            \"payment_gateway_config\": \"c0ff6002-6a41-404c-ae7e-7280e932dcf2\"\n        },\n        \"store\": {\n            \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n            \"name\": \"Lifelong Campus\"\n        },\n        \"profile\": {\n            \"id\": \"bd502357-84b1-4af0-8e75-697cc8a1b258\",\n            \"primary_email\": \"sahidul@sgcsoft.net\",\n            \"first_name\": \"Sahidul-edited\",\n            \"last_name\": \"Hasan\"\n        },\n        \"product\": {\n            \"id\": \"d63b5da5-fccf-4bb1-828a-7ecc83ce6481\",\n            \"product_type\": \"course\",\n            \"title\": \"A Manager's Guide to Artificial Intelligence\"\n        }\n    }\n}\n```"
@@ -8892,6 +7959,19 @@
 				},
 				{
 					"name": "Refund Request View for Completed Payment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -8931,44 +8011,6 @@
 						"description": "Request for refund to a completed payment.\n\n**URL** : `/payments/<payment_id>/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/payments/c043c988-3143-4a6b-8c26-ba2dee93e119/\",\n    \"date_time\": \"2021-07-06T12:47:55.482594Z\",\n    \"data\": {\n        \"id\": \"c043c988-3143-4a6b-8c26-ba2dee93e119\",\n        \"created_at\": \"2021-07-05T05:37:15.414407Z\",\n        \"updated_at\": \"2021-07-05T05:38:13.676864Z\",\n        \"active_status\": true,\n        \"transaction_time\": \"2021-07-05T05:37:15.411356Z\",\n        \"currency_code\": \"USD\",\n        \"amount\": \"355.00\",\n        \"transaction_reference\": \"40068913773\",\n        \"status\": \"completed\",\n        \"auth_code\": \"XI3MQ9\",\n        \"payment_type\": \"default\",\n        \"bank\": null,\n        \"account_number\": null,\n        \"card_type\": \"Visa\",\n        \"card_number\": \"XXXX1111\",\n        \"reason_code\": \"1\",\n        \"reason_description\": \"Approval\",\n        \"customer_ip\": \"118.179.124.17\",\n        \"transaction_request_id\": 515,\n        \"cart\": {\n            \"id\": \"72c28a93-91ab-48f3-bfea-53cb6e72071c\",\n            \"created_at\": \"2021-07-05T05:36:58.513397Z\",\n            \"updated_at\": \"2021-07-05T05:38:13.680425Z\",\n            \"active_status\": true,\n            \"status\": \"processed\",\n            \"note\": \"initiated by user in consumer api\",\n            \"extended_amount\": \"355.00\",\n            \"discount_amount\": \"0.00\",\n            \"sales_tax\": \"0.00\",\n            \"total_amount\": \"355.00\",\n            \"profile\": \"77b889db-4d9e-46ce-bd3b-edf0ade0a9d4\",\n            \"store\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n            \"coupon\": null\n        },\n        \"store_payment_gateway\": {\n            \"id\": \"26d42711-445e-4a90-910b-22f1e460f0a9\",\n            \"created_at\": \"2021-05-09T06:04:19.273389Z\",\n            \"updated_at\": \"2021-05-09T06:04:19.273413Z\",\n            \"active_status\": true,\n            \"name\": \"Campus Payment Gateway 2\",\n            \"branding\": {},\n            \"payment_gateway\": \"5d36f3b2-a442-4f09-bd19-0fa41f6da27b\",\n            \"store\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n            \"payment_gateway_config\": \"c0ff6002-6a41-404c-ae7e-7280e932dcf2\"\n        },\n        \"store\": {\n            \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n            \"name\": \"Lifelong Campus\"\n        },\n        \"profile\": {\n            \"id\": \"77b889db-4d9e-46ce-bd3b-edf0ade0a9d4\",\n            \"primary_email\": \"sahidul@sgcsoft.net\",\n            \"first_name\": \"Sahidul\",\n            \"last_name\": \"Hassan\"\n        },\n        \"product\": {\n            \"id\": \"0527d553-616d-42b2-9e9a-6b3e0e65c72c\",\n            \"product_type\": \"course\",\n            \"title\": \"4CShare Global Project Management Simulation\"\n        }\n    }\n}\n```"
 					},
 					"response": []
-				},
-				{
-					"name": "Submit a Refund Request for Completed Payment(not done)",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"payment\": \"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\r\n    \"amount\":150.00,\r\n    \"note\": \"\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseurl}}/refunds/",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"refunds",
-								""
-							]
-						},
-						"description": "Request for refund\n\n**URL** : `/refunds/`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n{\n    \"payment\": \"<payment_id>\",\n    \"amount\": 199.00,\n    \"note\": \"\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/refunds/\",\n    \"date_time\": \"2021-06-27T11:02:46.192938Z\",\n    \"data\": {\n        \"id\": \"71a52bfe-6b0f-4925-b1f2-55b080dc535c\",\n        \"payment\": \"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\n        \"amount\": \"150.00\",\n        \"note\": \"\",\n        \"status\": \"awaiting_verification\",\n        \"requested_by\": \"ca94a2df-c929-460d-bd1a-10790380d5d6\",\n        \"transaction_reference\": \"40068311737\"\n    }\n}\n```"
-					},
-					"response": []
 				}
 			],
 			"description": "Here you can get *Payment* related endpoints."
@@ -8977,7 +8019,20 @@
 			"name": "Refunds",
 			"item": [
 				{
-					"name": "Refund Payment List",
+					"name": "Refund List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -9001,12 +8056,12 @@
 								""
 							]
 						},
-						"description": "View refund payments list\n\n**URL** : `/refunds`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/refunds/\",\n    \"date_time\": \"2021-06-24T09:02:58.646413Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"56a65d25-517b-4838-b742-b4cf39b6e6ef\",\n            \"payment\": {\n                \"id\": \"94126845-977f-465b-a14c-6679e5bc0f09\",\n                \"created_at\": \"2021-06-23T11:57:19.386886Z\",\n                \"updated_at\": \"2021-06-23T12:33:33.233933Z\",\n                \"active_status\": true,\n                \"transaction_time\": \"2021-06-23T11:57:19.383765Z\",\n                \"currency_code\": \"USD\",\n                \"amount\": \"199.00\",\n                \"transaction_reference\": \"40068008211\",\n                \"status\": \"completed\",\n                \"auth_code\": \"default\",\n                \"payment_type\": \"default\",\n                \"bank\": null,\n                \"account_number\": null,\n                \"card_type\": \"Visa\",\n                \"card_number\": \"XXXX1111\",\n                \"reason_code\": \"1\",\n                \"reason_description\": \"Approval\",\n                \"customer_ip\": \"18.223.235.37\",\n                \"transaction_request_id\": 433,\n                \"cart\": \"fac722d6-7e04-4cd1-969a-8cb277fba12d\",\n                \"store_payment_gateway\": \"26d42711-445e-4a90-910b-22f1e460f0a9\"\n            },\n            \"amount\": \"40.00\",\n            \"note\": \"new\",\n            \"status\": \"failed\",\n            \"requested_by\": {\n                \"id\": \"ca94a2df-c929-460d-bd1a-10790380d5d6\",\n                \"last_login\": \"2021-06-23T13:18:21.333026Z\",\n                \"is_superuser\": true,\n                \"is_staff\": true,\n                \"date_joined\": \"2020-11-18T14:17:38Z\",\n                \"first_name\": \"Main\",\n                \"last_name\": \"Admin\",\n                \"username\": \"admin\",\n                \"password\": \"pbkdf2_sha256$216000$7VL6noe7IGtz$LKhAyV23VqXjl4xHXKm9wxtpkD+p6+ZB1dJsxnD8bsI=\",\n                \"email\": \"admin@campus.com\",\n                \"primary_contact_number\": \"01711111111\",\n                \"db_context\": {\n                    \"Store\": [\n                        \"efbe41fa-12b3-404a-8450-1e8e33275265\",\n                        \"1c8ee451-f246-4db1-ad7c-1a6d2c46f065\",\n                        \"b4754803-4eef-4eb3-a7fd-241aac23d639\"\n                    ],\n                    \"CourseProvider\": []\n                },\n                \"is_active\": true,\n                \"mfa_enabled\": false,\n                \"custom_roles\": [\n                    \"c308c357-3297-44a5-a07f-e6835014d41e\",\n                    \"a4fdf40e-f623-4a64-83ea-12b4589f2ddf\",\n                    \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n                    \"ef8ed791-c1ce-4386-b329-06f286a20365\",\n                    \"3e50169e-cc8d-4ab8-881f-36d58d1244b8\",\n                    \"025f327c-da7f-4b96-958a-46e87c35212a\"\n                ],\n                \"role\": \"601575d4-5227-4cfe-90ab-fb26a32291a2\",\n                \"groups\": [],\n                \"user_permissions\": []\n            },\n            \"transaction_reference\": \"0\",\n            \"store\": {\n                \"name\": \"Lifelong Campus\",\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\"\n            },\n            \"paid_amount\": {\n                \"name\": \"199.00\"\n            }\n        }\n    ]\n}\n```"
+						"description": "View refund payments list\n\n**URL** : `/refunds`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/refunds/\",\n    \"date_time\": \"2021-07-08T10:34:59.517296Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 4,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"1ea1b336-ab5e-440e-bd19-87944111c6df\",\n            \"payment\": {\n                \"id\": \"a6acae41-3ea6-4904-b579-27f4d87ea85a\",\n                \"created_at\": \"2021-07-08T10:13:41.511769Z\",\n                \"updated_at\": \"2021-07-08T10:14:27.134224Z\",\n                \"active_status\": true,\n                \"transaction_time\": \"2021-07-08T10:13:41.509182Z\",\n                \"currency_code\": \"USD\",\n                \"amount\": \"79.00\",\n                \"transaction_reference\": \"40069210297\",\n                \"status\": \"completed\",\n                \"auth_code\": \"PZ2HLI\",\n                \"payment_type\": \"default\",\n                \"bank\": null,\n                \"account_number\": null,\n                \"card_type\": \"Visa\",\n                \"card_number\": \"XXXX1111\",\n                \"reason_code\": \"1\",\n                \"reason_description\": \"Approval\",\n                \"customer_ip\": \"103.117.195.100\",\n                \"transaction_request_id\": 516,\n                \"cart\": \"3a70280a-7edf-493e-9336-6a0e5dc45461\",\n                \"store_payment_gateway\": \"26d42711-445e-4a90-910b-22f1e460f0a9\"\n            },\n            \"amount\": \"70.00\",\n            \"note\": \"test\",\n            \"status\": \"failed\",\n            \"requested_by\": {\n                \"id\": \"ca94a2df-c929-460d-bd1a-10790380d5d6\",\n                \"last_login\": \"2021-07-08T10:34:29.046998Z\",\n                \"is_superuser\": true,\n                \"is_staff\": true,\n                \"date_joined\": \"2020-11-18T14:17:38Z\",\n                \"first_name\": \"Main\",\n                \"last_name\": \"Admin\",\n                \"username\": \"admin\",\n                \"password\": \"pbkdf2_sha256$216000$kQhzn35pSZJB$Bq7KxoS6XD6hyh0Fe0C+0DKTt8vIiGx0e00uJwZTwCo=\",\n                \"email\": \"admin@campus.com\",\n                \"primary_contact_number\": \"01711111111\",\n                \"db_context\": {\n                    \"Store\": [\n                        \"efbe41fa-12b3-404a-8450-1e8e33275265\",\n                        \"1c8ee451-f246-4db1-ad7c-1a6d2c46f065\",\n                        \"b4754803-4eef-4eb3-a7fd-241aac23d639\"\n                    ],\n                    \"CourseProvider\": []\n                },\n                \"is_active\": true,\n                \"mfa_enabled\": false,\n                \"custom_roles\": [\n                    \"c308c357-3297-44a5-a07f-e6835014d41e\",\n                    \"a4fdf40e-f623-4a64-83ea-12b4589f2ddf\",\n                    \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n                    \"ef8ed791-c1ce-4386-b329-06f286a20365\",\n                    \"3e50169e-cc8d-4ab8-881f-36d58d1244b8\",\n                    \"025f327c-da7f-4b96-958a-46e87c35212a\"\n                ],\n                \"role\": \"601575d4-5227-4cfe-90ab-fb26a32291a2\",\n                \"groups\": [],\n                \"user_permissions\": []\n            },\n            \"transaction_reference\": \"0\",\n            \"task_cancel_enrollment\": \"not_required\",\n            \"task_tax_refund\": \"not_required\",\n            \"task_crm_update\": \"failed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"paid_amount\": 79.0,\n            \"profile\": {\n                \"id\": \"f7e4cf86-0f2b-4c45-bea0-f400602d1915\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\"\n            },\n            \"discount_amount\": 0.0,\n            \"sales_tax\": 0.0,\n            \"cart_id\": \"3a70280a-7edf-493e-9336-6a0e5dc45461\",\n            \"product\": {\n                \"id\": \"31a0d549-293d-4644-b39d-d3b5519120b8\",\n                \"product_type\": \"course\",\n                \"title\": \"Access Control and Identity Management Scenarios\"\n            }\n        },\n        {\n            \"id\": \"865a7dde-71bf-4d3c-afd6-21fe271cb8c9\",\n            \"payment\": {\n                \"id\": \"286eb8fb-2cfe-4a2c-91ba-9049c1f4ab2b\",\n                \"created_at\": \"2021-07-04T11:14:41.876597Z\",\n                \"updated_at\": \"2021-07-08T10:09:03.807129Z\",\n                \"active_status\": true,\n                \"transaction_time\": \"2021-07-04T11:14:41.874030Z\",\n                \"currency_code\": \"USD\",\n                \"amount\": \"549.00\",\n                \"transaction_reference\": \"40068890023\",\n                \"status\": \"completed\",\n                \"auth_code\": \"27EFTS\",\n                \"payment_type\": \"default\",\n                \"bank\": null,\n                \"account_number\": null,\n                \"card_type\": \"Visa\",\n                \"card_number\": \"XXXX1111\",\n                \"reason_code\": \"1\",\n                \"reason_description\": \"Approval\",\n                \"customer_ip\": \"103.117.195.100\",\n                \"transaction_request_id\": 511,\n                \"cart\": \"b247f92c-ace3-4525-97e8-4553dfcb2675\",\n                \"store_payment_gateway\": \"26d42711-445e-4a90-910b-22f1e460f0a9\"\n            },\n            \"amount\": \"50.00\",\n            \"note\": \"test\",\n            \"status\": \"failed\",\n            \"requested_by\": {\n                \"id\": \"ca94a2df-c929-460d-bd1a-10790380d5d6\",\n                \"last_login\": \"2021-07-08T10:34:29.046998Z\",\n                \"is_superuser\": true,\n                \"is_staff\": true,\n                \"date_joined\": \"2020-11-18T14:17:38Z\",\n                \"first_name\": \"Main\",\n                \"last_name\": \"Admin\",\n                \"username\": \"admin\",\n                \"password\": \"pbkdf2_sha256$216000$kQhzn35pSZJB$Bq7KxoS6XD6hyh0Fe0C+0DKTt8vIiGx0e00uJwZTwCo=\",\n                \"email\": \"admin@campus.com\",\n                \"primary_contact_number\": \"01711111111\",\n                \"db_context\": {\n                    \"Store\": [\n                        \"efbe41fa-12b3-404a-8450-1e8e33275265\",\n                        \"1c8ee451-f246-4db1-ad7c-1a6d2c46f065\",\n                        \"b4754803-4eef-4eb3-a7fd-241aac23d639\"\n                    ],\n                    \"CourseProvider\": []\n                },\n                \"is_active\": true,\n                \"mfa_enabled\": false,\n                \"custom_roles\": [\n                    \"c308c357-3297-44a5-a07f-e6835014d41e\",\n                    \"a4fdf40e-f623-4a64-83ea-12b4589f2ddf\",\n                    \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n                    \"ef8ed791-c1ce-4386-b329-06f286a20365\",\n                    \"3e50169e-cc8d-4ab8-881f-36d58d1244b8\",\n                    \"025f327c-da7f-4b96-958a-46e87c35212a\"\n                ],\n                \"role\": \"601575d4-5227-4cfe-90ab-fb26a32291a2\",\n                \"groups\": [],\n                \"user_permissions\": []\n            },\n            \"transaction_reference\": \"0\",\n            \"task_cancel_enrollment\": \"not_required\",\n            \"task_tax_refund\": \"not_required\",\n            \"task_crm_update\": \"not_required\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"paid_amount\": 549.0,\n            \"profile\": {\n                \"id\": \"f7e4cf86-0f2b-4c45-bea0-f400602d1915\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\"\n            },\n            \"discount_amount\": 0.0,\n            \"sales_tax\": 0.0,\n            \"cart_id\": \"b247f92c-ace3-4525-97e8-4553dfcb2675\",\n            \"product\": {\n                \"id\": \"3544fe93-1dd6-4dee-8dae-86724840ede3\",\n                \"product_type\": \"certificate\",\n                \"title\": \"Certificate in Digital Marketing\"\n            }\n        },\n        {\n            \"id\": \"ef93dda6-f507-4c52-9905-8172faefe441\",\n            \"payment\": {\n                \"id\": \"c043c988-3143-4a6b-8c26-ba2dee93e119\",\n                \"created_at\": \"2021-07-05T05:37:15.414407Z\",\n                \"updated_at\": \"2021-07-08T10:09:03.804541Z\",\n                \"active_status\": true,\n                \"transaction_time\": \"2021-07-05T05:37:15.411356Z\",\n                \"currency_code\": \"USD\",\n                \"amount\": \"355.00\",\n                \"transaction_reference\": \"40068913773\",\n                \"status\": \"completed\",\n                \"auth_code\": \"XI3MQ9\",\n                \"payment_type\": \"default\",\n                \"bank\": null,\n                \"account_number\": null,\n                \"card_type\": \"Visa\",\n                \"card_number\": \"XXXX1111\",\n                \"reason_code\": \"1\",\n                \"reason_description\": \"Approval\",\n                \"customer_ip\": \"118.179.124.17\",\n                \"transaction_request_id\": 515,\n                \"cart\": \"72c28a93-91ab-48f3-bfea-53cb6e72071c\",\n                \"store_payment_gateway\": \"26d42711-445e-4a90-910b-22f1e460f0a9\"\n            },\n            \"amount\": \"30.00\",\n            \"note\": \"test\",\n            \"status\": \"failed\",\n            \"requested_by\": {\n                \"id\": \"ca94a2df-c929-460d-bd1a-10790380d5d6\",\n                \"last_login\": \"2021-07-08T10:34:29.046998Z\",\n                \"is_superuser\": true,\n                \"is_staff\": true,\n                \"date_joined\": \"2020-11-18T14:17:38Z\",\n                \"first_name\": \"Main\",\n                \"last_name\": \"Admin\",\n                \"username\": \"admin\",\n                \"password\": \"pbkdf2_sha256$216000$kQhzn35pSZJB$Bq7KxoS6XD6hyh0Fe0C+0DKTt8vIiGx0e00uJwZTwCo=\",\n                \"email\": \"admin@campus.com\",\n                \"primary_contact_number\": \"01711111111\",\n                \"db_context\": {\n                    \"Store\": [\n                        \"efbe41fa-12b3-404a-8450-1e8e33275265\",\n                        \"1c8ee451-f246-4db1-ad7c-1a6d2c46f065\",\n                        \"b4754803-4eef-4eb3-a7fd-241aac23d639\"\n                    ],\n                    \"CourseProvider\": []\n                },\n                \"is_active\": true,\n                \"mfa_enabled\": false,\n                \"custom_roles\": [\n                    \"c308c357-3297-44a5-a07f-e6835014d41e\",\n                    \"a4fdf40e-f623-4a64-83ea-12b4589f2ddf\",\n                    \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n                    \"ef8ed791-c1ce-4386-b329-06f286a20365\",\n                    \"3e50169e-cc8d-4ab8-881f-36d58d1244b8\",\n                    \"025f327c-da7f-4b96-958a-46e87c35212a\"\n                ],\n                \"role\": \"601575d4-5227-4cfe-90ab-fb26a32291a2\",\n                \"groups\": [],\n                \"user_permissions\": []\n            },\n            \"transaction_reference\": \"0\",\n            \"task_cancel_enrollment\": \"not_required\",\n            \"task_tax_refund\": \"not_required\",\n            \"task_crm_update\": \"not_required\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"paid_amount\": 355.0,\n            \"profile\": {\n                \"id\": \"77b889db-4d9e-46ce-bd3b-edf0ade0a9d4\",\n                \"primary_email\": \"sahidul@sgcsoft.net\",\n                \"first_name\": \"Sahidul\",\n                \"last_name\": \"Hassan\"\n            },\n            \"discount_amount\": 0.0,\n            \"sales_tax\": 0.0,\n            \"cart_id\": \"72c28a93-91ab-48f3-bfea-53cb6e72071c\",\n            \"product\": {\n                \"id\": \"0527d553-616d-42b2-9e9a-6b3e0e65c72c\",\n                \"product_type\": \"course\",\n                \"title\": \"4CShare Global Project Management Simulation\"\n            }\n        },\n        {\n            \"id\": \"21d44185-0693-4f90-81e3-d3b92facc0cd\",\n            \"payment\": {\n                \"id\": \"c043c988-3143-4a6b-8c26-ba2dee93e119\",\n                \"created_at\": \"2021-07-05T05:37:15.414407Z\",\n                \"updated_at\": \"2021-07-08T10:09:03.804541Z\",\n                \"active_status\": true,\n                \"transaction_time\": \"2021-07-05T05:37:15.411356Z\",\n                \"currency_code\": \"USD\",\n                \"amount\": \"355.00\",\n                \"transaction_reference\": \"40068913773\",\n                \"status\": \"completed\",\n                \"auth_code\": \"XI3MQ9\",\n                \"payment_type\": \"default\",\n                \"bank\": null,\n                \"account_number\": null,\n                \"card_type\": \"Visa\",\n                \"card_number\": \"XXXX1111\",\n                \"reason_code\": \"1\",\n                \"reason_description\": \"Approval\",\n                \"customer_ip\": \"118.179.124.17\",\n                \"transaction_request_id\": 515,\n                \"cart\": \"72c28a93-91ab-48f3-bfea-53cb6e72071c\",\n                \"store_payment_gateway\": \"26d42711-445e-4a90-910b-22f1e460f0a9\"\n            },\n            \"amount\": \"300.00\",\n            \"note\": \"test\",\n            \"status\": \"failed\",\n            \"requested_by\": {\n                \"id\": \"ca94a2df-c929-460d-bd1a-10790380d5d6\",\n                \"last_login\": \"2021-07-08T10:34:29.046998Z\",\n                \"is_superuser\": true,\n                \"is_staff\": true,\n                \"date_joined\": \"2020-11-18T14:17:38Z\",\n                \"first_name\": \"Main\",\n                \"last_name\": \"Admin\",\n                \"username\": \"admin\",\n                \"password\": \"pbkdf2_sha256$216000$kQhzn35pSZJB$Bq7KxoS6XD6hyh0Fe0C+0DKTt8vIiGx0e00uJwZTwCo=\",\n                \"email\": \"admin@campus.com\",\n                \"primary_contact_number\": \"01711111111\",\n                \"db_context\": {\n                    \"Store\": [\n                        \"efbe41fa-12b3-404a-8450-1e8e33275265\",\n                        \"1c8ee451-f246-4db1-ad7c-1a6d2c46f065\",\n                        \"b4754803-4eef-4eb3-a7fd-241aac23d639\"\n                    ],\n                    \"CourseProvider\": []\n                },\n                \"is_active\": true,\n                \"mfa_enabled\": false,\n                \"custom_roles\": [\n                    \"c308c357-3297-44a5-a07f-e6835014d41e\",\n                    \"a4fdf40e-f623-4a64-83ea-12b4589f2ddf\",\n                    \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n                    \"ef8ed791-c1ce-4386-b329-06f286a20365\",\n                    \"3e50169e-cc8d-4ab8-881f-36d58d1244b8\",\n                    \"025f327c-da7f-4b96-958a-46e87c35212a\"\n                ],\n                \"role\": \"601575d4-5227-4cfe-90ab-fb26a32291a2\",\n                \"groups\": [],\n                \"user_permissions\": []\n            },\n            \"transaction_reference\": \"0\",\n            \"task_cancel_enrollment\": \"not_required\",\n            \"task_tax_refund\": \"not_required\",\n            \"task_crm_update\": \"not_required\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"paid_amount\": 355.0,\n            \"profile\": {\n                \"id\": \"77b889db-4d9e-46ce-bd3b-edf0ade0a9d4\",\n                \"primary_email\": \"sahidul@sgcsoft.net\",\n                \"first_name\": \"Sahidul\",\n                \"last_name\": \"Hassan\"\n            },\n            \"discount_amount\": 0.0,\n            \"sales_tax\": 0.0,\n            \"cart_id\": \"72c28a93-91ab-48f3-bfea-53cb6e72071c\",\n            \"product\": {\n                \"id\": \"0527d553-616d-42b2-9e9a-6b3e0e65c72c\",\n                \"product_type\": \"course\",\n                \"title\": \"4CShare Global Project Management Simulation\"\n            }\n        }\n    ]\n}\n```"
 					},
 					"response": []
 				},
 				{
-					"name": "View Refund Payment Status",
+					"name": "View Refund Status",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -9101,6 +8156,19 @@
 				},
 				{
 					"name": "Refunds Report Download",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -9120,12 +8188,25 @@
 								}
 							]
 						},
-						"description": "Refunds report download\n\n**URL** : `/refunds/?download=true`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```\n\"Refund ID\",\"Refund Status\",\"Refund Amount\",\"Payment ID\",\"Payment Amount\",\"Email\",\"First Name\",\"Last Name\"\n\"0c9bf569-9002-4033-9e62-c2523975abac\",\"failed\",\"199.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"89eb21f2-917b-4937-9843-24ca58b246fa\",\"failed\",\"2000.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"377e9795-335a-4eee-b8f5-056e1a937cea\",\"failed\",\"0.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"7223cd6d-512f-46ba-8f8c-47ef077d3742\",\"failed\",\"199.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"536f5096-90f8-452f-9efd-15ec45794132\",\"failed\",\"0.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"50a40aca-2383-473f-b2df-485cc2c8b1e9\",\"refunded\",\"49.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"71a52bfe-6b0f-4925-b1f2-55b080dc535c\",\"refunded\",\"150.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"7624d441-eb86-40a1-9731-61771634df15\",\"failed\",\"-199.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"464f94ca-9540-4cbc-8453-6ac9d3b7849e\",\"failed\",\"0.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"a2a43290-8a1c-4096-b25c-59a2f46526b5\",\"failed\",\"200.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"32f428fb-1662-4e8c-aae5-7bfb5538b4b6\",\"failed\",\"199.00\",\"94126845-977f-465b-a14c-6679e5bc0f09\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"1f7ea510-0988-4114-9640-ec5dd8333d47\",\"failed\",\"199.00\",\"94126845-977f-465b-a14c-6679e5bc0f09\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"b62e8a75-3336-4175-be21-bb909b7c09fd\",\"failed\",\"199.00\",\"94126845-977f-465b-a14c-6679e5bc0f09\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"817f1997-5747-4d29-89a1-6deab578bc49\",\"failed\",\"199.10\",\"94126845-977f-465b-a14c-6679e5bc0f09\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"f7d776fb-daaa-4cf6-a2a4-9eab7572376e\",\"failed\",\"200.00\",\"94126845-977f-465b-a14c-6679e5bc0f09\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"7de99636-7627-430a-9b1f-175dbdd7592a\",\"failed\",\"0.00\",\"94126845-977f-465b-a14c-6679e5bc0f09\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"20a39f15-2384-4396-bd67-4bca119eb889\",\"failed\",\"0.00\",\"96aea7aa-7934-4f81-b26b-c15a1f105629\",\"318.73\",\"\",\"Main\",\"Admin\"\n\"c404ab75-7562-4f8e-a1c6-d16bea44227c\",\"failed\",\"315.00\",\"96aea7aa-7934-4f81-b26b-c15a1f105629\",\"318.73\",\"\",\"Main\",\"Admin\"\n\"2447cd9b-801e-401e-9d45-79c480d20579\",\"failed\",\"318.74\",\"96aea7aa-7934-4f81-b26b-c15a1f105629\",\"318.73\",\"\",\"Main\",\"Admin\"\n\"06984f87-f782-43b9-a71e-83fd5b735256\",\"failed\",\"320.00\",\"96aea7aa-7934-4f81-b26b-c15a1f105629\",\"318.73\",\"\",\"Main\",\"Admin\"\n\"7eda74e1-7fcc-4ad2-8efe-2b18c1746ea9\",\"failed\",\"0.00\",\"96aea7aa-7934-4f81-b26b-c15a1f105629\",\"318.73\",\"\",\"Main\",\"Admin\"\n\"86628f60-c2b8-42d0-a503-ce47408ed541\",\"failed\",\"40.00\",\"94126845-977f-465b-a14c-6679e5bc0f09\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"991dfedb-f841-45ab-a482-7cbaf2f3df37\",\"failed\",\"56.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"fc3bca33-bf96-481d-a012-bbbce75c8f79\",\"failed\",\"20.00\",\"83d250f5-b5e3-4e30-82ca-aacd9e36f306\",\"199.00\",\"\",\"Main\",\"Admin\"\n\"56a65d25-517b-4838-b742-b4cf39b6e6ef\",\"failed\",\"40.00\",\"94126845-977f-465b-a14c-6679e5bc0f09\",\"199.00\",\"\",\"Main\",\"Admin\"\n\n\n\n```"
+						"description": "Refunds report download\n\n**URL** : `/refunds/?download=true`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```\n\"Refund ID\",\"Refund Status\",\"Refund Amount\",\"Payment ID\",\"Payment Amount\",\"Email\",\"First Name\",\"Last Name\"\n\"1ea1b336-ab5e-440e-bd19-87944111c6df\",\"failed\",\"70.00\",\"a6acae41-3ea6-4904-b579-27f4d87ea85a\",\"79.00\",\"sakib@sgcsoft.net\",\"Sakib\",\"Hasan\"\n\"865a7dde-71bf-4d3c-afd6-21fe271cb8c9\",\"failed\",\"50.00\",\"286eb8fb-2cfe-4a2c-91ba-9049c1f4ab2b\",\"549.00\",\"sakib@sgcsoft.net\",\"Sakib\",\"Hasan\"\n\"ef93dda6-f507-4c52-9905-8172faefe441\",\"failed\",\"30.00\",\"c043c988-3143-4a6b-8c26-ba2dee93e119\",\"355.00\",\"sahidul@sgcsoft.net\",\"Sahidul\",\"Hassan\"\n\"21d44185-0693-4f90-81e3-d3b92facc0cd\",\"failed\",\"300.00\",\"c043c988-3143-4a6b-8c26-ba2dee93e119\",\"355.00\",\"sahidul@sgcsoft.net\",\"Sahidul\",\"Hassan\"\n\n```"
 					},
 					"response": []
 				},
 				{
 					"name": "Refund Details View",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -9140,16 +8221,116 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/refunds/C95163cf-Bd4b-460b-Ab03-6b3f1a948f62",
+							"raw": "{{baseurl}}/refunds/418a902b-aa1c-4de6-9f3a-3860b50b3697",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"refunds",
-								"C95163cf-Bd4b-460b-Ab03-6b3f1a948f62"
+								"418a902b-aa1c-4de6-9f3a-3860b50b3697"
 							]
 						},
 						"description": "View a particular refund details \n\n**URL** : `/refunds/<refund_id>`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/refunds/C95163cf-Bd4b-460b-Ab03-6b3f1a948f62/\",\n    \"date_time\": \"2021-07-06T12:34:40.931092Z\",\n    \"data\": {\n        \"id\": \"c95163cf-bd4b-460b-ab03-6b3f1a948f62\",\n        \"payment\": {\n            \"id\": \"baa7bb90-537e-46d5-8773-59457511a010\",\n            \"created_at\": \"2021-06-29T11:28:06.460029Z\",\n            \"updated_at\": \"2021-06-29T11:28:38.572121Z\",\n            \"active_status\": true,\n            \"transaction_time\": \"2021-06-29T11:28:06.457208Z\",\n            \"currency_code\": \"USD\",\n            \"amount\": \"359.00\",\n            \"transaction_reference\": \"40068491615\",\n            \"status\": \"completed\",\n            \"auth_code\": \"1HS5L2\",\n            \"payment_type\": \"default\",\n            \"bank\": null,\n            \"account_number\": null,\n            \"card_type\": \"Visa\",\n            \"card_number\": \"XXXX1111\",\n            \"reason_code\": \"1\",\n            \"reason_description\": \"Approval\",\n            \"customer_ip\": \"27.147.226.74\",\n            \"transaction_request_id\": 490,\n            \"cart\": \"cc2dca5e-ed15-4847-bfe7-65d46acedcac\",\n            \"store_payment_gateway\": \"26d42711-445e-4a90-910b-22f1e460f0a9\"\n        },\n        \"amount\": \"9.00\",\n        \"note\": \"test4\",\n        \"status\": \"refunded\",\n        \"requested_by\": {\n            \"id\": \"4fefb3a6-e700-418e-8665-b22b6aefeb25\",\n            \"last_login\": null,\n            \"is_superuser\": false,\n            \"is_staff\": false,\n            \"date_joined\": \"2021-07-01T07:45:02.575356Z\",\n            \"first_name\": \"Accountant\",\n            \"last_name\": \"Accountant\",\n            \"username\": \"admin_accountant\",\n            \"password\": \"pbkdf2_sha256$216000$fSM1gBJDeCrH$denX3sxXooot/qnRG6GPMFOisMgaK3dI1NVGwlOu+cg=\",\n            \"email\": \"accountant@campus.com\",\n            \"primary_contact_number\": \"+8801717897213\",\n            \"db_context\": {\n                \"Store\": [\n                    \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\"\n                ],\n                \"CourseProvider\": [\n                    \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\"\n                ]\n            },\n            \"is_active\": true,\n            \"mfa_enabled\": false,\n            \"custom_roles\": [\n                \"c98cc82d-4e53-4d31-b056-4f1b80d7b8bb\"\n            ],\n            \"role\": null,\n            \"groups\": [],\n            \"user_permissions\": []\n        },\n        \"transaction_reference\": \"40068681349\",\n        \"store\": {\n            \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n            \"name\": \"Lifelong Campus\"\n        },\n        \"paid_amount\": 359.0,\n        \"profile\": {\n            \"id\": \"ac49393d-31ed-4355-b00c-14e62e30b83d\",\n            \"primary_email\": \"thomas.charles202129@gmail.com\",\n            \"first_name\": \"Thomas\",\n            \"last_name\": \"Charles\"\n        },\n        \"discount_amount\": 0.0,\n        \"sales_tax\": 0.0,\n        \"product\": {\n            \"id\": \"a0b5bd16-5bc1-47f0-b658-628f55250690\",\n            \"product_type\": \"certificate\",\n            \"title\": \"Certificate on Testing\"\n        }\n    }\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Refund Request for Completed Payment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment\": \"d491659e-4f95-496b-8d3e-6cc178c1586b\",\r\n    \"amount\": \"271.83\",\r\n    \"note\": \"\",\r\n    \"task_crm_update\": \"pending\",\r\n    \"task_tax_refund\": \"pending\",\r\n    \"task_cancel_enrollment\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/refunds/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"refunds",
+								""
+							]
+						},
+						"description": "Request for refund\n\n**URL** : `/refunds/`\n\n**Method** : `POST`\n\n**Payload** : task related fields have two options. \"not_required\" to disable & \"pending\" to enable.\n\n```json\n{\n    \"payment\": \"<payment_id>\",\n    \"amount\": \"9\",\n    \"note\": \"\",\n    \"task_crm_update\": \"not_required\",\n    \"task_tax_refund\": \"not_required\",\n    \"task_cancel_enrollment\": \"pending\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/refunds/\",\n    \"date_time\": \"2021-07-11T09:51:15.550089Z\",\n    \"data\": {\n        \"id\": \"1e7c0dd3-e7bc-4798-9808-3b96dad02820\",\n        \"payment\": \"dac9131b-b900-4b79-966d-0f8e99dc0605\",\n        \"amount\": \"9.00\",\n        \"note\": \"\",\n        \"status\": \"awaiting_verification\",\n        \"requested_by\": \"ca94a2df-c929-460d-bd1a-10790380d5d6\",\n        \"transaction_reference\": \"40069419363\",\n        \"task_cancel_enrollment\": \"pending\",\n        \"task_tax_refund\": \"not_required\",\n        \"task_crm_update\": \"not_required\"\n    }\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Restart Refund Subtask",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/retry-refund/?refund_id=1057e2b8-0121-4b35-a79c-e1d83add74a0&task_name=task_cancel_enrollment",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"retry-refund",
+								""
+							],
+							"query": [
+								{
+									"key": "refund_id",
+									"value": "1057e2b8-0121-4b35-a79c-e1d83add74a0"
+								},
+								{
+									"key": "task_name",
+									"value": "task_cancel_enrollment"
+								},
+								{
+									"key": "task_name",
+									"value": "task_tax_refund",
+									"disabled": true
+								},
+								{
+									"key": "task_name",
+									"value": "task_crm_update",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Restart the refund subtask\n\n**URL** : `/retry-refund/?refund_id=<refund_id>&task_name=<task_name>`\nThere are 3 tasks- task_cancel_enrollment, task_tax_refund, task_crm_update\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n    \"status\": \"pending\"\n}\n```"
 					},
 					"response": []
 				}
