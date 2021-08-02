@@ -856,7 +856,14 @@
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {\r",
 									"    pm.response.to.have.status(201);\r",
-									"});"
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -867,7 +874,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"fee\": \"249\",\r\n    \"seat_capacity\": \"0\",\r\n    \"available_seat\": \"0\",\r\n    \"execution_mode\": \"self-paced\",\r\n    \"credit_hours\": \"40\",\r\n    \"ceu_hours\": \"3\",\r\n    \"start_date\": \"2021-07-31T10:00:21+06:00\",\r\n    \"end_date\": \"2022-03-31T12:00:59+06:00\",\r\n    \"registration_deadline\": \"2022-01-01T10:00:30+06:00\",\r\n    \"course\": \"91251a10-aeea-4721-8bab-6a2a659bf9c7\"\r\n}",
+							"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"fee\": \"dafdf\",\r\n    \"seat_capacity\": \"0\",\r\n    \"available_seat\": \"0\",\r\n    \"execution_mode\": \"self-paced\",\r\n    \"credit_hours\": \"40\",\r\n    \"ceu_hours\": \"3\",\r\n    \"start_date\": \"2021-07-31T10:00:21+06:00\",\r\n    \"end_date\": \"2022-03-31T12:00:59+06:00\",\r\n    \"registration_deadline\": \"2022-01-01T10:00:30+06:00\",\r\n    \"course\": \"91251a10-aeea-4721-8bab-6a2a659bf9c7\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1602,6 +1609,294 @@
 			"name": "Course Import",
 			"item": [
 				{
+					"name": "Get Course Import List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/import-csv/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"import-csv",
+								""
+							]
+						},
+						"description": "Get course import list\n\n**URL** : `/import-csv/`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-csv/\",\n    \"date_time\": \"2021-08-02T09:33:54.204504Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"cee4e2c9-ef2b-46cb-897a-f5b269724556\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t092615_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Course Import by Course Provider",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/import-csv/?course_provider=3c7f0d0c-62b3-4db2-a23a-d36ec70a6377",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"import-csv",
+								""
+							],
+							"query": [
+								{
+									"key": "course_provider",
+									"value": "3c7f0d0c-62b3-4db2-a23a-d36ec70a6377"
+								}
+							]
+						},
+						"description": "Get course import list by course provider\n\n**URL** : `/import-csv/?course_provider=<course_provider_id>`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Course Import by Status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/import-csv/?status=in_progress",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"import-csv",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "in_progress"
+								},
+								{
+									"key": "status",
+									"value": "failed",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "completed",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get course import list by status\n\n**URL** : `/import-csv/?status=in_progress` or `/import-csv/?status=failed` or `/import-csv/?status=completed`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Course Import by Date",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/import-csv/?status=in_progress",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"import-csv",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "in_progress"
+								},
+								{
+									"key": "status",
+									"value": "failed",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "completed",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get course import list\n\n**URL** : `/import-csv/`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-csv/\",\n    \"date_time\": \"2021-08-02T09:33:54.204504Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"cee4e2c9-ef2b-46cb-897a-f5b269724556\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t092615_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
 					"name": "Course Import",
 					"event": [
 						{
@@ -1610,7 +1905,20 @@
 								"exec": [
 									"pm.test(\"Status code is 201\", function () {\r",
 									"    pm.response.to.have.status(201);\r",
-									"});"
+									"});\r",
+									"\r",
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Asserting error message \", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.error.message).to.eql(\"Invalid CSV file\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -1659,7 +1967,7 @@
 								{
 									"key": "filename",
 									"type": "file",
-									"src": "/C:/Users/USER/Desktop/courses - Copy2.csv"
+									"src": "/C:/Users/USER/Desktop/courses - Copy3 - 1.csv"
 								}
 							]
 						},
@@ -1677,7 +1985,8 @@
 					},
 					"response": []
 				}
-			]
+			],
+			"description": "Here you can get Course Import related endpoints."
 		},
 		{
 			"name": "Career",
@@ -6035,7 +6344,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/retry-refund/?refund_id=8b40fc29-7e2e-40b4-8e04-07f6f7b61db2&task_name=task_tax_refund",
+							"raw": "{{baseurl}}/retry-refund/?refund_id=8b40fc29-7e2e-40b4-8e04-07f6f7b61db2&task_name=task_cancel_enrollment",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -6050,12 +6359,12 @@
 								},
 								{
 									"key": "task_name",
-									"value": "task_cancel_enrollment",
-									"disabled": true
+									"value": "task_cancel_enrollment"
 								},
 								{
 									"key": "task_name",
-									"value": "task_tax_refund"
+									"value": "task_tax_refund",
+									"disabled": true
 								},
 								{
 									"key": "task_name",
@@ -6155,13 +6464,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/course-providers/7e3104b4-e5ba-40b0-a4f3-ef4684bec3f6",
+							"raw": "{{baseurl}}/course-providers/3c7f0d0c-62b3-4db2-a23a-d36ec70a6377",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"course-providers",
-								"7e3104b4-e5ba-40b0-a4f3-ef4684bec3f6"
+								"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377"
 							]
 						},
 						"description": "Show individual course providers details\n\n**URL** : `/course-providers/<id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/course-providers/3243fcec-685c-44b5-abf4-7727f395f213/\",\n  \"date_time\": \"2021-03-02T16:28:59.903754Z\",\n  \"data\": {\n    \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n    \"_is_deleted\": false,\n    \"deleted\": false,\n    \"created_at\": \"2020-04-22T06:09:43.860000Z\",\n    \"updated_at\": \"2020-12-14T13:14:40.406000Z\",\n    \"deleted_at\": null,\n    \"published_at\": null,\n    \"address\": null,\n    \"city\": null,\n    \"state\": null,\n    \"zipcode\": null,\n    \"geo_location\": null,\n    \"name\": \"Mind Edge\",\n    \"code\": \"MINDEDGE\",\n    \"logo\": {\n      \"original\": \"1e735563-62da-4aab-a16d-fb82ef2022ee.png\"\n    },\n    \"summary\": \"\",\n    \"description\": \"\",\n    \"_cls\": \"CourseProvider\",\n    \"created_by\": null,\n    \"updated_by\": null,\n    \"deleted_by\": null,\n    \"published_by\": null,\n    \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\"\n  }\n}\n```"
