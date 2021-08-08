@@ -123,7 +123,7 @@
 					"response": []
 				}
 			],
-			"description": "Password change for an Admin"
+			"description": "***Password change*** for an Admin"
 		},
 		{
 			"name": "Course",
@@ -729,7 +729,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Course* related endpoints."
+			"description": "Here you can get ***Course*** related endpoints."
 		},
 		{
 			"name": "Section",
@@ -968,7 +968,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Section* related endpoints."
+			"description": "Here you can get ***Section*** related endpoints."
 		},
 		{
 			"name": "Schedule",
@@ -1094,7 +1094,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Schedule* related endpoints."
+			"description": "Here you can get ***Schedule*** related endpoints."
 		},
 		{
 			"name": "Instructor",
@@ -1353,7 +1353,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Instructor* related endpoints."
+			"description": "Here you can get ***Instructor*** related endpoints."
 		},
 		{
 			"name": "Campus",
@@ -1580,7 +1580,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Campus-Course provider site* related endpoints.",
+			"description": "Here you can get ***Campus-Course provider site*** related endpoints.",
 			"auth": {
 				"type": "bearer"
 			},
@@ -1661,16 +1661,82 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{baseurl}}/import-csv/",
+							"raw": "{{baseurl}}/import-task/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"import-csv",
+								"import-task",
 								""
 							]
 						},
-						"description": "Get course import list\n\n**URL** : `/import-csv/`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-csv/\",\n    \"date_time\": \"2021-08-02T09:33:54.204504Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"cee4e2c9-ef2b-46cb-897a-f5b269724556\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t092615_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        }\n    ]\n}\n```"
+						"description": "Get course import list\n\n**URL** : `/import-task/`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-task/\",\n    \"date_time\": \"2021-08-03T03:20:48.370144Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 21,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"e12b0193-1874-4e07-9d01-6af87631e5d8\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t153145_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 1\n        },\n        {\n            \"id\": \"18aef11e-40df-4710-afa4-1782cf1ae486\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t151703_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 2\n        },\n        {\n            \"id\": \"95c14d9a-6553-449a-8afa-fb6c60217a3b\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t151322_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 2\n        },\n        {\n            \"id\": \"7266f882-934a-45c1-b688-45967fe9f4ba\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t150706_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 1\n        },\n        {\n            \"id\": \"77b3a190-e2e7-4774-8fb6-0b98b53c8f89\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t145943_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"34045dd6-6573-4734-ac2a-2a746c33fd84\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t144955_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"eb1786f0-b0f0-4754-a745-1b49ae89bb0c\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t144915_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"2f3fafef-5bf4-4701-b5fb-9fb0c433b858\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t143852_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"49a9a860-0e67-4ecf-8b43-6dfae1d2cd55\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t143313_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"84f54d7a-2514-4865-9afe-e40f11c0e6ce\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t141948_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course Import details of a Particular id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/import-task/d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"import-task",
+								"d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f"
+							]
+						},
+						"description": "Get course import list\n\n**URL** : `/import-task/<import-task_id>`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-task/d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f/\",\n    \"date_time\": \"2021-08-03T08:37:01.617773Z\",\n    \"data\": {\n        \"id\": \"d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f\",\n        \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n        \"import_type\": \"course\",\n        \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t121626_courses_-_copy3_-_1.csv\",\n        \"status\": \"in_progress\",\n        \"status_message\": null,\n        \"queue_processed\": 2\n    }\n}\n```"
 					},
 					"response": []
 				},
@@ -1727,12 +1793,12 @@
 							"formdata": []
 						},
 						"url": {
-							"raw": "{{baseurl}}/import-csv/?course_provider=3c7f0d0c-62b3-4db2-a23a-d36ec70a6377",
+							"raw": "{{baseurl}}/import-task/?course_provider=3c7f0d0c-62b3-4db2-a23a-d36ec70a6377",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"import-csv",
+								"import-task",
 								""
 							],
 							"query": [
@@ -1742,7 +1808,7 @@
 								}
 							]
 						},
-						"description": "Get course import list by course provider\n\n**URL** : `/import-csv/?course_provider=<course_provider_id>`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n\n```"
+						"description": "Get course import list by course provider\n\n**URL** : `/import-task/?course_provider=<course_provider_id>`\n\n**Method** : `GET`\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-task/?course_provider=3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n    \"date_time\": \"2021-08-03T03:25:15.715871Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 21,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"e12b0193-1874-4e07-9d01-6af87631e5d8\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t153145_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 1\n        },\n        {\n            \"id\": \"18aef11e-40df-4710-afa4-1782cf1ae486\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t151703_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 2\n        },\n        {\n            \"id\": \"95c14d9a-6553-449a-8afa-fb6c60217a3b\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t151322_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 2\n        },\n        {\n            \"id\": \"7266f882-934a-45c1-b688-45967fe9f4ba\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t150706_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 1\n        },\n        {\n            \"id\": \"77b3a190-e2e7-4774-8fb6-0b98b53c8f89\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t145943_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"34045dd6-6573-4734-ac2a-2a746c33fd84\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t144955_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"eb1786f0-b0f0-4754-a745-1b49ae89bb0c\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t144915_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"2f3fafef-5bf4-4701-b5fb-9fb0c433b858\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t143852_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"49a9a860-0e67-4ecf-8b43-6dfae1d2cd55\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t143313_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"84f54d7a-2514-4865-9afe-e40f11c0e6ce\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t141948_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        }\n    ]\n}\n```"
 					},
 					"response": []
 				},
@@ -1792,12 +1858,12 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/import-csv/?status=in_progress",
+							"raw": "{{baseurl}}/import-task/?status=in_progress",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"import-csv",
+								"import-task",
 								""
 							],
 							"query": [
@@ -1817,7 +1883,7 @@
 								}
 							]
 						},
-						"description": "Get course import list by status\n\n**URL** : `/import-csv/?status=in_progress` or `/import-csv/?status=failed` or `/import-csv/?status=completed`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n\n```"
+						"description": "Get course import list by status\n\n**URL** : `/import-task/?status=in_progress` or `/import-task/?status=failed` or `/import-task/?status=completed`\n\n**Method** : `GET`\n\n\n**Response for in_progress**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-task/?status=in_progress\",\n    \"date_time\": \"2021-08-02T15:14:01.002439Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 9,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"77b3a190-e2e7-4774-8fb6-0b98b53c8f89\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t145943_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"84f54d7a-2514-4865-9afe-e40f11c0e6ce\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t141948_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"740a770c-ab04-4ae2-8803-5fcebdf03730\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t133440_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"2fea5d71-6c4b-4b9c-aaf6-56b4debc2f35\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t130818_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"44c5e7bf-2f69-42ff-b4ab-f8c1437964e3\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t125113_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"a55e2ae4-c239-40ed-9ed9-d9e56cc1245b\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t124840_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"2314e32d-5bde-4b3b-825e-98395ee145e3\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t124005_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"5fc8d8f1-1f52-4a36-89a5-4e0fae3b381f\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t123613_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"e5bc006f-3e00-4b88-9acc-405f9f448db4\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t122615_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        }\n    ]\n}\n```"
 					},
 					"response": []
 				},
@@ -1867,32 +1933,26 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/import-csv/?status=in_progress",
+							"raw": "{{baseurl}}/import-task/?created_at__gte=2021-08-02&created_at__lte=2021-08-03",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"import-csv",
+								"import-task",
 								""
 							],
 							"query": [
 								{
-									"key": "status",
-									"value": "in_progress"
+									"key": "created_at__gte",
+									"value": "2021-08-02"
 								},
 								{
-									"key": "status",
-									"value": "failed",
-									"disabled": true
-								},
-								{
-									"key": "status",
-									"value": "completed",
-									"disabled": true
+									"key": "created_at__lte",
+									"value": "2021-08-03"
 								}
 							]
 						},
-						"description": "Get course import list\n\n**URL** : `/import-csv/`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-csv/\",\n    \"date_time\": \"2021-08-02T09:33:54.204504Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"cee4e2c9-ef2b-46cb-897a-f5b269724556\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t092615_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        }\n    ]\n}\n```"
+						"description": "Filter course import list by date\n\n**URL** : `import-task/?created_at__gte=2021-07-31&created_at__lte=2021-08-02`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n\n```"
 					},
 					"response": []
 				},
@@ -1967,26 +2027,370 @@
 								{
 									"key": "filename",
 									"type": "file",
-									"src": "/C:/Users/USER/Desktop/courses - Copy3 - 1.csv"
+									"src": "/C:/Users/USER/Desktop/courses - Copy3 - title.csv"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{baseurl}}/import-csv/",
+							"raw": "{{baseurl}}/import-task/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"import-csv",
+								"import-task",
 								""
 							]
 						},
-						"description": "Bulk course import \n\n**URL** : `/import-csv/`\n\n**Method** : `POST`\n\n**Payload** : import_type can be 3 types- course or certificate or sections. \nFile format: it should be a csv file. The headers of the csv file are like this:\nexternal_id, external_url, external_version_id, code, title, slug, description, learning_outcome, image, default_image, summary, syllabus_url, level, inquiry_url, keywords\n\n\n**Form Data** \n\n```json\n{\n    \"course_provider\": \"<course_provider_id>\",\n    \"import_type\": \"course or certificate or sections\",\n    \"filename\": <csv file obj>\n}\n```\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-csv/\",\n    \"date_time\": \"2021-07-29T05:16:34.810060Z\",\n    \"data\": {\n        \"id\": \"882a9093-49f1-4c70-9fae-8902a165d658\",\n        \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n        \"import_type\": \"course\",\n        \"filename\": \"https://static.dev.campus.com/uploads/course/20210729t051634_courses_-_copy2.csv\",\n        \"status\": \"in_progress\",\n        \"status_message\": null,\n        \"queue_processed\": 0\n    }\n}\n```"
+						"description": "Bulk course import \n\n**URL** : `/import-task/`\n\n**Method** : `POST`\n\n**Payload** : import_type can be 3 types- course or certificate or sections. \nFile format: it should be a csv file. The headers of the csv file are like this:\nexternal_id, external_url, external_version_id, code, title, slug, description, learning_outcome, image, default_image, summary, syllabus_url, level, inquiry_url, keywords\n\n\n**Form Data** \n\n```json\n{\n    \"course_provider\": \"<course_provider_id>\",\n    \"import_type\": \"course or certificate or sections\",\n    \"filename\": <csv file obj>\n}\n```\n\n**Response**\n\n```json\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Course Import Requeue",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "import_task_id",
+									"value": "d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/import-requeue/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"import-requeue",
+								""
+							]
+						},
+						"description": "Course import requeue\n\n**URL** : `/import-requeue/`\n\n**Method** : `POST`\n\n**Payload** : **Form Data** \n\n\n```json\n{\n    \"import_task_id\": \"<import_task_id>\"\n}\n```\n\n**Response**\n\n```json\n{\n    \"status\": \"success\"\n}\n```"
 					},
 					"response": []
 				}
 			],
-			"description": "Here you can get Course Import related endpoints."
+			"description": "Here you can get ***Course Import*** related endpoints."
+		},
+		{
+			"name": "Failed Message Queue",
+			"item": [
+				{
+					"name": "Get Failed Message Queue",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/failed-messages/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"failed-messages",
+								""
+							]
+						},
+						"description": "Get failed message list\n\n**URL** : `/failed-messages/`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/failed-messages/\",\n    \"date_time\": \"2021-08-07T10:56:55.768800Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 6,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"failed_message_id\": \"610a590682237e000aefdad0\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"e7daccc8-ac90-484a-ade3-e2ef81813efc\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:08:22.868000\"\n        },\n        {\n            \"failed_message_id\": \"610a5b826e6c404334719484\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"244f26d3-ffb4-4e46-b764-cf73599aa9b4\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:18:58.585000\"\n        },\n        {\n            \"failed_message_id\": \"610a5bc56e6c404334719485\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"8be9cbaa-ca9a-4b52-bcf6-5381fa712092\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:20:05.776000\"\n        },\n        {\n            \"failed_message_id\": \"610a5bee4b660ef0c09ad49e\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"27e6629c-13b8-454b-8687-3243092a153d\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:20:46.283000\"\n        },\n        {\n            \"failed_message_id\": \"610a66d098c76a4314863a2c\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"83416ce1-7080-4ba0-9cc2-6de316ce6d15\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 10:07:12.345000\"\n        },\n        {\n            \"failed_message_id\": \"610a6ca918b465f8a2ce2746\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"e7daccc8-ac90-484a-ade3-e2ef81813efc\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 10:32:09.784000\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Failed Message by Store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/failed-messages/?store_id=b4e5683c-4ae7-4d12-bc05-5a0053d835b6",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"failed-messages",
+								""
+							],
+							"query": [
+								{
+									"key": "store_id",
+									"value": "b4e5683c-4ae7-4d12-bc05-5a0053d835b6"
+								}
+							]
+						},
+						"description": "Filter failed message list by date\n\n**URL** : `failed-messages/?store_id=<store_id>`\n\n**Method** : `GET`\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/failed-messages/?store_id=b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n    \"date_time\": \"2021-08-07T10:57:58.168505Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 6,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"failed_message_id\": \"610a590682237e000aefdad0\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"e7daccc8-ac90-484a-ade3-e2ef81813efc\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:08:22.868000\"\n        },\n        {\n            \"failed_message_id\": \"610a5b826e6c404334719484\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"244f26d3-ffb4-4e46-b764-cf73599aa9b4\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:18:58.585000\"\n        },\n        {\n            \"failed_message_id\": \"610a5bc56e6c404334719485\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"8be9cbaa-ca9a-4b52-bcf6-5381fa712092\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:20:05.776000\"\n        },\n        {\n            \"failed_message_id\": \"610a5bee4b660ef0c09ad49e\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"27e6629c-13b8-454b-8687-3243092a153d\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:20:46.283000\"\n        },\n        {\n            \"failed_message_id\": \"610a66d098c76a4314863a2c\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"83416ce1-7080-4ba0-9cc2-6de316ce6d15\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 10:07:12.345000\"\n        },\n        {\n            \"failed_message_id\": \"610a6ca918b465f8a2ce2746\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"e7daccc8-ac90-484a-ade3-e2ef81813efc\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 10:32:09.784000\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Filter Failed Message by Date",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/failed-messages/?from_date=2021-08-01&to_date=2021-08-04",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"failed-messages",
+								""
+							],
+							"query": [
+								{
+									"key": "from_date",
+									"value": "2021-08-01"
+								},
+								{
+									"key": "to_date",
+									"value": "2021-08-04"
+								}
+							]
+						},
+						"description": "Filter failed message list by date\n\n**URL** : `failed-messages/?from_date=2021-07-01&to_date=2021-08-03`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/failed-messages/?from_date=2021-08-01&to_date=2021-08-04\",\n    \"date_time\": \"2021-08-07T10:58:39.085706Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 6,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"failed_message_id\": \"610a590682237e000aefdad0\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"e7daccc8-ac90-484a-ade3-e2ef81813efc\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:08:22.868000\"\n        },\n        {\n            \"failed_message_id\": \"610a5b826e6c404334719484\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"244f26d3-ffb4-4e46-b764-cf73599aa9b4\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:18:58.585000\"\n        },\n        {\n            \"failed_message_id\": \"610a5bc56e6c404334719485\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"8be9cbaa-ca9a-4b52-bcf6-5381fa712092\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:20:05.776000\"\n        },\n        {\n            \"failed_message_id\": \"610a5bee4b660ef0c09ad49e\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"27e6629c-13b8-454b-8687-3243092a153d\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 09:20:46.283000\"\n        },\n        {\n            \"failed_message_id\": \"610a66d098c76a4314863a2c\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"83416ce1-7080-4ba0-9cc2-6de316ce6d15\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 10:07:12.345000\"\n        },\n        {\n            \"failed_message_id\": \"610a6ca918b465f8a2ce2746\",\n            \"body\": {\n                \"routing_key\": \"course_mongo.import\",\n                \"refund_id\": null,\n                \"cart_id\": null,\n                \"payment_id\": null,\n                \"external_id\": null,\n                \"profile_id\": null,\n                \"course_enrollment_id\": null,\n                \"product_id\": null,\n                \"store_course_section_id\": null,\n                \"hubspot_token\": null,\n                \"import_task_id\": \"e7daccc8-ac90-484a-ade3-e2ef81813efc\",\n                \"store\": \"\",\n                \"store_id\": null\n            },\n            \"datetime\": \"2021-08-04 10:32:09.784000\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Failed Message Requeue",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "failed_message_id",
+									"value": "610a590682237e000aefdad0",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/message-requeue/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"message-requeue",
+								""
+							]
+						},
+						"description": "Failed message requeue\n\n**URL** : `/message-requeue/`\n\n**Method** : `POST`\n\n**Payload** : **Form Data** \n\n\n```json\n{\n“failed_message_id“: “<failed_message_id>“\n}\n```\n\n**Response**\n\n```json\n{\n    \"status\": \"success\"\n}\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get *failed message queue* related endpoints."
 		},
 		{
 			"name": "Career",
@@ -2126,7 +2530,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/stores/",
+							"raw": "{{baseurl}}/stores/?limit=20",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -2137,8 +2541,7 @@
 							"query": [
 								{
 									"key": "limit",
-									"value": "10",
-									"disabled": true
+									"value": "20"
 								},
 								{
 									"key": "page",
@@ -2229,8 +2632,35 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"course_provider\": \"56343945-00de-4770-bb7c-65c950b68fbc\",\r\n  \"name\": \"MindEdge\",\r\n  \"url_slug\": \"mindedge\",\r\n  \"gtm_id\": \"\"\r\n}"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "course_provider",
+									"value": "3c7f0d0c-62b3-4db2-a23a-d36ec70a6377",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Testing Template Store Nafisa",
+									"type": "text"
+								},
+								{
+									"key": "url_slug",
+									"value": "testing-template-store-nafisa",
+									"type": "text"
+								},
+								{
+									"key": "gtm_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "template",
+									"type": "file",
+									"src": "/C:/Users/USER/Desktop/laroche.js"
+								}
+							]
 						},
 						"url": {
 							"raw": "{{baseurl}}/stores/",
@@ -2242,12 +2672,25 @@
 								""
 							]
 						},
-						"description": "Create a store\n\n**URL** : `/stores/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n{\n  \"course_provider\": \"56343945-00de-4770-bb7c-65c950b68fbc\",\n  \"name\": \"MindEdge\",\n  \"url_slug\": \"mindedge\",\n  \"gtm_id\": \"\"\n}\n```\n\n**Response**\n\n**Code** : `201 CREATED`\n\n**Content example**\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/stores/\",\n  \"date_time\": \"2021-02-28T21:10:41.965836Z\",\n  \"data\": {\n    \"id\": \"74c65bbc-4582-4fe3-a1cd-3b92963b851a\",\n    \"name\": \"MindEdge\",\n    \"url_slug\": \"mindedge\",\n    \"is_active\": true,\n    \"store_logo_uri\": null,\n    \"gtm_id\": \"\",\n    \"identity_providers\": [],\n    \"payment_gateways\": []\n  }\n}\n```"
+						"description": "Create a store\n\n**URL** : `/stores/`\n\n**Method** : `POST`\n\n**Payload:** **Form Data:**\n\n\n```json\n{\n  \"course_provider\": \"56343945-00de-4770-bb7c-65c950b68fbc\",\n  \"name\": \"MindEdge\",\n  \"url_slug\": \"mindedge\",\n  \"gtm_id\": \"\",\n  \"template\":<file obj> \n}\n```\n\n**Response**\n\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/stores/\",\n  \"date_time\": \"2021-02-28T21:10:41.965836Z\",\n  \"data\": {\n    \"id\": \"74c65bbc-4582-4fe3-a1cd-3b92963b851a\",\n    \"name\": \"MindEdge\",\n    \"url_slug\": \"mindedge\",\n    \"is_active\": true,\n    \"store_logo_uri\": null,\n    \"gtm_id\": \"\",\n    \"identity_providers\": [],\n    \"payment_gateways\": []\n  }\n}\n```"
 					},
 					"response": []
 				},
 				{
 					"name": "Update Stores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -2271,21 +2714,48 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"course_provider\": \"f7295fbb-2624-46dc-ba23-68be32dbce9b\",\r\n  \"name\": \"test\",\r\n  \"url_slug\": \"t\",\r\n  \"gtm_id\": \"\"\r\n}"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "course_provider",
+									"value": "3c7f0d0c-62b3-4db2-a23a-d36ec70a6377",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Testing Template Store",
+									"type": "text"
+								},
+								{
+									"key": "url_slug",
+									"value": "testing-template-store4",
+									"type": "text"
+								},
+								{
+									"key": "gtm_id",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "template",
+									"type": "file",
+									"src": "/C:/Users/USER/Desktop/template_sample1.js"
+								}
+							]
 						},
 						"url": {
-							"raw": "{{baseurl}}/stores/e85b31b1-9724-4601-8361-0f62ce768c3e/",
+							"raw": "{{baseurl}}/stores/6b12ee83-edfb-4a3a-ba7b-6e4620cf25e1/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"stores",
-								"e85b31b1-9724-4601-8361-0f62ce768c3e",
+								"6b12ee83-edfb-4a3a-ba7b-6e4620cf25e1",
 								""
 							]
 						},
-						"description": "Update of a store can be performed either fully or partially by the Owner of the store.\n\n**URL** : /stores/:id/\n\n**Method** : PATCH\n\n**Permissions required** : User is store Owner\n\n**Payload** :\n\n```\n{\n    \"course_provider\": \"f7295fbb-2624-46dc-ba23-68be32dbce9b\",\n    \"name\": \"test\",\n    \"url_slug\": \"t\",\n    \"gtm_id\": \"\"\n}\n```\n\n**Responses** :\n\n**Code** : 200 OK\n\n**Content example** :\n\n```\n{\n  \"url\": \"http://api.admin.dev.campus.com/stores/e85b31b1-9724-4601-8361-0f62ce768c3e/\",\n  \"date_time\": \"2021-02-28T21:18:27.630076Z\",\n  \"data\": {\n    \"id\": \"e85b31b1-9724-4601-8361-0f62ce768c3e\",\n    \"name\": \"test\",\n    \"url_slug\": \"t\",\n    \"is_active\": true,\n    \"store_logo_uri\": null,\n    \"gtm_id\": \"\",\n    \"identity_providers\": [],\n    \"payment_gateways\": []\n  }\n}\n```\n"
+						"description": "Update of a store can be performed either fully or partially by the Owner of the store.\n\n**URL** : `/stores/<store_id/`\n\n**Method** : `PATCH`\n\n\n**Payload:** **Form Data:** :\n\n```json\n{\n    \"course_provider\": \"f7295fbb-2624-46dc-ba23-68be32dbce9b\",\n    \"name\": \"test\",\n    \"url_slug\": \"t\",\n    \"gtm_id\": \"\"\n    \"template\":<file obj> \n}\n```\n\n**Responses** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/stores/6b12ee83-edfb-4a3a-ba7b-6e4620cf25e1/\",\n    \"date_time\": \"2021-08-04T11:55:40.372344Z\",\n    \"data\": {\n        \"id\": \"6b12ee83-edfb-4a3a-ba7b-6e4620cf25e1\",\n        \"name\": \"Testing Template Store\",\n        \"url_slug\": \"testing-template-store4\",\n        \"is_active\": false,\n        \"store_logo_uri\": \"https://static.dev.campus.com/uploads/eec57bd0-e6ee-4669-847c-e1abd0dce80a.png\",\n        \"gtm_id\": \"214545\",\n        \"template\": \"https://static.dev.campus.com/uploads/testing-template-store4.20210804t115540.js\",\n        \"identity_providers\": [],\n        \"payment_gateways\": []\n    }\n}\n```"
 					},
 					"response": []
 				},
@@ -2573,7 +3043,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Store* related endpoints."
+			"description": "Here you can get ***Store*** related endpoints."
 		},
 		{
 			"name": "Catalogs",
@@ -2872,7 +3342,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Catalog* related endpoints."
+			"description": "Here you can get ***Catalog*** related endpoints."
 		},
 		{
 			"name": "Store Courses",
@@ -3365,7 +3835,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Store course* related endpoints."
+			"description": "Here you can get ***Store course*** related endpoints."
 		},
 		{
 			"name": "Certificates",
@@ -4696,7 +5166,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get **Certificate** related endpoints."
+			"description": "Here you can get ***Certificate*** related endpoints."
 		},
 		{
 			"name": "Featured Career",
@@ -4830,7 +5300,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Featured Career* related endpoints."
+			"description": "Here you can get ***Featured Career*** related endpoints."
 		},
 		{
 			"name": "Course Enrollments",
@@ -4893,7 +5363,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Course Enrollments* related endpoints."
+			"description": "Here you can get ***Course Enrollments*** related endpoints."
 		},
 		{
 			"name": "Certificate Enrollments",
@@ -5017,7 +5487,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Certificate Enrollments* related endpoints."
+			"description": "Here you can get ***Certificate Enrollments*** related endpoints."
 		},
 		{
 			"name": "Profile",
@@ -5375,7 +5845,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Profile* related endpoints."
+			"description": "Here you can get ***Profile*** related endpoints."
 		},
 		{
 			"name": "Coupon",
@@ -5645,7 +6115,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Coupon* related endpoints."
+			"description": "Here you can get ***Coupon*** related endpoints."
 		},
 		{
 			"name": "Carts",
@@ -5852,7 +6322,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Cart* related endpoints."
+			"description": "Here you can get ***Cart*** related endpoints."
 		},
 		{
 			"name": "Payments",
@@ -6056,7 +6526,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Payment* related endpoints."
+			"description": "Here you can get ***Payment*** related endpoints."
 		},
 		{
 			"name": "Refunds",
@@ -6378,7 +6848,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Refund* related endpoints."
+			"description": "Here you can get ***Refund*** related endpoints."
 		},
 		{
 			"name": "Course Providers",
@@ -6576,7 +7046,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Course Provider* related endpoints",
+			"description": "Here you can get ***Course Provider*** related endpoints",
 			"auth": {
 				"type": "bearer"
 			},
@@ -6831,7 +7301,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Role* related endpoints."
+			"description": "Here you can get ***Role*** related endpoints."
 		},
 		{
 			"name": "User",
@@ -7020,7 +7490,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *User* related endpoints."
+			"description": "Here you can get ***User*** related endpoints."
 		},
 		{
 			"name": "Identity Providers",
@@ -7219,7 +7689,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Identity Provider* related endpoints."
+			"description": "Here you can get ***Identity Provider*** related endpoints."
 		},
 		{
 			"name": "Payment Gateway",
@@ -7357,7 +7827,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *Payment Gateway* related endpoints."
+			"description": "Here you can get ***Payment Gateway*** related endpoints."
 		}
 	],
 	"auth": {
