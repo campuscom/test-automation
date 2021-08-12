@@ -1606,10 +1606,10 @@
 			]
 		},
 		{
-			"name": "Course Import",
+			"name": "Import Task",
 			"item": [
 				{
-					"name": "Get Course Import List",
+					"name": "Get Import Task List",
 					"event": [
 						{
 							"listen": "test",
@@ -1670,12 +1670,12 @@
 								""
 							]
 						},
-						"description": "Get course import list\n\n**URL** : `/import-task/`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-task/\",\n    \"date_time\": \"2021-08-03T03:20:48.370144Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 21,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"e12b0193-1874-4e07-9d01-6af87631e5d8\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t153145_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 1\n        },\n        {\n            \"id\": \"18aef11e-40df-4710-afa4-1782cf1ae486\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t151703_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 2\n        },\n        {\n            \"id\": \"95c14d9a-6553-449a-8afa-fb6c60217a3b\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t151322_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 2\n        },\n        {\n            \"id\": \"7266f882-934a-45c1-b688-45967fe9f4ba\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t150706_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 1\n        },\n        {\n            \"id\": \"77b3a190-e2e7-4774-8fb6-0b98b53c8f89\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t145943_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"34045dd6-6573-4734-ac2a-2a746c33fd84\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t144955_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"eb1786f0-b0f0-4754-a745-1b49ae89bb0c\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t144915_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"2f3fafef-5bf4-4701-b5fb-9fb0c433b858\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t143852_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"49a9a860-0e67-4ecf-8b43-6dfae1d2cd55\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t143313_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"84f54d7a-2514-4865-9afe-e40f11c0e6ce\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t141948_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        }\n    ]\n}\n```"
+						"description": "Get import task list\n\n**URL** : `/import-task/`\n\n**Method** : `GET`\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-task/\",\n    \"date_time\": \"2021-08-03T03:20:48.370144Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 21,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"e12b0193-1874-4e07-9d01-6af87631e5d8\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t153145_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 1\n        },\n        {\n            \"id\": \"18aef11e-40df-4710-afa4-1782cf1ae486\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t151703_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 2\n        },\n        {\n            \"id\": \"95c14d9a-6553-449a-8afa-fb6c60217a3b\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t151322_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 2\n        },\n        {\n            \"id\": \"7266f882-934a-45c1-b688-45967fe9f4ba\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t150706_courses_-_copy3_-_1.csv\",\n            \"status\": \"Success\",\n            \"status_message\": null,\n            \"queue_processed\": 1\n        },\n        {\n            \"id\": \"77b3a190-e2e7-4774-8fb6-0b98b53c8f89\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t145943_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"34045dd6-6573-4734-ac2a-2a746c33fd84\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t144955_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"eb1786f0-b0f0-4754-a745-1b49ae89bb0c\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t144915_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"2f3fafef-5bf4-4701-b5fb-9fb0c433b858\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t143852_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"49a9a860-0e67-4ecf-8b43-6dfae1d2cd55\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t143313_courses_-_copy3_-_1.csv\",\n            \"status\": \"Failed\",\n            \"status_message\": \"123456789: create error\",\n            \"queue_processed\": 0\n        },\n        {\n            \"id\": \"84f54d7a-2514-4865-9afe-e40f11c0e6ce\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"import_type\": \"course\",\n            \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t141948_courses_-_copy3_-_1.csv\",\n            \"status\": \"in_progress\",\n            \"status_message\": null,\n            \"queue_processed\": 0\n        }\n    ]\n}\n```"
 					},
 					"response": []
 				},
 				{
-					"name": "Get Course Import details of a Particular id",
+					"name": "Get Import Task Details of a Particular id",
 					"event": [
 						{
 							"listen": "test",
@@ -1736,7 +1736,7 @@
 								"d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f"
 							]
 						},
-						"description": "Get course import list\n\n**URL** : `/import-task/<import-task_id>`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-task/d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f/\",\n    \"date_time\": \"2021-08-03T08:37:01.617773Z\",\n    \"data\": {\n        \"id\": \"d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f\",\n        \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n        \"import_type\": \"course\",\n        \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t121626_courses_-_copy3_-_1.csv\",\n        \"status\": \"in_progress\",\n        \"status_message\": null,\n        \"queue_processed\": 2\n    }\n}\n```"
+						"description": "Get import task details of a particular id\n\n**URL** : `/import-task/<import-task_id>`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-task/d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f/\",\n    \"date_time\": \"2021-08-03T08:37:01.617773Z\",\n    \"data\": {\n        \"id\": \"d841c8e1-5d7d-4c50-bdfc-d1e1c42a9c1f\",\n        \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n        \"import_type\": \"course\",\n        \"filename\": \"https://static.dev.campus.com/uploads/course/20210802t121626_courses_-_copy3_-_1.csv\",\n        \"status\": \"in_progress\",\n        \"status_message\": null,\n        \"queue_processed\": 2\n    }\n}\n```"
 					},
 					"response": []
 				},
@@ -1957,7 +1957,7 @@
 					"response": []
 				},
 				{
-					"name": "Course Import",
+					"name": "Create Import Task",
 					"event": [
 						{
 							"listen": "test",
@@ -2021,13 +2021,13 @@
 								},
 								{
 									"key": "import_type",
-									"value": "course",
+									"value": "section",
 									"type": "text"
 								},
 								{
 									"key": "filename",
 									"type": "file",
-									"src": "/C:/Users/USER/Desktop/courses - Copy3 - title.csv"
+									"src": "/C:/Users/USER/Desktop/course_external_id.csv"
 								}
 							]
 						},
@@ -2041,7 +2041,7 @@
 								""
 							]
 						},
-						"description": "Bulk course import \n\n**URL** : `/import-task/`\n\n**Method** : `POST`\n\n**Payload** : import_type can be 3 types- course or certificate or sections. \nFile format: it should be a csv file. The headers of the csv file are like this:\nexternal_id, external_url, external_version_id, code, title, slug, description, learning_outcome, image, default_image, summary, syllabus_url, level, inquiry_url, keywords\n\n\n**Form Data** \n\n```json\n{\n    \"course_provider\": \"<course_provider_id>\",\n    \"import_type\": \"course or certificate or sections\",\n    \"filename\": <csv file obj>\n}\n```\n\n**Response**\n\n```json\n\n```"
+						"description": "Bulk import task\n\n**URL** : `/import-task/`\n\n**Method** : `POST`\n\n**Payload** : import_type can be 3 types- course or certificate or sections. \nFile format: it should be a csv file. The headers of the csv file are like this:\nexternal_id, external_url, external_version_id, code, title, slug, description, learning_outcome, image, default_image, summary, syllabus_url, level, inquiry_url, keywords\n\n\n**Form Data** \n\n```json\n{\n    \"course_provider\": \"<course_provider_id>\",\n    \"import_type\": \"course or certificate or sections\",\n    \"filename\": <csv file obj>\n}\n```\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/import-task/\",\n    \"date_time\": \"2021-08-09T12:14:57.888628Z\",\n    \"data\": {\n        \"id\": \"bfe89c6c-c572-49d8-a6d0-f5e148e016a1\",\n        \"course_provider\": \"Mind Edge\",\n        \"import_type\": \"section\",\n        \"filename\": \"https://static.dev.campus.com/uploads/section/20210809t121457_section.csv\",\n        \"status\": \"in_progress\",\n        \"status_message\": null,\n        \"queue_processed\": 0\n    }\n}\n```"
 					},
 					"response": []
 				},
@@ -2115,7 +2115,7 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get ***Course Import*** related endpoints."
+			"description": "Here you can get ***Import Task*** related endpoints."
 		},
 		{
 			"name": "Failed Message Queue",
@@ -2390,7 +2390,565 @@
 					"response": []
 				}
 			],
-			"description": "Here you can get *failed message queue* related endpoints."
+			"description": "Here you can get *Failed Message Queue* related endpoints."
+		},
+		{
+			"name": "External Entity",
+			"item": [
+				{
+					"name": "Get External Entity List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/external-entities/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"external-entities",
+								""
+							]
+						},
+						"description": "Get entity name list\n\n**URL** : `external-entities/`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/external-entities/\",\n    \"date_time\": \"2021-08-09T12:23:48.453883Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 2,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"5f7b3e2a-15cf-4574-a096-e4024a394f7f\",\n            \"created_at\": \"2021-08-09T11:27:03.809491Z\",\n            \"updated_at\": \"2021-08-09T11:27:03.809510Z\",\n            \"active_status\": true,\n            \"entity_type\": \"tax\",\n            \"entity_name\": \"Avatax\"\n        },\n        {\n            \"id\": \"0090c8e1-237c-43f6-8ef6-86075f3dade3\",\n            \"created_at\": \"2021-08-09T11:26:23.479394Z\",\n            \"updated_at\": \"2021-08-09T11:26:23.479449Z\",\n            \"active_status\": true,\n            \"entity_type\": \"crm\",\n            \"entity_name\": \"Hubspot\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Filter External Entity by Entity Type",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/external-entities/?entity_type=crm",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"external-entities",
+								""
+							],
+							"query": [
+								{
+									"key": "entity_type",
+									"value": "tax",
+									"disabled": true
+								},
+								{
+									"key": "entity_type",
+									"value": "crm"
+								}
+							]
+						},
+						"description": "Filter external entities by entity type. Entity types can be of two types- tax, crm.\n\n**URL** : `/external-entities/?entity_type=tax or entity_type=crm`\n\n**Method** : `GET`\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/external-entities/?entity_type=tax\",\n    \"date_time\": \"2021-08-09T12:28:34.755352Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"5f7b3e2a-15cf-4574-a096-e4024a394f7f\",\n            \"created_at\": \"2021-08-09T11:27:03.809491Z\",\n            \"updated_at\": \"2021-08-09T11:27:03.809510Z\",\n            \"active_status\": true,\n            \"entity_type\": \"tax\",\n            \"entity_name\": \"Avatax\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get *External Entity* related endpoints."
+		},
+		{
+			"name": "Store Configuration",
+			"item": [
+				{
+					"name": "Get Store Configuration List of a Store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/store-configurations/?store__id=5615a318-e323-4b58-afec-e96ac35845fc",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"store-configurations",
+								""
+							],
+							"query": [
+								{
+									"key": "store__id",
+									"value": "5615a318-e323-4b58-afec-e96ac35845fc"
+								}
+							]
+						},
+						"description": "Get store configurations list of a store\n\n**URL** : `/store-configurations/?store__id=<store_id>`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/store-configurations/?store__id=5615a318-e323-4b58-afec-e96ac35845fc\",\n    \"date_time\": \"2021-08-12T10:01:05.019836Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"3aa68fe3-2d99-49bb-a103-9ab6fdb2351f\",\n            \"created_at\": \"2021-08-11T12:09:33.417256Z\",\n            \"updated_at\": \"2021-08-12T08:56:14.304213Z\",\n            \"active_status\": true,\n            \"config_value\": {},\n            \"store\": {\n                \"id\": \"5615a318-e323-4b58-afec-e96ac35845fc\",\n                \"name\": \"Trident Technical College\"\n            },\n            \"external_entity\": \"5f7b3e2a-15cf-4574-a096-e4024a394f7f\",\n            \"entity_name\": \"Avatax\",\n            \"entity_type\": \"tax\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Store Configuration List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/store-configurations/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"store-configurations",
+								""
+							]
+						},
+						"description": "Get store configurations list\n\n**URL** : `/store-configurations/`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/store-configurations/\",\n    \"date_time\": \"2021-08-10T09:48:51.734916Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 5,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"d56d9f2d-7e93-47e6-91d0-8f9b80355d68\",\n            \"created_at\": \"2021-08-10T09:48:36.583065Z\",\n            \"updated_at\": \"2021-08-10T09:48:36.583086Z\",\n            \"active_status\": true,\n            \"config_value\": {},\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"external_entity\": \"0090c8e1-237c-43f6-8ef6-86075f3dade3\",\n            \"entity_name\": \"Hubspot\",\n            \"entity_type\": \"crm\"\n        },\n        {\n            \"id\": \"1583e7fc-0715-49e8-aec2-aaa2c6dbe2b2\",\n            \"created_at\": \"2021-08-10T09:47:42.893873Z\",\n            \"updated_at\": \"2021-08-10T09:47:42.893898Z\",\n            \"active_status\": true,\n            \"config_value\": \"{}\",\n            \"store\": {\n                \"id\": \"cbb4e971-a48a-4b08-9992-72f1bcba24dc\",\n                \"name\": \"La Roche University\"\n            },\n            \"external_entity\": \"0090c8e1-237c-43f6-8ef6-86075f3dade3\",\n            \"entity_name\": \"Hubspot\",\n            \"entity_type\": \"crm\"\n        },\n        {\n            \"id\": \"f0b45115-81e3-460b-8660-14f9348e387b\",\n            \"created_at\": \"2021-08-10T09:46:36.960451Z\",\n            \"updated_at\": \"2021-08-10T09:46:36.960474Z\",\n            \"active_status\": true,\n            \"config_value\": {\n                \"test\": \"edited\"\n            },\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"external_entity\": \"5f7b3e2a-15cf-4574-a096-e4024a394f7f\",\n            \"entity_name\": \"Avatax\",\n            \"entity_type\": \"tax\"\n        },\n        {\n            \"id\": \"b1c6865b-2754-4ebf-8d4c-353d5c1c488e\",\n            \"created_at\": \"2021-08-10T09:17:04.619361Z\",\n            \"updated_at\": \"2021-08-10T09:17:04.619384Z\",\n            \"active_status\": true,\n            \"config_value\": \"{\\\"text\\\": \\\"Hello world!\\\"}\",\n            \"store\": {\n                \"id\": \"dc6fb0eb-5e79-465f-a470-64a76e7785d8\",\n                \"name\": \"Goodwin University\"\n            },\n            \"external_entity\": \"5f7b3e2a-15cf-4574-a096-e4024a394f7f\",\n            \"entity_name\": \"Avatax\",\n            \"entity_type\": \"tax\"\n        },\n        {\n            \"id\": \"046180ee-a44b-4c44-a411-716760b2332c\",\n            \"created_at\": \"2021-08-10T07:34:13.043259Z\",\n            \"updated_at\": \"2021-08-10T09:16:12.478305Z\",\n            \"active_status\": true,\n            \"config_value\": \"{\\\"text\\\": \\\"hello world!\\\"}\",\n            \"store\": {\n                \"id\": \"5615a318-e323-4b58-afec-e96ac35845fc\",\n                \"name\": \"Trident Technical College\"\n            },\n            \"external_entity\": \"5f7b3e2a-15cf-4574-a096-e4024a394f7f\",\n            \"entity_name\": \"Avatax\",\n            \"entity_type\": \"tax\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Store Configuration Details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/store-configurations/d56d9f2d-7e93-47e6-91d0-8f9b80355d68",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"store-configurations",
+								"d56d9f2d-7e93-47e6-91d0-8f9b80355d68"
+							]
+						},
+						"description": "Get store configurations details\n\n**URL** : `/store-configurations/<store-configurations_id>`\n\n**Method** : `GET`\n\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/store-configurations/d56d9f2d-7e93-47e6-91d0-8f9b80355d68/\",\n    \"date_time\": \"2021-08-10T09:53:44.630633Z\",\n    \"data\": {\n        \"id\": \"d56d9f2d-7e93-47e6-91d0-8f9b80355d68\",\n        \"created_at\": \"2021-08-10T09:48:36.583065Z\",\n        \"updated_at\": \"2021-08-10T09:48:36.583086Z\",\n        \"active_status\": true,\n        \"config_value\": {},\n        \"store\": {\n            \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n            \"name\": \"Lifelong Campus\"\n        },\n        \"external_entity\": \"0090c8e1-237c-43f6-8ef6-86075f3dade3\",\n        \"entity_name\": \"Hubspot\",\n        \"entity_type\": \"crm\"\n    }\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Store Configuration Entry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"store\": \"dc6fb0eb-5e79-465f-a470-64a76e7785d8\",\r\n    \"entity_type\": \"\",\r\n    \"external_entity\": \"0090c8e1-237c-43f6-8ef6-86075f3dade3\",\r\n    \"config_value\": {\"text\": \"Hello world!\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/store-configurations/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"store-configurations",
+								""
+							]
+						},
+						"description": "Create new store configuration entry\n\n**URL** : `/store-configurations/`\n\n**Method** : `POST`\n\n**Payload** : **Form Data** \n\n\n```json\n{\n\"store\": \"<store_id>\",\n\"entity_type\": \"<entity_type_name>\",\n\"external_entity\": \"<external_entity_id>\",\n\"config_value\": {\"test\": \"edited\"}\n}\n```\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/store-configurations/\",\n    \"date_time\": \"2021-08-10T11:05:07.288692Z\",\n    \"data\": {\n        \"id\": \"f4ec616d-3b53-4331-8ba6-464c98e194c2\",\n        \"created_at\": \"2021-08-10T11:05:07.284280Z\",\n        \"updated_at\": \"2021-08-10T11:05:07.284305Z\",\n        \"active_status\": true,\n        \"config_value\": {},\n        \"store\": {\n            \"id\": \"5615a318-e323-4b58-afec-e96ac35845fc\",\n            \"name\": \"Trident Technical College\"\n        },\n        \"external_entity\": \"0090c8e1-237c-43f6-8ef6-86075f3dade3\",\n        \"entity_name\": \"Hubspot\",\n        \"entity_type\": \"crm\"\n    }\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Store Configuration Entry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"store\": \"0364464a-8336-43bf-b1c0-cef0a9a84e0f\",\r\n\"external_entity\": \"5f7b3e2a-15cf-4574-a096-e4024a394f7f\",\r\n\"config_value\": {\"text\": \"Hello world!\"}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/store-configurations/b1c6865b-2754-4ebf-8d4c-353d5c1c488e/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"store-configurations",
+								"b1c6865b-2754-4ebf-8d4c-353d5c1c488e",
+								""
+							]
+						},
+						"description": "Edit store configuration entry\n\n**URL** : `/store-configurations/<store-configurations_id>/`\n\n**Method** : `PATCH`\n\n**Payload** : \n\n\n```json\n{\n\"store\": \"dc6fb0eb-5e79-465f-a470-64a76e7785d8\",\n\"entity_type\": \"crm\",\n\"external_entity\": \"0090c8e1-237c-43f6-8ef6-86075f3dade3\",\n\"config_value\": {\"test\": \"edited 1\"}\n}\n```\n\n**Response**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/store-configurations/b1c6865b-2754-4ebf-8d4c-353d5c1c488e/\",\n    \"date_time\": \"2021-08-10T11:01:06.870225Z\",\n    \"data\": {\n        \"id\": \"b1c6865b-2754-4ebf-8d4c-353d5c1c488e\",\n        \"created_at\": \"2021-08-10T09:17:04.619361Z\",\n        \"updated_at\": \"2021-08-10T11:01:06.866024Z\",\n        \"active_status\": true,\n        \"config_value\": {\n            \"test\": \"edited 1\"\n        },\n        \"store\": {\n            \"id\": \"dc6fb0eb-5e79-465f-a470-64a76e7785d8\",\n            \"name\": \"Goodwin University\"\n        },\n        \"external_entity\": \"0090c8e1-237c-43f6-8ef6-86075f3dade3\",\n        \"entity_name\": \"Hubspot\",\n        \"entity_type\": \"crm\"\n    }\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Store Configuration Entry",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/store-configurations/e003cff8-baef-476a-8d7f-098582022e88/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"store-configurations",
+								"e003cff8-baef-476a-8d7f-098582022e88",
+								""
+							]
+						},
+						"description": "Delete store configuration entry\n\n**URL** : `/store-configurations/<store-configurations_id>/`\n\n**Method** : `DELETE`\n\n\n**Response**\n\n```json\nEmpty response with status code 204 (no content)\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get *Store Configuration* related endpoints."
 		},
 		{
 			"name": "Career",
@@ -6887,13 +7445,19 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/course-providers/",
+							"raw": "{{baseurl}}/course-providers/?limit=20",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"course-providers",
 								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "20"
+								}
 							]
 						},
 						"description": "Show Course providers List for currently logged in Account Admin\n\n**URL** : `/course-providers/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/course-providers/\",\n  \"date_time\": \"2021-02-28T21:09:06.640401Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 14,\n    \"limit\": 10\n  },\n  \"data\": [\n    {\n      \"id\": \"32f0098a-9310-4bc0-8027-b79b61a9e159\",\n      \"name\": \"Test Automation University\",\n      \"code\": \"TAU01\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"60146ce674b296f83f5e9ef3\"\n    },\n    {\n      \"id\": \"1b042ac4-27d6-4554-aa85-64471dcf03ed\",\n      \"name\": \"Test\",\n      \"code\": \"0011\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"600e8e9e2be88080f0c76ec3\"\n    },\n    {\n      \"id\": \"98094470-c556-489e-a1ac-a2e894c6a828\",\n      \"name\": \"Test\",\n      \"code\": \"011\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"60088097cd679628433bdc3a\"\n    },\n    {\n      \"id\": \"e31a4a1b-344e-4ee2-b6bb-fe0d71a8afa7\",\n      \"name\": \"testwww\",\n      \"code\": \"940934\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"6008805ecd679628433bdc39\"\n    },\n    {\n      \"id\": \"9a1d53cc-c467-44ea-9bab-0fcdd0f691eb\",\n      \"name\": \"testwww\",\n      \"code\": \"940934\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"60041c99c5c80199d704fa02\"\n    },\n    {\n      \"id\": \"0b8be422-6953-4f8c-9b58-ad7425622682\",\n      \"name\": \"testwww\",\n      \"code\": \"940934\",\n      \"course_provider_logo_uri\": null,\n      \"content_db_reference\": \"600402bfa5a1ad689a98aa57\"\n    },\n    {\n      \"id\": \"56343945-00de-4770-bb7c-65c950b68fbc\",\n      \"name\": \"Campus.com\",\n      \"code\": \"campus\",\n      \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/fff143f7-4985-4be9-a9df-992e579e8ce1.png\",\n      \"content_db_reference\": \"5fd747cc07467917d982ff29\"\n    },\n    {\n      \"id\": \"51cd0b75-1014-4b55-8cd5-4fd3f6d8dfe1\",\n      \"name\": \"Drexel University\",\n      \"code\": \"drexel\",\n      \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1b9fe97d-58eb-4958-a8e6-d5807a9cb6aa.png\",\n      \"content_db_reference\": \"5fbce8701aee3c8831b7a62e\"\n    },\n    {\n      \"id\": \"3243fcec-685c-44b5-abf4-7727f395f213\",\n      \"name\": \"Mind Edge\",\n      \"code\": \"MINDEDGE\",\n      \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/1e735563-62da-4aab-a16d-fb82ef2022ee.png\",\n      \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n    },\n    {\n      \"id\": \"c2679848-7511-48df-be8b-dbd6d50f3e6c\",\n      \"name\": \"UCSC Silicon Valley Extension\",\n      \"code\": \"UCSC\",\n      \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/3c44bca1-25a4-4f67-a358-b5b57197d06c.png\",\n      \"content_db_reference\": \"5e81d27bf083b65be9afb8ce\"\n    }\n  ]\n}\n```"
