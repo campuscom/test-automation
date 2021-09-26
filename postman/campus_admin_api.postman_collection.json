@@ -2021,13 +2021,19 @@
 								},
 								{
 									"key": "import_type",
-									"value": "section",
+									"value": "course",
 									"type": "text"
+								},
+								{
+									"key": "import_type",
+									"value": "section",
+									"type": "text",
+									"disabled": true
 								},
 								{
 									"key": "filename",
 									"type": "file",
-									"src": "/C:/Users/USER/Desktop/course_external_id.csv"
+									"src": "/C:/Users/shibli049/Desktop/course_upload_sample - Copy.xlsx"
 								}
 							]
 						},
