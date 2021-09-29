@@ -7910,13 +7910,23 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/users/",
+							"raw": "{{baseurl}}/users/?limit=30&page=1",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"users",
 								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
 							]
 						},
 						"description": "Get Users list \n\n**URL** : `/users/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/users/\",\n  \"date_time\": \"2021-02-23T07:10:38.784377Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": 2,\n    \"total\": 16,\n    \"limit\": 10\n  },\n  \"data\": [\n  {\n      \"id\": \"215d0f7d-2a53-41f7-af6b-7625a41ea5b2\",\n      \"username\": \"testadmin\",\n      \"first_name\": \"Thomas\",\n      \"last_name\": \"Charles\",\n      \"email\": \"test@email.com\",\n      \"is_active\": true,\n      \"primary_contact_number\": \"123\",\n      \"db_context\": {\n        \"Store\": [\n          \"0dd332c0-4f5b-4dd9-8953-d5e580246979\"\n        ],\n        \"CourseProvider\": [\n          \"3243fcec-685c-44b5-abf4-7727f395f213\"\n        ]\n      },\n      \"role\": {\n        \"id\": \"cd73aa67-fe32-415b-bc80-a0e570bf0f94\",\n        \"name\": \"StoreAdmin\",\n        \"is_active\": true\n      },\n      \"mfa_enabled\": false,\n      \"custom_roles\": [\n        {\n          \"id\": \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n          \"name\": \"Store Manager\",\n          \"permissions\": [\n            \"8ba8ac62-8508-43f8-81a8-40d67f2c0045\",\n            \"7f772b4d-f889-4ad7-8096-72f4e505f6bf\",\n            \"87dc194b-b219-43ea-bfc2-d6c9a97f6e2f\",\n            \"51cfadf6-d6ee-45ed-8bf9-e72365ad3ef3\"\n          ]\n        }\n      ],\n      \"stores\": [\n        \"0dd332c0-4f5b-4dd9-8953-d5e580246979\"\n      ],\n      \"course_providers\": [\n        \"3243fcec-685c-44b5-abf4-7727f395f213\"\n      ]\n    },\n    {\n      \"id\": \"501dfb7e-20b8-4385-a580-d6af3329c676\",\n      \"username\": \"test\",\n      \"first_name\": \"Mr. test\",\n      \"last_name\": \"Test\",\n      \"email\": \"test@test.com\",\n      \"is_active\": false,\n      \"primary_contact_number\": \"0123\",\n      \"db_context\": {\n        \"Store\": [\n          \"3eec5772-2156-4f5c-a647-979e3222f92b\",\n          \"176e25ea-e42e-49c6-b4ea-1facb45029d1\"\n        ],\n        \"CourseProvider\": [\n          \"c2679848-7511-48df-be8b-dbd6d50f3e6c\"\n        ]\n      },\n      \"role\": {\n        \"id\": \"7a8a004b-eda8-4baa-b4eb-bbf11a0cb51b\",\n        \"name\": \"CourseAdmin\",\n        \"is_active\": true\n      },\n      \"mfa_enabled\": false,\n      \"custom_roles\": [],\n      \"stores\": [\n        \"3eec5772-2156-4f5c-a647-979e3222f92b\",\n        \"176e25ea-e42e-49c6-b4ea-1facb45029d1\"\n      ],\n      \"course_providers\": [\n        \"c2679848-7511-48df-be8b-dbd6d50f3e6c\"\n      ]\n    }\n   ]\n}\n    \n```"
@@ -8010,7 +8020,7 @@
 								""
 							]
 						},
-						"description": "Create an User\n\n**URL** : `/users/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n{\n    \"first_name\": \"Abu\",\n    \"last_name\": \"Sufian\",\n    \"username\": \"abusufian3\",\n    \"password\": \"a123a123\",\n    \"email\": \"abu@sufian.com\",\n    \"is_active\": true,\n    \"primary_contact_number\": \"01454111111\",\n    \"custom_roles\": [\n        \"11546bde-289d-43c3-bb46-d8976fb7036a\"\n    ],\n    \"is_active\": true\n}\n```\n\n**Data example** : These fields must have entry.\n\n```json\n{\n  \"first_name\": \"[unicode 64 chars max]\",\n    \"last_name\": \"[unicode 64 chars max]\",\n    \"username\": \"<course_provider_id> \",\n    \"password\": \"[unicode 64 chars max]\",\n    \"email\": \"[unicode 64 chars max]\",\n    \"primary_contact_number\": \"[unicode 64 chars max]\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"http://api.admin.dev.campus.com/users/\",\n    \"date_time\": \"2021-03-04T05:53:07.686598Z\",\n    \"data\": {\n        \"id\": \"f29f3925-3d67-4755-8a3e-5e2fb395c2a0\",\n        \"username\": \"abusufian3\",\n        \"first_name\": \"Abu\",\n        \"last_name\": \"Sufian\",\n        \"email\": \"abu@sufian.com\",\n        \"is_active\": true,\n        \"primary_contact_number\": \"01454111111\",\n        \"db_context\": {\n            \"Store\": [],\n            \"CourseProvider\": []\n        },\n        \"role\": null,\n        \"mfa_enabled\": false,\n        \"custom_roles\": [\n            {\n                \"id\": \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n                \"name\": \"Store Manager\",\n                \"permissions\": [\n                    \"3ea4e339-d098-47a5-b7f4-a9edf12fc33c\",\n                    \"0d81a335-cd6b-4add-8ef0-6ba29597f6a0\",\n                    \"01219ef0-208d-4ed3-8770-d508066aea9a\",\n                    \"8ba8ac62-8508-43f8-81a8-40d67f2c0045\",\n                    \"dd21568d-875e-4e6e-b938-b74623eb33ec\",\n                    \"7f772b4d-f889-4ad7-8096-72f4e505f6bf\",\n                    \"d46083ec-071a-43d3-b273-f8015f7cffb6\",\n                    \"87dc194b-b219-43ea-bfc2-d6c9a97f6e2f\",\n                    \"fc81f770-36c5-4304-98cd-3fe459cc1d8f\",\n                    \"56c3e67a-2cba-4a41-9723-79bc5f53d2e0\",\n                    \"9db50bfa-b354-4535-ac68-7a81958ffc51\",\n                    \"0f91c620-9a52-4f61-886f-a5233825f12d\",\n                    \"5db3020d-f58b-4e40-8323-ee4b24d1ebd3\",\n                    \"c0f85497-eb9d-439d-916a-e73eb1e9548a\",\n                    \"4a98e32a-f7de-4d71-8be2-b17a7b941c2b\",\n                    \"9e81a031-1a90-4fe6-9885-cf77af2c021c\",\n                    \"ef0da399-f094-427e-b151-992ae3276790\",\n                    \"c4eb5c9d-1f13-4795-999d-2cd311362f3f\",\n                    \"dd8e605a-3dd5-4c03-b711-8a203014303e\",\n                    \"47f04739-800d-4086-ab88-0011cef49457\",\n                    \"facf8582-97ff-4268-89f6-3cebd1a09800\",\n                    \"51cfadf6-d6ee-45ed-8bf9-e72365ad3ef3\",\n                    \"f08daee3-7e80-4a36-93c2-b7270f614287\",\n                    \"9736a0a9-e13e-4792-aa35-382c63fe8a3c\",\n                    \"4a2da6c9-30d5-4eec-950c-19e7a3fc9f70\",\n                    \"d857c08f-dfee-49de-b730-55a4e9d26782\",\n                    \"a0ee8f80-2777-4476-b21b-ac44753a06ba\",\n                    \"9d8a809b-d6c2-42d5-9510-238dedabb1a6\",\n                    \"34bd92c0-01cd-46d8-be65-473abc4c5a65\",\n                    \"15012f50-bac1-432b-981a-6a2ffb51ee38\",\n                    \"01b0a97f-edb4-4069-a448-abdebdf09e2c\",\n                    \"56b63f82-0ad4-4d50-ad93-01c187ae511c\",\n                    \"2166ef55-191c-4184-85e7-b502baf8e9ad\",\n                    \"6c72f713-d98b-4354-ae2a-b5017a8ce7e5\",\n                    \"9273539f-fed6-40cc-bad9-d4c55625ca4d\",\n                    \"54b55e89-c1e6-4ef4-8374-3e809c0de38b\",\n                    \"a56010a1-87a9-4d57-a9ef-255bd1b8c938\",\n                    \"041eb447-a447-4fb2-96b6-662b51763fb3\",\n                    \"e1cd5f7b-6059-487a-a1fc-bb955bee6a92\",\n                    \"560fc655-6174-4624-bdc6-97b7dbe48f7c\",\n                    \"9e078fce-5a7a-4862-b18d-0029279e945d\",\n                    \"bd40b9a6-ac25-4c6f-9647-6e7c38a9e13f\",\n                    \"f7c0b684-8779-4529-9e94-b03bb3c511a3\",\n                    \"68139880-a680-42af-b655-d33f2fb91832\",\n                    \"6606995e-ccaa-4b8a-ac02-c7d8b1f7dd05\",\n                    \"23333ea9-bdf4-4eaa-8adb-3fc8f2a46441\",\n                    \"e8f1f552-96b6-4ff5-b909-998593585171\",\n                    \"79553ac7-b8c1-4193-ad6c-939b96be0303\",\n                    \"b2e9ddb8-1642-42eb-b46f-9d15a610f85f\",\n                    \"39191903-1275-4962-8cd9-45aad2c381c3\",\n                    \"e2ebe34c-7895-4dc4-9462-9c9f7b4adcaa\",\n                    \"0c525a3f-0879-42c7-bc1c-0ff9c28f3d31\",\n                    \"7a63c564-507f-44a2-aa23-87199439d3fe\",\n                    \"16614e20-7ddd-46ed-a83d-c6850e4ecd23\",\n                    \"2dc1cb0d-b2a4-4b0c-9712-47ffca87389e\",\n                    \"70f49ba2-fd94-420a-8e4c-a9cfd3f074c1\",\n                    \"b1bb0eff-64e4-4034-b2ce-8c29f267213b\",\n                    \"90fad2c7-3b30-4494-937c-4ba814fc6117\",\n                    \"dccf8552-d0e4-4197-ae85-ea380d72789e\",\n                    \"7c62ea4f-a35b-436d-a322-e2e27c36639b\",\n                    \"544d9451-55b2-4d7c-96f7-c7d9e55df159\",\n                    \"b504adde-5ef5-4fa7-9cf7-d044b86e430a\",\n                    \"63e69142-2348-4ec8-8ee1-7bde79fff1ba\",\n                    \"71a70073-d4d4-4270-ae4b-1a0f14ddbe96\",\n                    \"b13e0543-3a0a-4b7e-9467-6e669ebba74f\",\n                    \"6074cee4-abb8-4ab9-9a6d-befb780f85d5\",\n                    \"211b7d14-60d9-4cbc-87b3-56b5acd96735\",\n                    \"e81f0bf9-a325-4834-b592-61b214259a76\",\n                    \"92756fa3-69d2-4921-869f-d26f461b7f2a\",\n                    \"4621ae4a-2779-4093-b8e0-8b261a9c136d\",\n                    \"a47aba8d-9cec-4f51-8fbf-bbdc50c55cc5\",\n                    \"a2cc78a7-4457-455d-b089-04dd3db9205b\",\n                    \"812c276c-81fd-4c05-92aa-59544bd2d26c\",\n                    \"b9c82203-7ac9-4a1f-bf83-c4ee84636902\",\n                    \"c302fe89-5dbf-4e45-9033-5161eef77aef\"\n                ]\n            }\n        ],\n        \"stores\": [],\n        \"course_providers\": []\n    }\n}\n\n```"
+						"description": "Create an User\n\n**URL** : `/users/`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n{\n    \"first_name\": \"Abu\",\n    \"last_name\": \"Sufian\",\n    \"username\": \"abusufian3\",\n    \"password\": \"a123a123\",\n    \"email\": \"abu@sufian.com\",\n    \"is_active\": true,\n    \"primary_contact_number\": \"01454111111\",\n    \"custom_roles\": [\n        \"11546bde-289d-43c3-bb46-d8976fb7036a\"\n    ],\n    \"is_active\": true\n}\n```\n\n**Response** :\n\n```json\n{\n  \"first_name\": \"[unicode 64 chars max]\",\n    \"last_name\": \"[unicode 64 chars max]\",\n    \"username\": \"<course_provider_id> \",\n    \"password\": \"[unicode 64 chars max]\",\n    \"email\": \"[unicode 64 chars max]\",\n    \"primary_contact_number\": \"[unicode 64 chars max]\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"http://api.admin.dev.campus.com/users/\",\n    \"date_time\": \"2021-03-04T05:53:07.686598Z\",\n    \"data\": {\n        \"id\": \"f29f3925-3d67-4755-8a3e-5e2fb395c2a0\",\n        \"username\": \"abusufian3\",\n        \"first_name\": \"Abu\",\n        \"last_name\": \"Sufian\",\n        \"email\": \"abu@sufian.com\",\n        \"is_active\": true,\n        \"primary_contact_number\": \"01454111111\",\n        \"db_context\": {\n            \"Store\": [],\n            \"CourseProvider\": []\n        },\n        \"role\": null,\n        \"mfa_enabled\": false,\n        \"custom_roles\": [\n            {\n                \"id\": \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n                \"name\": \"Store Manager\",\n                \"permissions\": [\n                    \"3ea4e339-d098-47a5-b7f4-a9edf12fc33c\",\n                    \"0d81a335-cd6b-4add-8ef0-6ba29597f6a0\",\n                    \"01219ef0-208d-4ed3-8770-d508066aea9a\",\n                    \"8ba8ac62-8508-43f8-81a8-40d67f2c0045\",\n                    \"dd21568d-875e-4e6e-b938-b74623eb33ec\",\n                    \"7f772b4d-f889-4ad7-8096-72f4e505f6bf\",\n                    \"d46083ec-071a-43d3-b273-f8015f7cffb6\",\n                    \"87dc194b-b219-43ea-bfc2-d6c9a97f6e2f\",\n                    \"fc81f770-36c5-4304-98cd-3fe459cc1d8f\",\n                    \"56c3e67a-2cba-4a41-9723-79bc5f53d2e0\",\n                    \"9db50bfa-b354-4535-ac68-7a81958ffc51\",\n                    \"0f91c620-9a52-4f61-886f-a5233825f12d\",\n                    \"5db3020d-f58b-4e40-8323-ee4b24d1ebd3\",\n                    \"c0f85497-eb9d-439d-916a-e73eb1e9548a\",\n                    \"4a98e32a-f7de-4d71-8be2-b17a7b941c2b\",\n                    \"9e81a031-1a90-4fe6-9885-cf77af2c021c\",\n                    \"ef0da399-f094-427e-b151-992ae3276790\",\n                    \"c4eb5c9d-1f13-4795-999d-2cd311362f3f\",\n                    \"dd8e605a-3dd5-4c03-b711-8a203014303e\",\n                    \"47f04739-800d-4086-ab88-0011cef49457\",\n                    \"facf8582-97ff-4268-89f6-3cebd1a09800\",\n                    \"51cfadf6-d6ee-45ed-8bf9-e72365ad3ef3\",\n                    \"f08daee3-7e80-4a36-93c2-b7270f614287\",\n                    \"9736a0a9-e13e-4792-aa35-382c63fe8a3c\",\n                    \"4a2da6c9-30d5-4eec-950c-19e7a3fc9f70\",\n                    \"d857c08f-dfee-49de-b730-55a4e9d26782\",\n                    \"a0ee8f80-2777-4476-b21b-ac44753a06ba\",\n                    \"9d8a809b-d6c2-42d5-9510-238dedabb1a6\",\n                    \"34bd92c0-01cd-46d8-be65-473abc4c5a65\",\n                    \"15012f50-bac1-432b-981a-6a2ffb51ee38\",\n                    \"01b0a97f-edb4-4069-a448-abdebdf09e2c\",\n                    \"56b63f82-0ad4-4d50-ad93-01c187ae511c\",\n                    \"2166ef55-191c-4184-85e7-b502baf8e9ad\",\n                    \"6c72f713-d98b-4354-ae2a-b5017a8ce7e5\",\n                    \"9273539f-fed6-40cc-bad9-d4c55625ca4d\",\n                    \"54b55e89-c1e6-4ef4-8374-3e809c0de38b\",\n                    \"a56010a1-87a9-4d57-a9ef-255bd1b8c938\",\n                    \"041eb447-a447-4fb2-96b6-662b51763fb3\",\n                    \"e1cd5f7b-6059-487a-a1fc-bb955bee6a92\",\n                    \"560fc655-6174-4624-bdc6-97b7dbe48f7c\",\n                    \"9e078fce-5a7a-4862-b18d-0029279e945d\",\n                    \"bd40b9a6-ac25-4c6f-9647-6e7c38a9e13f\",\n                    \"f7c0b684-8779-4529-9e94-b03bb3c511a3\",\n                    \"68139880-a680-42af-b655-d33f2fb91832\",\n                    \"6606995e-ccaa-4b8a-ac02-c7d8b1f7dd05\",\n                    \"23333ea9-bdf4-4eaa-8adb-3fc8f2a46441\",\n                    \"e8f1f552-96b6-4ff5-b909-998593585171\",\n                    \"79553ac7-b8c1-4193-ad6c-939b96be0303\",\n                    \"b2e9ddb8-1642-42eb-b46f-9d15a610f85f\",\n                    \"39191903-1275-4962-8cd9-45aad2c381c3\",\n                    \"e2ebe34c-7895-4dc4-9462-9c9f7b4adcaa\",\n                    \"0c525a3f-0879-42c7-bc1c-0ff9c28f3d31\",\n                    \"7a63c564-507f-44a2-aa23-87199439d3fe\",\n                    \"16614e20-7ddd-46ed-a83d-c6850e4ecd23\",\n                    \"2dc1cb0d-b2a4-4b0c-9712-47ffca87389e\",\n                    \"70f49ba2-fd94-420a-8e4c-a9cfd3f074c1\",\n                    \"b1bb0eff-64e4-4034-b2ce-8c29f267213b\",\n                    \"90fad2c7-3b30-4494-937c-4ba814fc6117\",\n                    \"dccf8552-d0e4-4197-ae85-ea380d72789e\",\n                    \"7c62ea4f-a35b-436d-a322-e2e27c36639b\",\n                    \"544d9451-55b2-4d7c-96f7-c7d9e55df159\",\n                    \"b504adde-5ef5-4fa7-9cf7-d044b86e430a\",\n                    \"63e69142-2348-4ec8-8ee1-7bde79fff1ba\",\n                    \"71a70073-d4d4-4270-ae4b-1a0f14ddbe96\",\n                    \"b13e0543-3a0a-4b7e-9467-6e669ebba74f\",\n                    \"6074cee4-abb8-4ab9-9a6d-befb780f85d5\",\n                    \"211b7d14-60d9-4cbc-87b3-56b5acd96735\",\n                    \"e81f0bf9-a325-4834-b592-61b214259a76\",\n                    \"92756fa3-69d2-4921-869f-d26f461b7f2a\",\n                    \"4621ae4a-2779-4093-b8e0-8b261a9c136d\",\n                    \"a47aba8d-9cec-4f51-8fbf-bbdc50c55cc5\",\n                    \"a2cc78a7-4457-455d-b089-04dd3db9205b\",\n                    \"812c276c-81fd-4c05-92aa-59544bd2d26c\",\n                    \"b9c82203-7ac9-4a1f-bf83-c4ee84636902\",\n                    \"c302fe89-5dbf-4e45-9033-5161eef77aef\"\n                ]\n            }\n        ],\n        \"stores\": [],\n        \"course_providers\": []\n    }\n}\n\n```"
 					},
 					"response": []
 				},
@@ -8055,7 +8065,93 @@
 								""
 							]
 						},
-						"description": "Update an User\n\n**URL** : `/users/<id>`\n\n**Method** : `PATCH`\n\n**Payload** : A PATCH request is used to make changes to one or multiple part of the resource at a location.\n\n```json\n{\n    \"first_name\": \"[unicode 64 chars max]\",\n    \"last_name\": \"[unicode 64 chars max]\",\n    \"username\": \"<course_provider_id> \",\n    \"password\": \"[unicode 64 chars max]\",\n    \"email\": \"[unicode 64 chars max]\",\n    \"primary_contact_number\": \"[unicode 64 chars max]\",\n    \"role\": \"[unicode 64 chars max]\",\n    \"is_active\": \"[default False]\",\n    \"db_context\": \"[unicode 64 chars max]\"\n  \n}\n```\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/users/49346111-f5e9-4a01-8c99-92b6be71974c/\",\n  \"date_time\": \"2021-03-02T18:34:52.349912Z\",\n  \"data\": {\n    \"id\": \"49346111-f5e9-4a01-8c99-92b6be71974c\",\n    \"username\": \"abusufian\",\n    \"first_name\": \"Abu\",\n    \"last_name\": \"Sufian\",\n    \"email\": \"abu@sufian.com\",\n    \"is_active\": true,\n    \"primary_contact_number\": \"01454111111\",\n    \"db_context\": {\n      \"Store\": [],\n      \"CourseProvider\": []\n    },\n    \"role\": {\n      \"id\": \"cd73aa67-fe32-415b-bc80-a0e570bf0f94\",\n      \"name\": \"StoreAdmin\",\n      \"is_active\": true\n    },\n    \"mfa_enabled\": false,\n    \"custom_roles\": [],\n    \"stores\": [],\n    \"course_providers\": []\n  }\n}\n\n```"
+						"description": "Update an User\n\n**URL** : `/users/<id>`\n\n**Method** : `PATCH`\n\n**Payload** :\n\n```json\n{\n    \"first_name\": \"[unicode 64 chars max]\",\n    \"last_name\": \"[unicode 64 chars max]\",\n    \"username\": \"<course_provider_id> \",\n    \"password\": \"[unicode 64 chars max]\",\n    \"email\": \"[unicode 64 chars max]\",\n    \"primary_contact_number\": \"[unicode 64 chars max]\",\n    \"role\": \"[unicode 64 chars max]\",\n    \"is_active\": \"[default False]\",\n    \"db_context\": \"[unicode 64 chars max]\"\n  \n}\n```\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/users/49346111-f5e9-4a01-8c99-92b6be71974c/\",\n  \"date_time\": \"2021-03-02T18:34:52.349912Z\",\n  \"data\": {\n    \"id\": \"49346111-f5e9-4a01-8c99-92b6be71974c\",\n    \"username\": \"abusufian\",\n    \"first_name\": \"Abu\",\n    \"last_name\": \"Sufian\",\n    \"email\": \"abu@sufian.com\",\n    \"is_active\": true,\n    \"primary_contact_number\": \"01454111111\",\n    \"db_context\": {\n      \"Store\": [],\n      \"CourseProvider\": []\n    },\n    \"role\": {\n      \"id\": \"cd73aa67-fe32-415b-bc80-a0e570bf0f94\",\n      \"name\": \"StoreAdmin\",\n      \"is_active\": true\n    },\n    \"mfa_enabled\": false,\n    \"custom_roles\": [],\n    \"stores\": [],\n    \"course_providers\": []\n  }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Secret Key",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"19bea035-515c-4ef7-814d-52922cb7c63c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/generate-secret-key/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"generate-secret-key",
+								""
+							]
+						},
+						"description": "Generate a secret key\n\n**URL** : `/generate-secret-key/`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n{\n    \"user_id\": \"19bea035-515c-4ef7-814d-52922cb7c63c\"\n}\n```\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/generate-secret-key/\",\n    \"date_time\": \"2021-09-27T05:17:11.608461Z\",\n    \"data\": {\n        \"key\": \"FCnIC3cg3d2HE_ZdDCrX7w\"\n    }\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Secret Key",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"19bea035-515c-4ef7-814d-52922cb7c63c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/generate-secret-key/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"generate-secret-key",
+								""
+							]
+						},
+						"description": "Delete a secret key\n\n**URL** : `/generate-secret-key/`\n\n**Method** : `DELETE`\n\n**Payload** :\n\n```json\n{\n    \"user_id\": \"19bea035-515c-4ef7-814d-52922cb7c63c\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/generate-secret-key/\",\n    \"date_time\": \"2021-09-27T05:26:18.466992Z\",\n    \"data\": {\n        \"key\": \"\"\n    }\n}\n```"
 					},
 					"response": []
 				}
