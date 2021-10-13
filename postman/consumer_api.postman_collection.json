@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6b6af73d-7af4-4e03-a4ac-079ba538c5fe",
+		"_postman_id": "ff4218eb-cbcc-4c88-98b8-0a296ecc1897",
 		"name": "Consumer API",
 		"description": "This is a Postman Collection for the ***Consumer API*** endpoints. \n\nRefer to the main [Consumer API documentation](<link>) for more details.\n\nIf you have an API-related question, you can also discuss in the developer [community forum](<link>).\n\n\n\n## Installation ##\n\n### Quick install\n\nGo to the [Collection](<link>) and click `Run in Postman`.\n\n### Manual install\n\nYou can also download this Collection from a GitHub repo here: [github_link](<link>)\n\n\n## Environment\n\nThis Collection includes a pre-configured Environment. You will need to set up the following variable in order to run each request. Otherwise you have to manually put your baseurl for every request  :\n\n|Name|Description|\n|---|---|\n|`baseurl`|Your Base URL|\n\n***To send a request, you need to add cookie in header.***",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -769,6 +769,40 @@
 						"description": "Get Cart Details\n\n**URL :** `/enrollment/cart-details/?cart_id=<cart_id>`\n\n**Method :** `GET`\n\n**Response :** \n\n```json\n{\n    \"url\": \"https://api.account.dev.campus.com/enrollment/cart-details/?cart_id=d23eb55c-9983-4396-8729-62b166627ff7\",\n    \"date_time\": \"2021-05-19T11:43:49.252536Z\",\n    \"success\": true,\n    \"data\": {\n        \"cart_id\": \"d23eb55c-9983-4396-8729-62b166627ff7\",\n        \"status\": \"cancelled\",\n        \"products\": [\n            {\n                \"id\": \"4f457e9d-9196-4ef3-980f-e15dc6e12207\",\n                \"title\": \"Quality Management Basics\",\n                \"slug\": \"quality-management-basics\",\n                \"provider\": {\n                    \"code\": \"MINDEDGE\"\n                },\n                \"product_type\": \"store_course_section\",\n                \"sections\": [\n                    {\n                        \"code\": \"634\"\n                    }\n                ]\n            }\n        ]\n    }\n}\n\n```"
 					},
 					"response": []
+				},
+				{
+					"name": "Create Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_ids\": [\"817fcc0a-c9bb-4202-8217-e2d072b37d3c\"], \n    \"coupon_code\": \"\", \n    \"zip_code\": \"85055\", \n    \"persistent\": false \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl2}}/cart/?checkout=guest",
+							"host": [
+								"{{baseurl2}}"
+							],
+							"path": [
+								"cart",
+								""
+							],
+							"query": [
+								{
+									"key": "checkout",
+									"value": "guest"
+								}
+							]
+						},
+						"description": "Create profile\n**URL :** `cart/?checkout=guest`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n{\n    \"product_ids\": [\"817fcc0a-c9bb-4202-8217-e2d072b37d3c\"], \n    \"coupon_code\": \"\", \n    \"zip_code\": \"85055\", \n    \"persistent\": false \n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"url\": \"https://api.cart.dev.campus.com/cart/?checkout=guest\",\n    \"date_time\": \"2021-10-12T10:19:31.793670Z\",\n    \"success\": true,\n    \"data\": {\n        \"coupon_message\": \"no coupon found with that code\",\n        \"tax_message\": \"tax disabled\",\n        \"product\": [\n            {\n                \"id\": \"63ca3eae-4219-4cf9-92ac-712afe4b1578\",\n                \"title\": \"4CShare Global Project Management Simulation\",\n                \"slug\": \"4cshare-global-project-management-simulation\",\n                \"image_uri\": [\n                    \"https://cdn-d.mindedgeonline.com/609/custom_icons/4CShare_Global_Project_Management_Simulation_HRC.jpg\"\n                ],\n                \"external_image_url\": \"https://cdn-d.mindedgeonline.com/609/custom_icons/4CShare_Global_Project_Management_Simulation_HRC.jpg\",\n                \"provider\": {\n                    \"id\": \"5e9fdfa7d895b00d2f979d58\",\n                    \"code\": \"MINDEDGE\"\n                },\n                \"product_type\": \"store_course_section\",\n                \"section\": {\n                    \"start_date\": null,\n                    \"end_date\": null,\n                    \"execution_site\": null,\n                    \"execution_mode\": \"self-paced\"\n                },\n                \"price\": 355.0,\n                \"questionnaire\": [\n                    {\n                        \"type\": \"checkbox\",\n                        \"field\": \"have_relevant_certificate\",\n                        \"label\": \"Do you have a relevant certificate?\"\n                    },\n                    {\n                        \"type\": \"text\",\n                        \"field\": \"certificate_number\",\n                        \"label\": \"Enter the certificate number\"\n                    },\n                    {\n                        \"type\": \"date\",\n                        \"field\": \"certificate_expiry_date\",\n                        \"label\": \"Certificate expiry date\"\n                    }\n                ]\n            }\n        ],\n        \"payment_gateways\": [\n            {\n                \"id\": \"9c2eb1a1-78de-4015-9188-8990615826b1\",\n                \"name\": \"Authorize.Net\",\n                \"branding\": {}\n            }\n        ],\n        \"cart_id\": \"\",\n        \"store\": {\n            \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n            \"created_at\": \"2021-03-14T11:51:40.474133Z\",\n            \"updated_at\": \"2021-09-26T07:26:15.741468Z\",\n            \"active_status\": true,\n            \"name\": \"Lifelong Campus\",\n            \"url_slug\": \"campus\",\n            \"is_active\": true,\n            \"store_logo_uri\": null,\n            \"gtm_id\": null,\n            \"template\": \"/templates/campus.20210926t072615.js\",\n            \"tax_enabled\": false,\n            \"configurations\": [\n                {\n                    \"entity_name\": \"MindEdge\",\n                    \"entity_type\": \"enrollment_config\",\n                    \"config_value\": {\n                        \"url\": \"https://api.mindedgeuniversity.com/v1/studentService\",\n                        \"token\": \"09d66f6e5482d9b0ba91815c350fd9af3770819b\",\n                        \"password\": \"jz_me_api\",\n                        \"username\": \"jenzabar\"\n                    }\n                },\n                {\n                    \"entity_name\": \"Checkout Configuration\",\n                    \"entity_type\": \"enrollment_config\",\n                    \"config_value\": {\n                        \"agreement_details\": [\n                            {\n                                \"entities\": [\n                                    {\n                                        \"key\": \"privacy\",\n                                        \"link\": \"https://privacy\",\n                                        \"label\": \"Privacy\"\n                                    },\n                                    {\n                                        \"key\": \"terms\",\n                                        \"link\": \"https://terms\",\n                                        \"label\": \"Terms\"\n                                    },\n                                    {\n                                        \"key\": \"refund\",\n                                        \"link\": \"https://refund\",\n                                        \"label\": \"Refund\"\n                                    }\n                                ],\n                                \"isRequired\": true,\n                                \"label_format\": \"I agree to the {{privacy}}, {{terms}} and {{refund}}\"\n                            },\n                            {\n                                \"entities\": [\n                                    {\n                                        \"key\": \"email_notification\",\n                                        \"label\": \"Email notification\"\n                                    }\n                                ],\n                                \"label_format\": \"I agree to receive {{email_notification}}\"\n                            }\n                        ],\n                        \"registration_details\": [\n                            {\n                                \"type\": \"date\",\n                                \"field\": \"dob\",\n                                \"label\": \"Date of Birth\",\n                                \"isRequired\": true\n                            },\n                            {\n                                \"type\": \"checkbox\",\n                                \"field\": \"citizen\",\n                                \"label\": \"Are you US citizen?\",\n                                \"isRequired\": true\n                            }\n                        ]\n                    }\n                },\n                {\n                    \"entity_name\": \"Avatax\",\n                    \"entity_type\": \"tax\",\n                    \"config_value\": {\n                        \"tax_code\": \"ST087651\",\n                        \"account_id\": \"2001578376\",\n                        \"license_key\": \"D01678E64CC08999\",\n                        \"request_url\": \"https://sandbox-rest.avatax.com/api/v2/\",\n                        \"company_code\": \"DEFAULT\"\n                    }\n                }\n            ]\n        },\n        \"questionnaire\": [\n            {\n                \"type\": \"checkbox\",\n                \"field\": \"have_relevant_certificate\",\n                \"label\": \"Do you have a relevant certificate?\"\n            },\n            {\n                \"type\": \"text\",\n                \"field\": \"certificate_number\",\n                \"label\": \"Enter the certificate number\"\n            },\n            {\n                \"type\": \"date\",\n                \"field\": \"certificate_expiry_date\",\n                \"label\": \"Certificate expiry date\"\n            }\n        ]\n    }\n}\n\n```"
+					},
+					"response": []
 				}
 			],
 			"description": "Here you can get ***Cart*** related endpoints."
@@ -903,6 +937,12 @@
 				}
 			],
 			"description": "Here you can get ***Payment*** related endpoints."
+		}
+	],
+	"variable": [
+		{
+			"key": "Cart",
+			"value": "baseurl"
 		}
 	]
 }
