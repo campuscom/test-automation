@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"order_id\": \"16b98520-3361-43b3-Ae97-63088fcd31a7\",\n    \"event_type\": \"student\",\n    \"payload\": {\n        \"students\": [\n            {   \n                \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n                \"school_student_id\": \"4321\"\n            },\n            {   \n                \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n                \"school_student_id\": \"4322\"\n            }\n        ]\n    }\n}",
+					"raw": "{\n    \"order_id\": \"c33a29c5-7add-469d-8876-575c5f3e880d\",\n    \"event_type\": \"student\",\n    \"payload\": {\n        \"students\": [\n            {   \n                \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n                \"school_student_id\": \"4321\"\n            },\n            {   \n                \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n                \"school_student_id\": \"4322\"\n            }\n        ]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -26,7 +26,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/webhooks",
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/j1-push",
 					"protocol": "https",
 					"host": [
 						"j3fz4814s2",
@@ -36,10 +36,10 @@
 						"com"
 					],
 					"path": [
-						"webhooks"
+						"j1-push"
 					]
 				},
-				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/webhooks`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n{\n    \"order_id\": \"16b98520-3361-43b3-Ae97-63088fcd31a7\",\n    \"event_type\": \"student\",\n    \"payload\": {\n        \"students\": [\n            {   \n                \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n                \"school_student_id\": \"4321\"\n            },\n            {   \n                \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n                \"school_student_id\": \"4322\"\n            }\n        ]\n    }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"ok\"\n}\n\n```"
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/webhooks`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n{\n    \"order_id\": \"c33a29c5-7add-469d-8876-575c5f3e880d\",\n    \"event_type\": \"student\",\n    \"payload\": {\n        \"students\": [\n            {   \n                \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n                \"school_student_id\": \"4321\"\n            },\n            {   \n                \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n                \"school_student_id\": \"4322\"\n            }\n        ]\n    }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"ok\"\n}\n\n```"
 			},
 			"response": []
 		},
