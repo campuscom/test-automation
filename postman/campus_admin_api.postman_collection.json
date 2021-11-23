@@ -7848,12 +7848,7 @@
 						],
 						"body": {
 							"mode": "formdata",
-							"formdata": [],
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
+							"formdata": []
 						},
 						"url": {
 							"raw": "{{baseurl}}/custom-roles/?name__icontains=sT",
@@ -8420,63 +8415,33 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
+									"key": "provider_type",
+									"value": "oauth2",
+									"type": "text"
+								},
+								{
 									"key": "name",
-									"value": "Test",
-									"type": "text"
-								},
-								{
-									"key": "app_id",
-									"value": "test",
-									"type": "text"
-								},
-								{
-									"key": "authorization_uri",
-									"value": "https://test.com/auth",
-									"type": "text"
-								},
-								{
-									"key": "access_token_uri",
-									"value": "https://test.com/token",
-									"type": "text"
-								},
-								{
-									"key": "permission_scope",
-									"value": "test",
+									"value": "AppleID",
 									"type": "text"
 								},
 								{
 									"key": "slug",
-									"value": "test",
+									"value": "appleid",
 									"type": "text"
 								},
 								{
-									"key": "client_id",
-									"value": "<test_auth_token>",
+									"key": "is_sandboxed",
+									"value": "false",
 									"type": "text"
 								},
 								{
-									"key": "client_secret",
-									"value": "_EZ6FNaKVF1iXyFf84C_3VYr",
+									"key": "is_school_provider",
+									"value": "false",
 									"type": "text"
 								},
 								{
-									"key": "authorization_response_type",
-									"value": "test",
-									"type": "text"
-								},
-								{
-									"key": "access_grant_type",
-									"value": "test",
-									"type": "text"
-								},
-								{
-									"key": "return_uri",
-									"value": "https://test.com",
-									"type": "text"
-								},
-								{
-									"key": "oauth_provider_tag",
-									"value": "test",
+									"key": "configuration",
+									"value": "[object Object]",
 									"type": "text"
 								}
 							]
@@ -8521,7 +8486,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"SGC\",\r\n  \"slug\": \"test\"\r\n}"
+							"raw": "{\r\n  \"provider_type\": \"oauth2\",\r\n  \"name\": \"AppleID\",\r\n  \"slug\": \"appleid\",\r\n  \"is_sandboxed\": true,\r\n  \"is_school_provider\": false,\r\n  \"configuration\": {}\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/identity-providers/329458c8-7042-4d67-a633-dbe9dddcf4b2/",
@@ -8772,13 +8737,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/question-bank/56712ec5-bc89-456b-ba7b-b21db7657dfa",
+							"raw": "{{baseurl}}/question-bank/505c6d1b-3163-489f-970e-ebe08628830e",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"question-bank",
-								"56712ec5-bc89-456b-ba7b-b21db7657dfa"
+								"505c6d1b-3163-489f-970e-ebe08628830e"
 							]
 						},
 						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
@@ -8820,7 +8785,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ids\": [\"56712ec5-bc89-456b-ba7b-b21db7657dfa\", \"963ffdbf-2317-42e7-99eb-b07fc30010d8\"]\n}",
+							"raw": "{\n    \"ids\": [\"505c6d1b-3163-489f-970e-ebe08628830e\"]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8876,7 +8841,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"Authorize.Net\",\n    \"question_type\": \"multiselect\",\n    \"configuration\": \"hello\"\n}",
+							"raw": "{\n    \"title\": \"Question 5\",\n    \"question_type\": \"multiselect\",\n    \"configuration\": \"{}\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8884,13 +8849,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/question-bank/56712ec5-bc89-456b-ba7b-b21db7657dfa/",
+							"raw": "{{baseurl}}/question-bank/505c6d1b-3163-489f-970e-ebe08628830e/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"question-bank",
-								"56712ec5-bc89-456b-ba7b-b21db7657dfa",
+								"505c6d1b-3163-489f-970e-ebe08628830e",
 								""
 							]
 						},
@@ -8924,7 +8889,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Question 2\",\r\n    \"question_type\": \"textarea\",\r\n    \"configuration\":\"{ 'configuration name':'configuration 1','configuration type': 'textarea'}\"\r\n}"
+							"raw": "{\r\n    \"title\": \"Question 4\",\r\n    \"question_type\": \"number\",\r\n    \"configuration\":\"{'name':'nest'}\"\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/question-bank/",
@@ -8939,9 +8904,28 @@
 						"description": "Create a Payment Gateway\n\n**URL** : `/payment-gateways/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n{\n    \"title\": \"Question about vivasoft\",\n    \"question_type\": \"multiselect\",\n    \"configuration\":\"{ 'title':'Question about vivasoft','question_type': 'multiselect', 'hola':'hola'}\"\n}\n\n```\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/question-bank/\",\n    \"date_time\": \"2021-11-21T08:37:14.678602Z\",\n    \"data\": {\n        \"id\": \"26dfa082-e8c5-4505-938d-633a8222168d\",\n        \"ref_id\": 3,\n        \"title\": \"Question about vivasoft\",\n        \"question_type\": \"multiselect\",\n        \"configuration\": \"{ 'title':'Question about vivasoft','question_type': 'multiselect', 'hola':'hola'}\"\n    }\n}\n\n```"
 					},
 					"response": []
-				},
+				}
+			],
+			"description": "Here you can get ***Payment Gateway*** related endpoints."
+		},
+		{
+			"name": "Profile Question",
+			"item": [
 				{
-					"name": "Update Payment Gateways",
+					"name": "Profile Question List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -8953,7 +8937,102 @@
 								}
 							]
 						},
-						"method": "PATCH",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/profile-questions?provider_ref=8ad57f2c-a0f8-464f-933b-20ecc838d870",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"profile-questions"
+							],
+							"query": [
+								{
+									"key": "provider_ref",
+									"value": "8ad57f2c-a0f8-464f-933b-20ecc838d870"
+								}
+							]
+						},
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Question Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\"5633b9bb-69cc-4527-8545-6d7491d4a3a6\",\"42d5a737-e802-4a41-b6be-ab1ae82adf3f\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-profile-questions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-profile-questions",
+								""
+							]
+						},
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Profile Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
 						"header": [
 							{
 								"key": "Content-Type",
@@ -8966,20 +9045,19 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n  \"name\": \"Authorize2.Net\",\r\n  \"last_update_date\": \"2021-03-02\",\r\n  \"is_active\": \"False\"\r\n}"
+							"raw": "{\r\n    \"question_banks\": [\"bbec0a5c-8ac8-461a-ab38-51eeca604069\",\"38600253-8cbb-4031-bd7f-9cfda671d949\",\"ea186b9c-feff-4f7d-bd94-9e7318db72fe\",\"2be13a47-73d6-4db5-adee-1f62fe4af124\"],\r\n    \"provider_type\": \"course_provider\",\r\n    \"provider_ref\": \"8ad57f2c-a0f8-464f-933b-20ecc838d870\"\r\n}"
 						},
 						"url": {
-							"raw": "{{baseurl}}/payment-gateways/aac46438-185a-4577-9b68-e74ee0666046/",
+							"raw": "{{baseurl}}/profile-questions/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"payment-gateways",
-								"aac46438-185a-4577-9b68-e74ee0666046",
+								"profile-questions",
 								""
 							]
 						},
-						"description": "Update a payment gateway. A PATCH request is used to make changes to one or multiple part of the resource at a location.\n\n**URL** : `/payment-gateways/:id/`\n\n**Method** : `PATCH`\n\n**Payload**\n\n```json\n{\n    \"name\": \"[unicode 128 chars max]\",\n    \"sdk_version\": \"[unicode 20 chars max]\",\n    \"last_update_date\": \"YYYY-MM-DD\",\n    \"is_active\": \"[default False]\",\n    \"class_name\": \"[unicode 30 chars max]\",\n}\n```\n\n**Data example**  \n```json\n{\n    \"name\": \"Authorize.Net\",\n}\n```\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/payment-gateways/aac46438-185a-4577-9b68-e74ee0666046/\",\n  \"date_time\": \"2021-03-02T15:08:57.193430Z\",\n  \"data\": {\n    \"id\": \"aac46438-185a-4577-9b68-e74ee0666046\",\n    \"name\": \"Authorize2.Net\",\n    \"sdk_version\": null,\n    \"last_update_date\": \"2021-03-02\",\n    \"is_active\": false,\n    \"source_library_path\": \"/opt/app/admin_api/payments/authnet\",\n    \"class_name\": null\n  }\n}\n```"
+						"description": "Create a Payment Gateway\n\n**URL** : `/payment-gateways/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n{\n    \"title\": \"Question about vivasoft\",\n    \"question_type\": \"multiselect\",\n    \"configuration\":\"{ 'title':'Question about vivasoft','question_type': 'multiselect', 'hola':'hola'}\"\n}\n\n```\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/question-bank/\",\n    \"date_time\": \"2021-11-21T08:37:14.678602Z\",\n    \"data\": {\n        \"id\": \"26dfa082-e8c5-4505-938d-633a8222168d\",\n        \"ref_id\": 3,\n        \"title\": \"Question about vivasoft\",\n        \"question_type\": \"multiselect\",\n        \"configuration\": \"{ 'title':'Question about vivasoft','question_type': 'multiselect', 'hola':'hola'}\"\n    }\n}\n\n```"
 					},
 					"response": []
 				}
