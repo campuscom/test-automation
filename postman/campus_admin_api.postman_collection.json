@@ -8681,21 +8681,85 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/question-bank?title__icontains=&question_type__icontains=",
+							"raw": "{{baseurl}}/question-bank/?limit=10&page=1",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"question-bank"
+								"question-bank",
+								""
 							],
 							"query": [
 								{
-									"key": "title__icontains",
-									"value": ""
+									"key": "limit",
+									"value": "10"
 								},
 								{
-									"key": "question_type__icontains",
-									"value": ""
+									"key": "page",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Question Bank Complex Data Capabilities",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/question-bank/?provider_ref=d7522fdf-e591-4184-8c94-573a8e955e83",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"question-bank",
+								""
+							],
+							"query": [
+								{
+									"key": "provider_ref",
+									"value": "d7522fdf-e591-4184-8c94-573a8e955e83"
+								},
+								{
+									"key": "include_null_provider",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "exclude_tagged_provider",
+									"value": "d7522fdf-e591-4184-8c94-573a8e955e83",
+									"disabled": true
 								}
 							]
 						},
@@ -8737,13 +8801,13 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/question-bank/505c6d1b-3163-489f-970e-ebe08628830e",
+							"raw": "{{baseurl}}/question-bank/c93a6251-7223-4fd5-8c7a-fd762049d629",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"question-bank",
-								"505c6d1b-3163-489f-970e-ebe08628830e"
+								"c93a6251-7223-4fd5-8c7a-fd762049d629"
 							]
 						},
 						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
@@ -8785,7 +8849,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ids\": [\"505c6d1b-3163-489f-970e-ebe08628830e\"]\n}",
+							"raw": "{\n    \"ids\": [\"24fbef05-5390-41bf-abd0-ac1c15982b89\"]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8841,7 +8905,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"title\": \"Question 5\",\n    \"question_type\": \"multiselect\",\n    \"configuration\": \"{}\"\n}",
+							"raw": "{\n    \"provider_ref\": \"8ad57f2c-a0f8-464f-933b-20ecc838d870\",\n    \"provider_type\": \"course_provider\",\n    \"external_id\": \"external_id 15\",\n    \"title\": \"Question 25\",\n    \"question_type\": \"select\",\n    \"configuration\": {\n        \"var\": \"multiple\",\n        \"name\": \"test\"\n    }\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -8849,13 +8913,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/question-bank/505c6d1b-3163-489f-970e-ebe08628830e/",
+							"raw": "{{baseurl}}/question-bank/c93a6251-7223-4fd5-8c7a-fd762049d629/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"question-bank",
-								"505c6d1b-3163-489f-970e-ebe08628830e",
+								"c93a6251-7223-4fd5-8c7a-fd762049d629",
 								""
 							]
 						},
@@ -8888,8 +8952,40 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Question 4\",\r\n    \"question_type\": \"number\",\r\n    \"configuration\":\"{'name':'nest'}\"\r\n}"
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "Question 22",
+									"type": "text"
+								},
+								{
+									"key": "question_type",
+									"value": "select",
+									"type": "text"
+								},
+								{
+									"key": "configuration",
+									"value": "{\"var\":\"multiple\", \"name\":\"test\"}",
+									"type": "text"
+								},
+								{
+									"key": "provider_ref",
+									"value": "d7522fdf-e591-4184-8c94-573a8e955e83",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "provider_type",
+									"value": "store",
+									"type": "text"
+								},
+								{
+									"key": "external_id",
+									"value": "external_id 22",
+									"type": "text"
+								}
+							]
 						},
 						"url": {
 							"raw": "{{baseurl}}/question-bank/",
@@ -9045,7 +9141,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"question_banks\": [\"bbec0a5c-8ac8-461a-ab38-51eeca604069\",\"38600253-8cbb-4031-bd7f-9cfda671d949\",\"ea186b9c-feff-4f7d-bd94-9e7318db72fe\",\"2be13a47-73d6-4db5-adee-1f62fe4af124\"],\r\n    \"provider_type\": \"course_provider\",\r\n    \"provider_ref\": \"8ad57f2c-a0f8-464f-933b-20ecc838d870\"\r\n}"
+							"raw": "{\r\n    \"question_banks\": [\"1f162a36-a47a-4818-9b7d-4af771e837ed\",\"3597a7c8-bf05-4460-b368-0414c5f89e54\"],\r\n    \"provider_type\": \"course_provider\",\r\n    \"provider_ref\": \"8ad57f2c-a0f8-464f-933b-20ecc838d870\"\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/profile-questions/",
@@ -9054,6 +9150,157 @@
 							],
 							"path": [
 								"profile-questions",
+								""
+							]
+						},
+						"description": "Create a Payment Gateway\n\n**URL** : `/payment-gateways/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n{\n    \"title\": \"Question about vivasoft\",\n    \"question_type\": \"multiselect\",\n    \"configuration\":\"{ 'title':'Question about vivasoft','question_type': 'multiselect', 'hola':'hola'}\"\n}\n\n```\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/question-bank/\",\n    \"date_time\": \"2021-11-21T08:37:14.678602Z\",\n    \"data\": {\n        \"id\": \"26dfa082-e8c5-4505-938d-633a8222168d\",\n        \"ref_id\": 3,\n        \"title\": \"Question about vivasoft\",\n        \"question_type\": \"multiselect\",\n        \"configuration\": \"{ 'title':'Question about vivasoft','question_type': 'multiselect', 'hola':'hola'}\"\n    }\n}\n\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Payment Gateway*** related endpoints."
+		},
+		{
+			"name": "Registration Question",
+			"item": [
+				{
+					"name": "Registration Question List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/registration-questions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"registration-questions",
+								""
+							]
+						},
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Registration Question Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\"5633b9bb-69cc-4527-8545-6d7491d4a3a6\",\"42d5a737-e802-4a41-b6be-ab1ae82adf3f\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-registration-questions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-registration-questions",
+								""
+							]
+						},
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Registration Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question_banks\": [\"1f162a36-a47a-4818-9b7d-4af771e837ed\",\"3597a7c8-bf05-4460-b368-0414c5f89e54\"],\r\n    \"entity_type\": \"course\",\r\n    \"entity_id\": \"8ad57f2c-a0f8-464f-933b-20ecc838d870\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/registration-questions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"registration-questions",
 								""
 							]
 						},
