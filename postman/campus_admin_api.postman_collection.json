@@ -7334,7 +7334,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/sections/?course__id=b6323162-2fd4-4262-a918-d44923a866b5",
+							"raw": "{{baseurl}}/sections/?course__id=e45ead32-757a-43fa-b5a7-75e375b7332f",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -7345,7 +7345,7 @@
 							"query": [
 								{
 									"key": "course__id",
-									"value": "b6323162-2fd4-4262-a918-d44923a866b5"
+									"value": "e45ead32-757a-43fa-b5a7-75e375b7332f"
 								}
 							]
 						},
@@ -7495,13 +7495,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/sections/362c6e96-b17e-4f3d-800a-9caa711b61c8",
+							"raw": "{{baseurl}}/sections/75d51ab2-5f90-4239-895f-ccc65b3d6889/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"sections",
-								"362c6e96-b17e-4f3d-800a-9caa711b61c8"
+								"75d51ab2-5f90-4239-895f-ccc65b3d6889",
+								""
 							]
 						},
 						"description": "View a particular section details\n\n**URL** : `/sections/<section_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n {\n  \"url\": \"http://api.admin.dev.campus.com/sections/191b79a0-ba5d-4731-a47a-1724e5957a87/\",\n  \"date_time\": \"2021-03-02T20:48:22.851650Z\",\n  \"data\": {\n    \"course_fee\": {\n      \"amount\": 20.0,\n      \"currency\": \"USD\"\n    },\n    \"instructors\": [\n      {\n        \"id\": \"6036ab4971576ef69dd9a4ac\",\n        \"name\": \"Daniel Newman\"\n      }\n    ],\n    \"code\": \"PD1\",\n    \"external_version_id\": null,\n    \"description\": \"description\",\n    \"registration_url\": \"https://campus.com\",\n    \"inquiry_url\": null,\n    \"details_url\": \"https://campus.com\",\n    \"start_date\": \"2021-03-10T07:19:34Z\",\n    \"end_date\": \"2021-05-31T07:20:33Z\",\n    \"num_seats\": 20,\n    \"available_seats\": 11,\n    \"is_active\": true,\n    \"execution_mode\": \"instructor-led\",\n    \"registration_deadline\": \"2021-03-10T07:20:51Z\",\n    \"credit_hours\": 20.0,\n    \"ceu_hours\": 2.0,\n    \"clock_hours\": 0.0,\n    \"load_hours\": 0.0,\n    \"credit_unit\": null,\n    \"total_credits\": null,\n    \"schedules\": [],\n    \"execution_site\": null,\n    \"registration_form_data\": null,\n    \"name\": \"PD1\",\n    \"fee\": 20.0,\n    \"seat_capacity\": 20,\n    \"available_seat\": 11,\n    \"course\": {\n      \"id\": \"639df70b-b05a-4b31-aea6-8e09867db743\",\n      \"title\": \"Party Decoration\"\n    },\n    \"id\": \"191b79a0-ba5d-4731-a47a-1724e5957a87\"\n  }\n}\n```"
@@ -9045,7 +9046,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"course\": \"412daf13-6229-441d-b5e6-35078a7b8454\",\r\n    \"store\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\r\n    \"sections\": [\r\n        {\r\n            \"id\": \"659d1f0a-ea06-4cfd-bbe6-997481b234ef\",\r\n            \"fee\": \"149\"\r\n\r\n        }\r\n    ],\r\n    \"is_featured\": true,\r\n    \"is_published\": true\r\n}"
+							"raw": "{\r\n  \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\r\n  \"sections\": [\r\n    {\r\n      \"id\": \"ba74bc96-a5fa-46d5-a20d-f57c1c24bbd2\",\r\n      \"name\": \"tch101-section-3\",\r\n      \"provider_fee\": 100,\r\n      \"fee\": 100,\r\n      \"seat_capacity\": 35\r\n    },\r\n    {\r\n      \"id\": \"6f1a0455-94bf-4f0e-a58d-6551e1c430af\",\r\n      \"name\": \"tch101-section-2\",\r\n      \"provider_fee\": 150,\r\n      \"fee\": 150,\r\n      \"seat_capacity\": 50\r\n    }\r\n  ],\r\n  \"enrollment_ready\": true,\r\n  \"is_published\": true,\r\n  \"is_featured\": true,\r\n  \"course\": \"a51ee297-80fb-4988-9905-09c57ae51512\"\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/store-courses/",

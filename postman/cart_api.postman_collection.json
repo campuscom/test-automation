@@ -79,7 +79,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"product_ids\": [\n        \"cf8bab1b-acf1-45a2-90c7-0501377e639e\"\n    ]\n}",
+							"raw": "{\n    \"product_ids\": [\n        \"Cb6367f0-C92f-4925-B1e9-A8d1cb853be1\"\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
