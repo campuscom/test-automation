@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "366835b6-52ce-41b0-956b-dfdd78e86d21",
-		"name": "Higher Reach Publish Course API",
+		"_postman_id": "26f927bf-b519-4df7-8b88-2c936578f36e",
+		"name": "Jenzabar Sonis Course Publish API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -48,13 +48,13 @@
 					},
 					{
 						"key": "Authorization",
-						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"value": "Api-Key IqSHtdNi.rpuG4WJjImN2NKSyfksFYBGexY9lSsdF",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-sc104\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Evening\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"South Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"Mujib100\"\n\n            }\n        }\n    ]\n}",
+					"raw": "{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCMJS11\",\n                \"code\": \"TCMJS11\",\n                \"title\": \"Test Course M11\",\n                \"slug\": \"test-course-m11\",\n                \"description\":\"Test course m11 description...\"\n            }\n        }\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"

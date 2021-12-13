@@ -2319,6 +2319,228 @@
 			"description": "Here you can get ***Certificate Enrollments*** related endpoints."
 		},
 		{
+			"name": "Company",
+			"item": [
+				{
+					"name": "Delete Store Company",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\"8474ce1a-5560-4d0c-8b0d-a7e10845a521\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-store-companies/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-store-companies",
+								""
+							]
+						},
+						"description": "View enrolled certificate list of a Particular Student\n\n**URL** : `/delete-store-companies/`\n\n**Method** : Delete\n\n**Payload**: \n\n{\n    \"ids\": [\"8474ce1a-5560-4d0c-8b0d-a7e10845a521\"]\n}\n\n**Response** :\n\n```\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-store-companies/\",\n    \"date_time\": \"2021-12-13T08:58:30.929103Z\",\n    \"data\": {\n        \"message\": \"Store Companies deleted successfully\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Store Company Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store\": \"22305ada-58c2-4b27-9383-b0c3f7369645\",\n    \"company_name\": \"Software Global Consultancy PVT LTD\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/store-companies/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"store-companies",
+								""
+							]
+						},
+						"description": "View enrolled certificate list of a Particular Student\n\n**URL** : `/store-companies/`\n\n**Method** : Post\n\n**Payload** :\n...\n{\n\n    \"store\": \"22305ada-58c2-4b27-9383-b0c3f7369645\",\n    \"company_name\": \"Software Global Consultancy PVT LTD\"\n\n}\n\n\n\n\n**Response** :\n\n```\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/store-companies/\",\n    \"date_time\": \"2021-12-13T09:45:53.310311Z\",\n    \"data\": {\n        \"id\": \"681453cc-71c1-48f0-be24-71c3344f39e2\",\n        \"store\": \"22305ada-58c2-4b27-9383-b0c3f7369645\",\n        \"company_name\": \"Software Global Consultancy PVT LTD\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get List of Store Company",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/store-companies/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"store-companies",
+								""
+							]
+						},
+						"description": "View enrolled certificate list of a Particular Student\n\n**URL** : `/store-companies/`\n\n**Method** : GET\n\n**Response** :\n\n```\n{\n    \"url\": \"https://api.admin.dev.campus.com/store-companies/\",\n    \"date_time\": \"2021-12-13T09:47:31.857993Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 2,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"681453cc-71c1-48f0-be24-71c3344f39e2\",\n            \"store\": \"22305ada-58c2-4b27-9383-b0c3f7369645\",\n            \"company_name\": \"Software Global Consultancy PVT LTD\"\n        },\n        {\n            \"id\": \"7fd44357-1e29-4b03-8335-5f52d06a30b4\",\n            \"store\": \"22305ada-58c2-4b27-9383-b0c3f7369645\",\n            \"company_name\": \"Software Global Consultancy\"\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Store Company",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"company_name\": \"SGC Soft\"\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/store-companies/8474ce1a-5560-4d0c-8b0d-a7e10845a521/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"store-companies",
+								"8474ce1a-5560-4d0c-8b0d-a7e10845a521",
+								""
+							]
+						},
+						"description": "View enrolled certificate list of a Particular Student\n\n**URL** : `/certificate-enrollments/?profile=<profile_id>`\n\n**Method** : GET\n\n**Response** :\n\n```\n{\n    \"url\": \"https://api.admin.dev.campus.com/certificate-enrollments/?profile=1b14a0f7-a22f-427b-a565-923228f37a27&limit=10&page=1\",\n    \"date_time\": \"2021-04-19T10:17:44.216290Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 2,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"71e783c7-4a54-4bc0-8f5e-c420a6685d8d\",\n            \"profile\": {\n                \"id\": \"1b14a0f7-a22f-427b-a565-923228f37a27\",\n                \"first_name\": \"Chris\",\n                \"last_name\": \"Lemont\",\n                \"formal_name\": \"Lemont, Chris\",\n                \"date_of_birth\": null,\n                \"profile_picture_uri\": null,\n                \"primary_email\": \"lemont@yahoo.com\",\n                \"primary_contact_number\": null,\n                \"terms_accepted\": true\n            },\n            \"certificate\": {\n                \"id\": \"d3b0c56c-1b26-48b8-ae64-5bc2cc15e5b6\",\n                \"title\": \"Certificate in Leadership\"\n            },\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"payment\": {\n                \"id\": \"81b4a110-f2d5-4570-85dd-cda69cc15598\",\n                \"created_at\": \"2021-04-19T10:15:57.076410Z\",\n                \"updated_at\": \"2021-04-19T10:16:25.378135Z\",\n                \"active_status\": true,\n                \"transaction_time\": \"2021-04-19T10:15:57.075489Z\",\n                \"currency_code\": \"USD\",\n                \"amount\": \"99.50\",\n                \"transaction_reference\": \"consumer_api\",\n                \"status\": \"completed\",\n                \"transaction_detail\": {},\n                \"managed_unique_id\": 51,\n                \"cart\": \"c279409a-1581-4022-94fc-2b1e251e1b9f\",\n                \"store_payment_gateway\": \"9c2eb1a1-78de-4015-9188-8990615826b1\"\n            },\n            \"application_time\": \"2021-04-19T10:16:25.391058Z\",\n            \"enrollment_time\": \"2021-04-19T10:16:25.391050Z\",\n            \"enrollment_status\": \"enrolled\"\n        },\n        {\n            \"id\": \"d3ae2175-2847-4368-afed-e9ff90e11f48\",\n            \"profile\": {\n                \"id\": \"1b14a0f7-a22f-427b-a565-923228f37a27\",\n                \"first_name\": \"Chris\",\n                \"last_name\": \"Lemont\",\n                \"formal_name\": \"Lemont, Chris\",\n                \"date_of_birth\": null,\n                \"profile_picture_uri\": null,\n                \"primary_email\": \"lemont@yahoo.com\",\n                \"primary_contact_number\": null,\n                \"terms_accepted\": true\n            },\n            \"certificate\": {\n                \"id\": \"289200ae-e7cf-4dd9-813f-91caaa70516b\",\n                \"title\": \"Certificate in Cybersecurity\"\n            },\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"payment\": {\n                \"id\": \"d1e82d0d-1b78-40dd-893c-2c7a0ed9897f\",\n                \"created_at\": \"2021-04-19T10:02:29.930363Z\",\n                \"updated_at\": \"2021-04-19T10:03:04.570761Z\",\n                \"active_status\": true,\n                \"transaction_time\": \"2021-04-19T10:02:29.929500Z\",\n                \"currency_code\": \"USD\",\n                \"amount\": \"399.00\",\n                \"transaction_reference\": \"consumer_api\",\n                \"status\": \"completed\",\n                \"transaction_detail\": {},\n                \"managed_unique_id\": 50,\n                \"cart\": \"548c7357-b533-4589-848b-170521b2c162\",\n                \"store_payment_gateway\": \"9c2eb1a1-78de-4015-9188-8990615826b1\"\n            },\n            \"application_time\": \"2021-04-19T10:03:04.583856Z\",\n            \"enrollment_time\": \"2021-04-19T10:03:04.583849Z\",\n            \"enrollment_status\": \"enrolled\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Certificate Enrollments*** related endpoints."
+		},
+		{
 			"name": "Coupon",
 			"item": [
 				{
@@ -2672,13 +2894,14 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/courses/91251a10-aeea-4721-8bab-6a2a659bf9c7",
+							"raw": "{{baseurl}}/courses/e45ead32-757a-43fa-b5a7-75e375b7332f/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"courses",
-								"91251a10-aeea-4721-8bab-6a2a659bf9c7"
+								"e45ead32-757a-43fa-b5a7-75e375b7332f",
+								""
 							]
 						},
 						"description": "Show individual course\n\n**URL** : `/courses/<course_id>`\n\n**Method** : `GET`\n\n**Responses**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/courses/b150290d-204c-49f2-be4f-eeb0ed999f1a/\",\n    \"date_time\": \"2021-06-16T04:36:48.502835Z\",\n    \"data\": {\n        \"id\": \"b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n        \"provider\": {\n            \"id\": \"cad53a7e-d178-49d6-8630-7f7113b6acfc\",\n            \"name\": \"Asher Hartman\"\n        },\n        \"_is_deleted\": false,\n        \"deleted\": false,\n        \"created_at\": \"2021-04-20T08:30:29.512000Z\",\n        \"updated_at\": \"2021-06-09T10:06:25.432000Z\",\n        \"deleted_at\": null,\n        \"published_at\": null,\n        \"version\": 26,\n        \"from_importer\": false,\n        \"external_id\": \"body-language-for-women-in-businesses\",\n        \"external_url\": \"http://google.com\",\n        \"external_version_id\": null,\n        \"code\": \"elit\",\n        \"title\": \"Automate Your Testing\",\n        \"slug\": \"automate-your-testing\",\n        \"description\": \"<p>Automate Your Testing</p>\",\n        \"_is_published\": true,\n        \"learning_outcome\": \"<p>a lo</p>\",\n        \"image\": {\n            \"original\": \"uploads/d6f94d19-8092-4f1d-921a-87267b7c6bb3.jpeg\"\n        },\n        \"default_image\": {},\n        \"summary\": \"Provident excepturi\",\n        \"syllabus_url\": \"syll\",\n        \"level\": \"beginner\",\n        \"inquiry_url\": \"http://google.com\",\n        \"overrides\": {},\n        \"sections\": [\n            {\n                \"code\": \"Last Section\",\n                \"external_version_id\": null,\n                \"description\": \"\",\n                \"registration_url\": \"\",\n                \"inquiry_url\": null,\n                \"details_url\": null,\n                \"start_date\": \"2021-04-01T08:57:14Z\",\n                \"end_date\": \"2022-05-01T12:00:00Z\",\n                \"num_seats\": 200,\n                \"available_seats\": 90,\n                \"is_active\": true,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2022-04-30T12:00:00Z\",\n                \"instructors\": [],\n                \"credit_hours\": 12.0,\n                \"ceu_hours\": 85.0,\n                \"clock_hours\": 0.0,\n                \"load_hours\": 0.0,\n                \"credit_unit\": null,\n                \"total_credits\": null,\n                \"schedules\": [],\n                \"execution_site\": null,\n                \"course_fee\": {\n                    \"amount\": 100.0,\n                    \"currency\": \"USD\"\n                },\n                \"registration_form_data\": null\n            }\n        ],\n        \"programs\": [],\n        \"required_courses\": [],\n        \"recommended_courses\": [],\n        \"subjects\": [],\n        \"keywords\": [],\n        \"careers\": [\n            \"5e70bec987f7b325dfa1be1e\",\n            \"5e70b71287f7b325df9d275e\",\n            \"5e70ad9d87f7b325df977361\"\n        ],\n        \"skills\": [\n            \"5e70ad9a87f7b325df97711d\",\n            \"5e70ad9a87f7b325df97712c\",\n            \"5e70ad9a87f7b325df977127\",\n            \"5e70ad9b87f7b325df97719f\",\n            \"5e70ad9b87f7b325df9771c2\",\n            \"5e70ad9c87f7b325df9772ee\",\n            \"5e70ae7287f7b325df97f921\",\n            \"5e70ad9a87f7b325df9770ff\"\n        ],\n        \"_cls\": \"Course\",\n        \"created_by\": null,\n        \"updated_by\": null,\n        \"deleted_by\": null,\n        \"published_by\": null,\n        \"course_image_uri\": \"https://static.dev.campus.com/uploads/d6f94d19-8092-4f1d-921a-87267b7c6bb3.jpeg\",\n        \"content_ready\": true\n    }\n}\n```"
@@ -5909,7 +6132,7 @@
 								}
 							]
 						},
-						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/profile-questions?limit=30/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/profile-questions/?limit=30\",\n    \"date_time\": \"2021-12-13T09:54:55.630344Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 38,\n        \"limit\": 30\n    },\n    \"data\": [\n        {\n            \"id\": \"1a3d5bee-ad52-41c6-87fc-122da03380d6\",\n            \"question_bank\": \"d161f040-5f50-4a02-b1dc-c0cf7982b267\",\n            \"provider_type\": \"store\",\n            \"display_order\": 1,\n            \"title\": \"Test114\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"name\": \"Higher Reach\"\n            }\n        },\n        {\n            \"id\": \"2817b0c6-12f8-4a63-8ecd-968593e6d404\",\n            \"question_bank\": \"45303b97-1135-41b8-a4e9-06c7d4fb8b50\",\n            \"provider_type\": \"store\",\n            \"display_order\": 1,\n            \"title\": \"Question m044 Autocomplete\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"22305ada-58c2-4b27-9383-b0c3f7369645\",\n                \"name\": \"Maine Community College\"\n            }\n        },\n        {\n            \"id\": \"c47255d9-ab71-4cc1-8b89-b535947312ca\",\n            \"question_bank\": \"45303b97-1135-41b8-a4e9-06c7d4fb8b50\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 1,\n            \"title\": \"Question m044 Autocomplete\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"8ad57f2c-a0f8-464f-933b-20ecc838d870\",\n                \"name\": \"Higher Reach\"\n            }\n        },\n        {\n            \"id\": \"596aff56-d198-4dff-b4a5-41c370a2f6ad\",\n            \"question_bank\": \"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 1,\n            \"title\": \"Question m04 CountryName\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"8ad57f2c-a0f8-464f-933b-20ecc838d870\",\n                \"name\": \"Higher Reach\"\n            }\n        },\n        {\n            \"id\": \"adee87a9-2b63-4bcf-a286-f4791f5b0b26\",\n            \"question_bank\": \"45303b97-1135-41b8-a4e9-06c7d4fb8b50\",\n            \"provider_type\": \"store\",\n            \"display_order\": 2,\n            \"title\": \"Question m044 Autocomplete\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"name\": \"Higher Reach\"\n            }\n        },\n        {\n            \"id\": \"211b0497-d960-4022-b14a-d81a77e1b786\",\n            \"question_bank\": \"24bb5d82-b4c5-4720-ad08-71055f8859b0\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 2110497,\n            \"title\": \"Question m04 Type Text\",\n            \"question_type\": \"text\",\n            \"course_provider\": {\n                \"id\": \"38fc1729-cb81-4678-b583-2f50342ca545\",\n                \"name\": \"Roxbury Community College\"\n            }\n        },\n        {\n            \"id\": \"616f9e5e-af5c-4094-a649-2e4616125a09\",\n            \"question_bank\": \"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 1,\n            \"title\": \"Question m04 CountryName\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"38fc1729-cb81-4678-b583-2f50342ca545\",\n                \"name\": \"Roxbury Community College\"\n            }\n        },\n        {\n            \"id\": \"f7a853c1-5202-4c55-b0ab-9cfe692850a7\",\n            \"question_bank\": \"45303b97-1135-41b8-a4e9-06c7d4fb8b50\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 4,\n            \"title\": \"Question m044 Autocomplete\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"38fc1729-cb81-4678-b583-2f50342ca545\",\n                \"name\": \"Roxbury Community College\"\n            }\n        },\n        {\n            \"id\": \"b660c170-7ea3-4332-b947-576a5c853c7e\",\n            \"question_bank\": \"e54d345a-bfc3-44d9-88e9-ebec2077ae98\",\n            \"provider_type\": \"store\",\n            \"display_order\": 1,\n            \"title\": \"Test116\",\n            \"question_type\": \"text\",\n            \"store\": {\n                \"id\": \"22305ada-58c2-4b27-9383-b0c3f7369645\",\n                \"name\": \"Maine Community College\"\n            }\n        },\n        {\n            \"id\": \"8dee2aa0-4b4c-4817-9ea3-67e5366f653a\",\n            \"question_bank\": \"a579e823-4eac-430a-bede-8d3fcaf86fa5\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 2,\n            \"title\": \"Question m03\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"38fc1729-cb81-4678-b583-2f50342ca545\",\n                \"name\": \"Roxbury Community College\"\n            }\n        },\n        {\n            \"id\": \"bbdd18fb-7550-436b-a45b-478be7a54a64\",\n            \"question_bank\": \"abae7b1c-361e-4661-a6f4-582729f84550\",\n            \"provider_type\": \"store\",\n            \"display_order\": 3,\n            \"title\": \"Question m012\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"9b367c17-55c4-4554-a30b-d93245c56338\",\n                \"name\": \"Roxbury Community College\"\n            }\n        },\n        {\n            \"id\": \"b92a068f-3402-482a-9046-cdb7f2b674b1\",\n            \"question_bank\": \"7bdf9df7-40d2-4b09-9922-1f3767082248\",\n            \"provider_type\": \"store\",\n            \"display_order\": 4,\n            \"title\": \"Question m010\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"9b367c17-55c4-4554-a30b-d93245c56338\",\n                \"name\": \"Roxbury Community College\"\n            }\n        },\n        {\n            \"id\": \"371f7106-4ce7-4359-99be-cedef33e63b6\",\n            \"question_bank\": \"a579e823-4eac-430a-bede-8d3fcaf86fa5\",\n            \"provider_type\": \"store\",\n            \"display_order\": 1,\n            \"title\": \"Question m03\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"9b367c17-55c4-4554-a30b-d93245c56338\",\n                \"name\": \"Roxbury Community College\"\n            }\n        },\n        {\n            \"id\": \"11cf2c25-ad91-45c1-b545-f049d13fdd7b\",\n            \"question_bank\": \"24bb5d82-b4c5-4720-ad08-71055f8859b0\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 2,\n            \"title\": \"Question m04 Type Text\",\n            \"question_type\": \"text\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"76b0ac2f-3dcc-46d1-acab-1507ef682f28\",\n            \"question_bank\": \"a579e823-4eac-430a-bede-8d3fcaf86fa5\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 3,\n            \"title\": \"Question m03\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"3d7a0c7c-5224-4851-b57d-93401d97e3b3\",\n            \"question_bank\": \"5a37d4b2-3a06-42c8-ae1a-2b34330db72e\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 4,\n            \"title\": \"Question m02\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"cf033e18-86e9-417e-9aa5-4a859d14e5b5\",\n            \"question_bank\": \"8266ce0b-5238-4822-b428-dc31c0acf99a\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 5,\n            \"title\": \"Question m04 type toggle\",\n            \"question_type\": \"toggle\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"6d2d30f5-b9f8-4399-8c68-7f7a7023c9ab\",\n            \"question_bank\": \"179106cb-625f-4cc5-9a80-dc736fbad867\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 6,\n            \"title\": \"Question m04 Type Textarea\",\n            \"question_type\": \"textarea\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"63c054d1-5cc7-439f-92dd-62a857c6f486\",\n            \"question_bank\": \"35237aa9-880d-4181-b438-2f00f2c4b68e\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 1,\n            \"title\": \"Question 2 (test)\",\n            \"question_type\": \"date\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"37feca11-be34-4227-b787-959549f902ba\",\n            \"question_bank\": \"abae7b1c-361e-4661-a6f4-582729f84550\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 7,\n            \"title\": \"Question m012\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"8708c259-8a09-4a6b-b7a3-db8a7ed821d5\",\n            \"question_bank\": \"45303b97-1135-41b8-a4e9-06c7d4fb8b50\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 18,\n            \"title\": \"Question m044 Autocomplete\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"5881a7e0-24d9-4541-a093-07a366a97908\",\n            \"question_bank\": \"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 9,\n            \"title\": \"Question m04 CountryName\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"b0657bb6-c8c7-40d1-b031-04d88d564f43\",\n            \"question_bank\": \"10964cd7-4275-4101-bd46-6552c132f4dc\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 11,\n            \"title\": \"Question 2\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"13642433-ba3b-4415-af0c-7453500a6707\",\n            \"question_bank\": \"7bdf9df7-40d2-4b09-9922-1f3767082248\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 14,\n            \"title\": \"Question m010\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"70cd3f9d-0061-41c1-b9e3-902e66503073\",\n                \"name\": \"Irma Mercer\"\n            }\n        },\n        {\n            \"id\": \"afd21c20-f385-4c0e-b646-4bead1016e11\",\n            \"question_bank\": \"7fda2060-257b-4b04-a8a0-d5cef4f2f98b\",\n            \"provider_type\": \"course_provider\",\n            \"display_order\": 1,\n            \"title\": \"Question m019\",\n            \"question_type\": \"select\",\n            \"course_provider\": {\n                \"id\": \"8ad57f2c-a0f8-464f-933b-20ecc838d870\",\n                \"name\": \"Higher Reach\"\n            }\n        },\n        {\n            \"id\": \"72b3a63a-bf0e-4544-aa08-31cbf7bb5986\",\n            \"question_bank\": \"7fda2060-257b-4b04-a8a0-d5cef4f2f98b\",\n            \"provider_type\": \"store\",\n            \"display_order\": 3,\n            \"title\": \"Question m019\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"name\": \"Higher Reach\"\n            }\n        },\n        {\n            \"id\": \"b634bfe0-2f3d-4f8f-b579-d84ae1af2b26\",\n            \"question_bank\": \"a4db5e9b-f3cf-4b9c-b641-e4239a61206a\",\n            \"provider_type\": \"store\",\n            \"display_order\": 1,\n            \"title\": \"the terms transparency has a very different meaning in information security where it is used to desc\",\n            \"question_type\": \"textarea\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"name\": \"Higher Reach\"\n            }\n        },\n        {\n            \"id\": \"56438db2-11bc-44b0-bbe2-a87ea7241998\",\n            \"question_bank\": \"24bb5d82-b4c5-4720-ad08-71055f8859b0\",\n            \"provider_type\": \"store\",\n            \"display_order\": 4,\n            \"title\": \"Question m04 Type Text\",\n            \"question_type\": \"text\",\n            \"store\": {\n                \"id\": \"331eb1f8-dd8d-4318-a1f0-567f038d18c8\",\n                \"name\": \"Gay Sheppard\"\n            }\n        },\n        {\n            \"id\": \"cc485172-728e-4f91-bd0c-ce715a5cfae6\",\n            \"question_bank\": \"a579e823-4eac-430a-bede-8d3fcaf86fa5\",\n            \"provider_type\": \"store\",\n            \"display_order\": 2,\n            \"title\": \"Question m03\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"331eb1f8-dd8d-4318-a1f0-567f038d18c8\",\n                \"name\": \"Gay Sheppard\"\n            }\n        },\n        {\n            \"id\": \"c1247938-efd7-4bf7-9070-de10ac9a95c4\",\n            \"question_bank\": \"5a37d4b2-3a06-42c8-ae1a-2b34330db72e\",\n            \"provider_type\": \"store\",\n            \"display_order\": 5,\n            \"title\": \"Question m02\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"331eb1f8-dd8d-4318-a1f0-567f038d18c8\",\n                \"name\": \"Gay Sheppard\"\n            }\n        }\n    ]\n}\n\n\n```"
 					},
 					"response": []
 				},
@@ -5977,7 +6200,7 @@
 								}
 							]
 						},
-						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/update-profile-questions/`\n\n**Method** : `POST`\n\n**Payload**:\n{\n    \"profile_questions\": [{\"display_order\":\"2110497\", \"id\":\"211b0497-d960-4022-b14a-d81a77e1b786\"}]\n}\n\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/update-profile-questions/\",\n    \"date_time\": \"2021-12-13T09:51:16.398032Z\",\n    \"data\": {\n        \"message\": \"Display order updated successfully\"\n    }\n}\n\n\n\n```"
 					},
 					"response": []
 				},
@@ -6033,7 +6256,7 @@
 								""
 							]
 						},
-						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-gateways/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n\t\"url\": \"http://api.account.dev.campus.com/admin/payment-gateways/\",\n\t\"date_time\": \"2020-10-29T05:32:08.122577Z\",\n\t\"total\": 2,\n\t\"data\": [\n    \t{\n    \t    \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n    \t\t\"name\": \"Authorize.net\",\n    \t},\n    \t{\n            \"id\": \"f89a543e-eaa6-4bce-bc27-7939b5c6433f\",\n            \"name\": \"Other\",\n    \t}\n    \t\n\t]\n}\n\n```"
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/delete-profile-questions//`\n\n**Method** : `DELETE`\n\n**Payload**:\n\n{\n    \"ids\": [\n        \"a7d18932-e235-4ab9-8095-3a7546a0e9f4\",\n        \"f7a98158-3ef8-441a-98f0-b992d072a075\",\n        \"33dd6943-860a-49fe-94ff-4a597ecc2b91\",\n        \"05673603-80d5-4607-b5eb-7ed89f5658a0\",\n        \"7d209106-212a-4495-ae01-a884e90ea967\"\n    ]\n}\n\n\n**Response** :\n\n```json\n\n\n\n```"
 					},
 					"response": []
 				},
@@ -6075,7 +6298,7 @@
 								""
 							]
 						},
-						"description": "Create a Payment Gateway\n\n**URL** : `/payment-gateways/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n{\n    \"title\": \"Question about vivasoft\",\n    \"question_type\": \"multiselect\",\n    \"configuration\":\"{ 'title':'Question about vivasoft','question_type': 'multiselect', 'hola':'hola'}\"\n}\n\n```\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/question-bank/\",\n    \"date_time\": \"2021-11-21T08:37:14.678602Z\",\n    \"data\": {\n        \"id\": \"26dfa082-e8c5-4505-938d-633a8222168d\",\n        \"ref_id\": 3,\n        \"title\": \"Question about vivasoft\",\n        \"question_type\": \"multiselect\",\n        \"configuration\": \"{ 'title':'Question about vivasoft','question_type': 'multiselect', 'hola':'hola'}\"\n    }\n}\n\n```"
+						"description": "Create a Payment Gateway\n\n**URL** : `/profile-questions//`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\n    \"question_banks\": [\"d161f040-5f50-4a02-b1dc-c0cf7982b267\"],\n    \"provider_type\": \"store\",\n    \"provider_ref\": \"d7522fdf-e591-4184-8c94-573a8e955e83\"\n}\n\n\n```\n\n\n**Response** :\n\n```json\n\nStatus 201 Created\n\n```"
 					},
 					"response": []
 				}
@@ -6923,6 +7146,339 @@
 			"description": "Here you can get ***Payment Gateway*** related endpoints."
 		},
 		{
+			"name": "Releted Product",
+			"item": [
+				{
+					"name": "Get Releted Product List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/related-products/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"related-products",
+								""
+							]
+						},
+						"description": "Get schedules\n\n**URL** : `/schedules/?section__id=<section_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e\",\n  \"date_time\": \"2021-03-02T20:05:57.787887Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": null,\n    \"total\": 0,\n    \"limit\": 10\n  },\n  \"data\": []\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Releted Product List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\":[\"02d7fda5-5ffe-4a6c-ba3a-6efb2f75d29f\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-related-products/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-related-products",
+								""
+							]
+						},
+						"description": "Get schedules\n\n**URL** : `/schedules/?section__id=<section_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n  \"url\": \"http://api.admin.dev.campus.com/schedules/?section_id=0a20cf7e-4381-47f2-bdb1-3302310e5d2e\",\n  \"date_time\": \"2021-03-02T20:05:57.787887Z\",\n  \"page\": {\n    \"previous_page\": null,\n    \"page\": 1,\n    \"next_page\": null,\n    \"total\": 0,\n    \"limit\": 10\n  },\n  \"data\": []\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Releted Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"relation_type\": \"registration\",\r\n    \"product_id\": \"08519c73-6bf3-4e28-8dc4-8feff7648f3e\",\r\n    \"optional_product_id\": \"17018b0f-b62d-4b1e-8854-ab40b08e1794\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/related-products/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"related-products",
+								""
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/schedules/`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n{\n\"section\":\"362c6e96-b17e-4f3d-800a-9caa711b61c8\",\n \"name\":\"Test Schedule2\",\n \"section_type\":\"Urgent\",\n \"start_at\":\"2021-03-04T14:37:13+06:00\",\n \"end_at\":\"2021-03-27T14:37:18+06:00\",\n \"building_name\":\"North Building\",\n \"building_code\":\"NB1\",\n \"room_name\":\"303\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/schedules/\",\n    \"date_time\": \"2021-07-07T16:08:29.681432Z\",\n    \"data\": {\n        \"section_type\": \"Urgent\",\n        \"external_version_id\": null,\n        \"name\": \"Test Schedule2\",\n        \"description\": null,\n        \"start_at\": \"2021-03-04T08:37:13Z\",\n        \"end_at\": \"2021-03-27T08:37:18Z\",\n        \"building_name\": \"North Building\",\n        \"building_code\": \"NB1\",\n        \"room_name\": \"303\",\n        \"location\": \"303, North Building(NB1)\",\n        \"section\": \"362c6e96-b17e-4f3d-800a-9caa711b61c8\"\n    }\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Releted Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"relation_type\": \"registration\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/related-products/1464c8d7-d56c-49c3-82b8-dce06177da27/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"related-products",
+								"1464c8d7-d56c-49c3-82b8-dce06177da27",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/schedules/`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n{\n\"section\":\"362c6e96-b17e-4f3d-800a-9caa711b61c8\",\n \"name\":\"Test Schedule2\",\n \"section_type\":\"Urgent\",\n \"start_at\":\"2021-03-04T14:37:13+06:00\",\n \"end_at\":\"2021-03-27T14:37:18+06:00\",\n \"building_name\":\"North Building\",\n \"building_code\":\"NB1\",\n \"room_name\":\"303\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/schedules/\",\n    \"date_time\": \"2021-07-07T16:08:29.681432Z\",\n    \"data\": {\n        \"section_type\": \"Urgent\",\n        \"external_version_id\": null,\n        \"name\": \"Test Schedule2\",\n        \"description\": null,\n        \"start_at\": \"2021-03-04T08:37:13Z\",\n        \"end_at\": \"2021-03-27T08:37:18Z\",\n        \"building_name\": \"North Building\",\n        \"building_code\": \"NB1\",\n        \"room_name\": \"303\",\n        \"location\": \"303, North Building(NB1)\",\n        \"section\": \"362c6e96-b17e-4f3d-800a-9caa711b61c8\"\n    }\n}\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Schedule*** related endpoints."
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/products/?limit=50",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "50"
+								}
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/schedules/`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n{\n\"section\":\"362c6e96-b17e-4f3d-800a-9caa711b61c8\",\n \"name\":\"Test Schedule2\",\n \"section_type\":\"Urgent\",\n \"start_at\":\"2021-03-04T14:37:13+06:00\",\n \"end_at\":\"2021-03-27T14:37:18+06:00\",\n \"building_name\":\"North Building\",\n \"building_code\":\"NB1\",\n \"room_name\":\"303\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/schedules/\",\n    \"date_time\": \"2021-07-07T16:08:29.681432Z\",\n    \"data\": {\n        \"section_type\": \"Urgent\",\n        \"external_version_id\": null,\n        \"name\": \"Test Schedule2\",\n        \"description\": null,\n        \"start_at\": \"2021-03-04T08:37:13Z\",\n        \"end_at\": \"2021-03-27T08:37:18Z\",\n        \"building_name\": \"North Building\",\n        \"building_code\": \"NB1\",\n        \"room_name\": \"303\",\n        \"location\": \"303, North Building(NB1)\",\n        \"section\": \"362c6e96-b17e-4f3d-800a-9caa711b61c8\"\n    }\n}\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Schedule*** related endpoints."
+		},
+		{
 			"name": "Role",
 			"item": [
 				{
@@ -7204,7 +7760,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{baseurl}}/schedules/?section__id=362c6e96-b17e-4f3d-800a-9caa711b61c8",
+							"raw": "{{baseurl}}/schedules/?section__id=39c2a7f7-9f0a-4a7c-969c-457ac87039de",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -7215,7 +7771,7 @@
 							"query": [
 								{
 									"key": "section__id",
-									"value": "362c6e96-b17e-4f3d-800a-9caa711b61c8"
+									"value": "39c2a7f7-9f0a-4a7c-969c-457ac87039de"
 								}
 							]
 						},
