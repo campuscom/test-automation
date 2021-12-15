@@ -4178,6 +4178,156 @@
 			"description": "Here you can get *Failed Message Queue* related endpoints."
 		},
 		{
+			"name": "Global Configuration",
+			"item": [
+				{
+					"name": "Delete Global Configaration",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"Relation\",\n    \"configuration\": {\"child\": \"Child\",\"parents\":\"Parents\",\"office\":\"office\"}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/global-configurations/e33b0d43-9178-4e21-a115-d94869d25619/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"global-configurations",
+								"e33b0d43-9178-4e21-a115-d94869d25619",
+								""
+							]
+						},
+						"description": "Create profile\n**URL :** `/global-configurations/{id}/`\n\n**Method :** `DELETE`\n\n\n\n\n**Response :** \n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/global-configurations/\",\n    \"date_time\": \"2021-12-14T08:36:25.283847Z\",\n    \"data\": {\n        \"id\": \"e33b0d43-9178-4e21-a115-d94869d25619\",\n        \"label\": \"Relation\",\n        \"configuration\": {\n            \"child\": \"Child\",\n            \"parents\": \"Parents\",\n            \"office\": \"office\"\n        }\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Global Configaration Copy",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"Relation with Attendee\",\n    \"configuration\": {\"child\": \"Child\",\"parents\":\"Parents\",\"office\":\"office\", \"colleague\":\"Colleague\"}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/global-configurations/b0a89c89-89de-4d7d-a4ec-a7e2c00655a6/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"global-configurations",
+								"b0a89c89-89de-4d7d-a4ec-a7e2c00655a6",
+								""
+							]
+						},
+						"description": "Create profile\n**URL :** `/global-configurations/{id}`\n\n**Method :** `PATCH`\n\n**Payload**:\n\n```\n{\n    \"label\": \"Relation with Attendee\",\n    \"configuration\": {\"child\": \"Child\",\"parents\":\"Parents\",\"office\":\"office\", \"colleague\":\"Colleague\"}\n}\n\n```\n\n\n\n**Response :** \n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/global-configurations/b0a89c89-89de-4d7d-a4ec-a7e2c00655a6/\",\n    \"date_time\": \"2021-12-14T08:46:49.856240Z\",\n    \"data\": {\n        \"id\": \"b0a89c89-89de-4d7d-a4ec-a7e2c00655a6\",\n        \"label\": \"Relation with Attendee\",\n        \"configuration\": {\n            \"child\": \"Child\",\n            \"parents\": \"Parents\",\n            \"office\": \"office\",\n            \"colleague\": \"Colleague\"\n        }\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Global Configaration Copy 2",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"label\": \"Relation\",\n    \"configuration\": {\"child\": \"Child\",\"parents\":\"Parents\",\"office\":\"office\"}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/global-configurations/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"global-configurations",
+								""
+							]
+						},
+						"description": "Create profile\n**URL :** `/global-configurations/`\n\n**Method :** `POST`\n\n**Payload**:\n\n```\n{\n    \"label\": \"Relation\",\n    \"configuration\": {\"child\": \"Child\",\"parents\":\"Parents\",\"office\":\"office\"}\n}\n\n```\n\n\n\n**Response :** \n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/global-configurations/\",\n    \"date_time\": \"2021-12-14T08:36:25.283847Z\",\n    \"data\": {\n        \"id\": \"e33b0d43-9178-4e21-a115-d94869d25619\",\n        \"label\": \"Relation\",\n        \"configuration\": {\n            \"child\": \"Child\",\n            \"parents\": \"Parents\",\n            \"office\": \"office\"\n        }\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Global Configaration List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/global-configurations/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"global-configurations",
+								""
+							]
+						},
+						"description": "Create profile\n**URL :** `/global-configurations/`\n\n**Method :** `Get`\n\n\n**Response :** \n\n```\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/global-configurations/\",\n    \"date_time\": \"2021-12-14T08:35:08.212881Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 3,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"b0a89c89-89de-4d7d-a4ec-a7e2c00655a6\",\n            \"label\": \"Relation With\",\n            \"configuration\": {\n                \"child\": \"Child\",\n                \"office\": \"office\",\n                \"parents\": \"Parents\"\n            }\n        },\n        {\n            \"id\": \"cca96e30-e970-499f-a6b9-924b7a59bd17\",\n            \"label\": \"Global Configuration 2\",\n            \"configuration\": {\n                \"label\": \"Global Configuration 1\"\n            }\n        },\n        {\n            \"id\": \"f3a242ef-7639-4a7e-94e3-3c5a1c540c12\",\n            \"label\": \"Global Configuration 1\",\n            \"configuration\": {\n                \"label\": \"Global Configuration test\"\n            }\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Featured Career",
 			"item": [
 				{
