@@ -2412,7 +2412,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"store\": \"22305ada-58c2-4b27-9383-b0c3f7369645\",\n    \"company_name\": \"Software Global Consultancy PVT LTD\"\n}",
+							"raw": "{\n    \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n    \"company_name\": \"Software Global Consultancy PVT LTD\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7380,7 +7380,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ids\":[\"02d7fda5-5ffe-4a6c-ba3a-6efb2f75d29f\"]\n}",
+							"raw": "{\n    \"ids\":[\"95464994-298c-421c-a079-91c1b2c7b3e9\",\"8756698d-a735-4767-b414-3d42aedb6b63\",\"2fc2848e-2ec4-48ed-80e2-5f9784573efb\"]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7447,7 +7447,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"relation_type\": \"standalone\",\r\n    \"product_id\": \"08519c73-6bf3-4e28-8dc4-8feff7648f3e\",\r\n    \"optional_product_id\": \"17018b0f-b62d-4b1e-8854-ab40b08e1794\"\r\n}",
+							"raw": "{\r\n    \"product_id\": \"597c6d83-7f7f-4887-9070-a41ea1608790\",\r\n    \"optional_product_id\": \"60ed48d9-c248-45fb-baed-cb592a86326b\",\r\n    \"relation_type\": \"registration\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7606,7 +7606,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/products/",
+							"raw": "{{baseurl}}/products/?limit=50",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -7617,8 +7617,7 @@
 							"query": [
 								{
 									"key": "limit",
-									"value": "50",
-									"disabled": true
+									"value": "50"
 								}
 							]
 						},

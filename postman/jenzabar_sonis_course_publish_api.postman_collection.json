@@ -62,16 +62,17 @@
 					}
 				},
 				"url": {
-					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"raw": "https://zhepe7sbwj.execute-api.us-east-2.amazonaws.com/develop/publish",
 					"protocol": "https",
 					"host": [
-						"j3fz4814s2",
+						"zhepe7sbwj",
 						"execute-api",
 						"us-east-2",
 						"amazonaws",
 						"com"
 					],
 					"path": [
+						"develop",
 						"publish"
 					]
 				},
@@ -136,16 +137,17 @@
 					}
 				},
 				"url": {
-					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"raw": "https://zhepe7sbwj.execute-api.us-east-2.amazonaws.com/develop/publish",
 					"protocol": "https",
 					"host": [
-						"j3fz4814s2",
+						"zhepe7sbwj",
 						"execute-api",
 						"us-east-2",
 						"amazonaws",
 						"com"
 					],
 					"path": [
+						"develop",
 						"publish"
 					]
 				},
@@ -210,16 +212,17 @@
 					}
 				},
 				"url": {
-					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"raw": "https://zhepe7sbwj.execute-api.us-east-2.amazonaws.com/develop/publish",
 					"protocol": "https",
 					"host": [
-						"j3fz4814s2",
+						"zhepe7sbwj",
 						"execute-api",
 						"us-east-2",
 						"amazonaws",
 						"com"
 					],
 					"path": [
+						"develop",
 						"publish"
 					]
 				},
@@ -284,16 +287,17 @@
 					}
 				},
 				"url": {
-					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"raw": "https://zhepe7sbwj.execute-api.us-east-2.amazonaws.com/develop/publish",
 					"protocol": "https",
 					"host": [
-						"j3fz4814s2",
+						"zhepe7sbwj",
 						"execute-api",
 						"us-east-2",
 						"amazonaws",
 						"com"
 					],
 					"path": [
+						"develop",
 						"publish"
 					]
 				},
@@ -358,16 +362,17 @@
 					}
 				},
 				"url": {
-					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"raw": "https://zhepe7sbwj.execute-api.us-east-2.amazonaws.com/develop/publish",
 					"protocol": "https",
 					"host": [
-						"j3fz4814s2",
+						"zhepe7sbwj",
 						"execute-api",
 						"us-east-2",
 						"amazonaws",
 						"com"
 					],
 					"path": [
+						"develop",
 						"publish"
 					]
 				},
