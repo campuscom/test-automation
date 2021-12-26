@@ -5665,6 +5665,286 @@
 			"description": "Here you can get ***Payment Gateway*** related endpoints."
 		},
 		{
+			"name": "Payment Question",
+			"item": [
+				{
+					"name": "Payment Question List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/payment-questions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"payment-questions",
+								""
+							],
+							"query": [
+								{
+									"key": "provider_ref",
+									"value": "8ad57f2c-a0f8-464f-933b-20ecc838d870",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-questions/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/payment-questions/\",\n    \"date_time\": \"2021-12-23T05:12:05.056730Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 5,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"bf5deb71-9955-4b56-ac3c-a6a06502a52f\",\n            \"question_bank\": \"86506ad4-1cb4-4445-ad7a-c1fe0b55dc93\",\n            \"display_order\": 1,\n            \"title\": \"Do you have relevant certificate?\",\n            \"question_type\": \"toggle\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            }\n        },\n        {\n            \"id\": \"aad6124e-9ce6-4704-a5ca-8b035c04c686\",\n            \"question_bank\": \"d3844b59-413a-4f01-b87a-79e2365b942d\",\n            \"display_order\": 1,\n            \"title\": \"I accept the <a href=\\\"https://campus.com/privacy\\\">terms and conditions</a> of this store\",\n            \"question_type\": \"checkbox\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            }\n        },\n        {\n            \"id\": \"6fbaf32e-55cd-4fc7-8b5f-b43e51a3b703\",\n            \"question_bank\": \"62d36a4e-aaf2-4c9d-87ae-b4d82b6d1577\",\n            \"display_order\": 1,\n            \"title\": \"Question 360\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            }\n        },\n        {\n            \"id\": \"ea9078c0-2b37-42b6-bd54-9a84acbc43b3\",\n            \"question_bank\": \"d3844b59-413a-4f01-b87a-79e2365b942d\",\n            \"display_order\": 4,\n            \"title\": \"I accept the <a href=\\\"https://campus.com/privacy\\\">terms and conditions</a> of this store\",\n            \"question_type\": \"checkbox\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            }\n        },\n        {\n            \"id\": \"462e6135-b3c6-470e-b1f9-33bf349c81f4\",\n            \"question_bank\": \"d161f040-5f50-4a02-b1dc-c0cf7982b267\",\n            \"display_order\": 1,\n            \"title\": \"Test114\",\n            \"question_type\": \"select\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            }\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Retrive Payment Question",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/payment-questions/bf5deb71-9955-4b56-ac3c-a6a06502a52f",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"payment-questions",
+								"bf5deb71-9955-4b56-ac3c-a6a06502a52f"
+							],
+							"query": [
+								{
+									"key": "provider_ref",
+									"value": "8ad57f2c-a0f8-464f-933b-20ecc838d870",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/payment-questions/id`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/payment-questions/bf5deb71-9955-4b56-ac3c-a6a06502a52f/\",\n    \"date_time\": \"2021-12-23T05:21:35.990218Z\",\n    \"data\": {\n        \"id\": \"bf5deb71-9955-4b56-ac3c-a6a06502a52f\",\n        \"question_bank\": \"86506ad4-1cb4-4445-ad7a-c1fe0b55dc93\",\n        \"display_order\": 2110497,\n        \"title\": \"Do you have relevant certificate?\",\n        \"question_type\": \"toggle\",\n        \"store\": {\n            \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n            \"name\": \"J1\"\n        }\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Payment Question",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\n{\n    \"payment_questions\": [{\"display_order\":\"2110497\", \"id\":\"bf5deb71-9955-4b56-ac3c-a6a06502a52f\"}]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/update-payment-questions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"update-payment-questions",
+								""
+							],
+							"query": [
+								{
+									"key": "provider_ref",
+									"value": "8ad57f2c-a0f8-464f-933b-20ecc838d870",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "30",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/update-payment-questions/`\n\n**Method** : `POST`\n\n**Payload**:\n\n```json\n\n\n{\n    \"payment_questions\": [{\"display_order\":\"2110497\", \"id\":\"bf5deb71-9955-4b56-ac3c-a6a06502a52f\"}]\n}\n\n```\n\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/update-payment-questions/\",\n    \"date_time\": \"2021-12-23T05:17:34.403233Z\",\n    \"data\": {\n        \"message\": \"Display order updated successfully\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Question Delete",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"6fbaf32e-55cd-4fc7-8b5f-b43e51a3b703\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-payment-questions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-payment-questions",
+								""
+							]
+						},
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/delete-payment-questions/`\n\n**Method** : `DELETE`\n\n**Payload**:\n\n{\n    \"ids\": [\n        \"6fbaf32e-55cd-4fc7-8b5f-b43e51a3b703\"\n    ]\n}\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-payment-questions/\",\n    \"date_time\": \"2021-12-23T05:22:57.042294Z\",\n    \"data\": {\n        \"message\": \"Payment Questions deleted successfully\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Payment Question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"question_banks\": [\"d3844b59-413a-4f01-b87a-79e2365b942d\",\"86506ad4-1cb4-4445-ad7a-c1fe0b55dc93\"],\r\n    \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseurl}}/payment-questions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"payment-questions",
+								""
+							]
+						},
+						"description": "Create a Payment Gateway\n\n**URL** : `/payment-questions/\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\n    \"question_banks\": [\"d3844b59-413a-4f01-b87a-79e2365b942d\",\"86506ad4-1cb4-4445-ad7a-c1fe0b55dc93\"],\n    \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n}\n\n```\n\n\n**Response** :\n\n```\n\nStatus 201 Created\n\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Payment Gateway*** related endpoints."
+		},
+		{
 			"name": "Payments",
 			"item": [
 				{
@@ -6227,6 +6507,223 @@
 			"description": "Here you can get ***Profile*** related endpoints."
 		},
 		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/products/?limit=150",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "150"
+								}
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/products/?limit=50`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/products/\",\n    \"date_time\": \"2021-12-14T03:51:48.038771Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 78,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"df777fc8-5cd7-4a10-8a89-ee90552d7f41\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM01\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M01\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 15,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 15,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"150.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 102\n        },\n        {\n            \"id\": \"e4c1e642-652f-4064-bb83-f938620cdd48\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM10\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M10\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 20,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 20,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"200.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 101\n        },\n        {\n            \"id\": \"aeae332f-1d1a-49af-987f-245db22ea945\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM00\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M00\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 20,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 20,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"120.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 100\n        },\n        {\n            \"id\": \"e7ca706a-f377-4adb-87ad-ced8765aa9b2\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM00\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M00\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 15,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 15,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"150.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 99\n        },\n        {\n            \"id\": \"f7a8fdb8-8510-46ba-979f-e3b9f6c01907\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"created_at\": \"2021-11-22T08:45:23.486953Z\",\n                \"updated_at\": \"2021-11-23T10:33:27.854488Z\",\n                \"active_status\": true,\n                \"name\": \"Higher Reach\",\n                \"url_slug\": \"hir\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/4538540d-0968-4054-b867-0fadd57eb5a4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/hir.20211123t103327.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"220.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 98\n        },\n        {\n            \"id\": \"57a82ed8-21eb-44be-822f-496bcf05b30d\",\n            \"store\": {\n                \"id\": \"9b367c17-55c4-4554-a30b-d93245c56338\",\n                \"created_at\": \"2021-12-01T03:43:17.132755Z\",\n                \"updated_at\": \"2021-12-01T06:21:40.091871Z\",\n                \"active_status\": true,\n                \"name\": \"Roxbury Community College\",\n                \"url_slug\": \"rcc\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/939072ec-65a1-411f-8ba1-cb204037a5c4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/rcc.20211201t062140.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"220.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 97\n        },\n        {\n            \"id\": \"29c32357-8f43-4848-9c62-b3409c2dbcef\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"created_at\": \"2021-11-22T08:45:23.486953Z\",\n                \"updated_at\": \"2021-11-23T10:33:27.854488Z\",\n                \"active_status\": true,\n                \"name\": \"Higher Reach\",\n                \"url_slug\": \"hir\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/4538540d-0968-4054-b867-0fadd57eb5a4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/hir.20211123t103327.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"120.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 96\n        },\n        {\n            \"id\": \"935e58be-40fd-480e-a915-fe8f1d5ca9dd\",\n            \"store\": {\n                \"id\": \"9b367c17-55c4-4554-a30b-d93245c56338\",\n                \"created_at\": \"2021-12-01T03:43:17.132755Z\",\n                \"updated_at\": \"2021-12-01T06:21:40.091871Z\",\n                \"active_status\": true,\n                \"name\": \"Roxbury Community College\",\n                \"url_slug\": \"rcc\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/939072ec-65a1-411f-8ba1-cb204037a5c4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/rcc.20211201t062140.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"120.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 95\n        },\n        {\n            \"id\": \"5a75fd5b-50c6-4404-88f1-aa26700be2d9\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"created_at\": \"2021-10-21T06:14:23.296297Z\",\n                \"updated_at\": \"2021-11-22T10:31:42.364952Z\",\n                \"active_status\": true,\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/cd270ef0-38a8-4d39-8f5c-95b2ba14cb36.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/j1.20211122t103142.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TECM01\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Enrollment Course M01\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 18,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 18,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"180.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 94\n        },\n        {\n            \"id\": \"88bb973d-8f53-449d-8046-85e0727df036\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"created_at\": \"2021-10-21T06:14:23.296297Z\",\n                \"updated_at\": \"2021-11-22T10:31:42.364952Z\",\n                \"active_status\": true,\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/cd270ef0-38a8-4d39-8f5c-95b2ba14cb36.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/j1.20211122t103142.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TECM01\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Enrollment Course M01\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 20,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 20,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"220.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 93\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Test Product 00\",\n    \"store\":\"1fbae74d-3c10-488c-ae17-70a081be1652\",\n    \"product_type\":\"miscellaneous\",\n    \"tax_code\":\"NA\",\n    \"fee\":100.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/products/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"products",
+								""
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/products/\n\n**Method** : `POST`\n\n**Payload**\n\n```JSON\n\n{\n    \"title\":\"Test Product 00\",\n    \"store\":\"1fbae74d-3c10-488c-ae17-70a081be1652\",\n    \"product_type\":\"miscellaneous\",\n    \"tax_code\":\"NA\",\n    \"fee\":100.00\n}\n\n````\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/products/\",\n    \"date_time\": \"2021-12-22T09:19:53.475332Z\",\n    \"data\": {\n        \"id\": \"9bfa1d80-d003-43e3-92ff-36b8188a14d1\",\n        \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n        \"external_id\": null,\n        \"product_type\": \"miscellaneous\",\n        \"title\": \"Test Product 00\",\n        \"content\": {},\n        \"image\": null,\n        \"limit_applicable\": false,\n        \"total_quantity\": null,\n        \"quantity_sold\": 0,\n        \"available_quantity\": null,\n        \"tax_code\": \"NA\",\n        \"fee\": \"100.00\",\n        \"currency_code\": \"usd\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Test Product 00\",\n    \"store\":\"1fbae74d-3c10-488c-ae17-70a081be1652\",\n    \"product_type\":\"miscellaneous\",\n    \"tax_code\":\"NA\",\n    \"fee\":100.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/products/9bfa1d80-d003-43e3-92ff-36b8188a14d1/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"products",
+								"9bfa1d80-d003-43e3-92ff-36b8188a14d1",
+								""
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/products/9bfa1d80-d003-43e3-92ff-36b8188a14d1/\n\n**Method** : `PATCH`\n\n**Payload**\n\n```JSON\n\n{\n    \"title\":\"Test Product 00\",\n    \"store\":\"1fbae74d-3c10-488c-ae17-70a081be1652\",\n    \"product_type\":\"section\",\n    \"tax_code\":\"NA\",\n    \"fee\":100.00\n}\n\n````\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/products/9bfa1d80-d003-43e3-92ff-36b8188a14d1/\",\n    \"date_time\": \"2021-12-22T09:32:58.570956Z\",\n    \"data\": {\n        \"id\": \"9bfa1d80-d003-43e3-92ff-36b8188a14d1\",\n        \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n        \"external_id\": null,\n        \"product_type\": \"section\",\n        \"title\": \"Test Product 00\",\n        \"content\": {},\n        \"image\": null,\n        \"limit_applicable\": false,\n        \"total_quantity\": null,\n        \"quantity_sold\": 0,\n        \"available_quantity\": null,\n        \"tax_code\": \"NA\",\n        \"fee\": \"100.00\",\n        \"currency_code\": \"usd\"\n    }\n}\n\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Schedule*** related endpoints."
+		},
+		{
 			"name": "Profile Question",
 			"item": [
 				{
@@ -6389,7 +6886,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ids\": [\n        \"a7d18932-e235-4ab9-8095-3a7546a0e9f4\",\n        \"f7a98158-3ef8-441a-98f0-b992d072a075\",\n        \"33dd6943-860a-49fe-94ff-4a597ecc2b91\",\n        \"05673603-80d5-4607-b5eb-7ed89f5658a0\",\n        \"7d209106-212a-4495-ae01-a884e90ea967\"\n    ]\n}",
+							"raw": "{\n    \"ids\": [\n        \"a8a845d7-fd62-435e-836a-9299cb3147fe\"\n    ]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6406,7 +6903,7 @@
 								""
 							]
 						},
-						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/delete-profile-questions//`\n\n**Method** : `DELETE`\n\n**Payload**:\n\n{\n    \"ids\": [\n        \"a7d18932-e235-4ab9-8095-3a7546a0e9f4\",\n        \"f7a98158-3ef8-441a-98f0-b992d072a075\",\n        \"33dd6943-860a-49fe-94ff-4a597ecc2b91\",\n        \"05673603-80d5-4607-b5eb-7ed89f5658a0\",\n        \"7d209106-212a-4495-ae01-a884e90ea967\"\n    ]\n}\n\n\n**Response** :\n\n```json\n\n\n\n```"
+						"description": "Show Payment Gateway List for currently logged in Account Admin\n\n**URL** : `/delete-profile-questions/`\n\n**Method** : `DELETE`\n\n**Payload**:\n\n{\n    \"ids\": [\n        \"a7d18932-e235-4ab9-8095-3a7546a0e9f4\",\n        \"f7a98158-3ef8-441a-98f0-b992d072a075\",\n        \"33dd6943-860a-49fe-94ff-4a597ecc2b91\",\n        \"05673603-80d5-4607-b5eb-7ed89f5658a0\",\n        \"7d209106-212a-4495-ae01-a884e90ea967\"\n    ]\n}\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-profile-questions/\",\n    \"date_time\": \"2021-12-23T05:24:27.931158Z\",\n    \"data\": {\n        \"message\": \"Questions deleted successfully\"\n    }\n}\n\n```"
 					},
 					"response": []
 				},
@@ -6448,7 +6945,7 @@
 								""
 							]
 						},
-						"description": "Create a Payment Gateway\n\n**URL** : `/profile-questions//`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\n    \"question_banks\": [\"d161f040-5f50-4a02-b1dc-c0cf7982b267\"],\n    \"provider_type\": \"store\",\n    \"provider_ref\": \"d7522fdf-e591-4184-8c94-573a8e955e83\"\n}\n\n\n```\n\n\n**Response** :\n\n```json\n\nStatus 201 Created\n\n```"
+						"description": "Create a Payment Gateway\n\n**URL** : `/profile-questions/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\n    \"question_banks\": [\"d161f040-5f50-4a02-b1dc-c0cf7982b267\"],\n    \"provider_type\": \"store\",\n    \"provider_ref\": \"d7522fdf-e591-4184-8c94-573a8e955e83\"\n}\n\n\n```\n\n\n**Response** :\n\n```json\n\nStatus 201 Created\n\n```"
 					},
 					"response": []
 				}
@@ -7380,7 +7877,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ids\":[\"95464994-298c-421c-a079-91c1b2c7b3e9\",\"8756698d-a735-4767-b414-3d42aedb6b63\",\"2fc2848e-2ec4-48ed-80e2-5f9784573efb\"]\n}",
+							"raw": "{\n    \"ids\":[\"4fbac91b-177b-42f9-b85b-c8c82b5e053a\"]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7447,7 +7944,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"product_id\": \"597c6d83-7f7f-4887-9070-a41ea1608790\",\r\n    \"optional_product_id\": \"60ed48d9-c248-45fb-baed-cb592a86326b\",\r\n    \"relation_type\": \"registration\"\r\n}",
+							"raw": "{\r\n    \"product_id\": \"ab968483-0263-413f-a27d-4e8a4de99eb7\",\r\n    \"optional_products\": [\"1bfdf727-ad9c-47de-a72b-a89f45313faa\",\"a0a9a017-11a7-46ba-8c0c-406c3ae1fbdc\"],\r\n    \"relation_type\": \"standalone\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7540,88 +8037,6 @@
 							]
 						},
 						"description": "Create a Schedule\n\n**URL** : `/related-products/1464c8d7-d56c-49c3-82b8-dce06177da27/`\n\n**Method** : `PATCH`\n\n**Payload** :\n\n{\n    \"relation_type\": \"registration\"\n}\n```\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/related-products/1464c8d7-d56c-49c3-82b8-dce06177da27/\",\n    \"date_time\": \"2021-12-14T03:49:32.494880Z\",\n    \"data\": {\n        \"id\": \"1464c8d7-d56c-49c3-82b8-dce06177da27\",\n        \"product_id\": \"08519c73-6bf3-4e28-8dc4-8feff7648f3e\",\n        \"optional_product_id\": \"17018b0f-b62d-4b1e-8854-ab40b08e1794\",\n        \"relation_type\": \"registration\"\n    }\n}\n\n\n```"
-					},
-					"response": []
-				}
-			],
-			"description": "Here you can get ***Schedule*** related endpoints."
-		},
-		{
-			"name": "Product",
-			"item": [
-				{
-					"name": "Get Product",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code is 201\", function () {\r",
-									"    pm.response.to.have.status(201);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
-									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
-									"\r",
-									"    pm.environment.set(\"name\", name);\r",
-									"    pm.environment.set(\"room_name\", room_name);\r",
-									"\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseurl}}/products/?limit=50",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"products",
-								""
-							],
-							"query": [
-								{
-									"key": "limit",
-									"value": "50"
-								}
-							]
-						},
-						"description": "Create a Schedule\n\n**URL** : `/products/?limit=50`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/products/\",\n    \"date_time\": \"2021-12-14T03:51:48.038771Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 78,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"df777fc8-5cd7-4a10-8a89-ee90552d7f41\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM01\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M01\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 15,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 15,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"150.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 102\n        },\n        {\n            \"id\": \"e4c1e642-652f-4064-bb83-f938620cdd48\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM10\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M10\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 20,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 20,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"200.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 101\n        },\n        {\n            \"id\": \"aeae332f-1d1a-49af-987f-245db22ea945\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM00\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M00\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 20,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 20,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"120.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 100\n        },\n        {\n            \"id\": \"e7ca706a-f377-4adb-87ad-ced8765aa9b2\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM00\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M00\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 15,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 15,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"150.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 99\n        },\n        {\n            \"id\": \"f7a8fdb8-8510-46ba-979f-e3b9f6c01907\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"created_at\": \"2021-11-22T08:45:23.486953Z\",\n                \"updated_at\": \"2021-11-23T10:33:27.854488Z\",\n                \"active_status\": true,\n                \"name\": \"Higher Reach\",\n                \"url_slug\": \"hir\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/4538540d-0968-4054-b867-0fadd57eb5a4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/hir.20211123t103327.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"220.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 98\n        },\n        {\n            \"id\": \"57a82ed8-21eb-44be-822f-496bcf05b30d\",\n            \"store\": {\n                \"id\": \"9b367c17-55c4-4554-a30b-d93245c56338\",\n                \"created_at\": \"2021-12-01T03:43:17.132755Z\",\n                \"updated_at\": \"2021-12-01T06:21:40.091871Z\",\n                \"active_status\": true,\n                \"name\": \"Roxbury Community College\",\n                \"url_slug\": \"rcc\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/939072ec-65a1-411f-8ba1-cb204037a5c4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/rcc.20211201t062140.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"220.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 97\n        },\n        {\n            \"id\": \"29c32357-8f43-4848-9c62-b3409c2dbcef\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"created_at\": \"2021-11-22T08:45:23.486953Z\",\n                \"updated_at\": \"2021-11-23T10:33:27.854488Z\",\n                \"active_status\": true,\n                \"name\": \"Higher Reach\",\n                \"url_slug\": \"hir\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/4538540d-0968-4054-b867-0fadd57eb5a4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/hir.20211123t103327.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"120.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 96\n        },\n        {\n            \"id\": \"935e58be-40fd-480e-a915-fe8f1d5ca9dd\",\n            \"store\": {\n                \"id\": \"9b367c17-55c4-4554-a30b-d93245c56338\",\n                \"created_at\": \"2021-12-01T03:43:17.132755Z\",\n                \"updated_at\": \"2021-12-01T06:21:40.091871Z\",\n                \"active_status\": true,\n                \"name\": \"Roxbury Community College\",\n                \"url_slug\": \"rcc\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/939072ec-65a1-411f-8ba1-cb204037a5c4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/rcc.20211201t062140.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"120.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 95\n        },\n        {\n            \"id\": \"5a75fd5b-50c6-4404-88f1-aa26700be2d9\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"created_at\": \"2021-10-21T06:14:23.296297Z\",\n                \"updated_at\": \"2021-11-22T10:31:42.364952Z\",\n                \"active_status\": true,\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/cd270ef0-38a8-4d39-8f5c-95b2ba14cb36.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/j1.20211122t103142.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TECM01\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Enrollment Course M01\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 18,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 18,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"180.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 94\n        },\n        {\n            \"id\": \"88bb973d-8f53-449d-8046-85e0727df036\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"created_at\": \"2021-10-21T06:14:23.296297Z\",\n                \"updated_at\": \"2021-11-22T10:31:42.364952Z\",\n                \"active_status\": true,\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/cd270ef0-38a8-4d39-8f5c-95b2ba14cb36.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/j1.20211122t103142.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TECM01\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Enrollment Course M01\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 20,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 20,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"220.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 93\n        }\n    ]\n}\n\n\n```"
 					},
 					"response": []
 				}
