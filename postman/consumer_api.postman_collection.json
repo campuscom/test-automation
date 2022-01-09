@@ -447,19 +447,276 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"store_payment_gateway_id\": \"4bc57a13-8e68-4b49-a48a-210aaee576ef\",\n    \"zip_code\": \"01430\",\n    \"country\": \"US\",\n    \"product_ids\": [\n        \"08519c73-6bf3-4e28-8dc4-8feff7648f3e\"\n    ],\n    \"nonce\": \"eyJjb2RlIjoiNTBfMl8wNjAwMDUzNjQ1MTMyQUM5RjgwQkE4MzNFMkZBMjU2ODZEMjFGNzQ2NzM3MzU5OTg0RDVBOUZCNEYwMENEMDg1NzEzMDM4NjlEREYzRDZFQ0E4N0M5NTE5MEVGQjIyQzI0MDIwRDBCIiwidG9rZW4iOiI5NjM3MjEzOTU1NDM3MTcyMzA0NjAxIiwidiI6IjEuMSJ9\",\n    \"purchaser_info\": {\n        \"first_name\": \"Student_name\",\n        \"last_name\": \"Student_name_1\",\n        \"primary_email\": \"student_name_1@mail.com\"\n    },\n    \"registration_details\": [\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"student\": \"student_name_1@mail.com\",\n            \"data\": {\n                \"have_relevant_certificate\": true,\n                \"certificate_number\": \"certificate_1\"\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"student\": \"student_name_2@mail.com\",\n            \"data\": {\n                \"have_relevant_certificate\": true,\n                \"certificate_number\": \"certificate_2\"\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"student\": \"student_name_3@mail.com\",\n            \"data\": {\n                \"have_relevant_certificate\": true,\n                \"certificate_number\": \"certificate_3\"\n            }\n        }\n    ],\n    \"agreement_details\": {\n        \"[privacy,terms,refund]\": true,\n        \"[email_notification]\": true\n    },\n    \"student_details\": [\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"first_name\": \"Student_name\",\n            \"last_name\": \"Student_name_1\",\n            \"email\": \"student_name_1@mail.com\",\n            \"extra_info\": {\n                \"dob\": \"2021-11-17T18:00:00.000Z\",\n                \"citizen\": true\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"first_name\": \"Student_name\",\n            \"last_name\": \"Student_name_2\",\n            \"email\": \"student_name_2@mail.com\",\n            \"extra_info\": {\n                \"dob\": \"2021-11-25T18:00:00.000Z\",\n                \"citizen\": true\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"first_name\": \"Student_name\",\n            \"last_name\": \"Student_name_3\",\n            \"email\": \"student_name_3@mail.com\",\n            \"extra_info\": {\n                \"dob\": \"2021-11-29T18:00:00.000Z\",\n                \"citizen\": true\n            }\n        }\n    ]\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "store_payment_gateway_id",
+									"value": "a6d79158-29f6-42e3-bc77-f5661f272282",
+									"type": "text"
+								},
+								{
+									"key": "zip_code",
+									"value": "01430",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "US",
+									"type": "text"
+								},
+								{
+									"key": "product_ids",
+									"value": "[\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\"]",
+									"type": "text"
+								},
+								{
+									"key": "nonce",
+									"value": "eyJjb2RlIjoiNTBfMl8wNjAwMDUzM0Y4MEI0NDU0NDJCODEyMTJBRkNDNUUxRkJEREI1Mzg1NzBBN0YzRENBNTRFOTQ4RTkyNkY4OEE3N0UyREZGNDJBNUU3QTc0QzBEQ0E3QUE5OUEwMzY0RTk0OUMzMThGIiwidG9rZW4iOiI5NjQwNjY4MDYzODUwMjM1NjAzNjAxIiwidiI6IjEuMSJ9",
+									"type": "text"
+								},
+								{
+									"key": "purchaser_info",
+									"value": "{\"first_name\":\"Abusada\",\"last_name\":\"adasZafor\",\"primary_email\":\"adsas@sgcsoft.net\"}",
+									"type": "text"
+								},
+								{
+									"key": "registration_details",
+									"value": "[{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student\":\"adsas@sgcsoft.net\",\"data\":{\"8266ce0b-5238-4822-b428-dc31c0acf99a\":false,\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"related_products\":{\"394c2029-4b83-489b-9de7-49c2aa93bbab\":1,\"706aaee5-4d52-4796-9398-a6fbb0f48e41\":1}}},{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student\":\"ar@mail.com\",\"data\":{\"8266ce0b-5238-4822-b428-dc31c0acf99a\":false,\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"related_products\":{\"394c2029-4b83-489b-9de7-49c2aa93bbab\":1,\"706aaee5-4d52-4796-9398-a6fbb0f48e41\":1}}}]",
+									"type": "text"
+								},
+								{
+									"key": "agreement_details",
+									"value": "{\"d3844b59-413a-4f01-b87a-79e2365b942d\":true,\"10c74ac4-6f1b-4a1f-ac8f-dbcdc4634a05\":true}",
+									"type": "text"
+								},
+								{
+									"key": "student_details",
+									"value": "[{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"first_name\":\"Abusada\",\"last_name\":\"adasZafor\",\"email\":\"adsas@sgcsoft.net\",\"extra_info\":{\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"45303b97-1135-41b8-a4e9-06c7d4fb8b50\":\"\"}},{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"first_name\":\"Abu\",\"last_name\":\"Raiyan \",\"email\":\"ar@mail.com\",\"relationship_with_purchaser\":\"school\",\"extra_info\":{\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"45303b97-1135-41b8-a4e9-06c7d4fb8b50\":\"\"}}]",
+									"type": "text"
+								},
+								{
+									"key": "cart_details",
+									"value": "[{\"product_id\":\"5f4cd140-40a9-411b-b9bb-4843319d5391\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"\"},{\"product_id\":\"81126b32-a76a-47ca-8fec-03a4d447ee56\",\"quantity\":2,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"\"},{\"product_id\":\"394c2029-4b83-489b-9de7-49c2aa93bbab\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"adsas@sgcsoft.net\"},{\"product_id\":\"706aaee5-4d52-4796-9398-a6fbb0f48e41\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"adsas@sgcsoft.net\"},{\"product_id\":\"394c2029-4b83-489b-9de7-49c2aa93bbab\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"ar@mail.com\"},{\"product_id\":\"706aaee5-4d52-4796-9398-a6fbb0f48e41\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"ar@mail.com\"}]",
+									"type": "text"
+								},
+								{
+									"key": "files\n",
+									"type": "file",
+									"src": "/home/maruf/Downloads/bank-finance.jpg"
 								}
-							}
+							]
 						},
 						"url": {
 							"raw": "{{baseurl}}/enrollment/payment-initiate/?checkout=guest",
 							"host": [
 								"{{baseurl}}"
 							],
+							"path": [
+								"enrollment",
+								"payment-initiate",
+								""
+							],
+							"query": [
+								{
+									"key": "checkout",
+									"value": "guest"
+								}
+							]
+						},
+						"description": "Initiate payment\n\n**URL :** `/enrollment/payment-initiate/?store_payment_gateway_id=<store_payment_gateway_id>&cart_id=<cart_id>&zip_code=<zip_code>&country=USA&product_id=<product_id>`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"store_payment_gateway_id\": \"4bc57a13-8e68-4b49-a48a-210aaee576ef\",\n    \"zip_code\": \"01430\",\n    \"country\": \"US\",\n    \"product_ids\": [\n        \"08519c73-6bf3-4e28-8dc4-8feff7648f3e\"\n    ],\n    \"nonce\": \"eyJjb2RlIjoiNTBfMl8wNjAwMDUzNjQ1MTMyQUM5RjgwQkE4MzNFMkZBMjU2ODZEMjFGNzQ2NzM3MzU5OTg0RDVBOUZCNEYwMENEMDg1NzEzMDM4NjlEREYzRDZFQ0E4N0M5NTE5MEVGQjIyQzI0MDIwRDBCIiwidG9rZW4iOiI5NjM3MjEzOTU1NDM3MTcyMzA0NjAxIiwidiI6IjEuMSJ9\",\n    \"purchaser_info\": {\n        \"first_name\": \"Student_name\",\n        \"last_name\": \"Student_name_1\",\n        \"primary_email\": \"student_name_1@mail.com\"\n    },\n    \"registration_details\": [\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"student\": \"student_name_1@mail.com\",\n            \"data\": {\n                \"have_relevant_certificate\": true,\n                \"certificate_number\": \"certificate_1\"\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"student\": \"student_name_2@mail.com\",\n            \"data\": {\n                \"have_relevant_certificate\": true,\n                \"certificate_number\": \"certificate_2\"\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"student\": \"student_name_3@mail.com\",\n            \"data\": {\n                \"have_relevant_certificate\": true,\n                \"certificate_number\": \"certificate_3\"\n            }\n        }\n    ],\n    \"agreement_details\": {\n        \"[privacy,terms,refund]\": true,\n        \"[email_notification]\": true\n    },\n    \"student_details\": [\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"first_name\": \"Student_name\",\n            \"last_name\": \"Student_name_1\",\n            \"email\": \"student_name_1@mail.com\",\n            \"extra_info\": {\n                \"dob\": \"2021-11-17T18:00:00.000Z\",\n                \"citizen\": true\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"first_name\": \"Student_name\",\n            \"last_name\": \"Student_name_2\",\n            \"email\": \"student_name_2@mail.com\",\n            \"extra_info\": {\n                \"dob\": \"2021-11-25T18:00:00.000Z\",\n                \"citizen\": true\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"first_name\": \"Student_name\",\n            \"last_name\": \"Student_name_3\",\n            \"email\": \"student_name_3@mail.com\",\n            \"extra_info\": {\n                \"dob\": \"2021-11-29T18:00:00.000Z\",\n                \"citizen\": true\n            }\n        }\n    ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"data\": \"Invalid OTS Token.\",\n    \"date_time\": \"2021-11-18T05:39:33.026175Z\",\n    \"cart_id\": \"cc23c31c-b18c-46c0-8ae7-32318ae708ea\"\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Payment locally",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "_ga=GA1.2.911530094.1634632164; _gid=GA1.2.1722800988.1634632164; _gat_UA-159004897-2=1; cookie-consent-status=true; _gat_UA-159004897-1=1; __hstc=95765571.e5b95a74c07b4c5de680356eff45e43a.1634632170928.1634632170928.1634632170928.1; hubspotutk=e5b95a74c07b4c5de680356eff45e43a; __hssrc=1; _fbp=fb.1.1634632172004.1930852896; sessionid=g6vlz3yc3y8akg7nqvmxuj5pxnl2q9fg; access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Ijk3YzEwNGRlLTRiNGUtNDk0NC1hY2VkLTAzZGYxMjM3ODczZiIsInV1aWQiOiJmOTRhMzg4NS0xY2I0LTQwYTgtYjcwMi0wNGNmOWZkZWNiODIiLCJleHAiOjE2Mzk4MTYyMDV9.h2StGlz7RZpAVyR-daaVzMFBHIrdqyRcgSrmD_6TvLU; refresh_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Ijk3YzEwNGRlLTRiNGUtNDk0NC1hY2VkLTAzZGYxMjM3ODczZiIsInV1aWQiOiIwY2IyYTVkYi0xZTA3LTQ5MzQtYjEzYy0zNTIxNTdjNjZjZGYiLCJleHAiOjE2NjYxNjgyMDV9.sGRqBAkzNdl8Sgpp8tUPit8PCy-2eE-_i4LS33hd5o0; expires_in=5184000; __hssc=95765571.4.1634632170928",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "store_payment_gateway_id",
+									"value": "a6d79158-29f6-42e3-bc77-f5661f272282",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "zip_code",
+									"value": "01430",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "US",
+									"type": "text"
+								},
+								{
+									"key": "product_ids",
+									"value": "[\"37ae7e97-fcc6-40c7-9f66-ca694e880e4d\"]",
+									"type": "text"
+								},
+								{
+									"key": "nonce",
+									"value": "eyJjb2RlIjoiNTBfMl8wNjAwMDUyM0FDRjRBOENEMzA0OUM2ODdEMjEwQ0FGRjdCMUQzRjdENjMzMzBEODM2Qzk4MTA1OEE2MTQ4MkU0MjcyNDg3MTY5NzQ5OUQ2OTA1MjcwMzNBOTIzRjgzRTI2QUYwOUUwIiwidG9rZW4iOiI5NjQxNzA3MjMzNTY3NjY5MTAzNjAxIiwidiI6IjEuMSJ9",
+									"type": "text"
+								},
+								{
+									"key": "purchaser_info",
+									"value": "{\"first_name\":\"Raiyan\",\"last_name\":\"Rifat\",\"primary_email\":\"arr@sgcsoft.net\"}",
+									"type": "text"
+								},
+								{
+									"key": "registration_details",
+									"value": "[{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student\":\"adsas@sgcsoft.net\",\"data\":{\"8266ce0b-5238-4822-b428-dc31c0acf99a\":false,\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"related_products\":{\"394c2029-4b83-489b-9de7-49c2aa93bbab\":1,\"706aaee5-4d52-4796-9398-a6fbb0f48e41\":1}}},{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student\":\"ar@mail.com\",\"data\":{\"8266ce0b-5238-4822-b428-dc31c0acf99a\":false,\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"related_products\":{\"394c2029-4b83-489b-9de7-49c2aa93bbab\":1,\"706aaee5-4d52-4796-9398-a6fbb0f48e41\":1}}}]",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "agreement_details",
+									"value": "{\"ca3e36c7-f438-41d3-9211-662f0b7e5468\":true,\"e7c38b74-2ce3-49e7-ac7f-dc423cc56be0\":true}",
+									"type": "text"
+								},
+								{
+									"key": "student_details",
+									"value": "[{\"product_id\":\"37ae7e97-fcc6-40c7-9f66-ca694e880e4d\",\"first_name\":\" Raiyan\",\"last_name\":\"Rifat\",\"email\":\"arr@sgcsoft.net\",\"extra_info\":{\"102934b7-51ce-4647-8e4a-2dcc12f1d2b9\":true,\"4d9dd342-4ee4-4543-8b6f-d2ea4a8acbc5\":\"Depth knowledge of this course\"}}]",
+									"type": "text"
+								},
+								{
+									"key": "cart_details",
+									"value": "[{\"product_id\":\"37ae7e97-fcc6-40c7-9f66-ca694e880e4d\",\"quantity\":1,\"is_related\":false,\"related_to\":\"\",\"student_email\":\"\"}]",
+									"type": "text"
+								},
+								{
+									"key": "files\n",
+									"type": "file",
+									"src": "/home/maruf/Downloads/bank-finance.jpg",
+									"disabled": true
+								},
+								{
+									"key": "store_slug",
+									"value": "j1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "192.168.0.159:5057/enrollment/payment-initiate/?checkout=guest",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"159"
+							],
+							"port": "5057",
+							"path": [
+								"enrollment",
+								"payment-initiate",
+								""
+							],
+							"query": [
+								{
+									"key": "checkout",
+									"value": "guest"
+								}
+							]
+						},
+						"description": "Initiate payment\n\n**URL :** `/enrollment/payment-initiate/?store_payment_gateway_id=<store_payment_gateway_id>&cart_id=<cart_id>&zip_code=<zip_code>&country=USA&product_id=<product_id>`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"store_payment_gateway_id\": \"4bc57a13-8e68-4b49-a48a-210aaee576ef\",\n    \"zip_code\": \"01430\",\n    \"country\": \"US\",\n    \"product_ids\": [\n        \"08519c73-6bf3-4e28-8dc4-8feff7648f3e\"\n    ],\n    \"nonce\": \"eyJjb2RlIjoiNTBfMl8wNjAwMDUzNjQ1MTMyQUM5RjgwQkE4MzNFMkZBMjU2ODZEMjFGNzQ2NzM3MzU5OTg0RDVBOUZCNEYwMENEMDg1NzEzMDM4NjlEREYzRDZFQ0E4N0M5NTE5MEVGQjIyQzI0MDIwRDBCIiwidG9rZW4iOiI5NjM3MjEzOTU1NDM3MTcyMzA0NjAxIiwidiI6IjEuMSJ9\",\n    \"purchaser_info\": {\n        \"first_name\": \"Student_name\",\n        \"last_name\": \"Student_name_1\",\n        \"primary_email\": \"student_name_1@mail.com\"\n    },\n    \"registration_details\": [\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"student\": \"student_name_1@mail.com\",\n            \"data\": {\n                \"have_relevant_certificate\": true,\n                \"certificate_number\": \"certificate_1\"\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"student\": \"student_name_2@mail.com\",\n            \"data\": {\n                \"have_relevant_certificate\": true,\n                \"certificate_number\": \"certificate_2\"\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"student\": \"student_name_3@mail.com\",\n            \"data\": {\n                \"have_relevant_certificate\": true,\n                \"certificate_number\": \"certificate_3\"\n            }\n        }\n    ],\n    \"agreement_details\": {\n        \"[privacy,terms,refund]\": true,\n        \"[email_notification]\": true\n    },\n    \"student_details\": [\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"first_name\": \"Student_name\",\n            \"last_name\": \"Student_name_1\",\n            \"email\": \"student_name_1@mail.com\",\n            \"extra_info\": {\n                \"dob\": \"2021-11-17T18:00:00.000Z\",\n                \"citizen\": true\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"first_name\": \"Student_name\",\n            \"last_name\": \"Student_name_2\",\n            \"email\": \"student_name_2@mail.com\",\n            \"extra_info\": {\n                \"dob\": \"2021-11-25T18:00:00.000Z\",\n                \"citizen\": true\n            }\n        },\n        {\n            \"product_id\": \"db08e079-69d6-4a0b-b7cd-5f7a0227e9c7\",\n            \"first_name\": \"Student_name\",\n            \"last_name\": \"Student_name_3\",\n            \"email\": \"student_name_3@mail.com\",\n            \"extra_info\": {\n                \"dob\": \"2021-11-29T18:00:00.000Z\",\n                \"citizen\": true\n            }\n        }\n    ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"data\": \"Invalid OTS Token.\",\n    \"date_time\": \"2021-11-18T05:39:33.026175Z\",\n    \"cart_id\": \"cc23c31c-b18c-46c0-8ae7-32318ae708ea\"\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Initiate Payment Copy",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "_ga=GA1.2.911530094.1634632164; _gid=GA1.2.1722800988.1634632164; _gat_UA-159004897-2=1; cookie-consent-status=true; _gat_UA-159004897-1=1; __hstc=95765571.e5b95a74c07b4c5de680356eff45e43a.1634632170928.1634632170928.1634632170928.1; hubspotutk=e5b95a74c07b4c5de680356eff45e43a; __hssrc=1; _fbp=fb.1.1634632172004.1930852896; sessionid=g6vlz3yc3y8akg7nqvmxuj5pxnl2q9fg; access_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Ijk3YzEwNGRlLTRiNGUtNDk0NC1hY2VkLTAzZGYxMjM3ODczZiIsInV1aWQiOiJmOTRhMzg4NS0xY2I0LTQwYTgtYjcwMi0wNGNmOWZkZWNiODIiLCJleHAiOjE2Mzk4MTYyMDV9.h2StGlz7RZpAVyR-daaVzMFBHIrdqyRcgSrmD_6TvLU; refresh_token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6Ijk3YzEwNGRlLTRiNGUtNDk0NC1hY2VkLTAzZGYxMjM3ODczZiIsInV1aWQiOiIwY2IyYTVkYi0xZTA3LTQ5MzQtYjEzYy0zNTIxNTdjNjZjZGYiLCJleHAiOjE2NjYxNjgyMDV9.sGRqBAkzNdl8Sgpp8tUPit8PCy-2eE-_i4LS33hd5o0; expires_in=5184000; __hssc=95765571.4.1634632170928",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "store_payment_gateway_id",
+									"value": "a6d79158-29f6-42e3-bc77-f5661f272282",
+									"type": "text"
+								},
+								{
+									"key": "zip_code",
+									"value": "01430",
+									"type": "text"
+								},
+								{
+									"key": "country",
+									"value": "US",
+									"type": "text"
+								},
+								{
+									"key": "product_ids",
+									"value": "[\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\"]",
+									"type": "text"
+								},
+								{
+									"key": "nonce",
+									"value": "eyJjb2RlIjoiNTBfMl8wNjAwMDUzMEFGRDc5RkFCMUQ5QUJEN0VEMEU4REFFQTBGMTY2NTc3MTgzREY1NTExMEY3NzVBOEY5OUIzMkZCRjlEMEE5NjgzMjI2NDU5QTcwN0M0MUQ3QzlEOUExODI5NjIzRTI5IiwidG9rZW4iOiI5NjQwNzY2NjM1MjQyNDQ4NzAzNjAyIiwidiI6IjEuMSJ9",
+									"type": "text"
+								},
+								{
+									"key": "purchaser_info",
+									"value": "{\"first_name\":\"Abusada\",\"last_name\":\"adasZafor\",\"primary_email\":\"adsas@sgcsoft.net\"}",
+									"type": "text"
+								},
+								{
+									"key": "registration_details",
+									"value": "[{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student\":\"adsas@sgcsoft.net\",\"data\":{\"8266ce0b-5238-4822-b428-dc31c0acf99a\":false,\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"related_products\":{\"394c2029-4b83-489b-9de7-49c2aa93bbab\":1,\"706aaee5-4d52-4796-9398-a6fbb0f48e41\":1}}},{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student\":\"ar@mail.com\",\"data\":{\"8266ce0b-5238-4822-b428-dc31c0acf99a\":false,\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"related_products\":{\"394c2029-4b83-489b-9de7-49c2aa93bbab\":1,\"706aaee5-4d52-4796-9398-a6fbb0f48e41\":1}}}]",
+									"type": "text"
+								},
+								{
+									"key": "agreement_details",
+									"value": "{\"d3844b59-413a-4f01-b87a-79e2365b942d\":true,\"10c74ac4-6f1b-4a1f-ac8f-dbcdc4634a05\":true}",
+									"type": "text"
+								},
+								{
+									"key": "student_details",
+									"value": "[{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"first_name\":\"Abusada\",\"last_name\":\"adasZafor\",\"email\":\"adsas@sgcsoft.net\",\"extra_info\":{\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"45303b97-1135-41b8-a4e9-06c7d4fb8b50\":\"\"}},{\"product_id\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"first_name\":\"Abu\",\"last_name\":\"Raiyan \",\"email\":\"ar@mail.com\",\"relationship_with_purchaser\":\"school\",\"extra_info\":{\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Bangladesh\",\"45303b97-1135-41b8-a4e9-06c7d4fb8b50\":\"\"}}]",
+									"type": "text"
+								},
+								{
+									"key": "cart_details",
+									"value": "[{\"product_id\":\"5f4cd140-40a9-411b-b9bb-4843319d5391\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"\"},{\"product_id\":\"81126b32-a76a-47ca-8fec-03a4d447ee56\",\"quantity\":2,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"\"},{\"product_id\":\"394c2029-4b83-489b-9de7-49c2aa93bbab\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"adsas@sgcsoft.net\"},{\"product_id\":\"706aaee5-4d52-4796-9398-a6fbb0f48e41\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"adsas@sgcsoft.net\"},{\"product_id\":\"394c2029-4b83-489b-9de7-49c2aa93bbab\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"ar@mail.com\"},{\"product_id\":\"706aaee5-4d52-4796-9398-a6fbb0f48e41\",\"quantity\":1,\"is_related\":true,\"related_to\":\"4332791c-ceb3-4f0c-bfae-a82fbca725a4\",\"student_email\":\"ar@mail.com\"}]",
+									"type": "text"
+								},
+								{
+									"key": "files\n",
+									"type": "file",
+									"src": "/home/maruf/Downloads/bank-finance.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "192.168.0.107:5057/enrollment/payment-initiate/?checkout=guest",
+							"host": [
+								"192",
+								"168",
+								"0",
+								"107"
+							],
+							"port": "5057",
 							"path": [
 								"enrollment",
 								"payment-initiate",
