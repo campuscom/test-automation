@@ -7,6 +7,31 @@
 	},
 	"item": [
 		{
+			"name": "Attachment",
+			"item": [
+				{
+					"name": "Download Attachment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/attachment-download/8e1dd0b1-e6ec-4d71-81a1-230a721383ee.xlsx/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"attachment-download",
+								"8e1dd0b1-e6ec-4d71-81a1-230a721383ee.xlsx",
+								""
+							]
+						},
+						"description": "View enrolled course details \n\n**URL** : `/attachment-download/bank-finance.jpg/`\n\n**Method** : GET\n\n**Response** :\n\n```\n\nthe response is given as a binary file response\n\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Campus",
 			"item": [
 				{
@@ -362,30 +387,30 @@
 			"item": [
 				{
 					"name": "View Carts",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status 200\", function(){\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "cookie",
+								"value": "_ga=GA1.2.274566808.1622698360; _hjid=3394e82e-4472-42e0-95d9-8c9101d17615; _fbp=fb.1.1622698361021.23488058; hubspotutk=5dda55ec74792678f09fcaad514edeeb; _ce.s=v11.rlc~1624180079304; _gid=GA1.2.1634927685.1634033110; cookie-consent-status=true; __hstc=95765571.5dda55ec74792678f09fcaad514edeeb.1622698363055.1633417503626.1634033183609.7; __hssrc=1; __hssc=95765571.1.1634033183609",
+								"type": "text"
+							}
+						],
 						"url": {
-							"raw": "{{baseurl}}/carts/",
+							"raw": "{{baseurl}}/enrollment/cart/?product_id=817fcc0a-c9bb-4202-8217-e2d072b37d3c",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"carts",
+								"enrollment",
+								"cart",
 								""
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "817fcc0a-c9bb-4202-8217-e2d072b37d3c"
+								}
 							]
 						},
 						"description": "View cart list\n\n**URL** : `/carts`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/\",\n    \"date_time\": \"2021-06-15T03:39:04.820820Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 146,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"a8ddad3e-df40-4ff2-842f-3e0c47705cae\",\n            \"datetime\": \"2021-06-14T10:37:13.521822Z\",\n            \"profile\": {\n                \"id\": \"bd502357-84b1-4af0-8e75-697cc8a1b258\",\n                \"first_name\": \"Sahidul-edited\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sahidul@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sahidul-edited\"\n            },\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"7f0f2040-c21d-4337-b1bd-d195b16d5480\",\n            \"datetime\": \"2021-06-14T10:03:01.635026Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"211633c2-db22-4a61-9f0b-44bb72b07877\",\n            \"datetime\": \"2021-06-14T09:58:34.604069Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"payment_in_progress\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"99c93be3-28b9-4262-bc3c-71d53ff06f3e\",\n            \"datetime\": \"2021-06-14T05:26:33.196042Z\",\n            \"profile\": {\n                \"id\": \"bd502357-84b1-4af0-8e75-697cc8a1b258\",\n                \"first_name\": \"Sahidul-edited\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sahidul@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sahidul-edited\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"7d0a5409-f4f0-4f76-90a5-e087517b52ef\",\n            \"datetime\": \"2021-06-14T05:25:42.419359Z\",\n            \"profile\": {\n                \"id\": \"bd502357-84b1-4af0-8e75-697cc8a1b258\",\n                \"first_name\": \"Sahidul-edited\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sahidul@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sahidul-edited\"\n            },\n            \"cart_status\": \"payment_in_progress\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"b73c0050-9b2a-44ca-b254-a3039a01a497\",\n            \"datetime\": \"2021-06-13T11:58:23.161118Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"3502c8f7-753d-4cfd-b92c-275d96604ecc\",\n            \"datetime\": \"2021-06-13T11:32:43.153247Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"bd293952-4427-4dae-bdd8-27aab338c647\",\n            \"datetime\": \"2021-06-13T11:31:49.481452Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"f8c02ae6-c978-4b35-9e3c-3a3f9dc646ad\",\n            \"datetime\": \"2021-06-13T11:31:36.305145Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"bd33712b-bb97-43a2-b9a6-777ce3a95327\",\n            \"datetime\": \"2021-06-13T11:08:05.727164Z\",\n            \"profile\": {\n                \"id\": \"ba5fc049-63e9-4c4d-93e3-69ba0a061002\",\n                \"first_name\": \"*\",\n                \"last_name\": \"*\",\n                \"primary_email\": \"*\",\n                \"formal_name\": \"*, *\"\n            },\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        }\n    ]\n}\n```"
@@ -398,13 +423,220 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/carts/4a885c6d-5050-48db-Bf21-27128c95b070/",
+							"raw": "{{baseurl}}/carts/f612c916-96e6-477d-8a92-9ce032ebab93/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"carts",
-								"4a885c6d-5050-48db-Bf21-27128c95b070",
+								"f612c916-96e6-477d-8a92-9ce032ebab93",
+								""
+							]
+						},
+						"description": "View Cart Details.\n\n**URL** :  `/carts/<order_id>`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/4a885c6d-5050-48db-Bf21-27128c95b070/\",\n    \"date_time\": \"2021-11-30T05:15:00.519766Z\",\n    \"data\": {\n        \"id\": \"4a885c6d-5050-48db-bf21-27128c95b070\",\n        \"store\": {\n            \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n            \"name\": \"Higher Reach\"\n        },\n        \"profile\": {\n            \"id\": \"b60a6be0-2ad7-44ea-9ebb-f862431ea2a9\",\n            \"first_name\": \"Sahidul\",\n            \"last_name\": \"Hassan\",\n            \"primary_email\": \"alrazon@gmail.com\"\n        },\n        \"datetime\": \"2021-11-29T15:51:24.674679Z\",\n        \"cart_status\": \"payment_in_progress\",\n        \"extended_amount\": 800.0,\n        \"discount_amount\": 0.0,\n        \"tax_amount\": 0.0,\n        \"total_amount\": 800.0,\n        \"purchaser_info\": {\n            \"last_name\": \"Hassan\",\n            \"first_name\": \"Sahidul\",\n            \"primary_email\": \"alrazon@gmail.com\"\n        },\n        \"registration_details\": [\n            {\n                \"data\": [\n                    {\n                        \"id\": \"10964cd7-4275-4101-bd46-6552c132f4dc\",\n                        \"title\": \"Question 2\",\n                        \"answer\": \"\"\n                    },\n                    {\n                        \"id\": \"a579e823-4eac-430a-bede-8d3fcaf86fa5\",\n                        \"title\": \"Question m03\",\n                        \"answer\": \"option_1\"\n                    }\n                ],\n                \"student\": \"alrazon@gmail.com\",\n                \"product_id\": \"ccbe3294-bb6b-48d3-8f44-7bd7e11c3567\"\n            }\n        ],\n        \"agreement_details\": {},\n        \"student_details\": [\n            {\n                \"email\": \"alrazon@gmail.com\",\n                \"last_name\": \"Hassan\",\n                \"extra_info\": [\n                    {\n                        \"id\": \"35237aa9-880d-4181-b438-2f00f2c4b68e\",\n                        \"title\": \"Question 2 (test)\",\n                        \"answer\": \"\"\n                    },\n                    {\n                        \"id\": \"3b26714c-02d7-45f6-902f-49b76b8fed96\",\n                        \"title\": \"Question m08\",\n                        \"answer\": false\n                    },\n                    {\n                        \"id\": \"7fda2060-257b-4b04-a8a0-d5cef4f2f98b\",\n                        \"title\": \"Question m019\",\n                        \"answer\": \"option_5\"\n                    },\n                    {\n                        \"id\": \"8e045658-f046-437c-923f-58e335e02541\",\n                        \"title\": \"Question m04\",\n                        \"answer\": \"option_2\"\n                    },\n                    {\n                        \"id\": \"a4db5e9b-f3cf-4b9c-b641-e4239a61206a\",\n                        \"title\": \"the terms transparency has a very different meaning in information security where it is used to desc\",\n                        \"answer\": \"hello\"\n                    },\n                    {\n                        \"id\": \"a579e823-4eac-430a-bede-8d3fcaf86fa5\",\n                        \"title\": \"Question m03\",\n                        \"answer\": \"option_1\"\n                    },\n                    {\n                        \"id\": \"abae7b1c-361e-4661-a6f4-582729f84550\",\n                        \"title\": \"Question m012\",\n                        \"answer\": \"option_1\"\n                    },\n                    {\n                        \"id\": \"d3cb01f5-3c59-45b3-ad20-5ed77be3a074\",\n                        \"title\": \"Question m013\",\n                        \"answer\": false\n                    },\n                    {\n                        \"id\": \"e42f4632-d360-46e8-957f-44dfce6c2298\",\n                        \"title\": \"Question m020\",\n                        \"answer\": \"2021-11-29T18:00:00.000Z\"\n                    }\n                ],\n                \"first_name\": \"Sahidul\",\n                \"product_id\": \"ccbe3294-bb6b-48d3-8f44-7bd7e11c3567\"\n            }\n        ],\n        \"enrollment_request\": {},\n        \"product_title\": \"Test Course 1\",\n        \"product_type\": \"store_course_section\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Carts Report Download",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/carts/?download=true",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"carts",
+								""
+							],
+							"query": [
+								{
+									"key": "download",
+									"value": "true"
+								}
+							]
+						},
+						"description": "View store payments details\n\n**URL** : `/carts/?download=true`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```\n\"Store Name\",\"Student Name\",\"Email\",\"Product Type\",\"Product Title\",\"Cart Status\",\"Date Time\"\n\"Lifelong Campus\",\"Charles, Thomas\",\"thomas.charles202129@gmail.com\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 15, 2021, 11:12 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sahidul-edited\",\"sahidul@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 14, 2021, 10:37 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 14, 2021, 10:03 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 14, 2021, 9:58 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sahidul-edited\",\"sahidul@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 14, 2021, 5:26 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sahidul-edited\",\"sahidul@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 14, 2021, 5:25 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 13, 2021, 11:58 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 13, 2021, 11:32 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 13, 2021, 11:31 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 13, 2021, 11:31 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 13, 2021, 11:08 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 13, 2021, 11:04 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 13, 2021, 10:27 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 13, 2021, 10:26 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"certificate\",\"Nam velit similique\",\"\",\"June 13, 2021, 10:24 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 13, 2021, 10:02 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"Introduction to Critical Thinking\",\"\",\"June 13, 2021, 9:58 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 13, 2021, 9:55 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 13, 2021, 9:47 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 13, 2021, 8:56 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 13, 2021, 8:55 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Ace Your Job Search!\",\"\",\"June 13, 2021, 8:55 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Ace Your Job Search!\",\"\",\"June 13, 2021, 8:01 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Principles of Scrum\",\"\",\"June 13, 2021, 6:46 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"certificate\",\"Certificate on Testing\",\"\",\"June 13, 2021, 4:48 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"AEM®/CEM® Prep Course (U.S. version)\",\"\",\"June 10, 2021, 10:55 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 10, 2021, 10:48 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 10, 2021, 9:53 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sahidul-edited\",\"sahidul@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Information Technology\",\"\",\"June 10, 2021, 5:42 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sahidul-edited\",\"sahidul@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Information Technology\",\"\",\"June 10, 2021, 4:56 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"PowerPoint for Business\",\"\",\"June 8, 2021, 11:57 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"PowerPoint for Business\",\"\",\"June 8, 2021, 11:53 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate on Testing\",\"\",\"June 8, 2021, 5:47 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate on Testing\",\"\",\"June 8, 2021, 5:34 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate on Testing\",\"\",\"June 8, 2021, 5:34 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate on Testing\",\"\",\"June 8, 2021, 5:24 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 7, 2021, 10:47 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 7, 2021, 10:47 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 7, 2021, 10:24 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 7, 2021, 10:23 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"A Manager&#x27;s Guide to Artificial Intelligence\",\"\",\"June 7, 2021, 10:13 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"AEM®/CEM® Prep Course (U.S. version)\",\"\",\"June 7, 2021, 9:54 a.m.\"\n\"Lifelong Campus\",\"Hasan, Sakib\",\"sakib@sgcsoft.net\",\"store_course_section\",\"HTML for Web Design\",\"\",\"June 7, 2021, 8:41 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Ace Your Job Search!\",\"\",\"June 7, 2021, 8:21 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Ace Your Job Search!\",\"\",\"June 7, 2021, 8:21 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Ace Your Job Search!\",\"\",\"June 7, 2021, 7:49 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Ace Your Job Search!\",\"\",\"June 7, 2021, 7:48 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"AEM®/CEM® Prep Course (U.S. version)\",\"\",\"June 7, 2021, 6:57 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Ace Your Job Search!\",\"\",\"June 7, 2021, 5:52 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Access Control and Identity Management Scenarios\",\"\",\"June 7, 2021, 5:43 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Access Control and Identity Management Scenarios\",\"\",\"June 7, 2021, 5:31 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 7, 2021, 5:29 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 7, 2021, 4:51 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 7, 2021, 3:49 a.m.\"\n\"Lifelong Campus\",\"Zaman, Mamun\",\"mamunuzzaman@gmail.com\",\"certificate\",\"Certificate in Emerging Technology for Managers\",\"\",\"June 7, 2021, 3:12 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 7, 2021, 3:01 a.m.\"\n\"Lifelong Campus\",\"Zaman, Mamun\",\"mamunuzzaman@gmail.com\",\"store_course_section\",\"Procurement and Supply Management\",\"\",\"June 7, 2021, 2:53 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 6, 2021, 6:58 p.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 6, 2021, 6:53 p.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"4CShare Global Project Management Simulation\",\"\",\"June 6, 2021, 6:47 p.m.\"\n\"Lifelong Campus\",\"Hasan, Sahidul-edited\",\"sahidul@sgcsoft.net\",\"store_course_section\",\"Ace Your Job Search!\",\"\",\"June 6, 2021, 11:39 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Procurement and Supply Management\",\"\",\"June 6, 2021, 9:05 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Procurement and Supply Management\",\"\",\"June 6, 2021, 9:05 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"JavaScript for Web Design\",\"\",\"June 6, 2021, 7:46 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"JavaScript for Web Design\",\"\",\"June 6, 2021, 7:30 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 6, 2021, 7:30 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 6, 2021, 7:30 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 6, 2021, 7:30 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 6, 2021, 7:29 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 6, 2021, 7:02 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 6, 2021, 6:58 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:46 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:43 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:42 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:41 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:39 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:33 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:32 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:32 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:26 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:24 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:20 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 4:10 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:53 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:53 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:52 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:52 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:49 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:48 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:48 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:46 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:30 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:30 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:29 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:28 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:28 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Introduction to Agile\",\"\",\"June 6, 2021, 3:20 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Digital Marketing (ACE CREDIT&amp;reg;)\",\"\",\"June 3, 2021, 9:40 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate in Creativity and Innovation\",\"\",\"June 3, 2021, 9:19 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Communication and Network Security\",\"\",\"June 3, 2021, 9:17 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate in Computer Skills for the Office\",\"\",\"June 3, 2021, 9:05 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Communication and Network Security\",\"\",\"June 3, 2021, 8:52 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Communication and Network Security\",\"\",\"June 3, 2021, 8:49 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Communication and Network Security\",\"\",\"June 3, 2021, 8:43 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Communication and Network Security\",\"\",\"June 3, 2021, 7:53 a.m.\"\n\"Lifelong Campus\",\"Penn, Wright\",\"penn.w@drexel.edu\",\"certificate\",\"Agile Project Management (ACE CREDIT&amp;reg;)\",\"\",\"June 1, 2021, 11:17 a.m.\"\n\"Lifelong Campus\",\"Penn, Wright\",\"penn.w@drexel.edu\",\"store_course_section\",\"PowerPoint for Business\",\"\",\"June 1, 2021, 11:16 a.m.\"\n\"Lifelong Campus\",\"Penn, Wright\",\"penn.w@drexel.edu\",\"store_course_section\",\"Microsoft Word Basics\",\"\",\"June 1, 2021, 10:52 a.m.\"\n\"Lifelong Campus\",\"Penn, Wright\",\"penn.w@drexel.edu\",\"store_course_section\",\"Security Awareness Training\",\"\",\"June 1, 2021, 10:52 a.m.\"\n\"Lifelong Campus\",\"Penn, Wright\",\"penn.w@drexel.edu\",\"store_course_section\",\"Introduction to Business Analysis\",\"\",\"June 1, 2021, 10:47 a.m.\"\n\"Lifelong Campus\",\"Penn, Wright\",\"penn.w@drexel.edu\",\"store_course_section\",\"An Overview of Sustainable Management\",\"\",\"June 1, 2021, 10:47 a.m.\"\n\"Lifelong Campus\",\"Penn, Wright\",\"penn.w@drexel.edu\",\"certificate\",\"60 PDU Project Management Course Bundle\",\"\",\"June 1, 2021, 10:45 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 1, 2021, 7:06 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 1, 2021, 7:06 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 1, 2021, 7:06 a.m.\"\n\"Lifelong Campus\",\"Ahmed, Zayed\",\"zayed@sgcsoft.net\",\"store_course_section\",\"Responsive Web Design\",\"\",\"June 1, 2021, 7 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"60 PDU Project Management Course Bundle\",\"\",\"June 1, 2021, 6:03 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate in Business Communications\",\"\",\"June 1, 2021, 5:22 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate in Business Communications\",\"\",\"June 1, 2021, 5:21 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Effective Business Writing\",\"\",\"June 1, 2021, 5:21 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Effective Business Writing\",\"\",\"June 1, 2021, 5:20 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Effective Business Writing\",\"\",\"June 1, 2021, 5:20 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate in Business Communications\",\"\",\"June 1, 2021, 5:20 a.m.\"\n\"Lifelong Campus\",\"LI, Mamun\",\"mamun@sgcsoft.net\",\"certificate\",\"Real-World Cybersecurity Scenarios\",\"\",\"May 31, 2021, 12:13 p.m.\"\n\"Lifelong Campus\",\"Zaman, Mamun\",\"mamunuzzaman@gmail.com\",\"certificate\",\"Certificate in Business Communications\",\"\",\"May 31, 2021, 9:43 a.m.\"\n\"Lifelong Campus\",\"Zaman, Mamun\",\"mamunuzzaman@gmail.com\",\"store_course_section\",\"LEED® Green Associate v4™ Exam Prep\",\"\",\"May 31, 2021, 9:36 a.m.\"\n\"Lifelong Campus\",\"Zaman, Mamun\",\"mamunuzzaman@gmail.com\",\"certificate\",\"Certificate in Cybersecurity\",\"\",\"May 31, 2021, 9:35 a.m.\"\n\"Lifelong Campus\",\"Zaman, Mamun\",\"mamunuzzaman@gmail.com\",\"certificate\",\"Certificate in Cybersecurity\",\"\",\"May 31, 2021, 9:33 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"JavaScript for Web Design\",\"\",\"May 30, 2021, 7:21 p.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"JavaScript for Web Design\",\"\",\"May 30, 2021, 11:48 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"JavaScript for Web Design\",\"\",\"May 30, 2021, 11:43 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"JavaScript for Web Design\",\"\",\"May 30, 2021, 11:35 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Communication and Network Security\",\"\",\"May 30, 2021, 11:30 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Communication and Network Security\",\"\",\"May 30, 2021, 11:04 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Leadership and Management for Women in Business\",\"\",\"May 30, 2021, 10:35 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Leadership and Management for Women in Business\",\"\",\"May 30, 2021, 10:35 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate in Agile Project Management\",\"\",\"May 27, 2021, 10:03 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Agile Project Management (ACE CREDIT&amp;reg;)\",\"\",\"May 27, 2021, 10:01 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Agile Project Management (ACE CREDIT&amp;reg;)\",\"\",\"May 27, 2021, 10:01 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Agile Project Management (ACE CREDIT&amp;reg;)\",\"\",\"May 27, 2021, 10 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Certificate in Agile Project Management\",\"\",\"May 27, 2021, 9:08 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Agile Project Management (ACE CREDIT&amp;reg;)\",\"\",\"May 27, 2021, 8:56 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Agile Project Management (ACE CREDIT&amp;reg;)\",\"\",\"May 27, 2021, 8:55 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"certificate\",\"Agile Project Management (ACE CREDIT&amp;reg;)\",\"\",\"May 27, 2021, 8:54 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Introduction to Agile\",\"\",\"May 27, 2021, 8:18 a.m.\"\n\"Lifelong Campus\",\"*, *\",\"*\",\"store_course_section\",\"Responsive Web Design\",\"\",\"May 27, 2021, 7:49 a.m.\"\n\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "View Cart Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/carts/?cart_status=processed",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"carts",
+								""
+							],
+							"query": [
+								{
+									"key": "cart_status",
+									"value": "open",
+									"disabled": true
+								},
+								{
+									"key": "cart_status",
+									"value": "processed"
+								},
+								{
+									"key": "cart_status",
+									"value": "payment_in_progress",
+									"disabled": true
+								},
+								{
+									"key": "cart_status",
+									"value": "cancelled",
+									"disabled": true
+								}
+							]
+						},
+						"description": "View cart status. Status can be of four types- open, processed,payment_in_progress and cancelled.\n\n**URL** :  `/carts/?cart_status=open` or `/carts/?cart_status=processed`\n\n**Method** : `GET`\n\n\n**Response for status=open** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/?cart_status=open\",\n    \"date_time\": \"2021-04-15T04:34:03.577422Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 19,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"datetime\": \"2021-04-13T13:52:20.888851Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Real-World Cloud Cybersecurity Scenarios\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:09:42.454435Z\",\n            \"profile\": {\n                \"id\": \"1ae90dde-e3b0-453c-a3aa-0da984a5871b\",\n                \"first_name\": \"Kevin\",\n                \"last_name\": \"Miles\",\n                \"primary_email\": \"kevin.miles@drexel.edu\",\n                \"formal_name\": \"Miles, Kevin\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Visual PowerPoint\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T11:08:25.143999Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"JavaScript for Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T12:21:07.641070Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T11:04:14.351193Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"CompTIA Project+® Exam Prep Course\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:49:34.891712Z\",\n            \"profile\": {\n                \"id\": \"c57c9f56-409a-41c5-b113-9def111c729a\",\n                \"first_name\": \"Radon\",\n                \"last_name\": \"Shaha\",\n                \"primary_email\": \"radon78987@gmail.com\",\n                \"formal_name\": \"Shaha, Radon\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Cybersecurity\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:47:56.097241Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Real-World Cloud Cybersecurity Scenarios\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:29:00.540730Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:28:50.107292Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:06:34.865300Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Project Management (ACE CREDIT&reg;)\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        }\n    ]\n}\n\n```\n\n**Response for status=processed** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/?cart_status=processed\",\n    \"date_time\": \"2021-04-15T05:30:54.252603Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 5,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"datetime\": \"2021-04-13T14:40:59.960838Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:57:29.494790Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:54:39.055899Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Robotics\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:31:37.401732Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Global Trade Finance\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:21:32.867904Z\",\n            \"profile\": {\n                \"id\": \"1ae90dde-e3b0-453c-a3aa-0da984a5871b\",\n                \"first_name\": \"Kevin\",\n                \"last_name\": \"Miles\",\n                \"primary_email\": \"kevin.miles@drexel.edu\",\n                \"formal_name\": \"Miles, Kevin\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Cybersecurity\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        }\n    ]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "View Cart of a Particular Store",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/carts/?store_id=b4e5683c-4ae7-4d12-bc05-5a0053d835b6",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"carts",
+								""
+							],
+							"query": [
+								{
+									"key": "store_id",
+									"value": "b4e5683c-4ae7-4d12-bc05-5a0053d835b6"
+								}
+							]
+						},
+						"description": "View cart list of a specific store\n\n**URL** : `/carts/?store_id=<store_id>`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/?store_id=b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n    \"date_time\": \"2021-04-15T05:43:41.781688Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 25,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"datetime\": \"2021-04-15T05:34:55.413657Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T14:40:59.960838Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:57:29.494790Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:54:39.055899Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Robotics\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:52:20.888851Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Real-World Cloud Cybersecurity Scenarios\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:31:37.401732Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Global Trade Finance\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:21:32.867904Z\",\n            \"profile\": {\n                \"id\": \"1ae90dde-e3b0-453c-a3aa-0da984a5871b\",\n                \"first_name\": \"Kevin\",\n                \"last_name\": \"Miles\",\n                \"primary_email\": \"kevin.miles@drexel.edu\",\n                \"formal_name\": \"Miles, Kevin\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Cybersecurity\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:09:42.454435Z\",\n            \"profile\": {\n                \"id\": \"1ae90dde-e3b0-453c-a3aa-0da984a5871b\",\n                \"first_name\": \"Kevin\",\n                \"last_name\": \"Miles\",\n                \"primary_email\": \"kevin.miles@drexel.edu\",\n                \"formal_name\": \"Miles, Kevin\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Visual PowerPoint\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T11:08:25.143999Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"JavaScript for Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T12:21:07.641070Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        }\n    ]\n}\n   \n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Check Cart By Datetime Range",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/carts/?created_at__gte=2021-07-01&created_at__lte=2021-07-05",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"carts",
+								""
+							],
+							"query": [
+								{
+									"key": "created_at__gte",
+									"value": "2021-07-01"
+								},
+								{
+									"key": "created_at__lte",
+									"value": "2021-07-05"
+								}
+							]
+						},
+						"description": "View cart list from a date-time range\n\n**URL** : `/carts/?created_at__gte=2021-07-01&created_at__lte=2021-07-05`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/?created_at__gte=2021-07-01&created_at__lte=2021-07-05\",\n    \"date_time\": \"2021-07-13T07:10:49.512014Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 7,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"b247f92c-ace3-4525-97e8-4553dfcb2675\",\n            \"datetime\": \"2021-07-04T11:14:33.340948Z\",\n            \"profile\": {\n                \"id\": \"f7e4cf86-0f2b-4c45-bea0-f400602d1915\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Digital Marketing\"\n        },\n        {\n            \"id\": \"96cd0706-90b6-4420-a0d1-dad63d93087d\",\n            \"datetime\": \"2021-07-04T11:13:19.850302Z\",\n            \"profile\": {\n                \"id\": \"f7e4cf86-0f2b-4c45-bea0-f400602d1915\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Leadership and Management for Women in Business\"\n        },\n        {\n            \"id\": \"f826ccb9-a423-4ae1-b8b4-0c2818b0101b\",\n            \"datetime\": \"2021-07-04T09:13:12.023100Z\",\n            \"profile\": {\n                \"id\": \"f7e4cf86-0f2b-4c45-bea0-f400602d1915\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"status\": \"payment_in_progress\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Strategic PDU Bundle\"\n        },\n        {\n            \"id\": \"9c41385c-8a0a-47d6-aa1b-a047e5a34b50\",\n            \"datetime\": \"2021-07-04T09:12:43.431601Z\",\n            \"profile\": {\n                \"id\": \"f7e4cf86-0f2b-4c45-bea0-f400602d1915\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Strategic PDU Bundle\"\n        },\n        {\n            \"id\": \"de8cb688-8318-4645-8a31-adabcf51f376\",\n            \"datetime\": \"2021-07-04T08:46:33.980662Z\",\n            \"profile\": {\n                \"id\": \"f7e4cf86-0f2b-4c45-bea0-f400602d1915\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Strategic PDU Bundle\"\n        },\n        {\n            \"id\": \"7793294d-4ce1-4a31-80f2-9c848bf04c82\",\n            \"datetime\": \"2021-07-04T08:42:23.767559Z\",\n            \"profile\": {\n                \"id\": \"f7e4cf86-0f2b-4c45-bea0-f400602d1915\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Strategic PDU Bundle\"\n        },\n        {\n            \"id\": \"107a36af-896d-43e2-8a28-86842a51d8dd\",\n            \"datetime\": \"2021-07-04T08:41:52.984779Z\",\n            \"profile\": {\n                \"id\": \"f7e4cf86-0f2b-4c45-bea0-f400602d1915\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"60 PDU Project Management Course Bundle\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Check Cart By Product Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/carts/?product_type=store_course_section",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"carts",
+								""
+							],
+							"query": [
+								{
+									"key": "product_type",
+									"value": "certificate",
+									"disabled": true
+								},
+								{
+									"key": "product_type",
+									"value": "store_course_section"
+								}
+							]
+						},
+						"description": "View cart list by product type. There are two types-store_course_section or certificate\n\n**URL** : `/carts/?product_type=certificate` or `/carts/?product_type=store_course_section`\n\n**Method** : `GET`\n\n\n**Response for product_type=certificate** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/?product_type=certificate\",\n    \"date_time\": \"2021-04-15T06:06:39.477527Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 12,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"datetime\": \"2021-04-13T14:40:59.960838Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:57:29.494790Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:52:20.888851Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Real-World Cloud Cybersecurity Scenarios\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:21:32.867904Z\",\n            \"profile\": {\n                \"id\": \"1ae90dde-e3b0-453c-a3aa-0da984a5871b\",\n                \"first_name\": \"Kevin\",\n                \"last_name\": \"Miles\",\n                \"primary_email\": \"kevin.miles@drexel.edu\",\n                \"formal_name\": \"Miles, Kevin\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Cybersecurity\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T12:21:07.641070Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:49:34.891712Z\",\n            \"profile\": {\n                \"id\": \"c57c9f56-409a-41c5-b113-9def111c729a\",\n                \"first_name\": \"Radon\",\n                \"last_name\": \"Shaha\",\n                \"primary_email\": \"radon78987@gmail.com\",\n                \"formal_name\": \"Shaha, Radon\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Cybersecurity\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:47:56.097241Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Real-World Cloud Cybersecurity Scenarios\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:29:00.540730Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:28:50.107292Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:06:34.865300Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Project Management (ACE CREDIT&reg;)\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        }\n    ]\n}\n   \n```\n\n\n**Response for product_type=store_course_section** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/?product_type=store_course_section\",\n    \"date_time\": \"2021-04-15T06:07:38.811639Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 16,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"datetime\": \"2021-04-15T06:06:59.263618Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-15T06:03:55.749828Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-15T05:59:02.328602Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Web Design\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-15T05:34:55.413657Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:54:39.055899Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Robotics\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:31:37.401732Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Global Trade Finance\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:09:42.454435Z\",\n            \"profile\": {\n                \"id\": \"1ae90dde-e3b0-453c-a3aa-0da984a5871b\",\n                \"first_name\": \"Kevin\",\n                \"last_name\": \"Miles\",\n                \"primary_email\": \"kevin.miles@drexel.edu\",\n                \"formal_name\": \"Miles, Kevin\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Visual PowerPoint\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T11:08:25.143999Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"JavaScript for Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T11:04:14.351193Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"CompTIA Project+® Exam Prep Course\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T08:48:52.548549Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Agile\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        }\n    ]\n}\n   \n\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Cart*** related endpoints."
+		},
+		{
+			"name": "Carts New [Sprint-22C-W11]",
+			"item": [
+				{
+					"name": "View Carts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "_ga=GA1.2.274566808.1622698360; _hjid=3394e82e-4472-42e0-95d9-8c9101d17615; _fbp=fb.1.1622698361021.23488058; hubspotutk=5dda55ec74792678f09fcaad514edeeb; _ce.s=v11.rlc~1624180079304; _gid=GA1.2.1634927685.1634033110; cookie-consent-status=true; __hstc=95765571.5dda55ec74792678f09fcaad514edeeb.1622698363055.1633417503626.1634033183609.7; __hssrc=1; __hssc=95765571.1.1634033183609",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/enrollment/cart/?product_id=817fcc0a-c9bb-4202-8217-e2d072b37d3c",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"enrollment",
+								"cart",
+								""
+							],
+							"query": [
+								{
+									"key": "product_id",
+									"value": "817fcc0a-c9bb-4202-8217-e2d072b37d3c"
+								}
+							]
+						},
+						"description": "View cart list\n\n**URL** : `/carts`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/\",\n    \"date_time\": \"2021-06-15T03:39:04.820820Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 146,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"a8ddad3e-df40-4ff2-842f-3e0c47705cae\",\n            \"datetime\": \"2021-06-14T10:37:13.521822Z\",\n            \"profile\": {\n                \"id\": \"bd502357-84b1-4af0-8e75-697cc8a1b258\",\n                \"first_name\": \"Sahidul-edited\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sahidul@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sahidul-edited\"\n            },\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"7f0f2040-c21d-4337-b1bd-d195b16d5480\",\n            \"datetime\": \"2021-06-14T10:03:01.635026Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"211633c2-db22-4a61-9f0b-44bb72b07877\",\n            \"datetime\": \"2021-06-14T09:58:34.604069Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"payment_in_progress\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"99c93be3-28b9-4262-bc3c-71d53ff06f3e\",\n            \"datetime\": \"2021-06-14T05:26:33.196042Z\",\n            \"profile\": {\n                \"id\": \"bd502357-84b1-4af0-8e75-697cc8a1b258\",\n                \"first_name\": \"Sahidul-edited\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sahidul@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sahidul-edited\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"7d0a5409-f4f0-4f76-90a5-e087517b52ef\",\n            \"datetime\": \"2021-06-14T05:25:42.419359Z\",\n            \"profile\": {\n                \"id\": \"bd502357-84b1-4af0-8e75-697cc8a1b258\",\n                \"first_name\": \"Sahidul-edited\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sahidul@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sahidul-edited\"\n            },\n            \"cart_status\": \"payment_in_progress\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"b73c0050-9b2a-44ca-b254-a3039a01a497\",\n            \"datetime\": \"2021-06-13T11:58:23.161118Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"3502c8f7-753d-4cfd-b92c-275d96604ecc\",\n            \"datetime\": \"2021-06-13T11:32:43.153247Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"bd293952-4427-4dae-bdd8-27aab338c647\",\n            \"datetime\": \"2021-06-13T11:31:49.481452Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"f8c02ae6-c978-4b35-9e3c-3a3f9dc646ad\",\n            \"datetime\": \"2021-06-13T11:31:36.305145Z\",\n            \"profile\": {\n                \"id\": \"65c91605-5d70-4bbf-b62e-4e5880b7ae42\",\n                \"first_name\": \"Sakib\",\n                \"last_name\": \"Hasan\",\n                \"primary_email\": \"sakib@sgcsoft.net\",\n                \"formal_name\": \"Hasan, Sakib\"\n            },\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        },\n        {\n            \"id\": \"bd33712b-bb97-43a2-b9a6-777ce3a95327\",\n            \"datetime\": \"2021-06-13T11:08:05.727164Z\",\n            \"profile\": {\n                \"id\": \"ba5fc049-63e9-4c4d-93e3-69ba0a061002\",\n                \"first_name\": \"*\",\n                \"last_name\": \"*\",\n                \"primary_email\": \"*\",\n                \"formal_name\": \"*, *\"\n            },\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Artificial Intelligence\"\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "View Cart Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/carts/f612c916-96e6-477d-8a92-9ce032ebab93/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"carts",
+								"f612c916-96e6-477d-8a92-9ce032ebab93",
 								""
 							]
 						},
@@ -2811,6 +3043,283 @@
 			"description": "Here you can get ***Coupon*** related endpoints."
 		},
 		{
+			"name": "Coupon New [Sprint-22C-W1]",
+			"item": [
+				{
+					"name": "Get Coupons",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/coupons/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"coupons",
+								""
+							]
+						},
+						"description": "Get coupon list.\n\n**URL** : `/coupons/`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n\n\n{\n    \"url\": \"http://api.admin.dev.campus.com/coupons/\",\n    \"date_time\": \"2022-02-06T10:17:45.005085Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 47,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"7a7f2df8-a28e-443e-af76-2d93fa0e56f2\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"DIS2022F35\",\n            \"usage_limit\": \"10.00\",\n            \"profile_usage_limit\": \"5.00\",\n            \"description\": \"Test coupon DIS2022F\",\n            \"start_date\": \"2021-04-03T18:00:00Z\",\n            \"end_date\": \"2022-05-30T18:00:00Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": true\n        },\n        {\n            \"id\": \"4d895373-e4b8-4e7d-9ff9-4433f4eb5d3a\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"P100\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"100% discount\",\n            \"start_date\": \"2022-01-24T13:32:45Z\",\n            \"end_date\": \"2026-01-30T13:32:51Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"30c02592-f47f-4524-b037-cd9d162a16d2\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"C4IP20\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"20% Discount for any purchase\",\n            \"start_date\": \"2022-01-15T09:35:05Z\",\n            \"end_date\": \"2022-02-28T09:35:09Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"d3842637-4764-4bde-a481-8c747a6e8f65\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"C4IF90\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"Fixed 90tk discount\",\n            \"start_date\": \"2022-01-15T09:16:43Z\",\n            \"end_date\": \"2022-01-31T09:16:53Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"550da2fd-c464-44e6-81cb-477d19a3f8b0\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"created_at\": \"2021-10-21T06:14:23.296297Z\",\n                \"updated_at\": \"2021-11-22T10:31:42.364952Z\",\n                \"active_status\": true,\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/cd270ef0-38a8-4d39-8f5c-95b2ba14cb36.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/j1.20211122t103142.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"J1_CP_5\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"NA\",\n            \"start_date\": \"2022-01-24T07:52:16Z\",\n            \"end_date\": \"2023-01-01T07:52:21Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"3e2956ee-b462-467d-a628-5dfbb96d8d73\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"CP_C4I_5\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"NA\",\n            \"start_date\": \"2022-01-23T08:00:28Z\",\n            \"end_date\": \"2022-01-31T08:00:31Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"C4IF40\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"A Flat Discount\",\n            \"start_date\": \"2022-01-22T03:32:31Z\",\n            \"end_date\": \"2022-02-28T03:32:34Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"7f0786a2-2131-4258-ad50-ed1dee7e9a90\",\n            \"store\": {\n                \"id\": \"f79feac7-ef6b-4352-8a54-5df2816b7f95\",\n                \"created_at\": \"2021-10-20T04:20:40.754497Z\",\n                \"updated_at\": \"2022-01-27T04:08:29.184692Z\",\n                \"active_status\": true,\n                \"name\": \"Mount St. Mary's University\",\n                \"url_slug\": \"msmu\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/8ce5e336-64ac-428a-b324-a9eda9252b11.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/msmu.20220127t040829.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"MSM_CP_100\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"Coupon 100 of MSM\",\n            \"start_date\": \"2022-01-19T05:20:13Z\",\n            \"end_date\": \"2022-01-31T05:20:20Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"6920990a-66bd-4d0f-a6b8-eb470dfe8561\",\n            \"store\": {\n                \"id\": \"b6da815f-ec1f-46ef-95f1-dc8c0dcda3bc\",\n                \"created_at\": \"2021-07-28T11:34:54.353496Z\",\n                \"updated_at\": \"2022-01-23T09:10:05.870264Z\",\n                \"active_status\": true,\n                \"name\": \"Vol\",\n                \"url_slug\": \"vol\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/c722d343-75b1-466c-8e3b-cb5db6790692.jpg\",\n                \"gtm_id\": \"\",\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/vol.20211103t041123.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"some\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": null,\n            \"start_date\": \"2022-01-10T16:08:30Z\",\n            \"end_date\": \"2022-04-22T16:08:36Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"7911e068-49c8-4e40-bc52-2ee49729a5fa\",\n            \"store\": {\n                \"id\": \"b6da815f-ec1f-46ef-95f1-dc8c0dcda3bc\",\n                \"created_at\": \"2021-07-28T11:34:54.353496Z\",\n                \"updated_at\": \"2022-01-23T09:10:05.870264Z\",\n                \"active_status\": true,\n                \"name\": \"Vol\",\n                \"url_slug\": \"vol\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/c722d343-75b1-466c-8e3b-cb5db6790692.jpg\",\n                \"gtm_id\": \"\",\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/vol.20211103t041123.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"new2022\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": null,\n            \"start_date\": \"2022-01-17T09:29:37Z\",\n            \"end_date\": \"2023-02-11T09:29:42Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        }\n    ]\n}\n\n\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Coupons for a Particular Store",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/coupons/?store=830133d9-c97f-48ed-afab-c52ed2c68714",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"coupons",
+								""
+							],
+							"query": [
+								{
+									"key": "store",
+									"value": "830133d9-c97f-48ed-afab-c52ed2c68714"
+								}
+							]
+						},
+						"description": "Show coupons of individual stores\n\n**URL** : `/coupons/?store=<store_id>`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"http://api.admin.dev.campus.com/coupons/?store=830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"date_time\": \"2022-02-06T10:26:13.957314Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 6,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"7a7f2df8-a28e-443e-af76-2d93fa0e56f2\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"DIS2022F35\",\n            \"usage_limit\": \"10.00\",\n            \"profile_usage_limit\": \"5.00\",\n            \"description\": \"Test coupon DIS2022F\",\n            \"start_date\": \"2021-04-03T18:00:00Z\",\n            \"end_date\": \"2022-05-30T18:00:00Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": true\n        },\n        {\n            \"id\": \"4d895373-e4b8-4e7d-9ff9-4433f4eb5d3a\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"P100\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"100% discount\",\n            \"start_date\": \"2022-01-24T13:32:45Z\",\n            \"end_date\": \"2026-01-30T13:32:51Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"30c02592-f47f-4524-b037-cd9d162a16d2\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"C4IP20\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"20% Discount for any purchase\",\n            \"start_date\": \"2022-01-15T09:35:05Z\",\n            \"end_date\": \"2022-02-28T09:35:09Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"d3842637-4764-4bde-a481-8c747a6e8f65\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"C4IF90\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"Fixed 90tk discount\",\n            \"start_date\": \"2022-01-15T09:16:43Z\",\n            \"end_date\": \"2022-01-31T09:16:53Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"3e2956ee-b462-467d-a628-5dfbb96d8d73\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"CP_C4I_5\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"NA\",\n            \"start_date\": \"2022-01-23T08:00:28Z\",\n            \"end_date\": \"2022-01-31T08:00:31Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        },\n        {\n            \"id\": \"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n                \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n                \"active_status\": true,\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n                \"tax_enabled\": false\n            },\n            \"code\": \"C4IF40\",\n            \"usage_limit\": null,\n            \"profile_usage_limit\": null,\n            \"description\": \"A Flat Discount\",\n            \"start_date\": \"2022-01-22T03:32:31Z\",\n            \"end_date\": \"2022-02-28T03:32:34Z\",\n            \"discount_program\": {\n                \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n                \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n                \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n                \"active_status\": true,\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"type\": \"fixed\",\n                \"is_stackable\": true,\n                \"discount_text\": \"text\",\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            },\n            \"is_published\": false\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "View  a Coupon Details",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{baseurl}}/coupons/7a7f2df8-a28e-443e-af76-2d93fa0e56f2/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"coupons",
+								"7a7f2df8-a28e-443e-af76-2d93fa0e56f2",
+								""
+							]
+						},
+						"description": "Show individual coupon details\n\n**URL** : `/coupons/7a7f2df8-a28e-443e-af76-2d93fa0e56f2/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"http://api.admin.dev.campus.com/coupons/7a7f2df8-a28e-443e-af76-2d93fa0e56f2/\",\n    \"date_time\": \"2022-02-06T10:24:33.743084Z\",\n    \"data\": {\n        \"id\": \"7a7f2df8-a28e-443e-af76-2d93fa0e56f2\",\n        \"store\": {\n            \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"created_at\": \"2022-01-09T03:27:20.674523Z\",\n            \"updated_at\": \"2022-01-12T09:32:14.112338Z\",\n            \"active_status\": true,\n            \"name\": \"C4I (Campus for Institutes)\",\n            \"url_slug\": \"c4i\",\n            \"is_active\": false,\n            \"store_logo_uri\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/fc500d60-3856-4f04-82a1-45e51f2d9903.png\",\n            \"gtm_id\": null,\n            \"template\": \"https://admin2resources.dev.campus.com.s3-website.us-east-2.amazonaws.com/uploads/templates/c4i.20220112t093214.js\",\n            \"tax_enabled\": false\n        },\n        \"code\": \"DIS2022F35\",\n        \"usage_limit\": \"10.00\",\n        \"profile_usage_limit\": \"5.00\",\n        \"description\": \"Test coupon DIS2022F\",\n        \"start_date\": \"2021-04-03T18:00:00Z\",\n        \"end_date\": \"2022-05-30T18:00:00Z\",\n        \"discount_program\": {\n            \"id\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n            \"created_at\": \"2022-02-06T08:18:04.790019Z\",\n            \"updated_at\": \"2022-02-06T08:18:04.790088Z\",\n            \"active_status\": true,\n            \"discount_amount\": \"30.00\",\n            \"max_limit\": \"90.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"text\",\n            \"is_published\": true,\n            \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n        },\n        \"is_published\": true\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\r\n    \"code\": \"DIS2022P30\",\r\n    \"description\": \"Test coupon DIS2022F\",\r\n    \"start_date\": \"2021-05-04T00:00:00+06:00\",\r\n    \"end_date\": \"2022-05-31T00:00:00+06:00\",\r\n    \"is_published\": true,\r\n    \"usage_limit\": \"30\",\r\n    \"profile_usage_limit\": \"10\",\r\n    \"discount_program\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/coupons/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"coupons",
+								""
+							]
+						},
+						"description": "Create a coupon\n\n**URL** : `/coupons/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"code\": \"DIS2022F35\",\n    \"description\": \"Test coupon DIS2022F\",\n    \"coupon_type\": \"fixed\",\n    \"amount\": \"35\",\n    \"max_limit\": \"150\",\n    \"start_date\": \"2021-04-04T00:00:00+06:00\",\n    \"end_date\": \"2022-05-31T00:00:00+06:00\",\n    \"is_published\": true,\n    \"usage_limit\": \"10\",\n    \"profile_usage_limit\": \"5\",\n    \"discount_program\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\"\n}\n\n```\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"http://api.admin.dev.campus.com/coupons/\",\n    \"date_time\": \"2022-02-06T10:08:41.724532Z\",\n    \"data\": {\n        \"id\": \"7a7f2df8-a28e-443e-af76-2d93fa0e56f2\",\n        \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n        \"code\": \"DIS2022F35\",\n        \"usage_limit\": \"10.00\",\n        \"profile_usage_limit\": \"5.00\",\n        \"description\": \"Test coupon DIS2022F\",\n        \"start_date\": \"2021-04-03T18:00:00Z\",\n        \"end_date\": \"2022-05-30T18:00:00Z\",\n        \"discount_program\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n        \"is_published\": false\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit a Coupon",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\r\n    \"code\": \"DIS2022F35\",\r\n    \"description\": \"Test coupon DIS2022F\",\r\n    \"coupon_type\": \"fixed\",\r\n    \"amount\": \"35\",\r\n    \"max_limit\": \"150\",\r\n    \"start_date\": \"2021-04-04T00:00:00+06:00\",\r\n    \"end_date\": \"2022-05-31T00:00:00+06:00\",\r\n    \"is_published\": true,\r\n    \"usage_limit\": \"10\",\r\n    \"profile_usage_limit\": \"5\",\r\n    \"discount_program\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/coupons/7a7f2df8-a28e-443e-af76-2d93fa0e56f2/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"coupons",
+								"7a7f2df8-a28e-443e-af76-2d93fa0e56f2",
+								""
+							]
+						},
+						"description": "Edit a coupon\n\n**URL** : `/coupons/<coupon_id>/`\n\n**Method** : `PATCH`\n\n**Payload**\n\n```json\n\n{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"code\": \"DIS2022F35\",\n    \"description\": \"Test coupon DIS2022F\",\n    \"coupon_type\": \"fixed\",\n    \"amount\": \"35\",\n    \"max_limit\": \"150\",\n    \"start_date\": \"2021-04-04T00:00:00+06:00\",\n    \"end_date\": \"2022-05-31T00:00:00+06:00\",\n    \"is_published\": true,\n    \"usage_limit\": \"10\",\n    \"profile_usage_limit\": \"5\",\n    \"discount_program\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\"\n}\n\n```\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"http://api.admin.dev.campus.com/coupons/7a7f2df8-a28e-443e-af76-2d93fa0e56f2/\",\n    \"date_time\": \"2022-02-06T10:15:55.234594Z\",\n    \"data\": {\n        \"id\": \"7a7f2df8-a28e-443e-af76-2d93fa0e56f2\",\n        \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n        \"code\": \"DIS2022F35\",\n        \"usage_limit\": \"10.00\",\n        \"profile_usage_limit\": \"5.00\",\n        \"description\": \"Test coupon DIS2022F\",\n        \"start_date\": \"2021-04-03T18:00:00Z\",\n        \"end_date\": \"2022-05-30T18:00:00Z\",\n        \"discount_program\": \"d90994b1-85c2-4bbc-b0b5-4950079eeb3c\",\n        \"is_published\": true\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/coupons/cd198b0d-4b18-4c51-ab03-8b65f59dc1f7/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"coupons",
+								"cd198b0d-4b18-4c51-ab03-8b65f59dc1f7",
+								""
+							]
+						},
+						"description": "Delete a coupon\n\n**URL** : `/coupons/<coupon_id>/`\n\n**Method** : `DELETE`\n\n**Response** :\n\n**204 No Content**\nThe server successfully processed the request, but is not returning any content."
+					},
+					"response": []
+				},
+				{
+					"name": "Get Coupon Usage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/coupon-usage/?coupon__id=4de0790c-5b8f-4392-b6b7-1cf43cd2d74c",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"coupon-usage",
+								""
+							],
+							"query": [
+								{
+									"key": "coupon__id",
+									"value": "4de0790c-5b8f-4392-b6b7-1cf43cd2d74c"
+								}
+							]
+						},
+						"description": "Get coupon usage list\n\n**URL** : `/coupon-usage/?coupon__id=4de0790c-5b8f-4392-b6b7-1cf43cd2d74c`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/coupon-usage/?coupon__id=4de0790c-5b8f-4392-b6b7-1cf43cd2d74c\",\n    \"date_time\": \"2021-04-19T07:59:16.249844Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 2,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"cart\": \"77ef796b-9af8-405f-95c2-34c22200d207\",\n            \"actual_amount\": 499.0,\n            \"discount_amount\": 99.8,\n            \"total_amount\": 399.2\n        },\n        {\n            \"cart\": \"ff3d3ff2-617b-42c9-b6a5-b14cedbe91ff\",\n            \"actual_amount\": 199.0,\n            \"discount_amount\": 39.8,\n            \"total_amount\": 159.2\n        }\n    ]\n}\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Coupon*** related endpoints."
+		},
+		{
 			"name": "Course",
 			"item": [
 				{
@@ -3757,6 +4266,38 @@
 							""
 						]
 					}
+				}
+			]
+		},
+		{
+			"name": "Discount Program",
+			"item": [
+				{
+					"name": "Create Discount Program",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"discount_amount\": 30,\n    \"max_limit\": 90,\n    \"type\": \"fixed\",\n    \"is_stackable\": true,\n    \"discount_text\": \"test descount program\",\n    \"is_published\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/discount-programs/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"discount-programs",
+								""
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -5465,6 +6006,289 @@
 			"description": "This endpoint return details login information as an Admin, where you need the ***access token*** to use it as ***bearer token***.\n\nFor full details, see the [API reference](<link>) for these endpoints.\n"
 		},
 		{
+			"name": "Membership Program",
+			"item": [
+				{
+					"name": "Create Membership Program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"Gold\",\n    \"duration\": 170,\n    \"is_published\": true,\n    \"fee\": 320,\n    \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/membership-programs/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"membership-programs",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/membership-programs/`\n\n**Method** : `POST`\n\n\n**Payload** :\n\n```json\n\n{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"Gold\",\n    \"duration\": 170,\n    \"is_published\": true,\n    \"fee\": 320,\n    \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n}\n\n```\n\n**Response** :\n\n**Content example** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-programs/\",\n    \"date_time\": \"2022-01-23T10:35:27.681926Z\",\n    \"data\": {\n        \"id\": \"79166e45-8a48-4c34-a23e-231fc628bdec\",\n        \"store\": {\n            \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"name\": \"C4I (Campus for Institutes)\"\n        },\n        \"product\": {\n            \"id\": \"38c557f6-ffef-4fcb-88c9-10a6dfe20d91\",\n            \"title\": \"Gold\"\n        },\n        \"title\": \"Gold\",\n        \"duration\": 170,\n        \"is_published\": true,\n        \"fee\": \"320.00\",\n        \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Membership Program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"9c329898-e4e2-4702-b64e-5dd7908536f6\",\n        \"fbcb6a22-36d4-435c-8568-44996a48f0c1\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-membership-programs/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-membership-programs",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/delete-membership-programs/`\n\n**Method** : `DELETE`\n\n\n**Payload** :\n\n```json\n\n{\n    \"ids\": [\n        \"9c329898-e4e2-4702-b64e-5dd7908536f6\",\n        \"fbcb6a22-36d4-435c-8568-44996a48f0c1\"\n    ]\n}\n\n```\n\n**Response** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-membership-programs/\",\n    \"date_time\": \"2022-01-24T03:18:49.120597Z\",\n    \"data\": {\n        \"message\": \"Membership Programs deleted successfully\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Membership Program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"Gold\",\n    \"duration\": 170,\n    \"is_published\": true,\n    \"fee\": 320,\n    \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/membership-programs/fbcb6a22-36d4-435c-8568-44996a48f0c1/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"membership-programs",
+								"fbcb6a22-36d4-435c-8568-44996a48f0c1",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/membership-programs/fbcb6a22-36d4-435c-8568-44996a48f0c1/`\n\n**Method** : `POST`\n\n\n**Payload** :\n\n```json\n\n{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"Gold\",\n    \"duration\": 170,\n    \"is_published\": true,\n    \"fee\": 320,\n    \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n}\n\n```\n\n**Response** :\n\n\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-programs/fbcb6a22-36d4-435c-8568-44996a48f0c1/\",\n    \"date_time\": \"2022-01-23T10:55:14.786589Z\",\n    \"data\": {\n        \"id\": \"fbcb6a22-36d4-435c-8568-44996a48f0c1\",\n        \"store\": {\n            \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"name\": \"C4I (Campus for Institutes)\"\n        },\n        \"product\": {\n            \"id\": \"2a23436e-c3bd-4911-849d-1668e5d0ac58\",\n            \"title\": \"Gold\"\n        },\n        \"title\": \"Gold\",\n        \"duration\": 170,\n        \"is_published\": true,\n        \"fee\": \"320.00\",\n        \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Membership Program List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/membership-programs/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"membership-programs",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/membership-programs/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n**Content example** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-programs/\",\n    \"date_time\": \"2022-01-23T10:39:11.318911Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 8,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"79166e45-8a48-4c34-a23e-231fc628bdec\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\"\n            },\n            \"product\": {\n                \"id\": \"38c557f6-ffef-4fcb-88c9-10a6dfe20d91\",\n                \"title\": \"Gold\"\n            },\n            \"title\": \"Gold\",\n            \"duration\": 170,\n            \"is_published\": true,\n            \"fee\": \"320.00\",\n            \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n        },\n        {\n            \"id\": \"52db4570-8a69-4115-b395-a75a22f4186a\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\"\n            },\n            \"product\": {\n                \"id\": \"2874feaf-c235-4461-827d-43505fe1d841\",\n                \"title\": \"Silver\"\n            },\n            \"title\": \"Silver\",\n            \"duration\": 150,\n            \"is_published\": true,\n            \"fee\": \"380.00\",\n            \"description\": \"<p>A membership program for the specific user who wants the silver membership program</p>\"\n        },\n        {\n            \"id\": \"98d49945-f1fb-41ac-8867-3f12a0502c44\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"name\": \"Jenzabar SONIS\"\n            },\n            \"product\": {\n                \"id\": \"9407e1ca-5c8c-441a-9c9e-66bb4439a84a\",\n                \"title\": \"Membership prgoram for SONIs\"\n            },\n            \"title\": \"Membership prgoram for SONIs\",\n            \"duration\": 365,\n            \"is_published\": true,\n            \"fee\": \"100.00\",\n            \"description\": \"<p>Description</p>\"\n        },\n        {\n            \"id\": \"be4fc1b4-d396-467a-a501-fbc7a36a51b3\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"6ded9c99-597d-4467-a9bc-79a5e820ebf1\",\n                \"title\": \"Membership Program 8\"\n            },\n            \"title\": \"Membership Program 8\",\n            \"duration\": 120,\n            \"is_published\": true,\n            \"fee\": \"139.00\",\n            \"description\": \"description\"\n        },\n        {\n            \"id\": \"16e08fe1-9591-4d74-add8-5470efd94fa0\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"347b3cc1-ef2b-424a-98ae-3b47e01ff5fc\",\n                \"title\": \"Membership Program 7\"\n            },\n            \"title\": \"Membership Program 7\",\n            \"duration\": 20,\n            \"is_published\": true,\n            \"fee\": \"100.00\",\n            \"description\": \"description\"\n        },\n        {\n            \"id\": \"fcd58fbc-7aea-44da-ba39-9f052df31190\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"575e9943-56fb-43b0-8b9f-08585a4ee596\",\n                \"title\": \"Membership Program 6\"\n            },\n            \"title\": \"Membership Program 6\",\n            \"duration\": 20,\n            \"is_published\": true,\n            \"fee\": \"200.00\",\n            \"description\": \"<p>description</p>\"\n        },\n        {\n            \"id\": \"859b606a-bbe9-489d-83e0-457757142002\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"2f02bb7d-7236-4af9-a6fc-e1abc99249e6\",\n                \"title\": \"Membership Program 4\"\n            },\n            \"title\": \"Membership Program 4\",\n            \"duration\": 20,\n            \"is_published\": true,\n            \"fee\": \"100.00\",\n            \"description\": \"<p>description</p>\"\n        },\n        {\n            \"id\": \"415d377c-642c-4f30-9ac7-0828ba4c8dfa\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"ef3cf06e-fcc5-4fbd-89b5-4e025af982ac\",\n                \"title\": \"Membership Program 3\"\n            },\n            \"title\": \"Membership Program 3\",\n            \"duration\": 10,\n            \"is_published\": true,\n            \"fee\": \"0.00\",\n            \"description\": null\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Membership Program Coupon",
+			"item": [
+				{
+					"name": "Create Membership Program Coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"coupons\": [\"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\"2aa2865e-8278-4a8e-aea1-31607f4e985e\"],\n    \"membership_program\": \"79166e45-8a48-4c34-a23e-231fc628bdec\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/membership-program-coupons/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"membership-program-coupons",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/membership-program-coupons/`\n\n**Method** : `POST`\n\n\n**Payload** :\n\n```json\n\n{\n    \"coupons\": [\"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\"2aa2865e-8278-4a8e-aea1-31607f4e985e\"],\n    \"membership_program\": \"79166e45-8a48-4c34-a23e-231fc628bdec\"\n}\n\n```\n\n**Response** :\n\n```json\n\n\nStatus: 201 Created\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Membership Program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"9c329898-e4e2-4702-b64e-5dd7908536f6\",\n        \"fbcb6a22-36d4-435c-8568-44996a48f0c1\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-membership-programs/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-membership-programs",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/delete-membership-programs/`\n\n**Method** : `DELETE`\n\n\n**Payload** :\n\n```json\n\n{\n    \"ids\": [\n        \"9c329898-e4e2-4702-b64e-5dd7908536f6\",\n        \"fbcb6a22-36d4-435c-8568-44996a48f0c1\"\n    ]\n}\n\n```\n\n**Response** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-membership-programs/\",\n    \"date_time\": \"2022-01-24T03:18:49.120597Z\",\n    \"data\": {\n        \"message\": \"Membership Programs deleted successfully\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Membership Program Coupon List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/membership-program-coupons/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"membership-program-coupons",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/membership-program-coupons/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-program-coupons/\",\n    \"date_time\": \"2022-01-24T03:30:07.750643Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 7,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"0b95e05d-afaf-4fba-af41-455e96d900c0\",\n            \"membership_program\": {\n                \"id\": \"79166e45-8a48-4c34-a23e-231fc628bdec\",\n                \"title\": \"Gold\"\n            },\n            \"coupon\": {\n                \"id\": \"2aa2865e-8278-4a8e-aea1-31607f4e985e\",\n                \"code\": \"C4I20\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 20.0,\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            }\n        },\n        {\n            \"id\": \"73e5015b-e422-4d53-86bd-4e0dc0c3c2d1\",\n            \"membership_program\": {\n                \"id\": \"79166e45-8a48-4c34-a23e-231fc628bdec\",\n                \"title\": \"Gold\"\n            },\n            \"coupon\": {\n                \"id\": \"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\n                \"code\": \"C4I2022\"\n            },\n            \"coupon_type\": \"fixed\",\n            \"amount\": 50.0,\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            }\n        },\n        {\n            \"id\": \"4f044b2d-8477-4bd5-a470-c1243505e317\",\n            \"membership_program\": {\n                \"id\": \"52db4570-8a69-4115-b395-a75a22f4186a\",\n                \"title\": \"Silver\"\n            },\n            \"coupon\": {\n                \"id\": \"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\n                \"code\": \"C4I2022\"\n            },\n            \"coupon_type\": \"fixed\",\n            \"amount\": 50.0,\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            }\n        },\n        {\n            \"id\": \"eac55975-3440-4c8c-98d5-93a52c7aa416\",\n            \"membership_program\": {\n                \"id\": \"52db4570-8a69-4115-b395-a75a22f4186a\",\n                \"title\": \"Silver\"\n            },\n            \"coupon\": {\n                \"id\": \"2aa2865e-8278-4a8e-aea1-31607f4e985e\",\n                \"code\": \"C4I20\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 20.0,\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            }\n        },\n        {\n            \"id\": \"149f71e5-7fe4-45e2-ad06-7b9ff6781881\",\n            \"membership_program\": {\n                \"id\": \"fcd58fbc-7aea-44da-ba39-9f052df31190\",\n                \"title\": \"Membership Program 6\"\n            },\n            \"coupon\": {\n                \"id\": \"d0374aca-054a-405a-b649-6d6c6df4141e\",\n                \"code\": \"MP_CP_1\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 10.0,\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\"\n            }\n        },\n        {\n            \"id\": \"0a42c1e9-3b4c-4d37-93c0-41e5b64a7ba2\",\n            \"membership_program\": {\n                \"id\": \"fcd58fbc-7aea-44da-ba39-9f052df31190\",\n                \"title\": \"Membership Program 6\"\n            },\n            \"coupon\": {\n                \"id\": \"8a6bc9ee-feed-4ad8-9406-62af06c0c6e8\",\n                \"code\": \"j12022\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 20.0,\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\"\n            }\n        },\n        {\n            \"id\": \"c4242123-7d41-417a-9376-1ff8d9511546\",\n            \"membership_program\": {\n                \"id\": \"859b606a-bbe9-489d-83e0-457757142002\",\n                \"title\": \"Membership Program 4\"\n            },\n            \"coupon\": {\n                \"id\": \"8a6bc9ee-feed-4ad8-9406-62af06c0c6e8\",\n                \"code\": \"j12022\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 20.0,\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\"\n            }\n        }\n    ]\n}\n\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Password Change",
 			"item": [
 				{
@@ -6933,7 +7757,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"question_banks\": [\"d161f040-5f50-4a02-b1dc-c0cf7982b267\"],\r\n    \"provider_type\": \"store\",\r\n    \"provider_ref\": \"d7522fdf-e591-4184-8c94-573a8e955e83\"\r\n}"
+							"raw": "{\r\n    \"question_banks\": [\"6d98cf5f-a325-47c3-984d-9222a03bb7f2\"],\r\n    \"provider_type\": \"course_provider\",\r\n    \"provider_ref\": \"d9cc5edd-735d-49e4-90f5-0062609495f3\",\r\n    \"respondent_type\": \"purchaser\"\r\n}"
 						},
 						"url": {
 							"raw": "{{baseurl}}/profile-questions/",
@@ -7793,7 +8617,7 @@
 			"description": "Here you can get ***Payment Gateway*** related endpoints."
 		},
 		{
-			"name": "Releted Product",
+			"name": "Related Product",
 			"item": [
 				{
 					"name": "Get Releted Product List",
@@ -7877,7 +8701,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"ids\":[\"4fbac91b-177b-42f9-b85b-c8c82b5e053a\"]\n}",
+							"raw": "{\n    \"ids\":[\"23948817-566c-4b20-96f5-700ff5f40113\"]\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7894,7 +8718,7 @@
 								""
 							]
 						},
-						"description": "Get schedules\n\n**URL** : `/delete-related-products/`\n\n**Method** : `DELETE`\n\n**Payload**:\n\n{\n    \"ids\":[\"02d7fda5-5ffe-4a6c-ba3a-6efb2f75d29f\"]\n}\n\n\n**Response** :\n\n```json\n\n```"
+						"description": "Get schedules\n\n**URL** : `/delete-related-products/`\n\n**Method** : `DELETE`\n\n**Payload**:\n\n{\n    \"ids\":[\"23948817-566c-4b20-96f5-700ff5f40113\"]\n}\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-related-products/\",\n    \"date_time\": \"2021-12-27T08:36:06.233326Z\",\n    \"data\": {\n        \"message\": \"Related Products deleted successfully\"\n    }\n}\n\n```"
 					},
 					"response": []
 				},
@@ -7944,7 +8768,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"product_id\": \"ab968483-0263-413f-a27d-4e8a4de99eb7\",\r\n    \"optional_products\": [\"1bfdf727-ad9c-47de-a72b-a89f45313faa\",\"a0a9a017-11a7-46ba-8c0c-406c3ae1fbdc\"],\r\n    \"relation_type\": \"standalone\"\r\n}",
+							"raw": "{\r\n    \"product\": \"ab968483-0263-413f-a27d-4e8a4de99eb7\",\r\n    \"optional_products\": [\"706aaee5-4d52-4796-9398-a6fbb0f48e41\",\"394c2029-4b83-489b-9de7-49c2aa93bbab\"],\r\n    \"related_product_type\": \"registration\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -7961,82 +8785,7 @@
 								""
 							]
 						},
-						"description": "Create a Schedule\n\n**URL** : `/related-products//`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n{\n    \"relation_type\": \"registration\",\n    \"product_id\": \"08519c73-6bf3-4e28-8dc4-8feff7648f3e\",\n    \"optional_product_id\": \"17018b0f-b62d-4b1e-8854-ab40b08e1794\"\n}\n```\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/related-products/\",\n    \"date_time\": \"2021-12-14T03:22:54.585024Z\",\n    \"data\": {\n        \"id\": \"17576f7d-36e1-4685-b8f2-dbe3497e6a1c\",\n        \"product_id\": \"08519c73-6bf3-4e28-8dc4-8feff7648f3e\",\n        \"optional_product_id\": \"17018b0f-b62d-4b1e-8854-ab40b08e1794\",\n        \"relation_type\": \"standalone\"\n    }\n}\n```"
-					},
-					"response": []
-				},
-				{
-					"name": "Update Releted Product",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code is 201\", function () {\r",
-									"    pm.response.to.have.status(201);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"exec": [
-									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
-									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
-									"\r",
-									"    pm.environment.set(\"name\", name);\r",
-									"    pm.environment.set(\"room_name\", room_name);\r",
-									"\r",
-									"\r",
-									""
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "{{token}}",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"relation_type\": \"registration\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{baseurl}}/related-products/1464c8d7-d56c-49c3-82b8-dce06177da27/",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"related-products",
-								"1464c8d7-d56c-49c3-82b8-dce06177da27",
-								""
-							],
-							"query": [
-								{
-									"key": "id",
-									"value": "",
-									"disabled": true
-								}
-							]
-						},
-						"description": "Create a Schedule\n\n**URL** : `/related-products/1464c8d7-d56c-49c3-82b8-dce06177da27/`\n\n**Method** : `PATCH`\n\n**Payload** :\n\n{\n    \"relation_type\": \"registration\"\n}\n```\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/related-products/1464c8d7-d56c-49c3-82b8-dce06177da27/\",\n    \"date_time\": \"2021-12-14T03:49:32.494880Z\",\n    \"data\": {\n        \"id\": \"1464c8d7-d56c-49c3-82b8-dce06177da27\",\n        \"product_id\": \"08519c73-6bf3-4e28-8dc4-8feff7648f3e\",\n        \"optional_product_id\": \"17018b0f-b62d-4b1e-8854-ab40b08e1794\",\n        \"relation_type\": \"registration\"\n    }\n}\n\n\n```"
+						"description": "Create a Schedule\n\n**URL** : `/related-products//`\n\n**Method** : `POST`\n\n**Payload** :\n\n```json\n\n{\n    \"product\": \"ab968483-0263-413f-a27d-4e8a4de99eb7\",\n    \"optional_products\": [\"706aaee5-4d52-4796-9398-a6fbb0f48e41\",\"394c2029-4b83-489b-9de7-49c2aa93bbab\"],\n    \"related_product_type\": \"registration\"\n}\n\n\n**Response** :\nStatus: 201 Created"
 					},
 					"response": []
 				}
