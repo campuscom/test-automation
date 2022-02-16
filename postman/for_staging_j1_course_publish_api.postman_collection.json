@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "7853e6f3-29fb-4fd3-a5b8-f62ebf996607",
-		"name": "J1 Publish API",
+		"_postman_id": "de6f792e-c093-48ef-9125-0a0c76913c12",
+		"name": "For Staging - J1 Publish API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -12,13 +12,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Api-Key RPKnE1Ap.6BEMKPWhNTr39uqJkh3WPhC3k6zIks1Y",
+						"value": "Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"1000000\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"TS24\",\n    \"formatted_crs_cde\" : \"test-course-24\",\n    \"crs_title\" : \"Test Course 24\",\n    \"catalog_text\" : \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>\\n<!DOCTYPE html\\n          PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\"\\n          \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\\n<head>\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\\n<meta content=\\\"TX15_HTM 15.0.300.503\\\" name=\\\"GENERATOR\\\" />\\n<title></title>\\n</head>\\n<body style=\\\"font-family:'Arial';font-size:12pt;text-align:left;\\\">\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course is typically offered in Fall, Spring, Summer I and Summer II.</p>\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course provides a firm foundation for the study of statistics in other fields. Although no one field is emphasized to the exclusion of others, applications are drawn from psychology, political science, exercise science, and other areas. NOTE: This course can be used to satisfy the university Core Quantitative Reasoning B (QB) requirement. Although it may be usable towards graduation as a major requirement or university elective, it cannot be used to satisfy any of the university GenEd requirements. See your advisor for further information. </p>\\n</body>\\n</html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"564650\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"TS24\",\n        \"formatted_crs_cde\" : \"test-course-24\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-31\",\n        \"course_fees\" : \"0.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"132165465\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"TS24\",\n            \"section_appid\" : \"564650\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Baker\",\n            \"first_name\" : \"Isaac\",\n            \"middle_name\" : \"A\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"TS24\",\n            \"section_appid\" : \"564650\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"87974655\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CS1023\",\n    \"formatted_crs_cde\" : \"CS-102-3\",\n    \"crs_title\" : \"Introduction to C# Programming\",\n    \"catalog_text\" : \"<html><body><p>Introduction to C# Programming Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"564651\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CS1023\",\n        \"formatted_crs_cde\" : \"CS-102-3\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"20.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"13216546\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1023\",\n            \"section_appid\" : \"564650\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1023\",\n            \"section_appid\" : \"564650\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -26,12 +26,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
 					"protocol": "https",
 					"host": [
-						"j3fz4814s2",
+						"1k86sr9vx1",
 						"execute-api",
-						"us-east-2",
+						"us-east-1",
 						"amazonaws",
 						"com"
 					],
@@ -39,7 +39,45 @@
 						"publish"
 					]
 				},
-				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"442\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"MATH 113\",\n    \"formatted_crs_cde\" : \"MATH-113\",\n    \"crs_title\" : \"Elements of Statistics\",\n    \"catalog_text\":\"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>\\n<!DOCTYPE html\\n          PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\"\\n          \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\\n<head>\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\\n<meta content=\\\"TX15_HTM 15.0.300.503\\\" name=\\\"GENERATOR\\\" />\\n<title></title>\\n</head>\\n<body style=\\\"font-family:'Arial';font-size:12pt;text-align:left;\\\">\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course is typically offered in Fall, Spring, Summer I and Summer II.</p>\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course provides a firm foundation for the study of tatistics in other fields. Although no one field is emphasized to the exclusion of others, applications are drawn from psychology, political science, exercise science, and other areas. NOTE: This course can be used to satisfy the university Core Quantitative Reasoning B (QB) requirement. Although it may be usable towards graduation as a major requirement or university elective, it cannot be used to satisfy any of the university GenEd requirements. See your advisor for further information. </p>\\n</body>\\n</html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"14133\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"MATH 113\",\n        \"formatted_crs_cde\" : \"MATH-113\",\n        \"first_begin_dte\" : \"2021-08-30\",\n        \"last_end_dte\" : \"2021-12-31\",\n        \"final_enrollment_dte\" : \"2021-12-31\",\n        \"course_fees\" : \"0.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"5959\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"MATH 113\",\n            \"section_appid\" : \"14133\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Baker\",\n            \"first_name\" : \"Isaac\",\n            \"middle_name\" : \"A\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"MATH 113\",\n            \"section_appid\" : \"14133\",\n            \"begin_dte\" : \"2021-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2021-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n```"
+				"description": "Create profile\n**URL :** `https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish`\n\n**Headers**\nKey Name: Authorization\nValue: Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n\n{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"87974654\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CS1022\",\n    \"formatted_crs_cde\" : \"CS-102-2\",\n    \"crs_title\" : \"Introduction to Python Programming\",\n    \"catalog_text\" : \"<html><body><p>Introduction to Python Programming Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"564650\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CS1022\",\n        \"formatted_crs_cde\" : \"CS-102-2\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"0.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"132165465\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1022\",\n            \"section_appid\" : \"564650\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1022\",\n            \"section_appid\" : \"564650\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "J1 Enrollment API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"order_id\":39,\n   \"event_type\":\"enrollment\",\n   \"payload\":{\n      \"enrollments\":[\n         {\n            \"enrollment_id\":63,\n            \"status\":\"success\",\n            \"school_student_id\":\"1561561\"\n         }\n      ]\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/j1-push",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"j1-push"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/j1-push`\n\n**Headers**\nKey Name: Authorization\nValue: Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n\n{\n   \"order_id\":39,\n   \"event_type\":\"enrollment\",\n   \"payload\":{\n      \"enrollments\":[\n         {\n            \"enrollment_id\":63,\n            \"status\":\"success\",\n            \"school_student_id\":\"1561561\"\n         }\n      ]\n   }\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"ok\"\n}\n\n```"
 			},
 			"response": []
 		},

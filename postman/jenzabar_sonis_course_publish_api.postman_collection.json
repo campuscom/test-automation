@@ -129,7 +129,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCMJS11\",\n                \"code\": \"TCMJS11\",\n                \"title\": \"Test Course M11\",\n                \"slug\": \"test-course-m11\",\n                \"description\":\"Test course m11 description in publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.\"\n            }\n        }\n    ]\n}",
+					"raw": "{\n    \"action\": \"record\",\n    \"records\": [\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"external_id\": \"TCMJS12\",\n                \"code\": \"TCMJS12\",\n                \"title\": \"Test Course M12\",\n                \"slug\": \"test-course-m12\",\n                \"description\": \"Test course m12 description in publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content.\"\n            }\n        }\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -137,7 +137,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://zhepe7sbwj.execute-api.us-east-2.amazonaws.com/develop/publish",
+					"raw": "https://zhepe7sbwj.execute-api.us-east-2.amazonaws.com/develop/publish/",
 					"protocol": "https",
 					"host": [
 						"zhepe7sbwj",
@@ -148,7 +148,8 @@
 					],
 					"path": [
 						"develop",
-						"publish"
+						"publish",
+						""
 					]
 				},
 				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"

@@ -7,6 +7,42 @@
 	},
 	"item": [
 		{
+			"name": "Addable Discount Programs with Membership Program",
+			"item": [
+				{
+					"name": "Get Discount Program",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/addable-membership-program-discounts/2a0b13db-4569-46ce-bf68-3c6bfd1f4b87",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"addable-membership-program-discounts",
+								"2a0b13db-4569-46ce-bf68-3c6bfd1f4b87"
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/discount-programs/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-programs/\",\n    \"date_time\": \"2022-02-07T05:28:07.358709Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 4,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"9c7d8f69-c4a8-4744-a067-150718c1f448\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_amount\": \"60.00\",\n            \"max_limit\": \"90.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"test descount program\",\n            \"is_published\": true\n        },\n        {\n            \"id\": \"5f30e698-7f16-4741-b18d-ccb84f7d1eab\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_amount\": \"30.00\",\n            \"max_limit\": \"300.00\",\n            \"type\": \"percentage\",\n            \"is_stackable\": true,\n            \"discount_text\": \"A percentage discount program for C4I store\",\n            \"is_published\": true\n        },\n        {\n            \"id\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_amount\": \"50.00\",\n            \"max_limit\": \"200.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"A discount program for C4I store\",\n            \"is_published\": true\n        },\n        {\n            \"id\": \"2c51bad0-8c59-49da-969a-447f50af506c\",\n            \"store\": {\n                \"id\": \"b6da815f-ec1f-46ef-95f1-dc8c0dcda3bc\",\n                \"name\": \"Vol\",\n                \"url_slug\": \"vol\"\n            },\n            \"discount_amount\": \"120.00\",\n            \"max_limit\": \"10.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"A sample discount\",\n            \"is_published\": true\n        }\n    ]\n}\n\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Attachment",
 			"item": [
 				{
@@ -423,13 +459,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{baseurl}}/carts/f612c916-96e6-477d-8a92-9ce032ebab93/",
+							"raw": "{{baseurl}}/carts/b1ebed37-ecce-4f80-af3e-98a933499d04/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
 								"carts",
-								"f612c916-96e6-477d-8a92-9ce032ebab93",
+								"b1ebed37-ecce-4f80-af3e-98a933499d04",
 								""
 							]
 						},
@@ -583,6 +619,74 @@
 							]
 						},
 						"description": "View cart list by product type. There are two types-store_course_section or certificate\n\n**URL** : `/carts/?product_type=certificate` or `/carts/?product_type=store_course_section`\n\n**Method** : `GET`\n\n\n**Response for product_type=certificate** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/?product_type=certificate\",\n    \"date_time\": \"2021-04-15T06:06:39.477527Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 12,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"datetime\": \"2021-04-13T14:40:59.960838Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:57:29.494790Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:52:20.888851Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Real-World Cloud Cybersecurity Scenarios\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:21:32.867904Z\",\n            \"profile\": {\n                \"id\": \"1ae90dde-e3b0-453c-a3aa-0da984a5871b\",\n                \"first_name\": \"Kevin\",\n                \"last_name\": \"Miles\",\n                \"primary_email\": \"kevin.miles@drexel.edu\",\n                \"formal_name\": \"Miles, Kevin\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Cybersecurity\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T12:21:07.641070Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:49:34.891712Z\",\n            \"profile\": {\n                \"id\": \"c57c9f56-409a-41c5-b113-9def111c729a\",\n                \"first_name\": \"Radon\",\n                \"last_name\": \"Shaha\",\n                \"primary_email\": \"radon78987@gmail.com\",\n                \"formal_name\": \"Shaha, Radon\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Cybersecurity\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:47:56.097241Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Real-World Cloud Cybersecurity Scenarios\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:29:00.540730Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:28:50.107292Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Certificate in Leadership for Women in Business\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T10:06:34.865300Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"certificate\",\n            \"product_title\": \"Project Management (ACE CREDIT&reg;)\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        }\n    ]\n}\n   \n```\n\n\n**Response for product_type=store_course_section** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/carts/?product_type=store_course_section\",\n    \"date_time\": \"2021-04-15T06:07:38.811639Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 16,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"datetime\": \"2021-04-15T06:06:59.263618Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-15T06:03:55.749828Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-15T05:59:02.328602Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Web Design\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-15T05:34:55.413657Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T13:54:39.055899Z\",\n            \"profile\": {\n                \"id\": \"68d5ae3b-762b-4263-8f8a-dc0fe3a0ed3c\",\n                \"first_name\": \"Wright\",\n                \"last_name\": \"Penn\",\n                \"primary_email\": \"penn.w@drexel.edu\",\n                \"formal_name\": \"Penn, Wright\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"A Manager's Guide to Robotics\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:31:37.401732Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Global Trade Finance\",\n            \"cart_status\": \"processed\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T12:09:42.454435Z\",\n            \"profile\": {\n                \"id\": \"1ae90dde-e3b0-453c-a3aa-0da984a5871b\",\n                \"first_name\": \"Kevin\",\n                \"last_name\": \"Miles\",\n                \"primary_email\": \"kevin.miles@drexel.edu\",\n                \"formal_name\": \"Miles, Kevin\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Visual PowerPoint\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-13T11:08:25.143999Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"JavaScript for Web Design\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T11:04:14.351193Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"CompTIA Project+® Exam Prep Course\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        },\n        {\n            \"datetime\": \"2021-04-12T08:48:52.548549Z\",\n            \"profile\": {\n                \"id\": \"ba344848-779f-4365-9f6a-1a491068e5e8\",\n                \"first_name\": \"Thomas\",\n                \"last_name\": \"Charles\",\n                \"primary_email\": \"987poyut@me.com\",\n                \"formal_name\": \"Charles, Thomas\"\n            },\n            \"product_type\": \"store_course_section\",\n            \"product_title\": \"Introduction to Agile\",\n            \"cart_status\": \"open\",\n            \"store\": {\n                \"id\": \"b4e5683c-4ae7-4d12-bc05-5a0053d835b6\",\n                \"name\": \"Lifelong Campus\"\n            }\n        }\n    ]\n}\n   \n\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Cart*** related endpoints."
+		},
+		{
+			"name": "Cart Item New [ Sprint-22C-W2 ]",
+			"item": [
+				{
+					"name": "Get Cart Item",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "_ga=GA1.2.274566808.1622698360; _hjid=3394e82e-4472-42e0-95d9-8c9101d17615; _fbp=fb.1.1622698361021.23488058; hubspotutk=5dda55ec74792678f09fcaad514edeeb; _ce.s=v11.rlc~1624180079304; _gid=GA1.2.1634927685.1634033110; cookie-consent-status=true; __hstc=95765571.5dda55ec74792678f09fcaad514edeeb.1622698363055.1633417503626.1634033183609.7; __hssrc=1; __hssc=95765571.1.1634033183609",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/cart-item/548a7af0-f243-4349-9b85-2aaf25de5ca2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"cart-item",
+								"548a7af0-f243-4349-9b85-2aaf25de5ca2"
+							]
+						},
+						"description": "View cart list\n\n**URL** : `/cart-item/{cart-item-id}`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/cart-item/548a7af0-f243-4349-9b85-2aaf25de5ca2/\",\n    \"date_time\": \"2022-02-13T06:21:36.531911Z\",\n    \"data\": {\n        \"id\": \"548a7af0-f243-4349-9b85-2aaf25de5ca2\",\n        \"cart\": {\n            \"id\": \"b1ebed37-ecce-4f80-af3e-98a933499d04\",\n            \"created_at\": \"2022-01-10T10:07:49.739283Z\",\n            \"updated_at\": \"2022-02-07T11:47:36.305433Z\",\n            \"active_status\": true,\n            \"order_ref\": 208,\n            \"status\": \"processed\",\n            \"note\": \"\",\n            \"gross_amount\": \"0.00\",\n            \"total_discount\": null,\n            \"sales_tax\": \"0.00\",\n            \"total_amount\": \"0.00\",\n            \"registration_details\": {},\n            \"agreement_details\": {\n                \"10c74ac4-6f1b-4a1f-ac8f-dbcdc4634a05\": true,\n                \"d3844b59-413a-4f01-b87a-79e2365b942d\": true\n            },\n            \"purchaser_info\": {\n                \"last_name\": \"Zafor\",\n                \"first_name\": \"Abu\"\n            },\n            \"student_details\": [\n                {\n                    \"email\": \"maruf@sgcsoft.net\",\n                    \"last_name\": \"Zafor\",\n                    \"extra_info\": {\n                        \"b8fdeb57-56a8-42b6-b730-5886716a526d\": false,\n                        \"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\": \"Bangladesh\",\n                        \"f49d9bd8-191c-45f2-8c9d-57598abaaeb4\": \"\"\n                    },\n                    \"first_name\": \"Abu\",\n                    \"product_id\": \"410a29c9-b02b-4f93-b120-b5448efde645\"\n                }\n            ],\n            \"enrollment_request\": {\n                \"enrollments\": []\n            },\n            \"cart_details\": [\n                {\n                    \"quantity\": 1,\n                    \"is_related\": false,\n                    \"product_id\": \"410a29c9-b02b-4f93-b120-b5448efde645\",\n                    \"related_to\": \"\",\n                    \"student_email\": \"\"\n                }\n            ],\n            \"profile\": \"a817ea0c-4fca-4003-971b-c52afe19ccc1\",\n            \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n        },\n        \"product\": {\n            \"id\": \"410a29c9-b02b-4f93-b120-b5448efde645\",\n            \"created_at\": \"2021-12-16T19:31:13.683431Z\",\n            \"updated_at\": \"2022-02-07T05:31:04.553746Z\",\n            \"active_status\": true,\n            \"external_id\": \"592\",\n            \"product_type\": \"section\",\n            \"title\": \"Prohibited Course 102\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"0.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 116,\n            \"minimum_fee\": \"0.00\",\n            \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n        },\n        \"parent_product\": null,\n        \"quantity\": 1,\n        \"unit_price\": \"0.00\",\n        \"extended_amount\": \"0.00\",\n        \"discount_amount\": \"0.00\",\n        \"sales_tax\": \"0.00\",\n        \"total_amount\": \"0.00\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Cart*** related endpoints."
+		},
+		{
+			"name": "Cart Item New Profile [ Sprint-22C-W2 ]",
+			"item": [
+				{
+					"name": "Get Cart Item Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cookie",
+								"value": "_ga=GA1.2.274566808.1622698360; _hjid=3394e82e-4472-42e0-95d9-8c9101d17615; _fbp=fb.1.1622698361021.23488058; hubspotutk=5dda55ec74792678f09fcaad514edeeb; _ce.s=v11.rlc~1624180079304; _gid=GA1.2.1634927685.1634033110; cookie-consent-status=true; __hstc=95765571.5dda55ec74792678f09fcaad514edeeb.1622698363055.1633417503626.1634033183609.7; __hssrc=1; __hssc=95765571.1.1634033183609",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseurl}}/cart-item-profiles/?cart_item=548a7af0-f243-4349-9b85-2aaf25de5ca2",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"cart-item-profiles",
+								""
+							],
+							"query": [
+								{
+									"key": "cart_item",
+									"value": "548a7af0-f243-4349-9b85-2aaf25de5ca2"
+								}
+							]
+						},
+						"description": "View cart list\n\n**URL** : `/cart-item-profiles/?cart_item=548a7af0-f243-4349-9b85-2aaf25de5ca2`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/cart-item-profiles/?cart_item=548a7af0-f243-4349-9b85-2aaf25de5ca2\",\n    \"date_time\": \"2022-02-13T06:57:21.715666Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"5cf6604b-302f-4d63-9933-07fb1f02d647\",\n            \"cart_item\": {\n                \"id\": \"548a7af0-f243-4349-9b85-2aaf25de5ca2\",\n                \"created_at\": \"2022-01-10T10:07:49.750552Z\",\n                \"updated_at\": \"2022-01-10T10:07:49.750573Z\",\n                \"active_status\": true,\n                \"quantity\": 1,\n                \"unit_price\": \"0.00\",\n                \"extended_amount\": \"0.00\",\n                \"discount_amount\": \"0.00\",\n                \"sales_tax\": \"0.00\",\n                \"total_amount\": \"0.00\",\n                \"cart\": \"b1ebed37-ecce-4f80-af3e-98a933499d04\",\n                \"product\": \"410a29c9-b02b-4f93-b120-b5448efde645\",\n                \"parent_product\": null\n            },\n            \"profile\": {\n                \"id\": \"a817ea0c-4fca-4003-971b-c52afe19ccc1\",\n                \"created_at\": \"2021-12-01T06:55:52.019104Z\",\n                \"updated_at\": \"2022-02-09T07:30:29.661554Z\",\n                \"active_status\": true,\n                \"first_name\": \"Maruf\",\n                \"last_name\": \"Imran\",\n                \"date_of_birth\": null,\n                \"profile_picture_uri\": null,\n                \"primary_email\": \"maruf@sgcsoft.net\",\n                \"primary_contact_number\": null,\n                \"terms_accepted\": false\n            }\n        }\n    ]\n}\n\n\n```"
 					},
 					"response": []
 				}
@@ -795,6 +899,48 @@
 				}
 			],
 			"description": "Here you can get ***Cart*** related endpoints."
+		},
+		{
+			"name": "Cart Item Discount",
+			"item": [
+				{
+					"name": "Cart Item Discount List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/cart-item-discounts/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"cart-item-discounts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cart Item Discount Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/cart-item-discounts/769d5793-e8a0-4df6-9465-e9cd6b34a002/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"cart-item-discounts",
+								"769d5793-e8a0-4df6-9465-e9cd6b34a002",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		},
 		{
 			"name": "Catalogs",
@@ -3471,27 +3617,27 @@
 							"formdata": [
 								{
 									"key": "provider",
-									"value": "d9cc5edd-735d-49e4-90f5-0062609495f3",
+									"value": "4eef001e-06a3-4cee-8c40-b6117dc985af",
 									"type": "text"
 								},
 								{
 									"key": "external_id",
-									"value": "externar_id6",
+									"value": "11111155555",
 									"type": "text"
 								},
 								{
 									"key": "title",
-									"value": "Test Course 2021 A",
+									"value": "Test Course-2022",
 									"type": "text"
 								},
 								{
 									"key": "slug",
-									"value": "online-artificial-intelligence",
+									"value": "test-course-22",
 									"type": "text"
 								},
 								{
 									"key": "description",
-									"value": "description",
+									"value": "Test course description",
 									"type": "text"
 								},
 								{
@@ -4279,7 +4425,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"discount_amount\": 30,\n    \"max_limit\": 90,\n    \"type\": \"fixed\",\n    \"is_stackable\": true,\n    \"discount_text\": \"test descount program\",\n    \"is_published\": true\n}",
+							"raw": "{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"test descount program 00\",\n    \"discount_amount\": 30,\n    \"max_limit\": 90,\n    \"start_date\": \"2022-02-08T09:51:57.114632Z\",\n    \"end_date\": \"2022-03-08T09:51:57.114632Z\",\n    \"code\":\"c4i-2022\",\n    \"usage_limit\": 20,\n    \"profile_usage_limit\": 5,\n    \"type\": \"fixed\",\n    \"is_stackable\": true,\n    \"is_published\": true\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -4295,7 +4441,228 @@
 								"discount-programs",
 								""
 							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/discount-programs/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"test descount program 00\",\n    \"discount_amount\": 30,\n    \"max_limit\": 90,\n    \"start_date\": \"2022-02-08T09:51:57.114632Z\",\n    \"end_date\": \"2022-03-08T09:51:57.114632Z\",\n    \"code\":\"c4i-2022\",\n    \"usage_limit\": 20,\n    \"profile_usage_limit\": 5,\n    \"type\": \"fixed\",\n    \"is_stackable\": true,\n    \"is_published\": true\n}\n\n```\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-programs/\",\n    \"date_time\": \"2022-02-13T06:49:47.328082Z\",\n    \"data\": {\n        \"id\": \"c369eb6b-7717-4e1d-b217-53eccf938925\",\n        \"store\": {\n            \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"name\": \"C4I (Campus for Institutes)\",\n            \"url_slug\": \"c4i\"\n        },\n        \"title\": \"test descount program 00\",\n        \"type\": \"fixed\",\n        \"discount_amount\": \"30.00\",\n        \"max_limit\": \"90.00\",\n        \"start_date\": \"2022-02-08T09:51:57.114632Z\",\n        \"end_date\": \"2022-03-08T09:51:57.114632Z\",\n        \"code\": \"c4i-2022\",\n        \"usage_limit\": 20,\n        \"profile_usage_limit\": 5,\n        \"is_stackable\": true,\n        \"is_published\": true\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Discount Program",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
 						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"test descount program 00\",\n    \"discount_amount\": 30,\n    \"max_limit\": 50,\n    \"start_date\": \"2022-02-08T09:51:57.114632Z\",\n    \"end_date\": \"2022-03-08T09:51:57.114632Z\",\n    \"code\":\"c4i-2022\",\n    \"usage_limit\": 25,\n    \"profile_usage_limit\": 5,\n    \"type\": \"fixed\",\n    \"is_stackable\": true,\n    \"is_published\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/discount-programs/c369eb6b-7717-4e1d-b217-53eccf938925/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"discount-programs",
+								"c369eb6b-7717-4e1d-b217-53eccf938925",
+								""
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/discount-programs/{id}`\n\n**Method** : `PATCH`\n\n**Payload**\n\n```json\n\n{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"test descount program 00\",\n    \"discount_amount\": 30,\n    \"max_limit\": 90,\n    \"start_date\": \"2022-02-08T09:51:57.114632Z\",\n    \"end_date\": \"2022-03-08T09:51:57.114632Z\",\n    \"code\":\"c4i-2022\",\n    \"usage_limit\": 25,\n    \"profile_usage_limit\": 5,\n    \"type\": \"fixed\",\n    \"is_stackable\": true,\n    \"is_published\": true\n}\n\n```\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-programs/c369eb6b-7717-4e1d-b217-53eccf938925/\",\n    \"date_time\": \"2022-02-13T06:51:44.921964Z\",\n    \"data\": {\n        \"id\": \"c369eb6b-7717-4e1d-b217-53eccf938925\",\n        \"store\": {\n            \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"name\": \"C4I (Campus for Institutes)\",\n            \"url_slug\": \"c4i\"\n        },\n        \"title\": \"test descount program 00\",\n        \"type\": \"fixed\",\n        \"discount_amount\": \"30.00\",\n        \"max_limit\": \"90.00\",\n        \"start_date\": \"2022-02-08T09:51:57.114632Z\",\n        \"end_date\": \"2022-03-08T09:51:57.114632Z\",\n        \"code\": \"c4i-2022\",\n        \"usage_limit\": 25,\n        \"profile_usage_limit\": 5,\n        \"is_stackable\": true,\n        \"is_published\": true\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Discount Program",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"9c7d8f69-c4a8-4744-a067-150718c1f448\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-discount-programs/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-discount-programs",
+								""
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/delete-discount-programs/`\n\n**Method** : `DELETE`\n\n\n**Payload**\n```json\n\n{\n    \"ids\": [\n        \"9c7d8f69-c4a8-4744-a067-150718c1f448\"\n    ]\n}\n\n```\n\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-discount-programs/\",\n    \"date_time\": \"2022-02-07T05:32:06.461939Z\",\n    \"data\": {\n        \"message\": \"Discount Programs deleted successfully\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Discount Program",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/discount-programs/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"discount-programs",
+								""
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/discount-programs/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-programs/\",\n    \"date_time\": \"2022-02-07T05:28:07.358709Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 4,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"9c7d8f69-c4a8-4744-a067-150718c1f448\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_amount\": \"60.00\",\n            \"max_limit\": \"90.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"test descount program\",\n            \"is_published\": true\n        },\n        {\n            \"id\": \"5f30e698-7f16-4741-b18d-ccb84f7d1eab\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_amount\": \"30.00\",\n            \"max_limit\": \"300.00\",\n            \"type\": \"percentage\",\n            \"is_stackable\": true,\n            \"discount_text\": \"A percentage discount program for C4I store\",\n            \"is_published\": true\n        },\n        {\n            \"id\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_amount\": \"50.00\",\n            \"max_limit\": \"200.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"A discount program for C4I store\",\n            \"is_published\": true\n        },\n        {\n            \"id\": \"2c51bad0-8c59-49da-969a-447f50af506c\",\n            \"store\": {\n                \"id\": \"b6da815f-ec1f-46ef-95f1-dc8c0dcda3bc\",\n                \"name\": \"Vol\",\n                \"url_slug\": \"vol\"\n            },\n            \"discount_amount\": \"120.00\",\n            \"max_limit\": \"10.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"A sample discount\",\n            \"is_published\": true\n        }\n    ]\n}\n\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Discount Rule",
+			"item": [
+				{
+					"name": "Create Discount Rule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"discount_program\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n    \"type\": \"Product\",\n    \"operator\": \"in\",\n    \"value\": {\n        \"uuid1\":\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\n        \"uuid2\":\"6c1843a8-6879-4944-88d5-8c2bded07c55\",\n        \"uuid3\":\"21e36b3e-13b3-4f08-a2fd-146bd0ac83fb\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/discount-rules/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"discount-rules",
+								""
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/discount-rules/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\n    \"discount_program\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n    \"type\": \"Product\",\n    \"operator\": \"in\",\n    \"value\": {\n        \"uuid1\":\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\n        \"uuid2\":\"6c1843a8-6879-4944-88d5-8c2bded07c55\",\n        \"uuid3\":\"21e36b3e-13b3-4f08-a2fd-146bd0ac83fb\"\n    }\n}\n\n```\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-rules/\",\n    \"date_time\": \"2022-02-07T05:52:04.590172Z\",\n    \"data\": {\n        \"id\": \"91f6af8f-389e-48aa-a59b-9f6704ee1ae5\",\n        \"discount_program\": {\n            \"id\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n            \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"discount_amount\": 50.0,\n            \"max_limit\": 200.0,\n            \"type\": \"fixed\"\n        },\n        \"type\": \"Product\",\n        \"value\": {\n            \"uuid1\": \"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\n            \"uuid2\": \"6c1843a8-6879-4944-88d5-8c2bded07c55\",\n            \"uuid3\": \"21e36b3e-13b3-4f08-a2fd-146bd0ac83fb\"\n        },\n        \"operator\": \"in\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Discount Rule",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"discount_program\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n    \"type\": \"Product\",\n    \"operator\": \"in\",\n    \"value\": {\n        \"uuid1\":\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\n        \"uuid3\":\"21e36b3e-13b3-4f08-a2fd-146bd0ac83fb\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/discount-rules/91f6af8f-389e-48aa-a59b-9f6704ee1ae5/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"discount-rules",
+								"91f6af8f-389e-48aa-a59b-9f6704ee1ae5",
+								""
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/discount-programs/`\n\n**Method** : `PATCH`\n\n**Payload**\n\n```json\n\n{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"discount_amount\": 60,\n    \"max_limit\": 90,\n    \"type\": \"fixed\",\n    \"is_stackable\": true,\n    \"discount_text\": \"test descount program\",\n    \"is_published\": true\n}\n\n```\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-programs/9c7d8f69-c4a8-4744-a067-150718c1f448/\",\n    \"date_time\": \"2022-02-07T05:26:04.172900Z\",\n    \"data\": {\n        \"id\": \"9c7d8f69-c4a8-4744-a067-150718c1f448\",\n        \"store\": {\n            \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"name\": \"C4I (Campus for Institutes)\",\n            \"url_slug\": \"c4i\"\n        },\n        \"discount_amount\": \"60.00\",\n        \"max_limit\": \"90.00\",\n        \"type\": \"fixed\",\n        \"is_stackable\": true,\n        \"discount_text\": \"test descount program\",\n        \"is_published\": true\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Discount Rule",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"91f6af8f-389e-48aa-a59b-9f6704ee1ae5\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-discount-rules/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-discount-rules",
+								""
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/delete-discount-rules/`\n\n**Method** : `DELETE`\n\n\n**Payload**\n```json\n\n{\n    \"ids\": [\n        \"91f6af8f-389e-48aa-a59b-9f6704ee1ae5\"\n    ]\n}\n\n```\n\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-discount-rules/\",\n    \"date_time\": \"2022-02-07T05:58:30.750740Z\",\n    \"data\": {\n        \"message\": \"Discount Rules deleted successfully\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Discount Rule",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/discount-rules/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"discount-rules",
+								""
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/discount-rules/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-rules/\",\n    \"date_time\": \"2022-02-07T05:54:18.505548Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 3,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"91f6af8f-389e-48aa-a59b-9f6704ee1ae5\",\n            \"discount_program\": {\n                \"id\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n                \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"discount_amount\": 50.0,\n                \"max_limit\": 200.0,\n                \"type\": \"fixed\"\n            },\n            \"type\": \"Product\",\n            \"value\": {\n                \"uuid1\": \"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\n                \"uuid2\": \"6c1843a8-6879-4944-88d5-8c2bded07c55\",\n                \"uuid3\": \"21e36b3e-13b3-4f08-a2fd-146bd0ac83fb\"\n            },\n            \"operator\": \"in\"\n        },\n        {\n            \"id\": \"0f0bd53e-5ef6-415c-b733-6a8835c9bc33\",\n            \"discount_program\": {\n                \"id\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n                \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"discount_amount\": 50.0,\n                \"max_limit\": 200.0,\n                \"type\": \"fixed\"\n            },\n            \"type\": \"product\",\n            \"value\": {\n                \"uuid1\": \"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\n                \"uuid2\": \"6c1843a8-6879-4944-88d5-8c2bded07c55\"\n            },\n            \"operator\": \"in\"\n        },\n        {\n            \"id\": \"29f0148a-f5d0-411c-ab18-63e20ae88f1f\",\n            \"discount_program\": {\n                \"id\": \"2c51bad0-8c59-49da-969a-447f50af506c\",\n                \"store\": \"b6da815f-ec1f-46ef-95f1-dc8c0dcda3bc\",\n                \"discount_amount\": 120.0,\n                \"max_limit\": 10.0,\n                \"type\": \"fixed\"\n            },\n            \"type\": \"product\",\n            \"value\": {},\n            \"operator\": \"in\"\n        }\n    ]\n}\n\n```"
 					},
 					"response": []
 				}
@@ -6167,10 +6534,10 @@
 			]
 		},
 		{
-			"name": "Membership Program Coupon",
+			"name": "Membership Program New [ Sprint-22C-W1 ]",
 			"item": [
 				{
-					"name": "Create Membership Program Coupon",
+					"name": "Create Membership Program",
 					"request": {
 						"auth": {
 							"type": "bearer",
@@ -6186,7 +6553,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"coupons\": [\"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\"2aa2865e-8278-4a8e-aea1-31607f4e985e\"],\n    \"membership_program\": \"79166e45-8a48-4c34-a23e-231fc628bdec\"\n}",
+							"raw": "{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"For Platinum\",\n    \"description\": \"<p> membership program for the specific user who wants the 'Platinum' membership program</p>\",\n    \"discount_program\": \"63ce2252-6e29-42ac-9190-bbccfc61f86e\",\n    \"duration\": 365,\n    \"fee\": 500,\n    \"is_published\": true,\n    \"membership_type\": \"time_based\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -6194,16 +6561,16 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/membership-program-coupons/",
+							"raw": "{{baseurl}}/membership-programs/",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"membership-program-coupons",
+								"membership-programs",
 								""
 							]
 						},
-						"description": "Create a course provider.\n\n**URL** : `/membership-program-coupons/`\n\n**Method** : `POST`\n\n\n**Payload** :\n\n```json\n\n{\n    \"coupons\": [\"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\"2aa2865e-8278-4a8e-aea1-31607f4e985e\"],\n    \"membership_program\": \"79166e45-8a48-4c34-a23e-231fc628bdec\"\n}\n\n```\n\n**Response** :\n\n```json\n\n\nStatus: 201 Created\n\n\n```"
+						"description": "Create a course provider.\n\n**URL** : `/membership-programs/`\n\n**Method** : `POST`\n\n\n**Payload** :\n\n```json\n\n{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"For Platinum\",\n    \"description\": \"<p> membership program for the specific user who wants the 'Platinum' membership program</p>\",\n    \"discount_program\": \"63ce2252-6e29-42ac-9190-bbccfc61f86e\",\n    \"duration\": 365,\n    \"fee\": 500,\n    \"is_published\": true,\n    \"membership_type\": \"time_based\"\n}\n\n```\n\n**Response** :\n\n**Content example** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-programs/\",\n    \"date_time\": \"2022-02-08T03:24:00.974557Z\",\n    \"data\": {\n        \"id\": \"415b6407-68c9-44a4-8b90-d617f5e00af3\",\n        \"store\": {\n            \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"name\": \"C4I (Campus for Institutes)\"\n        },\n        \"product\": {\n            \"id\": \"c608d90f-771c-4f61-aa7b-56b64dad50d2\",\n            \"title\": \"For Platinum\"\n        },\n        \"duration\": 365,\n        \"title\": \"For Platinum\",\n        \"description\": \"<p> membership program for the specific user who wants the 'Platinum' membership program</p>\",\n        \"fee\": \"500.00\",\n        \"is_published\": true,\n        \"membership_type\": \"time_based\",\n        \"start_date\": null,\n        \"end_date\": null,\n        \"discount_program\": {\n            \"id\": \"63ce2252-6e29-42ac-9190-bbccfc61f86e\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_text\": \"A percentage discount program for C4I store\",\n            \"discount_amount\": 25.0,\n            \"max_limit\": 150.0,\n            \"type\": \"percentage\"\n        }\n    }\n}\n\n```"
 					},
 					"response": []
 				},
@@ -6246,6 +6613,167 @@
 					"response": []
 				},
 				{
+					"name": "Update Membership Program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"Gold\",\n    \"duration\": 170,\n    \"is_published\": true,\n    \"fee\": 320,\n    \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/membership-programs/fbcb6a22-36d4-435c-8568-44996a48f0c1/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"membership-programs",
+								"fbcb6a22-36d4-435c-8568-44996a48f0c1",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/membership-programs/fbcb6a22-36d4-435c-8568-44996a48f0c1/`\n\n**Method** : `POST`\n\n\n**Payload** :\n\n```json\n\n{\n    \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n    \"title\": \"Gold\",\n    \"duration\": 170,\n    \"is_published\": true,\n    \"fee\": 320,\n    \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n}\n\n```\n\n**Response** :\n\n\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-programs/fbcb6a22-36d4-435c-8568-44996a48f0c1/\",\n    \"date_time\": \"2022-01-23T10:55:14.786589Z\",\n    \"data\": {\n        \"id\": \"fbcb6a22-36d4-435c-8568-44996a48f0c1\",\n        \"store\": {\n            \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"name\": \"C4I (Campus for Institutes)\"\n        },\n        \"product\": {\n            \"id\": \"2a23436e-c3bd-4911-849d-1668e5d0ac58\",\n            \"title\": \"Gold\"\n        },\n        \"title\": \"Gold\",\n        \"duration\": 170,\n        \"is_published\": true,\n        \"fee\": \"320.00\",\n        \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Membership Program List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/membership-programs/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"membership-programs",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/membership-programs/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n**Content example** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-programs/\",\n    \"date_time\": \"2022-01-23T10:39:11.318911Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 8,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"79166e45-8a48-4c34-a23e-231fc628bdec\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\"\n            },\n            \"product\": {\n                \"id\": \"38c557f6-ffef-4fcb-88c9-10a6dfe20d91\",\n                \"title\": \"Gold\"\n            },\n            \"title\": \"Gold\",\n            \"duration\": 170,\n            \"is_published\": true,\n            \"fee\": \"320.00\",\n            \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\"\n        },\n        {\n            \"id\": \"52db4570-8a69-4115-b395-a75a22f4186a\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\"\n            },\n            \"product\": {\n                \"id\": \"2874feaf-c235-4461-827d-43505fe1d841\",\n                \"title\": \"Silver\"\n            },\n            \"title\": \"Silver\",\n            \"duration\": 150,\n            \"is_published\": true,\n            \"fee\": \"380.00\",\n            \"description\": \"<p>A membership program for the specific user who wants the silver membership program</p>\"\n        },\n        {\n            \"id\": \"98d49945-f1fb-41ac-8867-3f12a0502c44\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"name\": \"Jenzabar SONIS\"\n            },\n            \"product\": {\n                \"id\": \"9407e1ca-5c8c-441a-9c9e-66bb4439a84a\",\n                \"title\": \"Membership prgoram for SONIs\"\n            },\n            \"title\": \"Membership prgoram for SONIs\",\n            \"duration\": 365,\n            \"is_published\": true,\n            \"fee\": \"100.00\",\n            \"description\": \"<p>Description</p>\"\n        },\n        {\n            \"id\": \"be4fc1b4-d396-467a-a501-fbc7a36a51b3\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"6ded9c99-597d-4467-a9bc-79a5e820ebf1\",\n                \"title\": \"Membership Program 8\"\n            },\n            \"title\": \"Membership Program 8\",\n            \"duration\": 120,\n            \"is_published\": true,\n            \"fee\": \"139.00\",\n            \"description\": \"description\"\n        },\n        {\n            \"id\": \"16e08fe1-9591-4d74-add8-5470efd94fa0\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"347b3cc1-ef2b-424a-98ae-3b47e01ff5fc\",\n                \"title\": \"Membership Program 7\"\n            },\n            \"title\": \"Membership Program 7\",\n            \"duration\": 20,\n            \"is_published\": true,\n            \"fee\": \"100.00\",\n            \"description\": \"description\"\n        },\n        {\n            \"id\": \"fcd58fbc-7aea-44da-ba39-9f052df31190\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"575e9943-56fb-43b0-8b9f-08585a4ee596\",\n                \"title\": \"Membership Program 6\"\n            },\n            \"title\": \"Membership Program 6\",\n            \"duration\": 20,\n            \"is_published\": true,\n            \"fee\": \"200.00\",\n            \"description\": \"<p>description</p>\"\n        },\n        {\n            \"id\": \"859b606a-bbe9-489d-83e0-457757142002\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"2f02bb7d-7236-4af9-a6fc-e1abc99249e6\",\n                \"title\": \"Membership Program 4\"\n            },\n            \"title\": \"Membership Program 4\",\n            \"duration\": 20,\n            \"is_published\": true,\n            \"fee\": \"100.00\",\n            \"description\": \"<p>description</p>\"\n        },\n        {\n            \"id\": \"415d377c-642c-4f30-9ac7-0828ba4c8dfa\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\"\n            },\n            \"product\": {\n                \"id\": \"ef3cf06e-fcc5-4fbd-89b5-4e025af982ac\",\n                \"title\": \"Membership Program 3\"\n            },\n            \"title\": \"Membership Program 3\",\n            \"duration\": 10,\n            \"is_published\": true,\n            \"fee\": \"0.00\",\n            \"description\": null\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Multiple Membership Program Discount",
+			"item": [
+				{
+					"name": "Create Membership Program Coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"membership_program\": \"3e0be829-bdc4-4848-92a0-a65fd324d767\",\n    \"discount_programs\": [\"c369eb6b-7717-4e1d-b217-53eccf938925\", \"7fd8c16f-5a6d-47b0-a88f-a25b36f9e4c5\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/membership-program-discounts/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"membership-program-discounts",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/membership-program-discounts/`\n\n**Method** : `POST`\n\n\n**Payload** :\n\n```json\n\n{\n    \"membership_program\": \"3e0be829-bdc4-4848-92a0-a65fd324d767\",\n    \"discount_programs\": [\"c369eb6b-7717-4e1d-b217-53eccf938925\", \"7fd8c16f-5a6d-47b0-a88f-a25b36f9e4c5\"]\n}\n\n```\n\n**Response** :\n\n```json\n\n\nStatus: 201 Created\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Membership Program",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\n        \"969cb2f4-d151-401d-947f-ac0e667e3d66\"\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-membership-program-discounts/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-membership-program-discounts",
+								""
+							]
+						},
+						"description": "Create a course provider.\n\n**URL** : `/delete-membership-program-discounts/`\n\n**Method** : `DELETE`\n\n\n**Payload** :\n\n```json\n\n{\n    \"ids\": [\n        \"9c329898-e4e2-4702-b64e-5dd7908536f6\",\n        \"fbcb6a22-36d4-435c-8568-44996a48f0c1\"\n    ]\n}\n\n```\n\n**Response** :\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/delete-membership-program-discounts/\",\n    \"date_time\": \"2022-02-13T08:06:38.481254Z\",\n    \"data\": {\n        \"message\": \"Membership Programs deleted successfully\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
 					"name": "Get Membership Program Coupon List",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -6273,16 +6801,22 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/membership-program-coupons/",
+							"raw": "{{baseurl}}/membership-program-discounts/?membership_program=3e0be829-bdc4-4848-92a0-a65fd324d767",
 							"host": [
 								"{{baseurl}}"
 							],
 							"path": [
-								"membership-program-coupons",
+								"membership-program-discounts",
 								""
+							],
+							"query": [
+								{
+									"key": "membership_program",
+									"value": "3e0be829-bdc4-4848-92a0-a65fd324d767"
+								}
 							]
 						},
-						"description": "Create a course provider.\n\n**URL** : `/membership-program-coupons/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-program-coupons/\",\n    \"date_time\": \"2022-01-24T03:30:07.750643Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 7,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"0b95e05d-afaf-4fba-af41-455e96d900c0\",\n            \"membership_program\": {\n                \"id\": \"79166e45-8a48-4c34-a23e-231fc628bdec\",\n                \"title\": \"Gold\"\n            },\n            \"coupon\": {\n                \"id\": \"2aa2865e-8278-4a8e-aea1-31607f4e985e\",\n                \"code\": \"C4I20\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 20.0,\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            }\n        },\n        {\n            \"id\": \"73e5015b-e422-4d53-86bd-4e0dc0c3c2d1\",\n            \"membership_program\": {\n                \"id\": \"79166e45-8a48-4c34-a23e-231fc628bdec\",\n                \"title\": \"Gold\"\n            },\n            \"coupon\": {\n                \"id\": \"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\n                \"code\": \"C4I2022\"\n            },\n            \"coupon_type\": \"fixed\",\n            \"amount\": 50.0,\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            }\n        },\n        {\n            \"id\": \"4f044b2d-8477-4bd5-a470-c1243505e317\",\n            \"membership_program\": {\n                \"id\": \"52db4570-8a69-4115-b395-a75a22f4186a\",\n                \"title\": \"Silver\"\n            },\n            \"coupon\": {\n                \"id\": \"19aa45e7-bd1f-46ef-818a-d9abfea63035\",\n                \"code\": \"C4I2022\"\n            },\n            \"coupon_type\": \"fixed\",\n            \"amount\": 50.0,\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            }\n        },\n        {\n            \"id\": \"eac55975-3440-4c8c-98d5-93a52c7aa416\",\n            \"membership_program\": {\n                \"id\": \"52db4570-8a69-4115-b395-a75a22f4186a\",\n                \"title\": \"Silver\"\n            },\n            \"coupon\": {\n                \"id\": \"2aa2865e-8278-4a8e-aea1-31607f4e985e\",\n                \"code\": \"C4I20\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 20.0,\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            }\n        },\n        {\n            \"id\": \"149f71e5-7fe4-45e2-ad06-7b9ff6781881\",\n            \"membership_program\": {\n                \"id\": \"fcd58fbc-7aea-44da-ba39-9f052df31190\",\n                \"title\": \"Membership Program 6\"\n            },\n            \"coupon\": {\n                \"id\": \"d0374aca-054a-405a-b649-6d6c6df4141e\",\n                \"code\": \"MP_CP_1\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 10.0,\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\"\n            }\n        },\n        {\n            \"id\": \"0a42c1e9-3b4c-4d37-93c0-41e5b64a7ba2\",\n            \"membership_program\": {\n                \"id\": \"fcd58fbc-7aea-44da-ba39-9f052df31190\",\n                \"title\": \"Membership Program 6\"\n            },\n            \"coupon\": {\n                \"id\": \"8a6bc9ee-feed-4ad8-9406-62af06c0c6e8\",\n                \"code\": \"j12022\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 20.0,\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\"\n            }\n        },\n        {\n            \"id\": \"c4242123-7d41-417a-9376-1ff8d9511546\",\n            \"membership_program\": {\n                \"id\": \"859b606a-bbe9-489d-83e0-457757142002\",\n                \"title\": \"Membership Program 4\"\n            },\n            \"coupon\": {\n                \"id\": \"8a6bc9ee-feed-4ad8-9406-62af06c0c6e8\",\n                \"code\": \"j12022\"\n            },\n            \"coupon_type\": \"percentage\",\n            \"amount\": 20.0,\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\"\n            }\n        }\n    ]\n}\n\n```"
+						"description": "Create a course provider.\n\n**URL** : `/membership-program-discounts/?membership_program=3e0be829-bdc4-4848-92a0-a65fd324d767/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-program-discounts/?membership_program=3e0be829-bdc4-4848-92a0-a65fd324d767\",\n    \"date_time\": \"2022-02-13T08:02:06.377327Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 2,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"629519aa-4737-4b17-858e-469df31bd34f\",\n            \"membership_program\": {\n                \"id\": \"3e0be829-bdc4-4848-92a0-a65fd324d767\",\n                \"created_at\": \"2022-02-10T06:50:22.056555Z\",\n                \"updated_at\": \"2022-02-10T06:50:22.056576Z\",\n                \"active_status\": true,\n                \"duration\": null,\n                \"title\": \"Gold\",\n                \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\",\n                \"fee\": \"320.00\",\n                \"is_published\": true,\n                \"membership_type\": \"time_based\",\n                \"start_date\": null,\n                \"end_date\": null,\n                \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"product\": \"0fdc5b08-a8b8-4a86-b4d7-405e1da358ce\"\n            },\n            \"discount_program\": {\n                \"id\": \"7fd8c16f-5a6d-47b0-a88f-a25b36f9e4c5\",\n                \"created_at\": \"2022-02-08T10:43:25.521146Z\",\n                \"updated_at\": \"2022-02-13T06:02:32.972827Z\",\n                \"active_status\": true,\n                \"title\": \"J1 Discount Program 3\",\n                \"type\": \"percentage\",\n                \"discount_amount\": \"15.00\",\n                \"max_limit\": \"20.00\",\n                \"start_date\": \"2022-02-07T03:56:03.360197Z\",\n                \"end_date\": \"2022-02-07T03:56:03.360197Z\",\n                \"code\": \"abc123\",\n                \"usage_limit\": null,\n                \"profile_usage_limit\": null,\n                \"is_stackable\": false,\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            }\n        },\n        {\n            \"id\": \"dafc1a13-ac78-46bf-81d8-359e8d2cd9fc\",\n            \"membership_program\": {\n                \"id\": \"3e0be829-bdc4-4848-92a0-a65fd324d767\",\n                \"created_at\": \"2022-02-10T06:50:22.056555Z\",\n                \"updated_at\": \"2022-02-10T06:50:22.056576Z\",\n                \"active_status\": true,\n                \"duration\": null,\n                \"title\": \"Gold\",\n                \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\",\n                \"fee\": \"320.00\",\n                \"is_published\": true,\n                \"membership_type\": \"time_based\",\n                \"start_date\": null,\n                \"end_date\": null,\n                \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"product\": \"0fdc5b08-a8b8-4a86-b4d7-405e1da358ce\"\n            },\n            \"discount_program\": {\n                \"id\": \"c369eb6b-7717-4e1d-b217-53eccf938925\",\n                \"created_at\": \"2022-02-13T06:49:47.325043Z\",\n                \"updated_at\": \"2022-02-13T06:51:44.919108Z\",\n                \"active_status\": true,\n                \"title\": \"test descount program 00\",\n                \"type\": \"fixed\",\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"start_date\": \"2022-02-08T09:51:57.114632Z\",\n                \"end_date\": \"2022-03-08T09:51:57.114632Z\",\n                \"code\": \"c4i-2022\",\n                \"usage_limit\": 25,\n                \"profile_usage_limit\": 5,\n                \"is_stackable\": true,\n                \"is_published\": true,\n                \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\"\n            }\n        }\n    ]\n}\n\n\n```"
 					},
 					"response": []
 				}
