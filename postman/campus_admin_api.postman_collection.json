@@ -4544,6 +4544,43 @@
 						"description": "Create a Discount Program\n\n**URL** : `/discount-programs/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-programs/\",\n    \"date_time\": \"2022-02-07T05:28:07.358709Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 4,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"9c7d8f69-c4a8-4744-a067-150718c1f448\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_amount\": \"60.00\",\n            \"max_limit\": \"90.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"test descount program\",\n            \"is_published\": true\n        },\n        {\n            \"id\": \"5f30e698-7f16-4741-b18d-ccb84f7d1eab\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_amount\": \"30.00\",\n            \"max_limit\": \"300.00\",\n            \"type\": \"percentage\",\n            \"is_stackable\": true,\n            \"discount_text\": \"A percentage discount program for C4I store\",\n            \"is_published\": true\n        },\n        {\n            \"id\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n            \"store\": {\n                \"id\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"name\": \"C4I (Campus for Institutes)\",\n                \"url_slug\": \"c4i\"\n            },\n            \"discount_amount\": \"50.00\",\n            \"max_limit\": \"200.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"A discount program for C4I store\",\n            \"is_published\": true\n        },\n        {\n            \"id\": \"2c51bad0-8c59-49da-969a-447f50af506c\",\n            \"store\": {\n                \"id\": \"b6da815f-ec1f-46ef-95f1-dc8c0dcda3bc\",\n                \"name\": \"Vol\",\n                \"url_slug\": \"vol\"\n            },\n            \"discount_amount\": \"120.00\",\n            \"max_limit\": \"10.00\",\n            \"type\": \"fixed\",\n            \"is_stackable\": true,\n            \"discount_text\": \"A sample discount\",\n            \"is_published\": true\n        }\n    ]\n}\n\n```"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Discount Program Usage",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/discount-program-usage/?discount_program=2f16d999-7448-493b-9010-d3c2412c2c74",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"discount-program-usage",
+								""
+							],
+							"query": [
+								{
+									"key": "discount_program",
+									"value": "2f16d999-7448-493b-9010-d3c2412c2c74"
+								}
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/discount-program-usage/?discount_program=2f16d999-7448-493b-9010-d3c2412c2c74`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-program-usage/?discount_program=2f16d999-7448-493b-9010-d3c2412c2c74\",\n    \"date_time\": \"2022-02-20T04:11:28.871391Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 16,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"3062f13d-bb26-4995-950e-04b8966b86e2\",\n            \"order_ref\": 506,\n            \"gross_amount\": 210.0,\n            \"total_discount\": 65.0,\n            \"total_amount\": 145.0\n        },\n        {\n            \"id\": \"581bbd25-5a07-42dd-8409-86f4a79867fc\",\n            \"order_ref\": 505,\n            \"gross_amount\": 1050.0,\n            \"total_discount\": 75.0,\n            \"total_amount\": 975.0\n        },\n        {\n            \"id\": \"13895572-7f78-4765-891f-754289b01237\",\n            \"order_ref\": 504,\n            \"gross_amount\": 350.0,\n            \"total_discount\": 102.5,\n            \"total_amount\": 247.5\n        },\n        {\n            \"id\": \"79f1724e-7611-45c1-95ba-3d65f6d464bd\",\n            \"order_ref\": 503,\n            \"gross_amount\": 350.0,\n            \"total_discount\": 120.5,\n            \"total_amount\": 229.5\n        },\n        {\n            \"id\": \"3efd8a1e-0783-461b-b0ce-9dd029f9014e\",\n            \"order_ref\": 502,\n            \"gross_amount\": 350.0,\n            \"total_discount\": 120.5,\n            \"total_amount\": 229.5\n        },\n        {\n            \"id\": \"1f7fcae4-fff8-404b-b091-612bb329bc0f\",\n            \"order_ref\": 501,\n            \"gross_amount\": 400.0,\n            \"total_discount\": 60.0,\n            \"total_amount\": 340.0\n        },\n        {\n            \"id\": \"b923e60b-caca-4520-97dd-d14e0fe2bc57\",\n            \"order_ref\": 500,\n            \"gross_amount\": 400.0,\n            \"total_discount\": 60.0,\n            \"total_amount\": 340.0\n        },\n        {\n            \"id\": \"f727f538-6420-4517-afd4-878aa5c29fbb\",\n            \"order_ref\": 499,\n            \"gross_amount\": 450.0,\n            \"total_discount\": 117.5,\n            \"total_amount\": 332.5\n        },\n        {\n            \"id\": \"5dd55b65-5621-4991-8f86-00b030e46493\",\n            \"order_ref\": 498,\n            \"gross_amount\": 660.0,\n            \"total_discount\": 75.0,\n            \"total_amount\": 585.0\n        },\n        {\n            \"id\": \"d9496e20-ceef-4487-882e-2087c94f9b00\",\n            \"order_ref\": 494,\n            \"gross_amount\": 360.0,\n            \"total_discount\": 95.0,\n            \"total_amount\": 265.0\n        }\n    ]\n}\n```"
+					},
+					"response": []
 				}
 			]
 		},
@@ -4575,6 +4612,34 @@
 							]
 						},
 						"description": "Create a Discount Program\n\n**URL** : `/discount-rules/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\n    \"discount_program\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n    \"type\": \"Product\",\n    \"operator\": \"in\",\n    \"value\": {\n        \"uuid1\":\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\n        \"uuid2\":\"6c1843a8-6879-4944-88d5-8c2bded07c55\",\n        \"uuid3\":\"21e36b3e-13b3-4f08-a2fd-146bd0ac83fb\"\n    }\n}\n\n```\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/discount-rules/\",\n    \"date_time\": \"2022-02-07T05:52:04.590172Z\",\n    \"data\": {\n        \"id\": \"91f6af8f-389e-48aa-a59b-9f6704ee1ae5\",\n        \"discount_program\": {\n            \"id\": \"587b9956-03a8-49c5-857b-65e590d0721f\",\n            \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n            \"discount_amount\": 50.0,\n            \"max_limit\": 200.0,\n            \"type\": \"fixed\"\n        },\n        \"type\": \"Product\",\n        \"value\": {\n            \"uuid1\": \"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\n            \"uuid2\": \"6c1843a8-6879-4944-88d5-8c2bded07c55\",\n            \"uuid3\": \"21e36b3e-13b3-4f08-a2fd-146bd0ac83fb\"\n        },\n        \"operator\": \"in\"\n    }\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Discount Rule",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"discount_program\": \"2f16d999-7448-493b-9010-d3c2412c2c74\",\n    \"type\": \"Product\",\n    \"operator\": \"in\",\n    \"is_remove\": true,\n    \"products\": [\"98c14423-a2ca-474d-bdba-a2244c944039\",\"167c021c-ddfc-458a-98c3-bc3df89433eb\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/discount-rules/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"discount-rules",
+								""
+							]
+						},
+						"description": "Create a Discount Program\n\n**URL** : `/discount-rules/`\n\n**Method** : `POST`\n\n**Payload**\n\n```json\n\n{\n    \"discount_program\": \"2f16d999-7448-493b-9010-d3c2412c2c74\",\n    \"type\": \"Product\",\n    \"operator\": \"in\",\n    \"is_remove\": true,\n    \"products\": [\"98c14423-a2ca-474d-bdba-a2244c944039\",\"167c021c-ddfc-458a-98c3-bc3df89433eb\"]\n}\n\n```\n\n**Response** :\n\n```json\n\nStatus: 200 OK\n\n```"
 					},
 					"response": []
 				},

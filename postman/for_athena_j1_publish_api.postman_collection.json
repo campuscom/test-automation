@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "de6f792e-c093-48ef-9125-0a0c76913c12",
-		"name": "For Staging - J1 Publish API",
+		"_postman_id": "71c35962-a3de-4dad-aed6-8447466a8f29",
+		"name": "For Athena - J1 Publish API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -12,13 +12,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT",
+						"value": "Api-Key GGa1YU9D.1T3ThO73l52arPXtFCfWuiHZeSREgP2k",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"9999901\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CS1026\",\n    \"formatted_crs_cde\" : \"CS-102-6\",\n    \"crs_title\" : \"Introduction to OOP 3.0\",\n    \"catalog_text\" : \"<html><body><p>Introduction to OOP 2.0 Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"564655\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CS1026\",\n        \"formatted_crs_cde\" : \"CS-102-6\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"20.00\",\n        \"open_seats\" : \"50\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"13216549\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1026\",\n            \"section_appid\" : \"564655\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2985\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1026\",\n            \"section_appid\" : \"564655\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"99990001\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CRSA 001\",\n    \"formatted_crs_cde\" : \"CRSA-001\",\n    \"crs_title\" : \"Course A1 from Campus Team\",\n    \"catalog_text\" : \"<html><body><p>Course A1 from Campus Team Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"534543\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CRSA 001\",\n        \"formatted_crs_cde\" : \"CRSA-001\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"00.00\",\n        \"open_seats\" : \"50\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"534543\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA 001\",\n            \"section_appid\" : \"534543\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2985543\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA 001\",\n            \"section_appid\" : \"534543\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -26,12 +26,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
+					"raw": "https://u0kj96wbj9.execute-api.us-west-2.amazonaws.com/publish",
 					"protocol": "https",
 					"host": [
-						"1k86sr9vx1",
+						"u0kj96wbj9",
 						"execute-api",
-						"us-east-1",
+						"us-west-2",
 						"amazonaws",
 						"com"
 					],
@@ -56,7 +56,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"order_id\": 2,\n   \"event_type\":\"enrollment\",\n   \"payload\":{\n      \"enrollments\":[\n         {\n            \"enrollment_id\": 83,\n            \"status\":\"success\",\n            \"school_student_id\":\"10000283\"\n         }\n      ]\n   }\n}",
+					"raw": "{\n   \"order_id\": 63,\n   \"event_type\":\"enrollment\",\n   \"payload\":{\n      \"enrollments\":[\n         {\n            \"enrollment_id\": 82,\n            \"status\":\"success\",\n            \"school_student_id\":\"1561561\"\n         }\n      ]\n   }\n}",
 					"options": {
 						"raw": {
 							"language": "json"

@@ -56,7 +56,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"order_id\" : \"347\",\n  \"event_type\" : \"enrollment\",\n  \"payload\" : {\n    \"enrollments\" : [\n      {\n        \"enrollment_id\" : \"419\",\n        \"status\" : \"success\",\n        \"school_student_id\" : \"10001006\"\n      }\n    ]\n  }\n}",
+					"raw": "{\n  \"order_id\" : \"578\",\n  \"event_type\" : \"enrollment\",\n  \"payload\" : {\n    \"enrollments\" : [\n      {\n        \"enrollment_id\" : \"511\",\n        \"status\" : \"success\",\n        \"school_student_id\" : \"\"\n      }\n    ]\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
