@@ -6,6 +6,141 @@
 	},
 	"item": [
 		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Get Notification API by date and status",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+									"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+									"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+									"\r",
+									"    pm.environment.set(\"title\", title);\r",
+									"    pm.environment.set(\"external_id\", external_id);\r",
+									"    pm.environment.set(\"slug\", slug);\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Authorization",
+								"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"A11\",\n                \"code\": \"TestCourse-A11\",\n                \"title\": \"Test Course A11\",\n                \"slug\": \"Test Course A11\",\n                \"description\":\"test course description...\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"A11\",\n            \"data\":{\n                \"external_id\": \"A11-S1\",\n                \"code\": \"S1-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"10.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"A11\",\n            \"data\":{\n                \"external_id\": \"A11-S2\",\n                \"code\": \"S2-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"0.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"A11-S1\",\n            \"data\":{\n                \"external_id\": \"Ins-101\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"A11-S1\",\n            \"data\":{\n                \"external_id\": \"Sch-101\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Evening\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"South Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"Mujib100\"\n\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"A11-S2\",\n            \"data\":{\n                \"external_id\": \"Ins-102\",\n                \"name\": \"David Zabed\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"A11-S2\",\n            \"data\":{\n                \"external_id\": \"Sch-102\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Morning\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"South Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"Mujib420\"\n\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"A11-S2\",\n            \"data\":{\n                \"external_id\": \"Ins-103\",\n                \"name\": \"Captain Mojo\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"A11-S2\",\n            \"data\":{\n                \"external_id\": \"Sch-103\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Morning\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"South Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"ZiyaulHaque\"\n\n            }\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/notifications/?from_date=2022-04-18 3:50:00&to_date=2022-04-20 3:50:00",
+							"protocol": "https",
+							"host": [
+								"j3fz4814s2",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"notifications",
+								""
+							],
+							"query": [
+								{
+									"key": "from_date",
+									"value": "2022-04-18 3:50:00"
+								},
+								{
+									"key": "status",
+									"value": "pending",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "2022-04-20 3:50:00"
+								},
+								{
+									"key": "type",
+									"value": "order",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Notification API by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key RPKnE1Ap.6BEMKPWhNTr39uqJkh3WPhC3k6zIks1Y",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/notifications/31ac64cf-4fbf-4dc8-8ead-816560cea081",
+							"protocol": "https",
+							"host": [
+								"j3fz4814s2",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"notifications",
+								"31ac64cf-4fbf-4dc8-8ead-816560cea081"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "successful",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "J1 Publish API",
 			"request": {
 				"method": "POST",
@@ -18,7 +153,96 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"R-1007\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"R1007\",\n    \"formatted_crs_cde\" : \"R-1007\",\n    \"crs_title\" : \"R-1007 Course from Campus Team\",\n    \"catalog_text\" : \"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>\\n<!DOCTYPE html\\n          PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\"\\n          \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\\n<head>\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\\n<meta content=\\\"TX15_HTM 15.0.300.503\\\" name=\\\"GENERATOR\\\" />\\n<title></title>\\n</head>\\n<body style=\\\"font-family:'Arial';font-size:12pt;text-align:left;\\\">\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course is typically offered in Fall, Spring, Summer I and Summer II.</p>\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course provides a firm foundation for the study of statistics in other fields. Although no one field is emphasized to the exclusion of others, applications are drawn from psychology, political science, exercise science, and other areas. NOTE: This course can be used to satisfy the university Core Quantitative Reasoning B (QB) requirement. Although it may be usable towards graduation as a major requirement or university elective, it cannot be used to satisfy any of the university GenEd requirements. See your advisor for further information. </p>\\n</body>\\n</html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"3251007\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"11\",\n        \"crs_cde\" : \"R1007\",\n        \"formatted_crs_cde\" : \"R-1007\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-31\",\n        \"course_fees\" : \"00.00\",\n        \"open_seats\" : \"60\",\n        \"execution_site\" : \"East\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"2165469\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"11\",\n            \"crs_cde\" : \"R1007\",\n            \"section_appid\" : \"3251007\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Baker\",\n            \"first_name\" : \"Isaac\",\n            \"middle_name\" : \"A\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"161404\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"R1007\",\n            \"section_appid\" : \"3251007\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+					"raw": "{\n  \"action\": \"j1-course\",\n  \"entity_action\": \"d\",\n  \"data\": {\n    \"catalog_appid\": \"46575\",\n    \"org_cde\": \"*LOCAL\",\n    \"crs_cde\": \"ML3216\",\n    \"formatted_crs_cde\": \"ML-3216\",\n    \"crs_title\": \"Machine Learning\",\n    \"catalog_text\": \"Machine learning is related to business analytics and Data science but it has a higher demand in the market now. For implementing Artificial Intelligence in the business processes, knowing the machine learning techniques is a must. Companies are now looking for manpower trained in Machine learning technologies. A career in it can be rewarding in future and you can go for Machine learning courses after your 12th\",\n    \"sections\": [\n      {\n        \"section_appid\": \"58193\",\n        \"yr_cde\": \"2020\",\n        \"trm_cde\": \"UF\",\n        \"crs_cde\": \"ML3216\",\n        \"formatted_crs_cde\": \"ML-3216\",\n        \"first_begin_dte\": \"2020-08-26\",\n        \"last_end_dte\": \"2020-10-20\",\n        \"final_enrollment_dte\": \"2020-09-01\",\n        \"course_fees\": \"10.00\",\n        \"open_seats\": \"8\",\n        \"execution_site\": \"ONLN\",\n        \"credit_hrs\": \"3.00\",\n        \"crs_clock_hrs\": \"0.00\",\n        \"instructors\": [\n          {\n            \"section_instructor_appid\": \"68466\",\n            \"yr_cde\": \"2020\",\n            \"trm_cde\": \"UF\",\n            \"crs_cde\": \"ML3216\",\n            \"section_appid\": \"58193\",\n            \"instructor_id_num\": \"326549\",\n            \"last_name\": \"Johnson\",\n            \"first_name\": \"David\",\n            \"middle_name\": \"R\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"442\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"MATH 113\",\n    \"formatted_crs_cde\" : \"MATH-113\",\n    \"crs_title\" : \"Elements of Statistics\",\n    \"catalog_text\":\"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>\\n<!DOCTYPE html\\n          PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\"\\n          \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\\n<head>\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\\n<meta content=\\\"TX15_HTM 15.0.300.503\\\" name=\\\"GENERATOR\\\" />\\n<title></title>\\n</head>\\n<body style=\\\"font-family:'Arial';font-size:12pt;text-align:left;\\\">\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course is typically offered in Fall, Spring, Summer I and Summer II.</p>\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course provides a firm foundation for the study of tatistics in other fields. Although no one field is emphasized to the exclusion of others, applications are drawn from psychology, political science, exercise science, and other areas. NOTE: This course can be used to satisfy the university Core Quantitative Reasoning B (QB) requirement. Although it may be usable towards graduation as a major requirement or university elective, it cannot be used to satisfy any of the university GenEd requirements. See your advisor for further information. </p>\\n</body>\\n</html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"14133\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"MATH 113\",\n        \"formatted_crs_cde\" : \"MATH-113\",\n        \"first_begin_dte\" : \"2021-08-30\",\n        \"last_end_dte\" : \"2021-12-31\",\n        \"final_enrollment_dte\" : \"2021-12-31\",\n        \"course_fees\" : \"0.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"5959\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"MATH 113\",\n            \"section_appid\" : \"14133\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Baker\",\n            \"first_name\" : \"Isaac\",\n            \"middle_name\" : \"A\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"MATH 113\",\n            \"section_appid\" : \"14133\",\n            \"begin_dte\" : \"2021-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2021-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "J1 Publish API Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Key RPKnE1Ap.6BEMKPWhNTr39uqJkh3WPhC3k6zIks1Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"action\": \"j1-course\",\n  \"entity_action\": \"i\",\n  \"data\": {\n    \"catalog_appid\": \"6\",\n    \"org_cde\": \"*LOCAL\",\n    \"crs_cde\": \"ML3217\",\n    \"formatted_crs_cde\": \"ML-3217\",\n    \"crs_title\": \"Business Analytics\",\n    \"catalog_text\": \"Business Analytics is related to business analytics and Data science but it has a higher demand in the market now. For implementing Artificial Intelligence in the business processes, knowing the Business Analytics techniques is a must. Companies are now looking for manpower trained in Business Analytics technologies. A career in it can be rewarding in future and you can go for Business Analytics courses after your 12th\",\n    \"sections\": [\n      {\n        \"section_appid\": \"58194\",\n        \"yr_cde\": \"2020\",\n        \"trm_cde\": \"UF\",\n        \"crs_cde\": \"ML3217\",\n        \"formatted_crs_cde\": \"ML-3217\",\n        \"first_begin_dte\": \"2020-08-26\",\n        \"last_end_dte\": \"2020-10-20\",\n        \"final_enrollment_dte\": \"2020-09-01\",\n        \"course_fees\": \"10.00\",\n        \"open_seats\": \"50\",\n        \"execution_site\": \"ONLN\",\n        \"credit_hrs\": \"50.00\",\n        \"crs_clock_hrs\": \"0.00\",\n        \"instructors\": [\n          {\n            \"section_instructor_appid\": \"68467\",\n            \"yr_cde\": \"2020\",\n            \"trm_cde\": \"UF\",\n            \"crs_cde\": \"ML3217\",\n            \"section_appid\": \"58194\",\n            \"instructor_id_num\": \"326549\",\n            \"last_name\": \"Johnson\",\n            \"first_name\": \"David\",\n            \"middle_name\": \"R\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2985544\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"ML3217\",\n            \"section_appid\" : \"58194\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"442\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"MATH 113\",\n    \"formatted_crs_cde\" : \"MATH-113\",\n    \"crs_title\" : \"Elements of Statistics\",\n    \"catalog_text\":\"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>\\n<!DOCTYPE html\\n          PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\"\\n          \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\\n<head>\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\\n<meta content=\\\"TX15_HTM 15.0.300.503\\\" name=\\\"GENERATOR\\\" />\\n<title></title>\\n</head>\\n<body style=\\\"font-family:'Arial';font-size:12pt;text-align:left;\\\">\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course is typically offered in Fall, Spring, Summer I and Summer II.</p>\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course provides a firm foundation for the study of tatistics in other fields. Although no one field is emphasized to the exclusion of others, applications are drawn from psychology, political science, exercise science, and other areas. NOTE: This course can be used to satisfy the university Core Quantitative Reasoning B (QB) requirement. Although it may be usable towards graduation as a major requirement or university elective, it cannot be used to satisfy any of the university GenEd requirements. See your advisor for further information. </p>\\n</body>\\n</html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"14133\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"MATH 113\",\n        \"formatted_crs_cde\" : \"MATH-113\",\n        \"first_begin_dte\" : \"2021-08-30\",\n        \"last_end_dte\" : \"2021-12-31\",\n        \"final_enrollment_dte\" : \"2021-12-31\",\n        \"course_fees\" : \"0.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"5959\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"MATH 113\",\n            \"section_appid\" : \"14133\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Baker\",\n            \"first_name\" : \"Isaac\",\n            \"middle_name\" : \"A\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"MATH 113\",\n            \"section_appid\" : \"14133\",\n            \"begin_dte\" : \"2021-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2021-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "J1 Publish API test 08/03/2022",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\",  () => {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Key RPKnE1Ap.6BEMKPWhNTr39uqJkh3WPhC3k6zIks1Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"j1-course\",\n   \"entity_action\":\"D\",\n   \"data\":{\n      \"catalog_appid\":\"9897\",\n      \"org_cde\":\"*LOCAL\",\n      \"crs_cde\":\"HIST 9897\",\n      \"formatted_crs_cde\":\"HIST-9897\",\n      \"crs_title\":\"Intro to History to 9897\",\n      \"catalog_text\":\"<!DOCTYPE HTML PUBLIC \\\"-//W3C//DTD HTML 4.0 Transitional//EN\\\">\\n<HTML>\\n<head>\\n<meta content=\\\"TP13_HTM 13.0.234.500\\\" name=GENERATOR>\\n<title></title>\\n</head>\\n<body bgcolor=\\\"#FFFFFF\\\" text=\\\"#000000\\\">\\n<p><span style=\\\"font-family:'Microsoft Sans Serif';font-size:8pt;\\\">Intro to History to 9897 Intro to History to 9897 Intro to History to 9897 Intro to History to 9897 Intro to History to 9897. End!</span></p></body>\\n</html>\",\n      \"sections\":[\n         {\n            \"section_appid\":\"120140\",\n            \"yr_cde\":\"2022\",\n            \"trm_cde\":\"05\",\n            \"crs_cde\":\"HIST 9897\",\n            \"formatted_crs_cde\":\"HIST-9897\",\n            \"first_begin_dte\":\"2022-01-01\",\n            \"last_end_dte\":\"2022-05-30\",\n            \"course_fees\":\"0.00\",\n            \"open_seats\":\"10\",\n            \"credit_hrs\":\"3.00\",\n            \"crs_clock_hrs\":\"12.00\",\n            \"instructors\":[\n               {\n                  \"section_instructor_appid\":\"636000\",\n                  \"yr_cde\":\"2022\",\n                  \"trm_cde\":\"05\",\n                  \"crs_cde\":\"HIST 9897\",\n                  \"section_appid\":\"120140\",\n                  \"instructor_id_num\":\"280\",\n                  \"last_name\":\"Mikesell\",\n                  \"first_name\":\"Richard\",\n                  \"middle_name\":\"L\"\n               }\n            ],\n            \"schedules\":[\n               {\n                  \"section_schedule_appid\":\"330700\",\n                  \"yr_cde\":\"2022\",\n                  \"trm_cde\":\"05\",\n                  \"crs_cde\":\"HIST 9897\",\n                  \"section_appid\":\"120140\",\n                  \"begin_dte\":\"2022-01-01\",\n                  \"begin_tim\":\"12:00:00\",\n                  \"end_dte\":\"2022-05-30\",\n                  \"end_tim\":\"13:00:00\",\n                  \"monday_cde\":\"M\",\n                  \"wednesday_cde\":\"W\",\n                  \"friday_cde\":\"F\",\n                  \"loc_cde\":\"NORTH\",\n                  \"location_description\":\"North Location\",\n                  \"bldg_cde\":\"BLDG6\",\n                  \"building_description\":\"building 6\",\n                  \"room_cde\":\"100\",\n                  \"room_description\":\"100 Classroom\"\n               }\n            ]\n         }\n      ]\n   }\n}",
 					"options": {
 						"raw": {
 							"language": "json"

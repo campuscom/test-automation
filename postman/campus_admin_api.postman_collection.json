@@ -4734,6 +4734,233 @@
 			]
 		},
 		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "Get Individual Events Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/events/0c6ef016-4b7b-42b0-bffa-954f850f33fa",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"events",
+								"0c6ef016-4b7b-42b0-bffa-954f850f33fa"
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/partners/115d9078-8cbd-4a9e-8f51-c69459f8c5ae`\n\n**Method** : `GET`\n\n\n\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/partners/115d9078-8cbd-4a9e-8f51-c69459f8c5ae/\",\n    \"date_time\": \"2022-04-18T04:50:22.753607Z\",\n    \"data\": {\n        \"id\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\",\n        \"type\": \"course_provider\",\n        \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n        \"profile\": {\n            \"id\": \"420bc8c0-0f23-4988-98c8-85d4e85ec82e\",\n            \"last_login\": null,\n            \"is_superuser\": false,\n            \"is_staff\": false,\n            \"date_joined\": \"2022-01-31T06:14:19.908956Z\",\n            \"first_name\": \"C4I\",\n            \"last_name\": \"Admin\",\n            \"username\": \"c4i_admin\",\n            \"password\": \"pbkdf2_sha256$216000$kPkYwf2i9qco$JHh5gf6iugMxPvPtRJXeNbIpREc0Dy9kU1D/Ch+JDVA=\",\n            \"email\": \"c4ia@c4i.com\",\n            \"primary_contact_number\": \"123456\",\n            \"db_context\": {\n                \"Store\": [\n                    \"830133d9-c97f-48ed-afab-c52ed2c68714\"\n                ],\n                \"CourseProvider\": [\n                    \"5f5a27c0-40ad-4ede-b452-516e08ea811a\",\n                    \"200e219b-c04b-4636-9fd4-1d2a7459517b\",\n                    \"d9cc5edd-735d-49e4-90f5-0062609495f3\"\n                ]\n            },\n            \"is_active\": true,\n            \"mfa_enabled\": false,\n            \"custom_roles\": [\n                \"71da0af1-a235-44c3-9051-be48cc25a2bf\",\n                \"071c4e1c-6748-4107-81f6-4c5b60ca53d3\",\n                \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n                \"ef8ed791-c1ce-4386-b329-06f286a20365\",\n                \"3e50169e-cc8d-4ab8-881f-36d58d1244b8\"\n            ],\n            \"secret_key\": null,\n            \"access_token\": null,\n            \"access_token_time\": null,\n            \"groups\": [],\n            \"user_permissions\": []\n        },\n        \"notification_submission_url\": \"https://abc.com\",\n        \"course_provider\": {\n            \"id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n            \"name\": \"C4I_CP\"\n        }\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/events/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"events",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/events`\n\n**Method** : `GET`\n\n\n\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/partners/\",\n    \"date_time\": \"2022-04-18T04:45:39.410958Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 2,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\",\n            \"type\": \"course_provider\",\n            \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n            \"profile\": null,\n            \"notification_submission_url\": \"https://abc.com\",\n            \"course_provider\": {\n                \"id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n                \"name\": \"C4I_CP\"\n            }\n        },\n        {\n            \"id\": \"84ef8ea5-f91f-4eb1-8990-8a69880c4a40\",\n            \"type\": \"course_provider\",\n            \"ref_id\": \"d9cc5edd-735d-49e4-90f5-0062609495f3\",\n            \"profile\": {\n                \"id\": \"01b75051-c96f-400e-8e7c-750ed6104de4\",\n                \"last_login\": null,\n                \"is_superuser\": false,\n                \"is_staff\": false,\n                \"date_joined\": \"2021-12-12T10:56:50.402086Z\",\n                \"first_name\": \"Sonis \",\n                \"last_name\": \"Publisher\",\n                \"username\": \"sonis_publisher\",\n                \"password\": \"pbkdf2_sha256$216000$BMobPZY3JWUn$d65lXvbJgUaJDa+WRkayO3Djsew48XmYBZjs5rJjToU=\",\n                \"email\": \"sonis@mail.com\",\n                \"primary_contact_number\": \"1.617.492.9099\",\n                \"db_context\": {\n                    \"Store\": [\n                        \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\"\n                    ],\n                    \"CourseProvider\": [\n                        \"acb27d34-92e9-4f72-97e5-c57450163bb4\"\n                    ]\n                },\n                \"is_active\": true,\n                \"mfa_enabled\": false,\n                \"custom_roles\": [\n                    \"71da0af1-a235-44c3-9051-be48cc25a2bf\"\n                ],\n                \"secret_key\": null,\n                \"access_token\": null,\n                \"access_token_time\": null,\n                \"groups\": [],\n                \"user_permissions\": []\n            },\n            \"notification_submission_url\": \"https://httpbin.org/post\",\n            \"course_provider\": {\n                \"id\": \"d9cc5edd-735d-49e4-90f5-0062609495f3\",\n                \"name\": \"Jenzabar University\"\n            }\n        }\n    ]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Events",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"enrollment\",\n    \"description\": \"no description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/events/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"events",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/events/`\n\n**Method** : `POST`\n\n**Payload** :\n\n**Form Data**\n\n```json\n{\n    \"title\": \"order\",\n    \"description\": \"no description\"\n}\n```\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/events/\",\n    \"date_time\": \"2022-04-18T05:08:37.047280Z\",\n    \"data\": {\n        \"id\": \"0c6ef016-4b7b-42b0-bffa-954f850f33fa\",\n        \"title\": \"order\",\n        \"description\": \"no description\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Events",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\"d70184af-95ce-4a6e-90dc-4e1403f788fd\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-events/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-events",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/delete-events/`\n\n**Method** : `DELETE`\n\n**Payload** :\n\n**Form Data**\n\n```json\n{\n    \"ids\": [\"3407195e-c899-4412-8907-bc80fa8f6c15\"]\n}\n```\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/delete-events/\",\n    \"date_time\": \"2022-04-18T05:08:20.868101Z\",\n    \"data\": {\n        \"message\": \"Events deleted successfully\"\n    }\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Events",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"description\": \"test description\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/events/0c6ef016-4b7b-42b0-bffa-954f850f33fa/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"events",
+								"0c6ef016-4b7b-42b0-bffa-954f850f33fa",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/events/`\n\n**Method** : `POST`\n\n**Payload** :\n\n**Form Data**\n\n```json\n{\n    \"description\": \"test description\"\n}\n```\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/events/0c6ef016-4b7b-42b0-bffa-954f850f33fa/\",\n    \"date_time\": \"2022-04-18T05:10:08.220791Z\",\n    \"data\": {\n        \"id\": \"0c6ef016-4b7b-42b0-bffa-954f850f33fa\",\n        \"title\": \"order\",\n        \"description\": \"test description\"\n    }\n}\n\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EventSubscription",
+			"item": [
+				{
+					"name": "Get Individual EventSubscription Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/event-subscriptions/ee738ab3-a402-4d67-8218-cf55f0b2b914",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"event-subscriptions",
+								"ee738ab3-a402-4d67-8218-cf55f0b2b914"
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/event-subscriptions/ee738ab3-a402-4d67-8218-cf55f0b2b914`\n\n**Method** : `GET`\n\n\n\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/event-subscriptions/ee738ab3-a402-4d67-8218-cf55f0b2b914/\",\n    \"date_time\": \"2022-04-18T06:16:06.882220Z\",\n    \"data\": {\n        \"id\": \"ee738ab3-a402-4d67-8218-cf55f0b2b914\",\n        \"event\": {\n            \"id\": \"0c6ef016-4b7b-42b0-bffa-954f850f33fa\",\n            \"created_at\": \"2022-04-18T05:08:37.045975Z\",\n            \"updated_at\": \"2022-04-18T05:10:08.218521Z\",\n            \"active_status\": true,\n            \"title\": \"order\",\n            \"description\": \"test description\"\n        },\n        \"partner\": {\n            \"id\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\",\n            \"created_at\": \"2022-04-18T04:17:28.843465Z\",\n            \"updated_at\": \"2022-04-18T04:46:07.015911Z\",\n            \"active_status\": true,\n            \"type\": \"course_provider\",\n            \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n            \"notification_submission_url\": \"https://abc.com\",\n            \"profile\": \"420bc8c0-0f23-4988-98c8-85d4e85ec82e\"\n        }\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Event Subscriptions  List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/event-subscriptions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"event-subscriptions",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/event-subscriptions/`\n\n**Method** : `GET`\n\n\n\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/event-subscriptions/\",\n    \"date_time\": \"2022-04-18T06:12:19.300908Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"ee738ab3-a402-4d67-8218-cf55f0b2b914\",\n            \"event\": {\n                \"id\": \"0c6ef016-4b7b-42b0-bffa-954f850f33fa\",\n                \"created_at\": \"2022-04-18T05:08:37.045975Z\",\n                \"updated_at\": \"2022-04-18T05:10:08.218521Z\",\n                \"active_status\": true,\n                \"title\": \"order\",\n                \"description\": \"test description\"\n            },\n            \"partner\": {\n                \"id\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\",\n                \"created_at\": \"2022-04-18T04:17:28.843465Z\",\n                \"updated_at\": \"2022-04-18T04:46:07.015911Z\",\n                \"active_status\": true,\n                \"type\": \"course_provider\",\n                \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n                \"notification_submission_url\": \"https://abc.com\",\n                \"profile\": \"420bc8c0-0f23-4988-98c8-85d4e85ec82e\"\n            }\n        }\n    ]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Event Subcriptions",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"event\": \"0c6ef016-4b7b-42b0-bffa-954f850f33fa\",\n    \"partner\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/event-subscriptions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"event-subscriptions",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/event-subscriptions/`\n\n**Method** : `POST`\n\n**Payload** :\n\n**Form Data**\n\n```json\n{\n    \"event\": \"0c6ef016-4b7b-42b0-bffa-954f850f33fa\",\n    \"partner\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\"\n}\n```\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/event-subscriptions/\",\n    \"date_time\": \"2022-04-18T06:11:46.308550Z\",\n    \"data\": {\n        \"id\": \"ee738ab3-a402-4d67-8218-cf55f0b2b914\",\n        \"event\": \"0c6ef016-4b7b-42b0-bffa-954f850f33fa\",\n        \"partner\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete EventSubscriptions",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\"ee738ab3-a402-4d67-8218-cf55f0b2b914\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-event-subscriptions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-event-subscriptions",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/delete-event-subscriptions/`\n\n**Method** : `DELETE`\n\n**Payload** :\n\n**Form Data**\n\n```json\n{\n    \"ids\": [\"ee738ab3-a402-4d67-8218-cf55f0b2b914\"]\n}\n```\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/delete-event-subscriptions/\",\n    \"date_time\": \"2022-04-18T06:18:36.127908Z\",\n    \"data\": {\n        \"message\": \"Event Subscriptions deleted successfully\"\n    }\n}\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "External Entity",
 			"item": [
 				{
@@ -6882,6 +7109,133 @@
 							]
 						},
 						"description": "Create a course provider.\n\n**URL** : `/membership-program-discounts/?membership_program=3e0be829-bdc4-4848-92a0-a65fd324d767/`\n\n**Method** : `GET`\n\n\n\n\n**Response** :\n\n\n```json\n\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/membership-program-discounts/?membership_program=3e0be829-bdc4-4848-92a0-a65fd324d767\",\n    \"date_time\": \"2022-02-13T08:02:06.377327Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 2,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"629519aa-4737-4b17-858e-469df31bd34f\",\n            \"membership_program\": {\n                \"id\": \"3e0be829-bdc4-4848-92a0-a65fd324d767\",\n                \"created_at\": \"2022-02-10T06:50:22.056555Z\",\n                \"updated_at\": \"2022-02-10T06:50:22.056576Z\",\n                \"active_status\": true,\n                \"duration\": null,\n                \"title\": \"Gold\",\n                \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\",\n                \"fee\": \"320.00\",\n                \"is_published\": true,\n                \"membership_type\": \"time_based\",\n                \"start_date\": null,\n                \"end_date\": null,\n                \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"product\": \"0fdc5b08-a8b8-4a86-b4d7-405e1da358ce\"\n            },\n            \"discount_program\": {\n                \"id\": \"7fd8c16f-5a6d-47b0-a88f-a25b36f9e4c5\",\n                \"created_at\": \"2022-02-08T10:43:25.521146Z\",\n                \"updated_at\": \"2022-02-13T06:02:32.972827Z\",\n                \"active_status\": true,\n                \"title\": \"J1 Discount Program 3\",\n                \"type\": \"percentage\",\n                \"discount_amount\": \"15.00\",\n                \"max_limit\": \"20.00\",\n                \"start_date\": \"2022-02-07T03:56:03.360197Z\",\n                \"end_date\": \"2022-02-07T03:56:03.360197Z\",\n                \"code\": \"abc123\",\n                \"usage_limit\": null,\n                \"profile_usage_limit\": null,\n                \"is_stackable\": false,\n                \"is_published\": true,\n                \"store\": \"1fbae74d-3c10-488c-ae17-70a081be1652\"\n            }\n        },\n        {\n            \"id\": \"dafc1a13-ac78-46bf-81d8-359e8d2cd9fc\",\n            \"membership_program\": {\n                \"id\": \"3e0be829-bdc4-4848-92a0-a65fd324d767\",\n                \"created_at\": \"2022-02-10T06:50:22.056555Z\",\n                \"updated_at\": \"2022-02-10T06:50:22.056576Z\",\n                \"active_status\": true,\n                \"duration\": null,\n                \"title\": \"Gold\",\n                \"description\": \"A membership program for the specific user who wants the 'Gold' membership program\",\n                \"fee\": \"320.00\",\n                \"is_published\": true,\n                \"membership_type\": \"time_based\",\n                \"start_date\": null,\n                \"end_date\": null,\n                \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\",\n                \"product\": \"0fdc5b08-a8b8-4a86-b4d7-405e1da358ce\"\n            },\n            \"discount_program\": {\n                \"id\": \"c369eb6b-7717-4e1d-b217-53eccf938925\",\n                \"created_at\": \"2022-02-13T06:49:47.325043Z\",\n                \"updated_at\": \"2022-02-13T06:51:44.919108Z\",\n                \"active_status\": true,\n                \"title\": \"test descount program 00\",\n                \"type\": \"fixed\",\n                \"discount_amount\": \"30.00\",\n                \"max_limit\": \"90.00\",\n                \"start_date\": \"2022-02-08T09:51:57.114632Z\",\n                \"end_date\": \"2022-03-08T09:51:57.114632Z\",\n                \"code\": \"c4i-2022\",\n                \"usage_limit\": 25,\n                \"profile_usage_limit\": 5,\n                \"is_stackable\": true,\n                \"is_published\": true,\n                \"store\": \"830133d9-c97f-48ed-afab-c52ed2c68714\"\n            }\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Partner",
+			"item": [
+				{
+					"name": "Get Individual Partner Details",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/partners/115d9078-8cbd-4a9e-8f51-c69459f8c5ae",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"partners",
+								"115d9078-8cbd-4a9e-8f51-c69459f8c5ae"
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/partners/115d9078-8cbd-4a9e-8f51-c69459f8c5ae`\n\n**Method** : `GET`\n\n\n\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/partners/115d9078-8cbd-4a9e-8f51-c69459f8c5ae/\",\n    \"date_time\": \"2022-04-18T04:50:22.753607Z\",\n    \"data\": {\n        \"id\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\",\n        \"type\": \"course_provider\",\n        \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n        \"profile\": {\n            \"id\": \"420bc8c0-0f23-4988-98c8-85d4e85ec82e\",\n            \"last_login\": null,\n            \"is_superuser\": false,\n            \"is_staff\": false,\n            \"date_joined\": \"2022-01-31T06:14:19.908956Z\",\n            \"first_name\": \"C4I\",\n            \"last_name\": \"Admin\",\n            \"username\": \"c4i_admin\",\n            \"password\": \"pbkdf2_sha256$216000$kPkYwf2i9qco$JHh5gf6iugMxPvPtRJXeNbIpREc0Dy9kU1D/Ch+JDVA=\",\n            \"email\": \"c4ia@c4i.com\",\n            \"primary_contact_number\": \"123456\",\n            \"db_context\": {\n                \"Store\": [\n                    \"830133d9-c97f-48ed-afab-c52ed2c68714\"\n                ],\n                \"CourseProvider\": [\n                    \"5f5a27c0-40ad-4ede-b452-516e08ea811a\",\n                    \"200e219b-c04b-4636-9fd4-1d2a7459517b\",\n                    \"d9cc5edd-735d-49e4-90f5-0062609495f3\"\n                ]\n            },\n            \"is_active\": true,\n            \"mfa_enabled\": false,\n            \"custom_roles\": [\n                \"71da0af1-a235-44c3-9051-be48cc25a2bf\",\n                \"071c4e1c-6748-4107-81f6-4c5b60ca53d3\",\n                \"11546bde-289d-43c3-bb46-d8976fb7036a\",\n                \"ef8ed791-c1ce-4386-b329-06f286a20365\",\n                \"3e50169e-cc8d-4ab8-881f-36d58d1244b8\"\n            ],\n            \"secret_key\": null,\n            \"access_token\": null,\n            \"access_token_time\": null,\n            \"groups\": [],\n            \"user_permissions\": []\n        },\n        \"notification_submission_url\": \"https://abc.com\",\n        \"course_provider\": {\n            \"id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n            \"name\": \"C4I_CP\"\n        }\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Partner List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseurl}}/partners",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"partners"
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/partners`\n\n**Method** : `GET`\n\n\n\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/partners/\",\n    \"date_time\": \"2022-04-18T04:45:39.410958Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 2,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\",\n            \"type\": \"course_provider\",\n            \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n            \"profile\": null,\n            \"notification_submission_url\": \"https://abc.com\",\n            \"course_provider\": {\n                \"id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n                \"name\": \"C4I_CP\"\n            }\n        },\n        {\n            \"id\": \"84ef8ea5-f91f-4eb1-8990-8a69880c4a40\",\n            \"type\": \"course_provider\",\n            \"ref_id\": \"d9cc5edd-735d-49e4-90f5-0062609495f3\",\n            \"profile\": {\n                \"id\": \"01b75051-c96f-400e-8e7c-750ed6104de4\",\n                \"last_login\": null,\n                \"is_superuser\": false,\n                \"is_staff\": false,\n                \"date_joined\": \"2021-12-12T10:56:50.402086Z\",\n                \"first_name\": \"Sonis \",\n                \"last_name\": \"Publisher\",\n                \"username\": \"sonis_publisher\",\n                \"password\": \"pbkdf2_sha256$216000$BMobPZY3JWUn$d65lXvbJgUaJDa+WRkayO3Djsew48XmYBZjs5rJjToU=\",\n                \"email\": \"sonis@mail.com\",\n                \"primary_contact_number\": \"1.617.492.9099\",\n                \"db_context\": {\n                    \"Store\": [\n                        \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\"\n                    ],\n                    \"CourseProvider\": [\n                        \"acb27d34-92e9-4f72-97e5-c57450163bb4\"\n                    ]\n                },\n                \"is_active\": true,\n                \"mfa_enabled\": false,\n                \"custom_roles\": [\n                    \"71da0af1-a235-44c3-9051-be48cc25a2bf\"\n                ],\n                \"secret_key\": null,\n                \"access_token\": null,\n                \"access_token_time\": null,\n                \"groups\": [],\n                \"user_permissions\": []\n            },\n            \"notification_submission_url\": \"https://httpbin.org/post\",\n            \"course_provider\": {\n                \"id\": \"d9cc5edd-735d-49e4-90f5-0062609495f3\",\n                \"name\": \"Jenzabar University\"\n            }\n        }\n    ]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Partners",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"type\": \"course_provider\",\n    \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n    \"notification_submission_url\": \"https://abc.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/partners/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"partners",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/partners/`\n\n**Method** : `POST`\n\n**Payload** :\n\n**Form Data**\n\n```json\n{\n    \"type\": \"course_provider\",\n    \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n    \"notification_submission_url\": \"https://abc.com\"\n}\n```\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/partners/\",\n    \"date_time\": \"2022-04-18T04:17:28.845911Z\",\n    \"data\": {\n        \"id\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\",\n        \"type\": \"course_provider\",\n        \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n        \"profile\": null,\n        \"notification_submission_url\": \"https://abc.com\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Partners",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"ids\": [\"84ef8ea5-f91f-4eb1-8990-8a69880c4a40\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/delete-partners/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"delete-partners",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/delete-partners/`\n\n**Method** : `DELETE`\n\n**Payload** :\n\n**Form Data**\n\n```json\n{\n    \"ids\": [\"84ef8ea5-f91f-4eb1-8990-8a69880c4a40\"]\n}\n```\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/delete-partners/\",\n    \"date_time\": \"2022-04-18T04:52:55.078318Z\",\n    \"data\": {\n        \"message\": \"Partners deleted successfully\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Partners",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"profile\": \"420bc8c0-0f23-4988-98c8-85d4e85ec82e\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/partners/115d9078-8cbd-4a9e-8f51-c69459f8c5ae/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"partners",
+								"115d9078-8cbd-4a9e-8f51-c69459f8c5ae",
+								""
+							]
+						},
+						"description": "Create a course\n\n**URL** : `/partners/`\n\n**Method** : `POST`\n\n**Payload** :\n\n**Form Data**\n\n```json\n{\n    \"profile\": \"420bc8c0-0f23-4988-98c8-85d4e85ec82e\"\n}\n```\n\n\n**Response**\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/partners/115d9078-8cbd-4a9e-8f51-c69459f8c5ae/\",\n    \"date_time\": \"2022-04-18T04:46:07.017871Z\",\n    \"data\": {\n        \"id\": \"115d9078-8cbd-4a9e-8f51-c69459f8c5ae\",\n        \"type\": \"course_provider\",\n        \"ref_id\": \"4eef001e-06a3-4cee-8c40-b6117dc985af\",\n        \"profile\": \"420bc8c0-0f23-4988-98c8-85d4e85ec82e\",\n        \"notification_submission_url\": \"https://abc.com\"\n    }\n}\n\n```"
 					},
 					"response": []
 				}

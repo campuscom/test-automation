@@ -1,0 +1,827 @@
+{
+	"info": {
+		"_postman_id": "53ef8605-2dfb-4643-9bed-26763e537e8c",
+		"name": "For Staging - Higher Reach Publish Course API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Get Notification API by date and status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/notifications/?from_date=2022-04-19 00:00:00&to_date=2022-04-21 23:59:00",
+							"protocol": "https",
+							"host": [
+								"1k86sr9vx1",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"notifications",
+								""
+							],
+							"query": [
+								{
+									"key": "from_date",
+									"value": "2022-04-19 00:00:00"
+								},
+								{
+									"key": "status",
+									"value": "successful",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "2022-04-21 23:59:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Notification API by individual_id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/notifications/2442a42a-4721-4981-b5ee-3f0585e52c65",
+							"protocol": "https",
+							"host": [
+								"1k86sr9vx1",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"notifications",
+								"2442a42a-4721-4981-b5ee-3f0585e52c65"
+							],
+							"query": [
+								{
+									"key": "from_date",
+									"value": "2022-04-19 00:00:00",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "successful",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "2022-04-20 23:59:00",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hir Enrollment API",
+			"item": [
+				{
+					"name": "Student Enrollment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"order_id\" : \"825\",\n  \"event_type\" : \"enrollment\",\n  \"payload\" : {\n    \"enrollments\" : [\n      {\n        \"enrollment_id\" : \"816\",\n        \"status\" : \"success\",\n        \"school_student_id\" : \"9999816\"\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/erp-push",
+							"protocol": "https",
+							"host": [
+								"1k86sr9vx1",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"erp-push"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course Create Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"8085\",\n                \"code\": \"IA22\",\n                \"title\": \"Introduction to Algorithm\",\n                \"slug\": \"introduction-to-algorithm\",\n                \"description\":\"test course description Introduction to Algorithm...\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"8085\",\n            \"data\":{\n                \"external_id\": \"IA22-S1\",\n                \"code\": \"S1-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"10.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            },\n            \"related_products\":[\n                {\n                    \"type\":\"optional\",\n                    \"relation_type\": \"standalone\",\n                    \"external_id\":\"T11\"\n                }\n            ]\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"IA22-S1\",\n            \"data\":{\n                \"external_id\": \"Ins-101\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"IA22-S1\",\n            \"data\":{\n                \"external_id\": \"Sch-101\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Evening\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"South Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"Mujib100\"\n\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n   \"action\":\"record\",\n   \"records\":[\n      {\n         \"type\":\"course\",\n         \"parent\":\"\",\n         \"data\":{\n            \"external_id\":\"CRS-1001\",\n            \"code\":\"TCA1\",\n            \"title\":\"Test Course A1\",\n            \"slug\":\"test-course-a1\",\n            \"description\":\"<html><body><p>Introduction to Computer </p></body></html>\"\n         }\n      }\n   ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"61f27a89049a221471edd996\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "HIR logged in user checkout in Staging",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"store_slug\": \"hir\",\n    \"students\": [\n      {\n        \"first_name\": \"Abul\",\n        \"last_name\": \"Hasan Babu\",\n        \"primary_email\": \"babuhasan@gmail.com\",\n        \"student_id\": \"1234\",\n        \"products\": [\n          {\n            \"product_type\": \"section\",\n            \"id\": \"5080__Thc22-S1\"\n          }\n        ]\n      }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/checkout-info",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"checkout-info"
+					]
+				},
+				"description": "**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n   \"action\":\"record\",\n   \"records\":[\n      {\n         \"type\":\"course\",\n         \"parent\":\"\",\n         \"data\":{\n            \"external_id\":\"CRS-1001\",\n            \"code\":\"TCA1\",\n            \"title\":\"Test Course A1\",\n            \"slug\":\"test-course-a1\",\n            \"description\":\"<html><body><p>Introduction to Computer </p></body></html>\"\n         }\n      }\n   ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"61f27a89049a221471edd996\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Publish API for HIR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\":\"record\",\n    \"records\":[\n        {\n            \"type\":\"product\",\n            \"data\":{\n                \"store_slug\":\"hir\",\n                \"external_id\":\"T11\",\n                \"product_type\":\"optional\",\n                \"title\":\"Introduction to Agile\",\n                \"tax_code\":\"N/A\",\n                \"fee\":20,\n                \"minimum_fee\":15,\n                \"currency_code\": \"usd\"\n            }\n        }\n    ]\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "HIR logged in user checkout in Staging purchaser info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"5080\",\n                \"code\": \"Thc22\",\n                \"title\": \"Theory of Computing\",\n                \"slug\": \"theory-of-computing\",\n                \"description\":\"test course description theory of computing...\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"5080\",\n            \"data\":{\n                \"external_id\": \"Thc22-S1\",\n                \"code\": \"S1-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"10.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"Thc22-S1\",\n            \"data\":{\n                \"external_id\": \"Ins-101\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"Thc22-S1\",\n            \"data\":{\n                \"external_id\": \"Sch-101\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Evening\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"South Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"Mujib100\"\n\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/registration/purchaser/?tid=2b7841127464307591a3fd42ed1960c9",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"registration",
+						"purchaser",
+						""
+					],
+					"query": [
+						{
+							"key": "tid",
+							"value": "2b7841127464307591a3fd42ed1960c9"
+						}
+					]
+				},
+				"description": "**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n   \"action\":\"record\",\n   \"records\":[\n      {\n         \"type\":\"course\",\n         \"parent\":\"\",\n         \"data\":{\n            \"external_id\":\"CRS-1001\",\n            \"code\":\"TCA1\",\n            \"title\":\"Test Course A1\",\n            \"slug\":\"test-course-a1\",\n            \"description\":\"<html><body><p>Introduction to Computer </p></body></html>\"\n         }\n      }\n   ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"61f27a89049a221471edd996\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Course Create Publish API Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"action\": \"record\",\n  \"records\": [\n    {\n      \"type\": \"schedule\",\n      \"parent\": \"S2\",\n      \"data\": {\n        \"name\": \"SS(1)\",\n        \"description\": \"Lecture for Section\",\n        \"external_id\": \"16464\",\n        \"external_version_id\": \"16464\",\n        \"section_type\": \"Lecture\",\n        \"start_at\": \"2024-02-29T10:00:00\",\n        \"end_at\": \"2025-04-30T11:00:00\",\n        \"building_name\": \"test\",\n        \"building_code\": \"test\",\n        \"room_name\": \"t11\"\n      }\n    }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n   \"action\":\"record\",\n   \"records\":[\n      {\n         \"type\":\"course\",\n         \"parent\":\"\",\n         \"data\":{\n            \"external_id\":\"CRS-1001\",\n            \"code\":\"TCA1\",\n            \"title\":\"Test Course A1\",\n            \"slug\":\"test-course-a1\",\n            \"description\":\"<html><body><p>Introduction to Computer </p></body></html>\"\n         }\n      }\n   ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"61f27a89049a221471edd996\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Job Status  Course Create Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/job-status/625fe08fb5cd515677038b10",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"job-status",
+						"625fe08fb5cd515677038b10"
+					]
+				},
+				"description": "**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n   \"action\":\"record\",\n   \"records\":[\n      {\n         \"type\":\"course\",\n         \"parent\":\"\",\n         \"data\":{\n            \"external_id\":\"CRS-1001\",\n            \"code\":\"TCA1\",\n            \"title\":\"Test Course A1\",\n            \"slug\":\"test-course-a1\",\n            \"description\":\"<html><body><p>Introduction to Computer </p></body></html>\"\n         }\n      }\n   ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"61f27a89049a221471edd996\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Section Create Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"action\": \"record\",\n  \"records\": [\n    {\n      \"type\": \"section\",\n      \"parent\": \"CRS-1001\",\n      \"data\": {\n        \"external_id\": \"CRS-1001-SEC1\",\n        \"code\": \"SEC1\",\n        \"start_date\": \"2022-01-24T00:00:00\",\n        \"end_date\": \"2022-01-25T00:00:00\",\n        \"fee\": \"120.00\",\n        \"num_seats\": 25,\n        \"available_seats\": 25,\n        \"execution_mode\": \"self-paced\",\n        \"registration_deadline\": \"2022-12-24T00:00:00\",\n        \"is_active\": true,\n        \"credit_hours\": 10\n      }\n    },\n    {\n      \"type\": \"section\",\n      \"parent\": \"CRS-1001\",\n      \"data\": {\n        \"external_id\": \"CRS-1001-SEC2\",\n        \"code\": \"SEC2\",\n        \"start_date\": \"2022-01-24T00:00:00\",\n        \"end_date\": \"2022-01-25T00:00:00\",\n        \"fee\": \"300.00\",\n        \"num_seats\": 30,\n        \"available_seats\": 25,\n        \"execution_mode\": \"self-paced\",\n        \"registration_deadline\": \"2022-12-32T00:00:00\",\n        \"is_active\": true,\n        \"credit_hours\": 10\n      }\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n  \"action\": \"record\",\n  \"records\": [\n    {\n      \"type\": \"section\",\n      \"parent\": \"CRS-1001\",\n      \"data\": {\n        \"external_id\": \"CRS-1001-SEC1\",\n        \"code\": \"SEC1\",\n        \"start_date\": \"2022-01-24T00:00:00\",\n        \"end_date\": \"2022-01-25T00:00:00\",\n        \"fee\": \"120.00\",\n        \"num_seats\": 25,\n        \"available_seats\": 25,\n        \"execution_mode\": \"self-paced\",\n        \"registration_deadline\": \"2022-12-24T00:00:00\",\n        \"is_active\": true,\n        \"credit_hours\": 10\n      }\n    },\n    {\n      \"type\": \"section\",\n      \"parent\": \"CRS-1001\",\n      \"data\": {\n        \"external_id\": \"CRS-1001-SEC2\",\n        \"code\": \"SEC2\",\n        \"start_date\": \"2022-01-24T00:00:00\",\n        \"end_date\": \"2022-01-25T00:00:00\",\n        \"fee\": \"300.00\",\n        \"num_seats\": 30,\n        \"available_seats\": 25,\n        \"execution_mode\": \"self-paced\",\n        \"registration_deadline\": \"2022-12-24T00:00:00\",\n        \"is_active\": true,\n        \"credit_hours\": 10\n      }\n    }\n  ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"61f27ace29ff24d1360831ff\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Instructor Create Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record\",\n   \"records\":[\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"S1\",\n            \"data\":{\n                \"external_id\":\"Instructor-1\",\n                \"name\":\"David Robert Joseph Beckham\",\n                \"profile_urls\":{\n                \"url\":\"https://linkedin.com/david-math\"\n                }\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n   \"action\":\"record\",\n   \"records\":[\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"CRS-1001-SEC1\",\n            \"data\":{\n                \"external_id\":\"11223355-02-Ins-2\",\n                \"name\":\"David Robert Joseph Beckham\",\n                \"profile_urls\":{\n                \"url\":\"https://linkedin.com/david-math\"\n                }\n            }\n        }\n    ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"61f27b6da091e33d1e176091\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Schedule Create Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Wury2RFr.zEAz59p2gyOPbBV7d3ca2tJtn0oj5UfE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"action\": \"record\",\n  \"records\": [\n    {\n      \"type\": \"schedule\",\n      \"parent\": \"CRS-1001-SEC1\",\n      \"data\": {\n        \"external_id\": \"CRS-1001-SEC1-SCH1\",\n        \"external_version_id\": \"ex-ver-Sch1\",\n        \"section_type\": \"online\",\n        \"name\": \"Morning\",\n        \"description\": \"Schedule Description\",\n        \"start_at\": \"2022-02-24T00:00:00\",\n        \"end_at\": \"2022-02-25T00:00:00\",\n        \"building_name\": \"North Building\",\n        \"building_code\": \"SB0930\",\n        \"room_name\": \"SB0100\"\n      }\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n  \"action\": \"record\",\n  \"records\": [\n    {\n      \"type\": \"schedule\",\n      \"parent\": \"CRS-1001-SEC1\",\n      \"data\": {\n        \"external_id\": \"CRS-1001-SEC1-SCH1\",\n        \"external_version_id\": \"ex-ver-Sch1\",\n        \"section_type\": \"online\",\n        \"name\": \"Morning\",\n        \"description\": \"Schedule Description\",\n        \"start_at\": \"2022-02-24T00:00:00\",\n        \"end_at\": \"2022-02-25T00:00:00\",\n        \"building_name\": \"North Building\",\n        \"building_code\": \"SB0930\",\n        \"room_name\": \"SB0100\"\n      }\n    }\n  ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"61f27b0f29ff24d136083201\"\n}\n\n```"
+			},
+			"response": []
+		}
+	]
+}
