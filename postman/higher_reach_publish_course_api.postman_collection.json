@@ -1,0 +1,890 @@
+{
+	"info": {
+		"_postman_id": "366835b6-52ce-41b0-956b-dfdd78e86d21",
+		"name": "Higher Reach Publish Course API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Get Notification API by individual_id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/notifications/9ea9de2f-beff-4cfd-87d7-0ff4b0df90c8",
+							"protocol": "https",
+							"host": [
+								"j3fz4814s2",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"notifications",
+								"9ea9de2f-beff-4cfd-87d7-0ff4b0df90c8"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "successful",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Notification API by date and status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/notifications/?from_date=2022-04-20 00:00:00&to_date=2022-04-20 23:59:00",
+							"protocol": "https",
+							"host": [
+								"j3fz4814s2",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"notifications",
+								""
+							],
+							"query": [
+								{
+									"key": "from_date",
+									"value": "2022-04-20 00:00:00"
+								},
+								{
+									"key": "status",
+									"value": "successful",
+									"disabled": true
+								},
+								{
+									"key": "to_date",
+									"value": "2022-04-20 23:59:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hir Enrollment API",
+			"item": [
+				{
+					"name": "Student Enrollment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"order_id\" : \"825\",\n  \"event_type\" : \"enrollment\",\n  \"payload\" : {\n    \"enrollments\" : [\n      {\n        \"enrollment_id\" : \"816\",\n        \"status\" : \"success\",\n        \"school_student_id\" : \"9999816\"\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/erp-push",
+							"protocol": "https",
+							"host": [
+								"j3fz4814s2",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"erp-push"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"8085\",\n                \"code\": \"IA22\",\n                \"title\": \"Introduction to Algorithm\",\n                \"slug\": \"introduction-to-algorithm\",\n                \"description\":\"test course description Introduction to Algorithm...\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"8085\",\n            \"data\":{\n                \"external_id\": \"IA22-S1\",\n                \"code\": \"S1-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"10.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"IA22-S1\",\n            \"data\":{\n                \"external_id\": \"Ins-101\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"IA22-S1\",\n            \"data\":{\n                \"external_id\": \"Sch-101\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Evening\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"South Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"Mujib100\"\n\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Publish API for HIR",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\":\"record\",\n    \"records\":[\n        {\n            \"type\":\"product\",\n            \"data\":{\n                \"store_slug\":\"hir\",\n                \"external_id\":\"T11\",\n                \"product_type\":\"optional\",\n                \"title\":\"Introduction to Agile\",\n                \"tax_code\":\"N/A\",\n                \"fee\":100,\n                \"minimum_fee\":80,\n                \"currency_code\": \"usd\"\n            }\n        }\n    ]\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Publish API for HIR Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\":\"record\",\n    \"records\":[\n        {\n            \"type\":\"product\",\n            \"data\":{\n                \"store_slug\":\"hir\",\n                \"external_id\":\"T11\",\n                \"product_type\":\"optional\",\n                \"title\":\"Introduction to Algorithms\",\n                \"content\": {\n                    \"dict\": \"dictionary field\"\n                },\n                \"image\": null,\n                \"limit_applicable\": true,\n                \"total_quantity\": 100,\n                \"quantity_sold\": 10,\n                \"available_quantity\": 90,\n                \"tax_code\":\"NA\",\n                \"fee\":100,\n                \"minimum_fee\":80,\n                \"currency_code\": \"usd\"\n            }\n        }\n    ]\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "HIR logged in user checkout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"store_slug\":\"hir\",\n    \"success_url\": \"https://www.hir.edu/checkout/success\",\n    \"failure_url\": \"https://www.hir.edu/checkout/failure\",\n    \"students\":[\n        {\n            \"first_name\":\"Abudus\",\n            \"last_name\":\"Salam\",\n            \"primary_email\":\"Salam@gmail.com\",\n            \"student_id\":\"9999###\",\n            \"products\":[\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S4\"\n                },\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S3\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/checkout-info",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"checkout-info"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/checkout-info`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"store_slug\":\"hir\",\n    \"success_url\": \"https://www.hir.edu/checkout/success\",\n    \"failure_url\": \"https://www.hir.edu/checkout/failure\",\n    \"students\":[\n        {\n            \"first_name\":\"Abul\",\n            \"last_name\":\"Hasan\",\n            \"primary_email\":\"hasan@gmail.com\",\n            \"student_id\":\"1234\",\n            \"products\":[\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S4\"\n                },\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S3\"\n                }\n            ]\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"tid\": \"ea093e71ac1df38c2cc18e88661af65c\",\n    \"message\": \"Checkout Information Received\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Create profile for Higher Reach logged in user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\":\"record\",\n    \"type\":\"student\",\n    \"data\":{\n        \"first_name\":\"\",\n        \"last_name\":\"Abul Khair\",\n        \"primary_email\":\"jul@mail.com\",\n        \"date_of_birth\":\"1995-07-25\",\n        \"primary_contact_number\":\"\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/student",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"student"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\":\"record\",\n    \"type\":\"student\",\n    \"data\":{\n        \"first_name\":\"Karim\",\n        \"last_name\":\"Abul Khair\",\n        \"primary_email\":\"abul.khair@mail.com\",\n        \"date_of_birth\":\"1995-07-25\",\n        \"primary_contact_number\":\"01711076585\"\n    }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"type\": \"student\",\n    \"data\": {\n        \"id\": \"eaa3e5f4-6c9d-4ffd-b4a7-ff091c02c846\",\n        \"first_name\": \"Karim\",\n        \"last_name\": \"Abul Khair\",\n        \"date_of_birth\": \"1995-07-25\",\n        \"primary_email\": \"abul.khair@mail.com\",\n        \"primary_contact_number\": \"01711076585\"\n    },\n    \"status\": \"created\",\n    \"message\": \"new profile created successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "HIR logged in user get purchaser info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.account.dev.campus4i.com/registration/purchaser/?tid=1715f043aac3e9239839e70c4b0c562b",
+					"protocol": "https",
+					"host": [
+						"api",
+						"account",
+						"dev",
+						"campus4i",
+						"com"
+					],
+					"path": [
+						"registration",
+						"purchaser",
+						""
+					],
+					"query": [
+						{
+							"key": "tid",
+							"value": "1715f043aac3e9239839e70c4b0c562b"
+						},
+						{
+							"key": "pid",
+							"value": "8e0dfcdf-9344-4115-a994-9388ea98c51f",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Course Publish API Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"A12\",\n                \"code\": \"TestCourse-A12\",\n                \"title\": \"Test Course A12\",\n                \"slug\": \"Test Course A12\",\n                \"description\":\"test course description...\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"A12\",\n            \"data\":{\n                \"external_id\": \"A12-S1\",\n                \"code\": \"S1-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"10.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"A12\",\n            \"data\":{\n                \"external_id\": \"A12-S2\",\n                \"code\": \"S2-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"0.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"A12-S1\",\n            \"data\":{\n                \"external_id\": \"Ins-101\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"A12-S1\",\n            \"data\":{\n                \"external_id\": \"Sch-101\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Evening\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"S1 Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"Mujib100\"\n\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"A12-S2\",\n            \"data\":{\n                \"external_id\": \"Ins-102\",\n                \"name\": \"David Zabed\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"A12-S2\",\n            \"data\":{\n                \"external_id\": \"Sch-102\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Morning\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"South Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"Mujib420\"\n\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"A12-S2\",\n            \"data\":{\n                \"external_id\": \"Ins-103\",\n                \"name\": \"Captain Mojo\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"},\n                \"image\": {\"url\":\"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\"}\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"parent\":\"A12-S2\",\n            \"data\":{\n                \"external_id\": \"Sch-103\",\n                \"external_version_id\": \"ex-ver-sc104\",\n                \"section_type\": \"online\",\n                \"name\": \"Morning\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2021-12-24T00:00:00\",\n                \"end_at\":\"2021-12-25T00:00:00\",\n                \"building_name\":\"South Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"ZiyaulHaque\"\n\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Course Publish API 15/03/22",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record\",\n    \"records\": [\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Testing 2\",\n                \"title\": \"Testing 2\",\n                \"slug\": \"Testing-2\",\n                \"description\": \"Testing 2\\t\",\n                \"external_id\": 6706\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"DiscSection\",\n                \"title\": \"Discounted Sections\",\n                \"slug\": \"Discounted-Sections\",\n                \"description\": \"Description\",\n                \"external_id\": 6827\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Pre-requisite\",\n                \"title\": \"Pre-requisite Test\",\n                \"slug\": \"Pre-requisite-Test\",\n                \"description\": \"Description\",\n                \"external_id\": 6831\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"duplicate test\",\n                \"title\": \"duplicate test\",\n                \"slug\": \"duplicate-test\",\n                \"description\": \"duplicate test\",\n                \"external_id\": 6844\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"ACC- 411\",\n                \"title\": \"Advanced -Accounting\",\n                \"slug\": \"Advanced--Accounting\",\n                \"description\": \"The primary focus of the course is on business combinations and preparing consolidated financial statements. Additionally, there is coverage of the accounting principles and practices applied to foreign operations and partnerships.For Accounting majors who need to take a 500-level accounting course, this course satisfies that requirement.\",\n                \"external_id\": 5784\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"People Analytics\",\n                \"title\": \"People Analytics 'Delivering Measurable Business Impact\",\n                \"slug\": \"People-Analytics-'Delivering-Measurable-Business-Impact\",\n                \"description\": \"People Analytics–Delivering Measurable Business Impact\",\n                \"external_id\": 6853\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"COMP-102\",\n                \"title\": \"Advanced Java\",\n                \"slug\": \"Advanced-Java\",\n                \"description\": \"Learn object oriented java programming.\",\n                \"external_id\": 5577\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Merge &* Merge'\",\n                \"title\": \"Merge &* Merge'\",\n                \"slug\": \"Merge-&*-Merge'\",\n                \"description\": \"Merge\",\n                \"external_id\": 6834\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CMX 903\",\n                \"title\": \"Plan Reading\",\n                \"slug\": \"Plan-Reading\",\n                \"description\": \"This course provides a survey of the fundamentals of Construction Math and plan reading.  This class should be taken before CMX 902.\\t\",\n                \"external_id\": 3142\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CMX 902\",\n                \"title\": \"Estimation\",\n                \"slug\": \"Estimation\",\n                \"description\": \"This course provides cost estimating with emphasis on quantity survey and pricing.  Plan Reading should be taken before this class.  Bring plans from CMX 903, Plan Reading, to class.\",\n                \"external_id\": 3144\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CMX 904\",\n                \"title\": \"Construction Accounting\",\n                \"slug\": \"Construction-Accounting\",\n                \"description\": \"This course reviews accounting theory, offering an understanding of the terminology of accounting.  Payroll accounting will focus on workers compensation insurance, cost allocation and control.. Other subjects include types of businesses and organizations, lien law, construction cost control, paogress payments and subcontractor invoices,  back charges, cash flow and cost of sales.\",\n                \"external_id\": 3146\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CMX 905\",\n                \"title\": \"Financing Real Estate Acquisitions\",\n                \"slug\": \"Financing-Real-Estate-Acquisitions\",\n                \"description\": \"This course will focus on the nature of development projects, sources of funds, mortages, permanent and construction loan processing and administration for both portfolio and for the sale projects.\",\n                \"external_id\": 3148\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CMX 920\",\n                \"title\": \"Field Project Management\",\n                \"slug\": \"Field-Project-Management\",\n                \"description\": \"Become a successful project manager by learning the basic principles and responsibilities of construction project management and how they relate to the total construction process.  Learn how to identify and manage the vital components of project planning, budgeting, and scheduling, resource allocation, legal requirements and ethical considerations,construction safety, and project supervision.  This should be one of the last classes taken in the certificate.\",\n                \"external_id\": 3150\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CMX 921\",\n                \"title\": \"Real Estate Law (Law for Construction)\",\n                \"slug\": \"Real-Estate-Law-(Law-for-Construction)\",\n                \"description\": \"This course provides an overview of the legal system: contractor's license law, contract laws, real estate law, labor law, OSHA, employment law, litigation and arbitration, contractor's liability in tort-negligence, mechanic's liens, plus basic contract principles and responsibilities.\",\n                \"external_id\": 3152\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CMX 925\",\n                \"title\": \"Bidding and Scheduling\",\n                \"slug\": \"Bidding-and-Scheduling\",\n                \"description\": \"This course covers the different bidding strategies used in the construction industry; methods of selling or buying out the construction project, whether from the owners' or contractors' perspective.  Learn to read, analyze and create your own bar chart and critical path method schedules.  Learn to monitor and control time, money and other resources with the schedule.  Learn how to use the schedule to measure the effect of changes and delays on the project.  This should be one of the last classes taken in the certificate.\",\n                \"external_id\": 3154\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CMX 926\",\n                \"title\": \"Construction Safety\",\n                \"slug\": \"Construction-Safety\",\n                \"description\": \"This course provides an overview of safety procedures, regulations and their application as they apply to the construction industry.  Also included will be a series of lectures supported by printed material given by an industry working safety specialist.  Areas such as fall protection working in confined spaces,k excavation safety procedures, CAL/ OSHA regulations and procedures, Federal OSGA are covered.\",\n                \"external_id\": 3156\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CSP0015\",\n                \"title\": \"Manicurist and Pedicurist\",\n                \"slug\": \"Manicurist-and-Pedicurist\",\n                \"description\": \"Manicurist and Pedicurist\",\n                \"external_id\": 3188\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"COS005\",\n                \"title\": \"Hairdresser and Cosmetologist 1 of 2\",\n                \"slug\": \"Hairdresser-and-Cosmetologist-1-of-2\",\n                \"description\": \"Hairdresser and Cosmetologist 1 of 2\",\n                \"external_id\": 3192\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"COS006\",\n                \"title\": \"Hairdresser and Cosmetologist 2 of 2\",\n                \"slug\": \"Hairdresser-and-Cosmetologist-2-of-2\",\n                \"description\": \"Hairdresser and Cosmetologist 2 of 2\",\n                \"external_id\": 3194\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"BAO 010\",\n                \"title\": \"Business Analysis Complete (v.2)\",\n                \"slug\": \"Business-Analysis-Complete-(v.2)\",\n                \"description\": \"This nine-module Business Analysis program builds successful Business Analysts at all levels of the organization. This course is aligned with IIBA's Guide to the Business Analysis Body of Knowledge (BABOK™). It has been designed to introduce you to the role and skills of Business Analysis\",\n                \"external_id\": 5266\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CORE 01\",\n                \"title\": \"Core Animation: Basic Foundations\",\n                \"slug\": \"Core-Animation:-Basic-Foundations\",\n                \"description\": \"In this class, beginning students will discover the fundamental principles of animation while the more advanced students will find a deeper understanding of the foundation upon which our art form is built. More importantly, students will learn how to exploit these fundamental principles to create convincing character motion. Students also will be pushed to not only recognize the more common animation mistakes involving timing, weight issues, and body mechanics, but will learn how to avoid and conquer them. Animation students must plant deep roots in the basics if they hope to grow into the artists they aspire to become, and this class will guide them through that process.\",\n                \"external_id\": 5287\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CORE 02\",\n                \"title\": \"Core Animation: Psychology of Body Mechanics\",\n                \"slug\": \"Core-Animation:-Psychology-of-Body-Mechanics\",\n                \"description\": \"Body mechanics is the place where most animators “go wrong.” If an animation does not have convincing mechanics, it does not look right even to the average untrained eye. For this reason, we spend two quarters on this important concept as once body mechanics is mastered, students have the confidence they need to tackle almost any situation their character gets into.\",\n                \"external_id\": 5288\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CORE 03\",\n                \"title\": \"Core Animation: Advance Body Techniques\",\n                \"slug\": \"Core-Animation:-Advance-Body-Techniques\",\n                \"description\": \"Students will learn how to best apply the principles learned in Class 1 and 2 to the type of character most commonly found in animation work: the bipedal/human character. Students will dive deeper into the advanced concepts of motion and body mechanics and learn how to combine the many principles into a single, powerful tool set that they can use to create more believable motion in their characters.\",\n                \"external_id\": 5289\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CORE 04\",\n                \"title\": \"Core Animation: Introduction to Acting\",\n                \"slug\": \"Core-Animation:-Introduction-to-Acting\",\n                \"description\": \"This is the beginning of what students are waiting for. All of the principles they have studied will be fully implemented in this class. Students will begin exploring the ideas and concepts that will add life and originality to their character animation. Adding emotion, non-cliché acting choices, and carefully timed and planned gestures to their shots will lift students’ work to a new level.\",\n                \"external_id\": 5290\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CORE 05\",\n                \"title\": \"Core Animation: Advanced Acting\",\n                \"slug\": \"Core-Animation:-Advanced-Acting\",\n                \"description\": \"As with any other animation idea, acting has many levels of understanding and many layers of meaning to an animator’s work. Here students will jump feetfirst into advanced acting techniques, exploring the similarities and differences between acting for animators and real-world acting, as well as examining the common mistakes and the inherent challenges of translating a meaningful and powerful performance into the animated world.\",\n                \"external_id\": 5291\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CORE 06\",\n                \"title\": \"Core Animation:  Polishing and Portfolio\",\n                \"slug\": \"Core-Animation:--Polishing-and-Portfolio\",\n                \"description\": \"This class focuses on two very important aspects of animation:\\n1. Polishing\\n2. Creating an amazing demo reel that students will be able to use in\\ntheir job search.\",\n                \"external_id\": 5292\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"BEI IEP Morning \",\n                \"title\": \"Intensive English Morning Program\",\n                \"slug\": \"Intensive-English-Morning-Program\",\n                \"description\": \"Intensive English Program Mornings\\n\\nOur Intensive English Programs focus on essential building blocks for language acquisition, Grammar, Reading, Writing, Listening, Vocabulary/ Idioms, conversation, and Cultural Awareness.\\t\",\n                \"external_id\": 5338\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"BEI IEP Evening\",\n                \"title\": \"BEI IEP Evening Program\",\n                \"slug\": \"BEI-IEP-Evening-Program\",\n                \"description\": \"Intensive English Program - Evenings \\nOur Intensive English Programs focus on essential building blocks for language acquisition, Grammar, Reading, Writing, Listening, Vocabulary/ Idioms, conversation, and Cultural Awareness.\",\n                \"external_id\": 5339\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"BusEng LLA\",\n                \"title\": \"Business English  Lower Advanced A\",\n                \"slug\": \"Business-English--Lower-Advanced-A\",\n                \"description\": \"Classes in Business English aim to improve the use of English in professional settings. They focus on grammar usage and the skills required to function in business.\\n\\nThis course is intended for those already working in a business context or planning to do so. It will be interesting to students who want to practice a variety of business communications skills and are keen to explore topics relevant to students of business. We have groups for anyone from intermediate to advanced level.\",\n                \"external_id\": 5377\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"BusEng  INA\",\n                \"title\": \"Business English Intermediate Level A\",\n                \"slug\": \"Business-English-Intermediate-Level-A\",\n                \"description\": \"Classes in Business English aim to improve the use of English in professional settings. They focus on grammar usage and the skills required to function in business.\\n\\nThis course is intended for those already working in a business context or planning to do so. It will be interesting to students who want to practice a variety of business communications skills and are keen to explore topics relevant to students of business. We have groups for anyone from intermediate to advanced level.\",\n                \"external_id\": 5378\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CNA 2012\",\n                \"title\": \"Certified Nursing Assistant Program\",\n                \"slug\": \"Certified-Nursing-Assistant-Program\",\n                \"description\": \"The need for dependable bedside nursing care is as prevalent as ever, ranging from \\nhospitals to home health agencies to long-term care facilities. The Certified Nursing \\nAssistant or CNA plays an important role, providing basic care while ensuring the \\nsafety and comfort of patients.  M-TEC’s training program prepares the student for \\nimmediate employment as a nursing assistant.\\nThe Certified Nursing Assistant Program is designed to provide people an \\nopportunity to develop the knowledge, skills, processes and understanding of \\nbecoming a Nursing Assistant. After successfully completing this course, the \\ngraduate will qualify to take the state  competency evaluation test for nursing \\nassistants.\",\n                \"external_id\": 5382\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Book 1234\",\n                \"title\": \"Books for Small Business\",\n                \"slug\": \"Books-for-Small-Business\",\n                \"description\": \"Bookkeeping for Small Business\",\n                \"external_id\": 5477\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"GRADETEST\",\n                \"title\": \"GRADETEST\",\n                \"slug\": \"GRADETEST\",\n                \"description\": \"Grades in the realm of education are standardized measurements of varying levels of comprehension within a subject area.\\nGrades can be assigned in letters (for example, A, B, C, D, or E, or F), as a range (for example 4.0–1.0), as a number out of a possible total (for example out of 20 or 100), as descriptors (excellent, great, satisfactory, needs improvement), in percentages, or, as is common in some post-secondary institutions in some countries, as a Grade Point Average (GPA). GPA is calculated by taking the number of grade points a student earned in a given period of time divided by the total number of credits taken\\t\\t\",\n                \"external_id\": 5496\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"COMP-101\",\n                \"title\": \"Java Programming I\",\n                \"slug\": \"Java-Programming-I\",\n                \"description\": \"Learn the fundementals of java.\",\n                \"external_id\": 5576\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"MATH-101\",\n                \"title\": \"Algebra I\",\n                \"slug\": \"Algebra-I\",\n                \"description\": \"Learn the fundementals of Algebra.\",\n                \"external_id\": 5599\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Bread Baking\",\n                \"title\": \"Introduction to Bread Baking\",\n                \"slug\": \"Introduction-to-Bread-Baking\",\n                \"description\": \"A true labor of love, bread making is often left up to the pros. Join us to demystify this art so that, the next time you have a hankering for a crusty loaf, you can rise to the occasion and make your own! Learn bread-making basics including the use of leaveners, why different types of flour are used for different loaves, the role each ingredient plays in the recipe, the art of kneading, and how to successfully rise and proof dough. Techniques will be illustrated using basic recipes for: French Baguette, Brioche, and Focaccia.\",\n                \"external_id\": 5658\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"BHS 500\",\n                \"title\": \"Assessing Levels of Care and the Use of Family Therapy in the Treatment of Eating Disorders\",\n                \"slug\": \"Assessing-Levels-of-Care-and-the-Use-of-Family-Therapy-in-the-Treatment-of-Eating-Disorders\",\n                \"description\": \"When a patient with an eating disorder presents in an outpatient setting, the clinician needs to know how to assess the appropriate level of care needed by the patient. Get an overview of the levels of care available, and clarify admission and discharge criteria at each level. Examine selected modalities of psychotherapy successful in the treatment of eating disorders—including the Maudsley method and the family systems approach—with an emphasis on the role of family therapy. \\t\\n\\nCourses are offered three terms per year: spring, summer, fall. Information about upcoming courses is available when enrollment opens each term.\\n\\nSpring term: Enrollment opens in early December. Classes begin in January.\\n\\nSummer term: Enrollment opens in early April. Classes begin in late May.\\n\\nFall term: Enrollment opens in early July. Classes begin in August.\\n\\n\\n\\n\",\n                \"external_id\": 5885\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Boat Safety\",\n                \"title\": \"Boating Safety - US Coast Guard \",\n                \"slug\": \"Boating-Safety---US-Coast-Guard-\",\n                \"description\": \"Get certified by the US Coast Guard.  Boating safety Offering\",\n                \"external_id\": 6045\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"COM 300\",\n                \"title\": \"Introduction to Film Studies\",\n                \"slug\": \"Introduction-to-Film-Studies\",\n                \"description\": \"The course is an introduction to the study of film as an art form and industrial practice. Students\\nare introduced to the basic terms and concepts of film theory, including theories of film editing\\nand mise-en-scene while becoming familiar with the basic “canon” of major films and directors\\nthat form the foundations for the academic field of film studies. This course is also available for\\ncredit. (For credit information, please refer to the credit listing for PACE-Communication\\nStudies 330; class number 13709).\",\n                \"external_id\": 6166\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"COM 394\",\n                \"title\": \"The World of “Film Noir”\",\n                \"slug\": \"The-World-of-“Film-Noir”\",\n                \"description\": \"The course offers an historical survey of the development of “film noir” as a major film genre.\\nThe course examines the major characteristics that define “film noir” and offers an introduction\\nto the historical roots of this genre in German Expressionism, as well as the social and political\\ncontext for the development of “film noir” as a Hollywood studio genre in the late 1940s.\\nParticular attention is given to the social/political conditions of the 1950s that contributed to both\\nthe rise and decline in popularity of “film noir” during the Cold War, as well as the film genre’s\\nrevival in the “neo-noirs” of the 1970s. This class can be taken for either credit or for noncredit.\\n(For credit information, please refer to the credit listing for Communication Studies 394; class\\nnumber 17314). For more information on any aspect of this course, please call Professor Tom\\nPoe at 816-235-1691.\",\n                \"external_id\": 6167\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"COM 400\",\n                \"title\": \"Opera Goes to the Movies\",\n                \"slug\": \"Opera-Goes-to-the-Movies\",\n                \"description\": \"Each course in this series presents a unique opportunity for film fans and opera buffs to explore\\nthe close relationship of two art forms that bring together music, visual spectacle and the\\ndramatic arts. The Lyric Opera’s production of “The Flying Dutchman” serves as the theme for\\nthis semester’s class. The Saturday session of the course is held at the Tivoli Theater, Manor\\nSquare in Westport and the Sunday session at the Lyric Opera in the Kauffman Center for the\\nPerforming Arts, 1601 Broadway, Kansas City, Mo. 64108. Lunch at the Lyric and a\\ncomplimentary Sunday matinee ticket to the Lyric’s production is included!\",\n                \"external_id\": 6168\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"C131PT2101\",\n                \"title\": \"ANIMAL MASSAGE & CARE PROVIDER (AMCP) CERTIFICATION\",\n                \"slug\": \"ANIMAL-MASSAGE-&-CARE-PROVIDER-(AMCP)-CERTIFICATION\",\n                \"description\": \"Add a new dimension to your animal care practice with IP Touch Animal\\nMassage for small, large, exotic, and aviary animals. Course topics include\\nbehavioral observation, anatomy and physiology for a variety of animals,\\ntouch techniques, and treatment documentation. Gain understanding\\nthrough in-class demonstrations, research projects, off-site observations,\\nfield trips, and an open book final exam and portfolio review. To earn your\\ncertificate you must also complete Pet First Aid and CPR.\",\n                \"external_id\": 6205\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"CIPP\",\n                \"title\": \"Certificate in Positive Psychology\",\n                \"slug\": \"Certificate-in-Positive-Psychology\",\n                \"description\": \"The Certificate in Positive Psychology provides an introduction to the core concepts and fundamental\\nprinciples of Positive Psychology, including its philosophical approach and its practical applications.\\nThrough interactive online modules and webinars, personal and group coaching, as well as two\\nresidential intensives, the Certificate in Positive Psychology contributes to the wellbeing and success\\nof the participant, and provides tools with which to help others fulfill their potential.\\nThroughout the 11-month program, participants explore the research and practice that make up the\\nfoundation of Positive Psychology. They engage in the processes and practices of Positive Psychology\\nand learn how to\\n· Develop self-efficacy and grounded optimism\\n· Discover a higher purpose and set clear-cut goals in relation to that purpose\\n· Make the most of the mind-body connection to enhance physical and mental health\\n· Enhance positive emotions and navigate painful ones\\n· Cultivate healthy personal and professional relationships while learning the art and science of\\ncoaching and teaching\\n· Explore how Positive Psychology contributes to the art and science of leadership\\n· Bring lasting change to individuals and organizations.\",\n                \"external_id\": 6432\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"TST-8047\",\n                \"title\": \"TST-8047\",\n                \"slug\": \"TST-8047\",\n                \"description\": \"TST-8047\",\n                \"external_id\": 6754\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Round\",\n                \"title\": \"Round Test\",\n                \"slug\": \"Round-Test\",\n                \"description\": null,\n                \"external_id\": 6779\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"BCAE-CraftDrink\",\n                \"title\": \"Craft & Drink: Creating Decorative Holiday Flowers\",\n                \"slug\": \"Craft-&-Drink:-Creating-Decorative-Holiday-Flowers\",\n                \"description\": \"Baby it’s cold outside. Come join us for a cozy evening of mulled wine and treats (and recipes!) and learn how to craft classic holiday camellia blooms in Italian crepe paper, perfect for present toppers, christmas ornaments, or as seasonal objects for your mantle.  Learn the basics of paper manipulation and flower construction. Class includes templates and paper for multiple blooms.\",\n                \"external_id\": 6782\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"BCAE- Inter Sew \",\n                \"title\": \"Intermediate Sewing: \",\n                \"slug\": \"Intermediate-Sewing:-\",\n                \"description\": \"Already feel comfortable operating a sewing machine? Improve your sewing skills and develop better spatial thinking as you work on a box-shaped cushion with zipper closure, a square pillow with trim/twisted cord, a table runner, and basic drapes without lining. You'll also learn how to calculate yardage of fabric and trim for your projects. You don’t have to hunt for fabulous home décor when you can create it yourself!\",\n                \"external_id\": 6783\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"BCAE -Day Water \",\n                \"title\": \"Daytime Watercolor\",\n                \"slug\": \"Daytime-Watercolor\",\n                \"description\": \"Examine the fundamentals of watercolor painting, including basic approaches to color and value. We'll start by reviewing the basic elements of composition, which you can use as a foundation for your work. Then, through a series of projects, you'll develop a sensitivity to the medium and begin to understand how to use the brush, paint, and paper to achieve the best possible results. No previous painting experience is required. Expect to spend approximately $60 on materials. Please bring following supplies to the first class: Watercolor Paint in Pale Cadmium Yellow, Rose Madder, Emerald Green, Cobalt Blue and optional a medium Cadmium Red, Ultramarine Blue. Round and pointed Sable or Sablette brushes, at least one smaller(#6/4) and one bigger (#10/12) one. 140 lb Cold Press Paper. A roll of 1 inch masking tape, a water jar, a 4B pencil and a small 8.5 x 5.5 sketch book. If you already have supplies you may bring them, even if they are different from above list.\",\n                \"external_id\": 6784\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Test_SOffer01\",\n                \"title\": \"Test_SOffer01\",\n                \"slug\": \"Test_SOffer01\",\n                \"description\": \"Description\",\n                \"external_id\": 6786\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"SamiraTest_001\",\n                \"title\": \"SamiraTest_001\",\n                \"slug\": \"SamiraTest_001\",\n                \"description\": \"Description\",\n                \"external_id\": 6787\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Test_Off_Eng01\",\n                \"title\": \"Test_Off_test_01\",\n                \"slug\": \"Test_Off_test_01\",\n                \"description\": \"Description\",\n                \"external_id\": 6789\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Offering_Nobosha\",\n                \"title\": \"Offering_Nobosha_2/22\",\n                \"slug\": \"Offering_Nobosha_2/22\",\n                \"description\": \"Offering_Nobosha_2/22\",\n                \"external_id\": 6790\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Offering Engnr01\",\n                \"title\": \"Offering name\",\n                \"slug\": \"Offering-name\",\n                \"description\": \"Description\",\n                \"external_id\": 6797\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Offering Work\",\n                \"title\": \"sd\",\n                \"slug\": \"sd\",\n                \"description\": \"sdd\",\n                \"external_id\": 6798\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Offer_regression\",\n                \"title\": \"Offer_regression\",\n                \"slug\": \"Offer_regression\",\n                \"description\": \"Offer_regression test\",\n                \"external_id\": 6825\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"offering test\",\n                \"title\": \"offering test\",\n                \"slug\": \"offering-test\",\n                \"description\": \"offering test\",\n                \"external_id\": 6848\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"TT-01\",\n                \"title\": \"test\",\n                \"slug\": \"test\",\n                \"description\": \"test\",\n                \"external_id\": 6851\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"TST-LOAD\",\n                \"title\": \"TST-LOAD\",\n                \"slug\": \"TST-LOAD\",\n                \"description\": \"TST-LOAD\",\n                \"external_id\": 6760\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"MS2\",\n                \"title\": \"Membership Sprint 2\",\n                \"slug\": \"Membership-Sprint-2\",\n                \"description\": \"Membership Sprint 2\",\n                \"external_id\": 6766\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\": [\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Testing 2\",\n                \"title\": \"Testing 22\\t$'ssk' $\",\n                \"slug\": \"Testing-2\",\n                \"description\": \"Testing 2\\t\",\n                \"external_id\": 606161\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"DiscSection\",\n                \"title\": \"Discounted Sections\",\n                \"slug\": \"Discounted-Sections\",\n                \"description\": null,\n                \"external_id\": 6827\n            }\n        },\n        {\n            \"type\": \"course\",\n            \"parent\": \"\",\n            \"data\": {\n                \"code\": \"Pre-requisite\",\n                \"title\": \"Pre-requisite Test\",\n                \"slug\": \"Pre-requisite-Test\",\n                \"description\": null,\n                \"external_id\": 6831\n            }\n        }\n        \n    ]\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"successfully created a job\",\n    \"job_id\": \"623165b9803f628c1104f5bd\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Section Publish API 16/03/22",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record\",\n    \"records\": [\n        {\n            \"type\": \"section\",\n            \"parent\": \"46575\",\n            \"data\": {\n                \"code\": \"540654\",\n                \"fee\": 0.0,\n                \"external_id\": 1971,\n                \"start_date\": \"2023-08-04T23:59:00\",\n                \"end_date\": \"2023-12-04T23:59:00\",\n                \"registration_deadline\": \"2023-11-04T23:59:00\",\n                \"num_seats\": 60,\n                \"available_seats\": 60,\n                \"execution_mode\": \"self-paced\",\n                \"is_active\": true,\n                \"credit_hours\": 45\n            },\n            \"related_products\":[\n                {\n                    \"type\":\"resource\",\n                    \"relation_type\": \"standalone\",\n                    \"external_id\": \"1234\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Job Status Course Publish API 15/03/22",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"   \r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/job-status/625fdde9d33e514fa8ba6ec6",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"job-status",
+						"625fdde9d33e514fa8ba6ec6"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		}
+	]
+}

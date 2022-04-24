@@ -1,0 +1,1773 @@
+{
+  "id": "1af70e62-c12c-42cc-919f-23d361d51eb0",
+  "version": "2.0",
+  "name": "store-goodwin",
+  "url": "https://store.staging.campus.com/goodwin",
+  "tests": [{
+    "id": "b94d9b7c-ced5-48e4-b72b-fd4a901970eb",
+    "name": "Check courses from courses dropdown",
+    "commands": [{
+      "id": "56bf47a1-7e33-4228-b737-979be4213a3e",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.staging.campus.com/goodwin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bb1a6849-22a3-4408-b59b-52a980dc3840",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b56a36b3-fc7a-41d5-aad4-dc6895197dad",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2338534-ef6d-4176-9307-99fa860d1cfb",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "20b6d1b0-96c6-4e36-9efb-7c84c55bbfc1",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d94a377-457a-4076-ad6a-1004b3b77497",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=View All Courses",
+      "targets": [
+        ["linkText=View All Courses", "linkText"],
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'View All Courses')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/goodwin/courses?courseSort=relevance')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View All Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51b6003c-dd33-427e-8e6a-082fd9536e1c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=View All Courses",
+      "targets": [
+        ["linkText=View All Courses", "linkText"],
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'View All Courses')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/goodwin/courses?courseSort=relevance')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View All Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18409f28-2597-400e-a3fd-fa143a4467a4",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.btn-outline-primary",
+      "targets": [
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'View All Courses')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/goodwin/courses?courseSort=relevance')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View All Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5f19695-1155-4432-979e-88b78ed36f26",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,566)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "51310d1e-6027-4a52-bb64-f9f43d2abcd3",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,864)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e7cb419-859a-4ad0-b0be-72f1eebf4561",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1000)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3b0a4b4-b986-47dd-be54-17d6db5fff1a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e4a190b-210e-43ac-8146-d13b4bf1fefe",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=All Subjects",
+      "targets": [
+        ["linkText=All Subjects", "linkText"],
+        ["css=.submenu-item--link > a", "css:finder"],
+        ["xpath=//a[contains(text(),'All Subjects')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div[2]/div/div[11]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/subjects')])[13]", "xpath:href"],
+        ["xpath=//div[11]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'All Subjects')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68c47690-d610-444c-b3c0-098120bd2f27",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(9) > .card-header",
+      "targets": [
+        ["css=.card:nth-child(9) > .card-header", "css:finder"],
+        ["xpath=//div[@id='tabList']/div/section/div/div/a[9]/div", "xpath:idRelative"],
+        ["xpath=//a[9]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f36ab1cc-0524-4114-8e37-dcd1587c49cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(4) .title",
+      "targets": [
+        ["css=.card:nth-child(4) .title", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a[4]/div/div", "xpath:idRelative"],
+        ["xpath=//a[4]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a64b971d-e4e8-444a-958b-26f80b50f6ff",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c9890fe-67ce-40ae-b9e4-f6cb28636732",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=View All Courses",
+      "targets": [
+        ["linkText=View All Courses", "linkText"],
+        ["css=.btn-outline-primary", "css:finder"],
+        ["xpath=//a[contains(text(),'View All Courses')]", "xpath:link"],
+        ["xpath=//div[@id='submenu-panel']/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/goodwin/courses?courseSort=relevance')]", "xpath:href"],
+        ["xpath=//div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'View All Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "cd51f00c-72f5-4eec-a9fb-50ea6d3bd913",
+    "name": "Home search box ",
+    "commands": [{
+      "id": "a410784f-e492-404e-bc3a-4c9ffe325460",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.staging.campus.com/goodwin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72d36c59-c3ed-4c77-9ba5-29e2fa4f6a6a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x768",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "59e12010-a831-4c5e-b13f-6205ca307fb5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c7912d2-c8d9-47b3-8934-bfdf6cc867be",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,151)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0f84e6f-20b1-490f-a7c8-b055c54dc284",
+      "comment": "",
+      "command": "type",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='a']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "eb0e1ccb-d0db-4fe3-9133-b4827e8e7b02",
+      "comment": "",
+      "command": "//waitForElementPresent",
+      "target": "css=.react-autosuggest__input",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "66d46ab2-93dd-4b9b-9100-f5025c00fe0f",
+      "comment": "",
+      "command": "click",
+      "target": "css=#react-autowhatever-1-section-2-item-2 > span",
+      "targets": [
+        ["css=#react-autowhatever-1-section-2-item-2 > span", "css:finder"],
+        ["xpath=//li[@id='react-autowhatever-1-section-2-item-2']/span", "xpath:idRelative"],
+        ["xpath=//div[3]/ul/li[3]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Administrative Law Judges, Adjudicators, and Hearing Officers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "944e2596-bd2e-42ae-b4f6-e7841e91b6c9",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a81e9a99-4b7a-4edf-92d8-623b8e873737",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1885)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "776f7049-7b1c-42c6-b8b7-88de11344b3d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "128ab2fb-80db-4962-82fd-11020d265cb2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa30bd24-6d36-4c4e-bea5-1aebffd29726",
+      "comment": "",
+      "command": "type",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='a']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "101ac03f-a5b7-43d6-9622-a68c4a84ee68",
+      "comment": "",
+      "command": "click",
+      "target": "id=react-autowhatever-1-section-0-item-0",
+      "targets": [
+        ["id=react-autowhatever-1-section-0-item-0", "id"],
+        ["css=#react-autowhatever-1-section-0-item-0", "css:finder"],
+        ["xpath=//li[@id='react-autowhatever-1-section-0-item-0']", "xpath:attributes"],
+        ["xpath=//div[@id='react-autowhatever-1']/div/ul/li", "xpath:idRelative"],
+        ["xpath=//li", "xpath:position"],
+        ["xpath=//li[contains(.,'Business Analysis')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c5dd6e9b-4410-4cef-bccb-c73ff1b38ea4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.title",
+      "targets": [
+        ["css=.title", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6ad0b23e-0279-4544-9e53-4d2f72b472f2",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08bf741c-26e0-4888-bb5c-b4a75be9cf2a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3e9c1aa2-53b9-4640-ab9d-7d239931df71",
+      "comment": "",
+      "command": "click",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7b10dfa-da62-4bf0-9077-f96fd814c92b",
+      "comment": "",
+      "command": "type",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='a']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "f4c3e494-1548-4ee0-ac25-f0f7ac9dce11",
+      "comment": "",
+      "command": "click",
+      "target": "css=#react-autowhatever-1-section-1-item-1 > span",
+      "targets": [
+        ["css=#react-autowhatever-1-section-1-item-1 > span", "css:finder"],
+        ["xpath=//li[@id='react-autowhatever-1-section-1-item-1']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Asset Security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ca1621b-dd41-4735-b633-c4cdf84de0a5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15cdaf55-5bd8-4892-83c6-02c17c83fcf0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "064bbdbb-a3fb-4ede-a579-e826bfabb6a7",
+      "comment": "",
+      "command": "type",
+      "target": "css=.react-autosuggest__input",
+      "targets": [
+        ["css=.react-autosuggest__input", "css:finder"],
+        ["xpath=//input[@value='a']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "a"
+    }, {
+      "id": "0942e94a-50b1-4033-a43c-0dba236567e1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#react-autowhatever-1-section-1-item-1 > span",
+      "targets": [
+        ["css=#react-autowhatever-1-section-1-item-1 > span", "css:finder"],
+        ["xpath=//li[@id='react-autowhatever-1-section-1-item-1']/span", "xpath:idRelative"],
+        ["xpath=//div[2]/ul/li[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Asset Security')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4c916b5-ec81-4686-9e89-a27078e504ce",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9bf8e65-055d-468d-bd83-a25627a6b46f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Courses",
+      "targets": [
+        ["linkText=Courses", "linkText"],
+        ["css=.submenu", "css:finder"],
+        ["xpath=(//a[contains(text(),'Courses')])[2]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[3]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/subjects')])[2]", "xpath:href"],
+        ["xpath=//a[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "497c67a4-4da3-49cd-b994-92b0b89c8121",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "76c39d3d-45cc-411e-9d9d-888f10b44e4a",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.section:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b56f140-a0b8-4d81-90a3-09f968536e8a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "da91af3f-d45b-432e-aa33-21cdae3a2e45",
+    "name": "Check courses from homepage",
+    "commands": [{
+      "id": "c40594f3-e3fd-4b07-b00b-4571a121369d",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.staging.campus.com/goodwin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8024c709-e469-4e88-b654-5c5d4333b80a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0f98e5cf-5a16-48c5-90b8-abf739c165a0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,141)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b26f589e-c21b-443b-8bcb-8fc2f7dab568",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaExploreCourses",
+      "targets": [
+        ["id=ctaExploreCourses", "id"],
+        ["linkText=Explore Courses »", "linkText"],
+        ["css=#ctaExploreCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Explore Courses »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaExploreCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div[3]/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/subjects')])[14]", "xpath:href"],
+        ["xpath=//div[3]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Explore Courses »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1fdaec78-9f8e-4cb1-8aae-c94a5d4fa3ad",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6c9726f5-7921-41db-ad2d-414d4b15318f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(9) > .card-header",
+      "targets": [
+        ["css=.card:nth-child(9) > .card-header", "css:finder"],
+        ["xpath=//div[@id='tabList']/div/section/div/div/a[9]/div", "xpath:idRelative"],
+        ["xpath=//a[9]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ffe1bea-beaa-4294-bf99-6a927726d1f3",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea19a268-ee5b-454f-b3b0-acb3f1ad43ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(4) .title",
+      "targets": [
+        ["css=.card:nth-child(4) .title", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a[4]/div/div", "xpath:idRelative"],
+        ["xpath=//a[4]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6dbdff3-ee97-4534-9833-7ca3b97c9aa6",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "abb55389-c447-4105-897f-6ce07f58a9e9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c412f245-61a0-4bae-b99f-2ce2f36b6d4a",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,829)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af42d9eb-8246-4d56-aae8-b98c9fa79275",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title:nth-child(2)",
+      "targets": [
+        ["css=.card:nth-child(1) .title:nth-child(2)", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5319ba1b-70ef-4831-96fa-e0524bbb14e0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b555cc39-a06f-4a6a-bf58-61e61aa15461",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5a4ae3b8-0dd3-43a5-9e4a-b6da95f7c2e5",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaSearchAllCourses",
+      "targets": [
+        ["id=ctaSearchAllCourses", "id"],
+        ["linkText=Search All Courses »", "linkText"],
+        ["css=#ctaSearchAllCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Search All Courses »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaSearchAllCourses']", "xpath:attributes"],
+        ["xpath=//section[@id='courses']/div/p/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/courses')])[6]", "xpath:href"],
+        ["xpath=//section[3]/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Search All Courses »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "175d36f5-e6a4-4921-a174-10be0b7d01a9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title",
+      "targets": [
+        ["css=.card:nth-child(1) .title", "css:finder"],
+        ["xpath=//div[@id='courses']/section[2]/div/div[2]/div/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e34dfebc-1223-4c24-b1cc-50009bd5e42c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "e9154ce2-384d-4316-97a5-070b24ed0d37",
+    "name": "Check careers ",
+    "commands": [{
+      "id": "91668d8c-f57c-47aa-a323-16e888d0301d",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.staging.campus.com/goodwin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2b152bc2-5639-48c7-9680-2584e45f23b6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8981858f-c06b-43f1-8c9c-e3a6824d3631",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Careers",
+      "targets": [
+        ["linkText=Careers", "linkText"],
+        ["css=.navbar-nav > a:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'Careers')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/goodwin/careers?careerSort=relevance')]", "xpath:href"],
+        ["xpath=//a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Careers')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "391d5261-d617-4d28-89ea-1703ebca579f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) > .card-header",
+      "targets": [
+        ["css=.card:nth-child(1) > .card-header", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div[2]/div/a/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2a865a6-6baa-4ffc-9dae-06fa7eb0c2a3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.active",
+      "targets": [
+        ["css=.active", "css:finder"],
+        ["xpath=(//a[contains(text(),'About')])[2]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#about')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c1f2c7d-e33b-405b-a402-a1dad479d182",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.active",
+      "targets": [
+        ["css=.active", "css:finder"],
+        ["xpath=(//a[contains(text(),'About')])[2]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#about')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "55799e1f-6297-419c-99bb-517c43c0b928",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Skills')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#skills')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2edc0629-f4a0-424b-9159-faeba500c39b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'Related Careers')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/div[2]/div/div/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#careers')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "986c671c-23c4-4969-a14d-a6c857dd4ef4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title",
+      "targets": [
+        ["css=.card:nth-child(1) .title", "css:finder"],
+        ["xpath=//section[@id='careers']/div/div[2]/a/div/div", "xpath:idRelative"],
+        ["xpath=//a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d3768b58-2025-45ce-9126-54bff262cd50",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0027db4a-1e84-4485-81cd-1209dec9df6b",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,153)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08e1b97d-285b-4540-8bf2-1421051ba4da",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaExploreCareers",
+      "targets": [
+        ["id=ctaExploreCareers", "id"],
+        ["linkText=Explore Careers »", "linkText"],
+        ["css=#ctaExploreCareers", "css:finder"],
+        ["xpath=//a[contains(text(),'Explore Careers »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaExploreCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div[2]/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/careers')])[2]", "xpath:href"],
+        ["xpath=//div[2]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Explore Careers »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9c77ed91-06f6-4d2d-b533-69044d3eb40f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e0dc243-3d77-43ce-bb21-81afed4c629b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d1202e1-e24a-498f-af93-0dec9b39d5d1",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnQuiz",
+      "targets": [
+        ["id=btnQuiz", "id"],
+        ["css=#btnQuiz", "css:finder"],
+        ["xpath=//button[@id='btnQuiz']", "xpath:attributes"],
+        ["xpath=//div[@id='showIFQuiz']/div/button", "xpath:idRelative"],
+        ["xpath=//div/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Career Quiz')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7844d4e-46d7-4ede-b6db-063a9b55dfaa",
+      "comment": "",
+      "command": "click",
+      "target": "id=filter1",
+      "targets": [
+        ["id=filter1", "id"],
+        ["name=filter1", "name"],
+        ["css=#filter1", "css:finder"],
+        ["xpath=//input[@id='filter1']", "xpath:attributes"],
+        ["xpath=//div[@id='quizFilter']/div/input", "xpath:idRelative"],
+        ["xpath=//div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b73862d2-ad2f-4ca0-b840-cadc3d97d7d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pt-1",
+      "targets": [
+        ["css=.pt-1", "css:finder"],
+        ["xpath=//div[@id='careers']/section", "xpath:idRelative"],
+        ["xpath=//div/section", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "471f9c37-e979-4a57-9122-b1612a0168ef",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn-close",
+      "targets": [
+        ["css=.btn-close", "css:finder"],
+        ["xpath=//div[@id='hideIFNoFilters']/div/div/span", "xpath:idRelative"],
+        ["xpath=//div/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'×')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c042a97-955b-4903-a2cf-1090555ab636",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSalary",
+      "targets": [
+        ["id=btnSalary", "id"],
+        ["css=#btnSalary", "css:finder"],
+        ["xpath=//button[@id='btnSalary']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Salaries')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "56cba15b-eb09-44e2-a4b9-0678492fb427",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSalary",
+      "targets": [
+        ["id=btnSalary", "id"],
+        ["css=#btnSalary", "css:finder"],
+        ["xpath=//button[@id='btnSalary']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Salaries')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3e80ceb-69b7-4876-b99a-12ed4fce6268",
+      "comment": "",
+      "command": "click",
+      "target": "id=2",
+      "targets": [
+        ["id=2", "id"],
+        ["name=$100K+ TO $200K", "name"],
+        ["css=#\\32", "css:finder"],
+        ["xpath=//input[@id='2']", "xpath:attributes"],
+        ["xpath=//div[@id='salaryFilter']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d758d4f-714c-4cfd-9151-fc554d87e1cc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edced6a1-3702-4194-ba11-87bbdf02525c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSkills",
+      "targets": [
+        ["id=btnSkills", "id"],
+        ["css=#btnSkills", "css:finder"],
+        ["xpath=//button[@id='btnSkills']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Skills')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2236e1bc-9851-4c15-86ab-c3f9eb3af6c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnSkills",
+      "targets": [
+        ["id=btnSkills", "id"],
+        ["css=#btnSkills", "css:finder"],
+        ["xpath=//button[@id='btnSkills']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Skills')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "640fb5e2-0e6f-4f16-912f-66848890e41e",
+      "comment": "",
+      "command": "click",
+      "target": "id=5e56025b467fb556add3c017",
+      "targets": [
+        ["id=5e56025b467fb556add3c017", "id"],
+        ["name=Word processing software", "name"],
+        ["css=#\\35 e56025b467fb556add3c017", "css:finder"],
+        ["xpath=//input[@id='5e56025b467fb556add3c017']", "xpath:attributes"],
+        ["xpath=//div[@id='skillsFilter']/div[25]/input", "xpath:idRelative"],
+        ["xpath=//div[25]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b8a957f-624f-463b-ad62-8f8982099ed2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "045df126-bce6-4ee9-802b-bec55de6a10a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnEntryLevels",
+      "targets": [
+        ["id=btnEntryLevels", "id"],
+        ["css=#btnEntryLevels", "css:finder"],
+        ["xpath=//button[@id='btnEntryLevels']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Entry Levels')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3c6bd9b8-13ec-4d34-bb62-68c72b0e4834",
+      "comment": "",
+      "command": "click",
+      "target": "id=btnEntryLevels",
+      "targets": [
+        ["id=btnEntryLevels", "id"],
+        ["css=#btnEntryLevels", "css:finder"],
+        ["xpath=//button[@id='btnEntryLevels']", "xpath:attributes"],
+        ["xpath=//div[@id='searchFiltersCareer']/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'All Entry Levels')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4314c992-b5b0-475e-ab27-7d261e805dcf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#levelFilter > .form-check:nth-child(4) > .form-check-label",
+      "targets": [
+        ["css=#levelFilter > .form-check:nth-child(4) > .form-check-label", "css:finder"],
+        ["xpath=//div[@id='levelFilter']/div[3]/label", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div[3]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bef1917-9cab-404c-b12b-2d2bb4271837",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pb-4 .col:nth-child(1)",
+      "targets": [
+        ["css=.pb-4 .col:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91644261-2905-46c3-9c6b-c26b74832f3e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(4) .title",
+      "targets": [
+        ["css=.card:nth-child(4) .title", "css:finder"],
+        ["xpath=//div[@id='careers']/section[2]/div/div[2]/div/a[4]/div/div", "xpath:idRelative"],
+        ["xpath=//a[4]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40374f99-ccb6-4046-948f-58b396f69535",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaFindRelatedCourses",
+      "targets": [
+        ["id=ctaFindRelatedCourses", "id"],
+        ["linkText=Find Related Courses", "linkText"],
+        ["css=#ctaFindRelatedCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Find Related Courses')]", "xpath:link"],
+        ["xpath=//a[@id='ctaFindRelatedCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/goodwin/courses?careers=5e561882467fb556add3fb45')]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Find Related Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc5921ec-8e28-448c-928b-febbca842750",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "id=ctaFindRelatedCourses",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88952d63-5aeb-4d07-adff-a3ebfea36be7",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a08ca666-3c69-467c-b61f-559d9d8b85de",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2fd38bdb-362a-43e7-8f1a-366c87b81beb",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.active", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d446c49-195b-4fa8-b911-086171b28741",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(1) .title:nth-child(1)",
+      "targets": [
+        ["css=.card:nth-child(1) .title:nth-child(1)", "css:finder"],
+        ["xpath=//section[@id='careers']/div/div[2]/a/div/div", "xpath:idRelative"],
+        ["xpath=//section[4]/div/div[2]/a/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d39d3a33-012b-4164-b6af-8d044712ac68",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Home",
+      "targets": [
+        ["linkText=Home", "linkText"],
+        ["css=.navbar-nav > a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Home')]", "xpath:link"],
+        ["xpath=//div[@id='navbarToggle']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin')])[2]", "xpath:href"],
+        ["xpath=//div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Home')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ee10dbc-1ccd-44f8-9020-31171c6f6b36",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaSearchAllCareers",
+      "targets": [
+        ["id=ctaSearchAllCareers", "id"],
+        ["linkText=Search All Careers »", "linkText"],
+        ["css=#ctaSearchAllCareers", "css:finder"],
+        ["xpath=//a[contains(text(),'Search All Careers »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaSearchAllCareers']", "xpath:attributes"],
+        ["xpath=//section[@id='careers']/div/p/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/careers')])[6]", "xpath:href"],
+        ["xpath=//section[4]/div/p/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Search All Careers »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7086d1ea-13fe-45dc-a8e1-a8b4854e1d01",
+      "comment": "",
+      "command": "//mouseOver",
+      "target": "id=ctaSearchAllCareers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70925b67-1cf5-4f74-bac7-743e80a5a697",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=btnSortCareers",
+      "targets": [
+        ["id=btnSortCareers", "id"],
+        ["css=#btnSortCareers", "css:finder"],
+        ["xpath=//button[@id='btnSortCareers']", "xpath:attributes"],
+        ["xpath=//div[@id='careers']/section[2]/div/div/div[2]/div/button", "xpath:idRelative"],
+        ["xpath=//section[2]/div/div/div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sort By Relevance')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94ef0a35-5375-48e9-b553-1dcadb89197f",
+      "comment": "",
+      "command": "//click",
+      "target": "id=btnSortCareers",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "38303f04-dc89-4ffe-b3bc-9375a3562dda",
+      "comment": "",
+      "command": "//click",
+      "target": "id=btnSortCareers",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "9cd8ed40-1f94-4aae-84dc-4c8fbae3d425",
+    "name": "Sign in as a student(Google)",
+    "commands": [{
+      "id": "c174c928-47b8-4bf3-bd2b-6069bbaf10d7",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.staging.campus.com/goodwin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7140bfe-56a7-4fa4-b5d6-e06262b43c1e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d580cda5-f553-4793-87a7-7d8b3f53b4a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar--action__sign-in",
+      "targets": [
+        ["css=.navbar--action__sign-in", "css:finder"],
+        ["xpath=//header[@id='header']/div/div/a/div", "xpath:idRelative"],
+        ["xpath=//div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb5f7c42-69ee-45f4-8e04-ef5f3f151311",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cta-group__cta:nth-child(3) > .cta-group__cta-text",
+      "targets": [
+        ["css=.cta-group__cta:nth-child(3) > .cta-group__cta-text", "css:finder"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/div[2]/div/a[3]/h4", "xpath:idRelative"],
+        ["xpath=//a[3]/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Continue with Google')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2073400-8d81-4202-8611-f9a56f9369d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.JDAKTe:nth-child(3) .w1I7fb",
+      "targets": [
+        ["css=.JDAKTe:nth-child(3) .w1I7fb", "css:finder"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/ul/li[3]/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//li[3]/div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04636e10-760e-4c46-8559-029a0b004d8e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.user-dropdown-toggle__icon",
+      "targets": [
+        ["css=.user-dropdown-toggle__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/markup/assets/img/avatar.png')]", "xpath:img"],
+        ["xpath=//header[@id='header']/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5beb9685-01ec-4bbc-82bf-4289da44aa8f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=.dropdown-item:nth-child(10)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div/div/div/div/a[8]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[4]", "xpath:href"],
+        ["xpath=//a[8]", "xpath:position"],
+        ["xpath=//a[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "629a4c22-d3ef-4fba-93e1-3356216d9b30",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ca75904b-1ad3-4d85-b8c9-ccae14179557",
+    "name": "Enroll in a course",
+    "commands": [{
+      "id": "7d546f0a-bd8b-482a-afcc-4ee208dad945",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.staging.campus.com/goodwin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fe6f1779-b362-40cb-9027-493e57ed2673",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f9aa08c5-a4b2-41d2-846c-ce72a93619ea",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar--action__sign-in",
+      "targets": [
+        ["css=.navbar--action__sign-in", "css:finder"],
+        ["xpath=//header[@id='header']/div/div/a/div", "xpath:idRelative"],
+        ["xpath=//div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef940bcc-400e-4ce7-8bf5-8a7d4abf566c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cta-group__cta:nth-child(3) > .cta-group__cta-text",
+      "targets": [
+        ["css=.cta-group__cta:nth-child(3) > .cta-group__cta-text", "css:finder"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/div[2]/div/a[3]/h4", "xpath:idRelative"],
+        ["xpath=//a[3]/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Continue with Google')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee2d72d4-9981-40b6-8aab-7b7dafbb67d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.JDAKTe:nth-child(3) #profileIdentifier",
+      "targets": [
+        ["css=.JDAKTe:nth-child(3) #profileIdentifier", "css:finder"],
+        ["xpath=(//div[@id='profileIdentifier'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/ul/li[3]/div/div/div/div[2]/div[2]", "xpath:idRelative"],
+        ["xpath=//li[3]/div/div/div/div[2]/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a76c14ce-536b-41e6-8cb9-73bc2af628d1",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,151)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76995574-2413-4935-8506-ca4194042fda",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaExploreCourses",
+      "targets": [
+        ["id=ctaExploreCourses", "id"],
+        ["linkText=Explore Courses »", "linkText"],
+        ["css=#ctaExploreCourses", "css:finder"],
+        ["xpath=//a[contains(text(),'Explore Courses »')]", "xpath:link"],
+        ["xpath=//a[@id='ctaExploreCourses']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section[2]/div/div/div[3]/p[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/goodwin/subjects')])[14]", "xpath:href"],
+        ["xpath=//div[3]/p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Explore Courses »')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3722d39f-e017-48ee-a0f8-664ec8be86f1",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db1d799b-68c9-4189-be2a-10e663e6c27f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card:nth-child(2) .title",
+      "targets": [
+        ["css=.card:nth-child(2) .title", "css:finder"],
+        ["xpath=//div[@id='tabList']/div/section/div/div/a[2]/div/div", "xpath:idRelative"],
+        ["xpath=//a[2]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c05fce8e-959e-41ef-ab8f-e78ed3027d9c",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5e92682-d393-4b22-a62f-c7e167e8c873",
+      "comment": "",
+      "command": "click",
+      "target": "css=.card-header",
+      "targets": [
+        ["css=.card-header", "css:finder"],
+        ["xpath=//section[@id='courses']/div/div[2]/a/div", "xpath:idRelative"],
+        ["xpath=//div[2]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bc55a37-0a1c-4ff0-9507-ff898019c148",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,0)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "197abf87-782a-4809-87e3-af7d73b7861c",
+      "comment": "",
+      "command": "click",
+      "target": "id=ctaEnrollCoursePrimary",
+      "targets": [
+        ["id=ctaEnrollCoursePrimary", "id"],
+        ["linkText=Enroll Now", "linkText"],
+        ["css=#ctaEnrollCoursePrimary", "css:finder"],
+        ["xpath=//a[contains(text(),'Enroll Now')]", "xpath:link"],
+        ["xpath=//a[@id='ctaEnrollCoursePrimary']", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://enrollment.staging.campus.com/MINDEDGE/introduction-to-business-analysis?store=goodwin')]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Enroll Now')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "53abf8aa-5df1-4502-b1ce-1b21e62a6d71",
+      "comment": "",
+      "command": "click",
+      "target": "css=.payment-options__icon",
+      "targets": [
+        ["css=.payment-options__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/assets/img/cards.png')]", "xpath:img"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/div[2]/div[2]/div/div/div/label/div/div/img", "xpath:idRelative"],
+        ["xpath=//label/div/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "523136aa-bd9a-4179-8dd8-96c897e7a39a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.proceed-action",
+      "targets": [
+        ["css=.proceed-action", "css:finder"],
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["xpath=//div[@id='__next']/main/section/div/div[2]/div/div[2]/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Continue with payment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea5ce281-3e93-4550-aca5-c16baf9cd722",
+      "comment": "",
+      "command": "click",
+      "target": "id=cardNum",
+      "targets": [
+        ["id=cardNum", "id"],
+        ["name=cardNum", "name"],
+        ["css=#cardNum", "css:finder"],
+        ["xpath=//input[@id='cardNum']", "xpath:attributes"],
+        ["xpath=//div[@id='divPageMain container']/app-accept-payment/div/div/div/div/div[2]/credit-card-component/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f535b9ab-edf4-4c44-8fed-5102dba97177",
+      "comment": "",
+      "command": "click",
+      "target": "id=cancelBtn",
+      "targets": [
+        ["id=cancelBtn", "id"],
+        ["css=#cancelBtn", "css:finder"],
+        ["xpath=//button[@id='cancelBtn']", "xpath:attributes"],
+        ["xpath=//div[@id='controlBtn']/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Cancel')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6edccb57-06f4-4a41-b267-7372b04ad124",
+    "name": "Check student portal",
+    "commands": [{
+      "id": "dcdedba7-53e8-4915-9154-639201ef28ad",
+      "comment": "",
+      "command": "open",
+      "target": "https://store.staging.campus.com/goodwin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a462272-6ec8-41be-b141-8b7ce1aa37a6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5d8a3d68-d064-45bc-9cee-808bd983ad83",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar--action__sign-in",
+      "targets": [
+        ["css=.navbar--action__sign-in", "css:finder"],
+        ["xpath=//header[@id='header']/div/div/a/div", "xpath:idRelative"],
+        ["xpath=//div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ccfa77c1-d063-40a5-a1f2-2fd2d2a3c095",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cta-group__cta:nth-child(3) > .cta-group__cta-text",
+      "targets": [
+        ["css=.cta-group__cta:nth-child(3) > .cta-group__cta-text", "css:finder"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/div[2]/div/a[3]/h4", "xpath:idRelative"],
+        ["xpath=//a[3]/h4", "xpath:position"],
+        ["xpath=//h4[contains(.,'Continue with Google')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d74406e-f4ce-4cc8-9fc1-7c0adc5216ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.JDAKTe:nth-child(3) .w1I7fb",
+      "targets": [
+        ["css=.JDAKTe:nth-child(3) .w1I7fb", "css:finder"],
+        ["xpath=//div[@id='view_container']/div/div/div[2]/div/div/div/form/span/section/div/div/div/div/ul/li[3]/div/div/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//li[3]/div/div/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0ba9a1f-856e-406d-953e-fb0aae09a396",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.user-dropdown-toggle__icon",
+      "targets": [
+        ["css=.user-dropdown-toggle__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/markup/assets/img/avatar.png')]", "xpath:img"],
+        ["xpath=//header[@id='header']/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a898e412-8fa8-484b-ace6-6023359571bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.user-dropdown-toggle__icon",
+      "targets": [
+        ["css=.user-dropdown-toggle__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/markup/assets/img/avatar.png')]", "xpath:img"],
+        ["xpath=//header[@id='header']/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e94b033-2c1e-4a78-85c6-c29d29f0471c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Account",
+      "targets": [
+        ["linkText=Account", "linkText"],
+        ["css=.dropdown-item:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Account')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://account.staging.campus.com/?store=goodwin')]", "xpath:href"],
+        ["xpath=//div/div/div/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "55716a4b-e032-487c-b1b7-71d6e7a8ffd8",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.user-dropdown-toggle__icon",
+      "targets": [
+        ["css=.user-dropdown-toggle__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/markup/assets/img/avatar.png')]", "xpath:img"],
+        ["xpath=//header[@id='header']/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "23aeb9f8-9616-4439-b70f-a11ae86fb791",
+      "comment": "",
+      "command": "click",
+      "target": "css=.user-dropdown-toggle__icon",
+      "targets": [
+        ["css=.user-dropdown-toggle__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/markup/assets/img/avatar.png')]", "xpath:img"],
+        ["xpath=//header[@id='header']/div/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4f4097c-0208-483e-bd36-29086ad6c4e5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My Courses",
+      "targets": [
+        ["linkText=My Courses", "linkText"],
+        ["css=.dropdown-item:nth-child(4)", "css:finder"],
+        ["xpath=//a[contains(text(),'My Courses')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div/div/div/div/a[3]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://studentportal.staging.campus.com/my-courses?store=goodwin')]", "xpath:href"],
+        ["xpath=//div/div/div/a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,'My Courses')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b30a70a-9069-4c74-aecc-69eae8c0bb23",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'My Schedules')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/my-schedules?store=goodwin')]", "xpath:href"],
+        ["xpath=//section/div/div/div/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90ded4f6-58c3-4d10-bb83-3128af6bb17a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.nav-item:nth-child(2) > .nav-link",
+      "targets": [
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[contains(text(),'My Schedules')]", "xpath:link"],
+        ["xpath=//div[@id='__next']/main/section/div/div/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/my-schedules?store=goodwin')]", "xpath:href"],
+        ["xpath=//section/div/div/div/div/div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36f3a98b-3edd-4d77-a0ea-7561cc15e35f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar--dropdown:nth-child(3) .user-dropdown-toggle__icon",
+      "targets": [
+        ["css=.navbar--dropdown:nth-child(3) .user-dropdown-toggle__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/markup/assets/img/avatar.png')]", "xpath:img"],
+        ["xpath=//header[@id='header']/div/div/div[2]/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e093292-6226-406b-aca7-0846db87dbe9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar--dropdown:nth-child(3) .user-dropdown-toggle__icon",
+      "targets": [
+        ["css=.navbar--dropdown:nth-child(3) .user-dropdown-toggle__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/markup/assets/img/avatar.png')]", "xpath:img"],
+        ["xpath=//header[@id='header']/div/div/div[2]/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b2eaf0f0-3b01-48c6-a179-d9b9c83d3818",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Career Assesssment",
+      "targets": [
+        ["linkText=Career Assesssment", "linkText"],
+        ["css=.dropdown-item:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Career Assesssment')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div/div/div[2]/div/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://studentportal.staging.campus.com/my-persona?store=goodwin')]", "xpath:href"],
+        ["xpath=//div[2]/div/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Career Assesssment')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fc34c5a1-a565-40e1-812f-9082be8a3b00",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar--dropdown:nth-child(3) .user-dropdown-toggle__icon",
+      "targets": [
+        ["css=.navbar--dropdown:nth-child(3) .user-dropdown-toggle__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/markup/assets/img/avatar.png')]", "xpath:img"],
+        ["xpath=//header[@id='header']/div/div/div[2]/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "567f24dd-810f-42df-94b7-ccee66326b60",
+      "comment": "",
+      "command": "//click",
+      "target": "css=.navbar--dropdown:nth-child(3) .user-dropdown-toggle__icon",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b6d0ef4b-7eec-49ff-af40-813ceb65ff1f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar--dropdown:nth-child(3) > .nav-link",
+      "targets": [
+        ["css=.navbar--dropdown:nth-child(3) > .nav-link", "css:finder"],
+        ["xpath=//header[@id='header']/div/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '')])[8]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87fb8c77-909e-409b-a32e-e1e9ee83d0a3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=My Favorites",
+      "targets": [
+        ["linkText=My Favorites", "linkText"],
+        ["css=.dropdown-item:nth-child(6)", "css:finder"],
+        ["xpath=//a[contains(text(),'My Favorites')]", "xpath:link"],
+        ["xpath=//header[@id='header']/div/div/div[2]/div/a[5]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://studentportal.staging.campus.com/careers?store=goodwin')]", "xpath:href"],
+        ["xpath=//div[2]/div/a[5]", "xpath:position"],
+        ["xpath=//a[contains(.,'My Favorites')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f221cabd-fd5a-4cb1-980a-0604d1514fbf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar--dropdown:nth-child(3) .user-dropdown-toggle__icon",
+      "targets": [
+        ["css=.navbar--dropdown:nth-child(3) .user-dropdown-toggle__icon", "css:finder"],
+        ["xpath=//img[contains(@src,'https://static.staging.campus.com/markup/assets/img/avatar.png')]", "xpath:img"],
+        ["xpath=//header[@id='header']/div/div/div[2]/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c57c191-7249-461d-8cb3-b86ed554b80e",
+      "comment": "",
+      "command": "//click",
+      "target": "linkText=Career Assesssment",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7a1928cc-3025-41b8-991d-7d50b476976d",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["b94d9b7c-ced5-48e4-b72b-fd4a901970eb"]
+  }],
+  "urls": ["https://store.staging.campus.com/goodwin"],
+  "plugins": []
+}
