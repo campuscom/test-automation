@@ -7,9 +7,9 @@ let loginPage = new NewWebAdminLoginPage();
 
   it('Admin front-end Visit and create a course ', function() {
       // admin panel visit
-      cy.visit("https://jpuri.github.io/react-draft-wysiwyg/#/")
+      cy.visit("https://ant.design/components/date-picker/")
 
-      cy.get('.notranslate').type("hello")
+      cy.get('#components-date-picker-demo-basic > .code-box-demo > .ant-space > :nth-child(1) > .ant-picker > .ant-picker-input > input').dblclick();
 
       // userlogin
     //   loginPage.enterUsername("admin");

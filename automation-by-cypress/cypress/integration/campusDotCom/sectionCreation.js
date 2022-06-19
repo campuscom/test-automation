@@ -9,8 +9,9 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 
 let loginPage = new NewWebAdminLoginPage();
 
+describe("Visit WebAdmin front-end  and create a course sections ",()=>{
 
-  it('Admin front-end Visit and create a course ', function() {
+  beforeEach( () => {
     // admin panel visit
     cy.visit("https://webadmin.dev.campus4i.com/")
 
@@ -21,55 +22,77 @@ let loginPage = new NewWebAdminLoginPage();
     cy.wait(600);
     loginPage.clickButton();
     cy.wait(2600);
+  })
+
+
+
+
+  it('Accessing the section and create a section', () => {
+    
 
     // access the sidenav
     cy.contains('Institute').click();
     cy.wait(600);
 
-    cy.contains('Courses').click()
+    cy.contains('Courses').click();
     
 
     // showing the courses list
-    cy.contains('Search').click()
-    cy.wait(3000);
+    cy.contains('Search').click();
+    cy.wait(3500);
 
     // select course for details
-    cy.contains('Test course for new Web Admin').click()
-    cy.wait(3000)
+    cy.get('#title__icontains').type("Test course for new Web Admin");
+    cy.wait(1000);
+    cy.contains('Search').click();
+    cy.wait(2500);
 
-    // select the tab section
+    // to check the details
+    cy.get('.ant-table-row > :nth-child(1)').click();
+    cy.wait(600);
+
+    // go to the sections tab
     cy.get('#rc-tabs-0-tab-2').click()
-    cy.wait(600)
+    cy.wait(300);
 
-    // creating the section of the selected course
-    cy.get('[style="padding-left: 2px; padding-right: 2px; flex: 0 0 auto;"] > .ant-btn').click()
-    cy.wait(600)
+    //Section Creation 
+    cy.get(':nth-child(2) > .ant-btn').click();
+    cy.wait(2600);
 
-    // filling the sections input 
-    cy.get('#name').type('S1-E1')
-    cy.wait(300)
+    // input form fill up for section
+    // sections name
+    cy.get('#name').type("64121");
+    cy.wait(600);
 
-    cy.get('#fee').type(0)
-    cy.wait(300)
+    // sections fee
+    cy.get('#fee').type("10");
+    cy.wait(600);
 
-    cy.get('#seat_capacity').type(70)
-    cy.wait(300)
+    // Seat Capacity
+    cy.get('#seat_capacity').type("30");
+    cy.wait(600);
 
-    cy.get('#available_seat').type(70)
-    cy.wait(300)
+    cy.get('#available_seat').type("30");
+    cy.wait(600);
 
-    cy.get('#execution_mode').type('Self-paced{enter}')
-    cy.wait(1000)
+    // Execution Mode
+    cy.get('#execution_mode').type("Self{enter}");
+    cy.wait(600);
 
-    cy.get('#credit_hours').type(35)
-    cy.wait(300)
+    // Credit Hours
+    cy.get('#credit_hours').type("42");
+    cy.wait(600);
+    cy.get('#ceu_hours').type("7");
+    cy.wait(500);
 
-    cy.get('#ceu_hours').type(2)
-    cy.wait(300)
 
-    // cy.get('#__start_date')
-    cy.get('#__start_date').click().type('7{enter}')
+    // Start and End Date
+    // cy.get(':nth-child(9) > [style="row-gap: 0px;"] > .ant-col-24 > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-picker').should("be.visible").should("have.class","ant-picker-cell-inner").click();
+    cy.get(':nth-child(9) > [style="row-gap: 0px;"] > .ant-col-24 > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-picker').click();
+  })
 
 
 })
+
+  
 
