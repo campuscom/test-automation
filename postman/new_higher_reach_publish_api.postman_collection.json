@@ -1,0 +1,1726 @@
+{
+	"info": {
+		"_postman_id": "14d8e9b6-c258-43dc-80ca-29f95103a723",
+		"name": "New Higher Reach Publish API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Notification",
+			"item": [
+				{
+					"name": "Get Notification API by individual_id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/notifications/e45a2de0-862a-4360-bdca-0dc84142e108",
+							"protocol": "https",
+							"host": [
+								"j3fz4814s2",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"notifications",
+								"e45a2de0-862a-4360-bdca-0dc84142e108"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "successful",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Notification API by date and status",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/notifications/?from_date=2022-06-14 00:00:00&to_date=2022-06-17 23:59:00",
+							"protocol": "https",
+							"host": [
+								"j3fz4814s2",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"notifications",
+								""
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "successful",
+									"disabled": true
+								},
+								{
+									"key": "from_date",
+									"value": "2022-06-14 00:00:00"
+								},
+								{
+									"key": "to_date",
+									"value": "2022-06-17 23:59:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hir Enrollment API",
+			"item": [
+				{
+					"name": "Student Enrollment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"order_id\" : \"825\",\n  \"event_type\" : \"enrollment\",\n  \"payload\" : {\n    \"enrollments\" : [\n      {\n        \"enrollment_id\" : \"816\",\n        \"status\" : \"success\",\n        \"school_student_id\" : \"9999816\"\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/erp-push",
+							"protocol": "https",
+							"host": [
+								"j3fz4814s2",
+								"execute-api",
+								"us-east-2",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"erp-push"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Course Publish API Payload 16/05/2022",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record_add\",\n    \"records\": [{\n        \"type\": \"course\",\n        \"parent\": {},\n        \"match\": {\n        },\n        \"publishing_stores\": [\"hir\"],\n        \"data\": {\n            \"code\": \"itpp-2000\",\n            \"title\": \"Introduction to Python Programming\",\n            \"description\": \"Introduction to Python Programming description for 4 month course schedule\",\n            \"external_id\": \"itpp2000\",\n            \"is_published\": true\n        }\n    },\n    {\n        \"type\": \"section\",\n        \"parent\": {\n            \"course\": \"itpp2000\"\n        },\n        \"match\": {},\n        \"data\": {\n            \"external_id\": \"itpp2000Sec1\",\n            \"code\": \"SecCode1\",\n            \"fee\": 5.0,\n            \"num_seats\": 25,\n            \"available_seats\": 25,\n            \"execution_mode\": \"self-paced\",\n            \"credit_hours\": 3\n        },\n        \"related_records\": []\n    },\n    {\n        \"type\": \"instructor\",\n        \"parent\": {\n            \"course\": \"itpp2000\", \n            \"section\": \"itpp2000Sec1\"\n        },\n        \"match\": {},\n        \"data\":{\n            \"external_id\": \"Ins-0001\",\n            \"name\": \"Gwen Stacy\",\n            \"profile_urls\": {\n                \"url\": \"\"\n            }\n        }\n    },\n    {\n        \"type\": \"schedule\",\n        \"parent\": {\n            \"course\": \"itpp2000\", \n            \"section\": \"itpp2000Sec1\"\n        },\n        \"match\": {},\n        \"data\":{\n            \"external_id\": \"itpp2000Sch1\",\n            \"external_version_id\": \"hir-Ecwe-Sche-101\",\n            \"description\":\"Schedule Description...\",\n            \"start_at\":\"2022-12-24T00:00:00\",\n            \"end_at\":\"2023-12-25T00:00:00\",\n            \"building_code\":\"SB0930\"\n        }\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Course Update API Payload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record_add\",\n    \"records\": [{\n        \"type\": \"course\",\n        \"parent\": {},\n        \"match\": {},\n        \"publishing_stores\": [\"hir\"],\n        \"data\": {\n            \"code\": \"ECWE22\",\n            \"title\": \"E-Commerce and Web Engineering\",\n            \"slug\": \"tc-hir\",\n            \"description\": \"E-Commerce and Web Engineering description for 4 month course schedule\",\n            \"external_id\": \"ecwe2022\",\n            \"is_published\": true\n        }\n    },\n    {\n        \"type\": \"section\",\n        \"parent\": {\n            \"course\": \"ecwe2022\"\n        },\n        \"match\": {},\n        \"data\": {\n            \"external_id\": \"hirEcweS001\",\n            \"code\": \"s-code-1\",\n            \"start_date\": \"2022-06-24T00:00:00\",\n            \"end_date\": \"2023-08-25T00:00:00\",\n            \"registration_deadline\": \"2023-07-24T00:00:00\",\n            \"fee\": 5.0,\n            \"num_seats\": 25,\n            \"available_seats\": 25,\n            \"execution_mode\": \"self-paced\",\n            \"credit_hours\": 3\n        },\n        \"related_records\": [{}]\n    },\n    {\n        \"type\": \"instructor\",\n        \"parent\": {\n            \"course\": \"ecwe2022\", \n            \"section\": \"hirEcweS001\"\n        },\n        \"match\": {},\n        \"data\":{\n            \"external_id\": \"Ins-101\",\n            \"name\": \"Peter Parker\",\n            \"profile_urls\": {\n                \"url\": \"https://linkedin.com/peter-parker-hir\"\n            }\n        }\n    },\n    {\n        \"type\": \"schedule\",\n        \"parent\": {\n            \"course\": \"ecwe2022\", \n            \"section\": \"hirEcweS001\"\n        },\n        \"match\": {},\n        \"data\":{\n            \"external_id\": \"hirEcweSche101\",\n            \"external_version_id\": \"hir-Ecwe-Sche-101\",\n            \"section_type\": \"online\",\n            \"name\": \"Morning\",\n            \"description\":\"Schedule Description...\",\n            \"start_at\":\"2022-12-24T00:00:00\",\n            \"end_at\":\"2023-12-25T00:00:00\",\n            \"building_name\":\"South Building\",\n            \"building_code\":\"SB0930\",\n            \"room_name\":\"Mujib100\"\n        }\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Individual Course Publish API Payload 16/05/2022",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record_add\",\n    \"records\": [\n        {\n            \"type\": \"course\",\n            \"parent\": {},\n            \"match\": {},\n            \"publishing_stores\": [\"hir\"],\n            \"data\": {\n                \"code\": \"python-101-dyfpp\",\n                \"title\": \"Python 101: Develop Your First Python Program\",\n                \"description\": \"This course will cover various topics that would teach students healthy lifestyle choices, the importance of mental and physical health and self-care. For each topic, an evidence-based lecture that would include scientific evidence will be presented and then students will be provided practical methods to practice what they have learned from the lectures. One of the main goals of this course is to inspire students to adopt a healthy lifestyle.\",\n                \"external_id\": \"python101dyfpp\",\n                \"is_published\": true\n            }\n        },\n        {\n            \"type\": \"section\",\n            \"parent\": {\n                \"course\": \"python101dyfpp\"\n            },\n            \"match\": {},\n            \"data\": {\n                \"external_id\": \"python101dyfppSec1\",\n                \"code\": \"SecCode1\",\n                \"start_date\": \"2022-06-24T00:00:00\",\n                \"end_date\": \"2023-08-25T00:00:00\",\n                \"registration_deadline\": \"2023-07-24T00:00:00\",\n                \"fee\": 5.0,\n                \"num_seats\": 25,\n                \"available_seats\": 25,\n                \"execution_mode\": \"self-paced\",\n                \"credit_hours\": 4\n            },\n            \"related_records\": [\n                {\n                    \"type\": \"product\",\n                    \"external_type\": \"optional\",\n                    \"relation_type\": \"standalone\",\n                    \"external_id\": \"HIR_OPT1\"\n                }\n            ]\n        },\n        {\n            \"type\": \"instructor\",\n            \"parent\": {\n                \"course\": \"python101dyfpp\", \n                \"section\": \"python101dyfppSec1\"\n            },\n            \"match\": {},\n            \"data\":{\n                \"external_id\": \"Ins-0001\",\n                \"name\": \"Gwen Stacy\",\n                \"profile_urls\": {\n                    \"url\": \"https://linkedin.com/gwen-stacy-hir\"\n                }\n            }\n        },\n    {\n        \"type\": \"schedule\",\n        \"parent\": {\n            \"course\": \"python101dyfpp\", \n            \"section\": \"python101dyfppSec1\"\n        },\n        \"match\": {},\n        \"data\":{\n            \"external_id\": \"python101dyfppSch\",\n            \"external_version_id\": \"hir-Ecwe-Sche-101\",\n            \"section_type\": \"online\",\n            \"name\": \"Morning\",\n            \"description\":\"Schedule Description...\",\n            \"start_at\":\"2022-12-24T00:00:00\",\n            \"end_at\":\"2023-12-25T00:00:00\",\n            \"building_name\":\"South Building\",\n            \"building_code\":\"SB0930\",\n            \"room_name\":\"Mujib100\"\n        }\n    }]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Individual Course Update API Payload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_add\",\n   \"records\":[\n        {\n            \"type\": \"course\",\n            \"parent\": {},\n            \"match\": {},\n            \"publishing_stores\": [\"hir\"],\n            \"data\": {\n                \"external_id\": \"accounting2\",\n                \"code\": \"acc-2\",\n                \"title\": \"Accounting 2\",\n                \"description\": \"The Accounting 2 is characterised as a developing market economy. It is the 41st largest in the world in nominal terms or at current prices, and 30th largest by purchasing power parity; international dollars at current prices.\",\n                \"is_published\": false\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Product Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_add\",\n   \"records\":[\n      {\n         \"type\":\"product\",\n         \"data\":{\n            \"store_slug\":\"hir\",\n            \"external_id\":\"R1-P1\",\n            \"product_type\":\"resource\",\n            \"title\":\"Product Title One for Test\",\n            \"content\":{\n               \"dict\":\"dictionary field\"\n            },\n            \"image\":\"\",\n            \"limit_applicable\":\"\",\n            \"total_quantity\":\"\",\n            \"quantity_sold\":\"\",\n            \"available_quantity\":\"90\",\n            \"tax_code\":\"NA\",\n            \"fee\":100,\n            \"minimum_fee\":80,\n            \"currency_code\":\"\"\n         }\n      }\n   ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Individual Section Publish API Payload 16/05/2022",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record_add\",\n    \"records\": [\n    {\n        \"type\": \"section\",\n        \"parent\": {\n            \"course\": \"accounting1\"\n        },\n        \"match\": {},\n        \"data\": {\n            \"external_id\": \"accounting1Sec3\",\n            \"code\": \"SecCode3\",\n            \"start_date\": \"2022-06-24T00:00:00\",\n            \"end_date\": \"2023-08-25T00:00:00\",\n            \"registration_deadline\": \"2023-07-24T00:00:00\",\n            \"fee\": 30.0,\n            \"num_seats\": 20,\n            \"available_seats\": 20,\n            \"execution_mode\": \"self-paced\",\n            \"credit_hours\": 5\n        },\n        \"related_records\": [\n            {\n                \"type\": \"product\",\n                \"external_type\": \"section\",\n                \"relation_type\": \"registration\",\n                \"external_id\": \"Eco2000TestTwo\"\n            }\n        ]\n    }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Individual Section Update API Payload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\": \"record_update\",\n    \"records\": [\n            {\n            \"type\": \"section\",\n            \"parent\": {\n                \n            },\n            \"match\": {\n                \"course\": \"accounting1\",\n                \"section\":\"accounting1Sec3\"\n            },\n            \"data\": {\n                \"num_seats\": 60,\n                \"available_seats\": 50,\n                \"fee\": 30\n            },\n            \"related_records\": [\n                {\n                    \"type\": \"product\",\n                    \"external_type\": \"resource\",\n                    \"relation_type\": \"registration\",\n                    \"external_id\": \"R1-P1\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Individual Instructor Publish API Payload 16/05/2022",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_add\",\n   \"records\":[\n        {\n            \"type\":\"instructor\",\n            \"parent\":{\n                \"section\":\"dfss3pSec\",\n                \"course\":\"dfss3p\"\n            },\n            \"match\":{\n                \n            },\n            \"data\":{\n                \"external_id\":\"Ins-1\",\n                \"name\":\"David Christian Bale\",\n                \"profile_urls\":{\n                    \"url\":\"https://linkedin.com/david-christian-bale\"\n                }\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":{\n                \"section\":\"dfss3pSec\",\n                \"course\":\"dfss3p\"\n            },\n            \"match\":{\n                \n            },\n            \"data\":{\n                \"external_id\":\"Ins-2\",\n                \"name\":\"Joshef Alamgir\",\n                \"profile_urls\":{\n                    \"url\":\"https://linkedin.com/joshef\"\n                }\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Individual Instructor Update API Payload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_add\",\n   \"records\":[\n        {\n            \"type\":\"instructor\",\n            \"parent\":{\n                \"section\":\"4654613219811\",\n                \"course\":\"TC-1001\"\n            },\n            \"match\":{\n                \n            },\n            \"data\":{\n                \"external_id\":\"Ins-1\",\n                \"name\":\"David Beckham\",\n                \"profile_urls\":{\n                    \"url\":\"https://linkedin.com/david-beckham\"\n                }\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":{\n                \"section\":\"4654613219822\",\n                \"course\":\"TC-1002\"\n            },\n            \"match\":{\n                \n            },\n            \"data\":{\n                \"external_id\":\"Ins-2\",\n                \"name\":\"David Beckham\",\n                \"profile_urls\":{\n                    \"url\":\"https://linkedin.com/david-beckham\"\n                }\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Individual Schedule Publish API Payload 16/05/2022",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_add\",\n   \"records\":[\n        {\n            \"type\":\"schedule\",\n            \"match\":{\n                \n            },\n            \"parent\":{\n                \"section\":\"dfss3pSec\",\n                \"course\":\"dfss3p\"\n            },\n            \"data\":{\n                \"external_id\":\"dfss3pSecSch2\",\n                \"external_version_id\":\"dfss-3p-Sec-Sch-2\",\n                \"section_type\":\"Online\",\n                \"name\":\"Evening\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2022-02-24T00:00:00\",\n                \"end_at\":\"2023-02-25T00:00:00\",\n                \"building_name\":\"North Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"SB0100\"\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog Create Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_add\",\n   \"records\":[\n        {\n            \"type\":\"subject\",\n            \"match\":{},\n            \"parent\":{},\n            \"publishing_stores\":[\"hir\"],\n            \"data\":{\n                \"external_id\":\"Sub-008\",\n                \"title\":\"Management\",\n                \"description\":\"Management subject details and also ...\",\n                \"is_published\": true,\n                \"start_at\":\"\",\n                \"end_at\":\"\",\n                \"catalog_image\":\"\"\n            },\n            \"related_records\":[\n                {\n                    \"type\": \"course\",\n                    \"external_id\":\"dfss3p\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "QuestionBank Create Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_add\",\n   \"records\":[\n        {\n            \"type\":\"question\",\n            \"match\":{},\n            \"parent\":{},\n            \"data\":{\n                \"external_id\":\"QB-002\",\n                \"title\":\"Select your gender\",\n                \"input\":{\n                    \"type\":\"select\",\n                    \"config\":{\n                        \"options\":[\n                            {\n                                \"key\": \"male\",\n                                \"label\": \"Male\"\n                            },\n                            {\n                                \"key\":\"female\",\n                                \"label\": \"Female\"\n                            }\n                        ],\n                        \"required\": true,\n                        \"help_text\":\"\",\n                        \"placeholder\":\"Please select your gender \",\n                        \"default_vlaue\": \"Select a Gender\"\n                    }\n                }\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "QuestionBank update Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_update\",\n   \"records\":[\n        {\n            \"type\":\"question\",\n            \"match\":{\n                \"question\":\"QB-002\"\n            },\n            \"parent\":{},\n            \"data\":{\n                \"external_id\":\"QB-002\",\n                \"title\":\"Select your gender\"\n                \n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Question Tagging Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_tag\",\n   \"records\":[\n      {\n         \"type\":\"question\",\n         \"parent\":{},\n         \"match\":{\n            \"question\":\"QB-002\"\n         },\n         \"data\":{\n            \n         },\n         \"tag_map\":{\n            \"question_type\":\"profile\",\n            \"question_for\":\"student\"\n         },\n         \"tag_with\":[\n            {\n               \"type\":\"course\",\n               \"external_id\":\"itpp2000\"\n            },\n            {\n               \"type\":\"store\",\n               \"slug\":\"hir\"\n            }\n         ]\n      }\n   ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Catalog Update Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"const response = pm.response.json();\r",
+							"pm.globals.set(\"job_id\", response.job_id);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_update\",\n   \"records\":[\n        {\n            \"type\":\"subject\",\n            \"match\":{\n                \"title\": \"Cyber Security\",\n                \"store\": \"hir\"\n            },\n            \"parent\":{},\n            \"publishing_stores\":[],\n            \"data\":{\n                \"external_id\":\"Sub-001\",\n                \"title\":\"Cyber & Security\",\n                \"description\":\"Cyber & Security details...\",\n                \"is_publish\": true,\n                \"start_at\":\"2022-08-24T00:00:00\",\n                \"end_at\":\"2023-6-25T00:00:00\",\n                \"catalog_image\":\"\"\n            },\n            \"related_records\":[\n                {\n                    \"type\": \"course\",\n                    \"external_id\":\"dfss3p\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Individual Schedule Update API Payload Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_delete\",\n   \"records\":[\n        {\n            \"type\":\"schedule\",\n            \"match\":{\n                \n            },\n            \"parent\":{\n                \"section\":\"4654613219822\",\n                \"course\":\"TC-1002\"\n            },\n            \"data\":{\n                \"external_id\":\"TC-1002-SEC1-SCH2\",\n                \"external_version_id\":\"ex-ver-Sch2\",\n                \"section_type\":\"online\",\n                \"name\":\"Morning\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2022-02-24T00:00:00\",\n                \"end_at\":\"2023-02-25T00:00:00\",\n                \"building_name\":\"North Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"SB0100\"\n            }\n        },\n        {\n            \"type\":\"schedule\",\n            \"match\":{\n                \n            },\n            \"parent\":{\n                \"section\":\"4654613219811\",\n                \"course\":\"TC-1001\"\n            },\n            \"data\":{\n                \"external_id\":\"TC-1001-SEC1-SCH1\",\n                \"external_version_id\":\"ex-ver-Sch1\",\n                \"section_type\":\"online\",\n                \"name\":\"Morning\",\n                \"description\":\"Schedule Description\",\n                \"start_at\":\"2022-02-24T00:00:00\",\n                \"end_at\":\"2023-02-25T00:00:00\",\n                \"building_name\":\"North Building\",\n                \"building_code\":\"SB0930\",\n                \"room_name\":\"SB0100\"\n            }\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "New Individual Delete API Payload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"record_delete\",\n   \"records\":[\n        {\n            \"type\":\"instructor\",\n            \"match\":{\n                \"course\": \"dfss3p\", \n                \"section\": \"dfss3pSec\",\n                \"instructor\": \"Ins-0001\"\n            },\n            \"parent\":{},\n            \"data\":{}\n        }\n   ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "HIR logged in user checkout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"store_slug\":\"hir\",\n    \"success_url\": \"https://www.hir.edu/checkout/success\",\n    \"failure_url\": \"https://www.hir.edu/checkout/failure\",\n    \"students\":[\n        {\n            \"first_name\": \"Abul\",\n            \"last_name\": \"Khair\",\n            \"date_of_birth\": \"1995-07-25\",\n            \"primary_email\": \"Khairabul@mail.com\",\n            \"products\":[\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"SFDV100000012__hirSfdVS001\"\n                }\n            ]\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/checkout-info",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"checkout-info"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/checkout-info`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"store_slug\":\"hir\",\n    \"success_url\": \"https://www.hir.edu/checkout/success\",\n    \"failure_url\": \"https://www.hir.edu/checkout/failure\",\n    \"students\":[\n        {\n            \"first_name\":\"Abul\",\n            \"last_name\":\"Hasan\",\n            \"primary_email\":\"hasan@gmail.com\",\n            \"student_id\":\"1234\",\n            \"products\":[\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S4\"\n                },\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S3\"\n                }\n            ]\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"tid\": \"ea093e71ac1df38c2cc18e88661af65c\",\n    \"message\": \"Checkout Information Received\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "HIR logged in user get purchaser info",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.account.dev.campus4i.com/registration/purchaser/?tid=1715f043aac3e9239839e70c4b0c562b",
+					"protocol": "https",
+					"host": [
+						"api",
+						"account",
+						"dev",
+						"campus4i",
+						"com"
+					],
+					"path": [
+						"registration",
+						"purchaser",
+						""
+					],
+					"query": [
+						{
+							"key": "tid",
+							"value": "1715f043aac3e9239839e70c4b0c562b"
+						},
+						{
+							"key": "pid",
+							"value": "8e0dfcdf-9344-4115-a994-9388ea98c51f",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Create profile for Higher Reach logged in user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"    let title = \"Nafisa Test Course\" + Math.floor(Math.random() * 100);\r",
+							"    let external_id = \"0\" + Math.floor(Math.random() * 10000);\r",
+							"    let slug = \"test_slug\" + Math.floor(Math.random() * 1000);\r",
+							"\r",
+							"    pm.environment.set(\"title\", title);\r",
+							"    pm.environment.set(\"external_id\", external_id);\r",
+							"    pm.environment.set(\"slug\", slug);\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"action\":\"record\",\n    \"type\":\"student\",\n    \"data\":{\n        \"first_name\":\"Abul\",\n        \"last_name\":\"Khair\",\n        \"primary_email\":\"Khairabul@mail.com\",\n        \"date_of_birth\":\"1995-07-25\",\n        \"primary_contact_number\":\"\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/student",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"student"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\":\"record\",\n    \"type\":\"student\",\n    \"data\":{\n        \"first_name\":\"Karim\",\n        \"last_name\":\"Abul Khair\",\n        \"primary_email\":\"abul.khair@mail.com\",\n        \"date_of_birth\":\"1995-07-25\",\n        \"primary_contact_number\":\"01711076585\"\n    }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"type\": \"student\",\n    \"data\": {\n        \"id\": \"eaa3e5f4-6c9d-4ffd-b4a7-ff091c02c846\",\n        \"first_name\": \"Karim\",\n        \"last_name\": \"Abul Khair\",\n        \"date_of_birth\": \"1995-07-25\",\n        \"primary_email\": \"abul.khair@mail.com\",\n        \"primary_contact_number\": \"01711076585\"\n    },\n    \"status\": \"created\",\n    \"message\": \"new profile created successfully\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Job Status Course Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"   \r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Api-Key Be8DyR4d.uEfEwxztV2oepGyjEK9vSsNJ15da6p58",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/job-status/{{job_id}}",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"job-status",
+						"{{job_id}}"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"
+			},
+			"response": []
+		}
+	]
+}

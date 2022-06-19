@@ -18,7 +18,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"order_id\" : \"773\",\n  \"event_type\" : \"enrollment\",\n  \"payload\" : {\n    \"enrollments\" : [\n      {\n        \"enrollment_id\" : \"771\",\n        \"status\" : \"success\",\n        \"school_student_id\" : \"9999771\"\n      }\n    ]\n  }\n}",
+					"raw": "{\n  \"order_id\" : \"891\",\n  \"event_type\" : \"enrollment\",\n  \"payload\" : {\n    \"enrollments\" : [\n      {\n        \"enrollment_id\" : \"869\",\n        \"status\" : \"success\",\n        \"school_student_id\" : \"9999869\"\n      }\n    ]\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -37,6 +37,44 @@
 					],
 					"path": [
 						"j1-push"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/webhooks`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n{\n    \"order_id\": \"16b98520-3361-43b3-Ae97-63088fcd31a7\",\n    \"event_type\": \"enrollment\",\n    \"payload\": {\n    \"enrollments\": [\n        {   \n            \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n            \"status\": \"success\"\n        },\n\t {   \n            \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n            \"status\": \"pending\"\n        }\n    ]\n    }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"ok\"\n}\n\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "Enrollment Update API for C4I",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Key NnlAHmcZ.2JrRMiez7QOnefDX4KVfxR84wuV51OWV",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"order_id\" : \"950\",\n  \"event_type\" : \"enrollment\",\n  \"payload\" : {\n    \"enrollments\" : [\n      {\n        \"enrollment_id\" : \"930\",\n        \"status\" : \"success\",\n        \"school_student_id\" : \"9999930\"\n      },\n      {\n        \"enrollment_id\" : \"931\",\n        \"status\" : \"success\",\n        \"school_student_id\" : \"9999931\"\n      }\n    ]\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"j3fz4814s2",
+						"execute-api",
+						"us-east-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
 					]
 				},
 				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/webhooks`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n{\n    \"order_id\": \"16b98520-3361-43b3-Ae97-63088fcd31a7\",\n    \"event_type\": \"enrollment\",\n    \"payload\": {\n    \"enrollments\": [\n        {   \n            \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n            \"status\": \"success\"\n        },\n\t {   \n            \"enrollment_id\": \"04dc011e-Ae51-4ee7-A446-2635be5537f6\",\n            \"status\": \"pending\"\n        }\n    ]\n    }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"ok\"\n}\n\n```"

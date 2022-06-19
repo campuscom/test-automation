@@ -7926,6 +7926,445 @@
 			"description": "Here you can get ***Payment*** related endpoints."
 		},
 		{
+			"name": "Permission",
+			"item": [
+				{
+					"name": "Get Permissions",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/permissions?group=Career",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"permissions"
+							],
+							"query": [
+								{
+									"key": "group",
+									"value": "Career"
+								}
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/products/?limit=50`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/user-table-configurations/?limit=30&page=1&table_name=Store\",\n    \"date_time\": \"2022-05-09T06:33:09.099891Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": null,\n        \"total\": 1,\n        \"limit\": 30\n    },\n    \"data\": [\n        {\n            \"id\": \"57b50bdd-923f-4378-81e8-058823bf5c42\",\n            \"user\": \"ca94a2df-c929-460d-bd1a-10790380d5d6\",\n            \"table_name\": \"Store\",\n            \"configuration\": {\n                \"name\": {\n                    \"title\": \"Name\",\n                    \"hidden\": false,\n                    \"columnPosition\": 0,\n                    \"defaultSortOrder\": null\n                },\n                \"url_slug\": {\n                    \"title\": \"Slug\",\n                    \"hidden\": false,\n                    \"columnPosition\": 1,\n                    \"defaultSortOrder\": null\n                }\n            }\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Permission@athena",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Cart Item View\",\n    \"group\": \"Cart Item\",\n    \"operation\": \"CartItemViewSet\",\n    \"action\": \"r\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/permissions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"permissions",
+								""
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/permissions/\n\n**Method** : `POST`\n\n**Payload**\n\n```JSON\n\n{\n    \"name\": \"Related Product Delete\",\n    \"group\": \"Related Product\",\n    \"operation\": \"DeleteRelatedProductView\",\n    \"action\": \"d\"\n}\n\n````\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/permissions/\",\n    \"date_time\": \"2022-05-09T06:05:31.448386Z\",\n    \"data\": {\n        \"id\": \"9bc3e9fb-7e24-4be4-a099-be58a7f10a47\",\n        \"name\": \"Related Product Delete\",\n        \"action\": \"d\",\n        \"operation\": \"DeleteRelatedProductView\",\n        \"group\": \"Related Product\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Permission@dev",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"User Table Configuration Edit\",\n    \"group\": \"User Table Configuration\",\n    \"operation\": \"UserTableConfigurationViewSet\",\n    \"action\": \"w\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/permissions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"permissions",
+								""
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/permissions/\n\n**Method** : `POST`\n\n**Payload**\n\n```JSON\n\n{\n    \"name\": \"Related Product Delete\",\n    \"group\": \"Related Product\",\n    \"operation\": \"DeleteRelatedProductView\",\n    \"action\": \"d\"\n}\n\n````\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/permissions/\",\n    \"date_time\": \"2022-05-09T06:05:31.448386Z\",\n    \"data\": {\n        \"id\": \"9bc3e9fb-7e24-4be4-a099-be58a7f10a47\",\n        \"name\": \"Related Product Delete\",\n        \"action\": \"d\",\n        \"operation\": \"DeleteRelatedProductView\",\n        \"group\": \"Related Product\"\n    }\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Permission@staging",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Career View\",\n    \"group\": \"Career\",\n    \"operation\": \"OccupationModelViewSet\",\n    \"action\": \"r\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/permissions/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"permissions",
+								""
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/permissions/\n\n**Method** : `POST`\n\n**Payload**\n\n```JSON\n\n{\n    \"name\": \"Related Product Delete\",\n    \"group\": \"Related Product\",\n    \"operation\": \"DeleteRelatedProductView\",\n    \"action\": \"d\"\n}\n\n````\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/permissions/\",\n    \"date_time\": \"2022-05-09T06:05:31.448386Z\",\n    \"data\": {\n        \"id\": \"9bc3e9fb-7e24-4be4-a099-be58a7f10a47\",\n        \"name\": \"Related Product Delete\",\n        \"action\": \"d\",\n        \"operation\": \"DeleteRelatedProductView\",\n        \"group\": \"Related Product\"\n    }\n}\n\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Schedule*** related endpoints."
+		},
+		{
+			"name": "User Table Configuration Model]",
+			"item": [
+				{
+					"name": "Get user table configuration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user-table-configurations/?limit=30&page=1&table_name=Store",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user-table-configurations",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "30"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "table_name",
+									"value": "Store"
+								}
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/products/?limit=50`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/permissions/?group=Payment%20Question\",\n    \"date_time\": \"2022-05-09T06:14:53.587707Z\",\n    \"total\": 1,\n    \"data\": [\n        {\n            \"group\": \"Payment Question\",\n            \"permissions\": [\n                {\n                    \"id\": \"a96c302d-b5dc-470c-9a6f-6e26028bef50\",\n                    \"name\": \"Payment Question Delete\",\n                    \"action\": \"d\",\n                    \"operation\": \"DeletePaymentQuestionView\",\n                    \"group\": \"Payment Question\"\n                },\n                {\n                    \"id\": \"996e7789-d6e8-43e2-a718-430617cf867a\",\n                    \"name\": \"Payment Question Edit\",\n                    \"action\": \"w\",\n                    \"operation\": \"UpdatePaymentQuestionView\",\n                    \"group\": \"Payment Question\"\n                },\n                {\n                    \"id\": \"8e392b0a-f50e-48bd-9733-178b85fd5994\",\n                    \"name\": \"Payment Question Create\",\n                    \"action\": \"w\",\n                    \"operation\": \"PaymentQuestionViewSet\",\n                    \"group\": \"Payment Question\"\n                },\n                {\n                    \"id\": \"2b223b64-0784-4728-bc90-fdbdc4307943\",\n                    \"name\": \"Payment Question View\",\n                    \"action\": \"r\",\n                    \"operation\": \"PaymentQuestionViewSet\",\n                    \"group\": \"Payment Question\"\n                }\n            ]\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Create user table configuration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"table_name\": \"Store\",\n  \"value\": {\n    \"name\": {\n      \"title\": \"Name\",\n      \"columnPosition\": 0,\n      \"hidden\": false,\n      \"defaultSortOrder\": null\n    },\n    \"url_slug\": {\n      \"title\": \"Slug\",\n      \"columnPosition\": 1,\n      \"hidden\": false,\n      \"defaultSortOrder\": null\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/user-table-configurations/",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"user-table-configurations",
+								""
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/permissions/\n\n**Method** : `POST`\n\n**Payload**\n\n```JSON\n\n{\n    \"name\": \"Related Product Delete\",\n    \"group\": \"Related Product\",\n    \"operation\": \"DeleteRelatedProductView\",\n    \"action\": \"d\"\n}\n\n````\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus4i.com/permissions/\",\n    \"date_time\": \"2022-05-09T06:05:31.448386Z\",\n    \"data\": {\n        \"id\": \"9bc3e9fb-7e24-4be4-a099-be58a7f10a47\",\n        \"name\": \"Related Product Delete\",\n        \"action\": \"d\",\n        \"operation\": \"DeleteRelatedProductView\",\n        \"group\": \"Related Product\"\n    }\n}\n\n```"
+					},
+					"response": []
+				}
+			],
+			"description": "Here you can get ***Schedule*** related endpoints."
+		},
+		{
 			"name": "Profile",
 			"item": [
 				{
@@ -8343,7 +8782,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{baseurl}}/products/?limit=150",
+							"raw": "{{baseurl}}/products/?limit=100&=",
 							"host": [
 								"{{baseurl}}"
 							],
@@ -8354,7 +8793,26 @@
 							"query": [
 								{
 									"key": "limit",
-									"value": "150"
+									"value": "100"
+								},
+								{
+									"key": "product_id",
+									"value": "a9d58d7b-b50a-4754-9241-af7c0e58fc53",
+									"disabled": true
+								},
+								{
+									"key": "include_null",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "relation_type",
+									"value": "registration",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": ""
 								}
 							]
 						},
@@ -9721,7 +10179,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"product\": \"ab968483-0263-413f-a27d-4e8a4de99eb7\",\r\n    \"optional_products\": [\"706aaee5-4d52-4796-9398-a6fbb0f48e41\",\"394c2029-4b83-489b-9de7-49c2aa93bbab\"],\r\n    \"related_product_type\": \"registration\"\r\n}",
+							"raw": "{\r\n    \"product\": \"aba14e04-d98b-4900-be4d-5b9a7678bc60\",\r\n    \"optional_products\": [\"49de5288-718c-409f-b6bf-195bb07a8060\"],\r\n    \"related_product_type\": \"registration\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

@@ -7,6 +7,19 @@
 	"item": [
 		{
 			"name": "J1 Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {",
+							"    pm.response.to.have.status(201);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [
@@ -18,7 +31,45 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"99990002\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CRSA002\",\n    \"formatted_crs_cde\" : \"CRSA-002\",\n    \"crs_title\" : \"Introduction to Business\",\n    \"catalog_text\" : \"<html><body><p>Introduction to Business Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"534544\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CRSA002\",\n        \"formatted_crs_cde\" : \"CRSA-002\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"10.00\",\n        \"open_seats\" : \"50\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"534544\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA002\",\n            \"section_appid\" : \"534544\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2985543\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA002\",\n            \"section_appid\" : \"534544\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"i\",\n  \"data\" : {\n    \"catalog_appid\" : \"216854\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"PFM001\",\n    \"formatted_crs_cde\" : \"pfm-001\",\n    \"crs_title\" : \"Personal Finance Management\",\n    \"catalog_text\" : \"<html><body><p>Personal Finance Management Description... </p></body></html>\",\n    \"sections\" : [\n        {\n            \"section_appid\" : \"888777\",\n            \"yr_cde\" : \"2022\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"PFM001\",\n            \"formatted_crs_cde\" : \"pfm-001\",\n            \"first_begin_dte\" : \"2022-08-30\",\n            \"last_end_dte\" : \"2022-12-31\",\n            \"final_enrollment_dte\" : \"2022-12-15\",\n            \"course_fees\" : \"00.00\",\n            \"open_seats\" : \"50\",\n            \"execution_site\" : \"NORTH\",\n            \"credit_hrs\" : \"3.00\",\n            \"crs_clock_hrs\" : \"0.00\",\n            \"instructors\" : [\n            {\n                \"section_instructor_appid\" : \"111222\",\n                \"yr_cde\" : \"2022\",\n                \"trm_cde\" : \"10\",\n                \"crs_cde\" : \"PFM001\",\n                \"section_appid\" : \"9517530\",\n                \"instructor_id_num\" : \"1379\",\n                \"last_name\" : \"Beckham\",\n                \"first_name\" : \"David\",\n                \"middle_name\" : \"Robert Joseph\"\n            }\n            ],\n            \"schedules\" : [\n            {\n                \"section_schedule_appid\" : \"222333\",\n                \"yr_cde\" : \"2022\",\n                \"trm_cde\" : \"10\",\n                \"crs_cde\" : \"PFM001\",\n                \"section_appid\" : \"9517530\",\n                \"begin_dte\" : \"2022-08-30\",\n                \"begin_tim\" : \"11:00:00\",\n                \"end_dte\" : \"2022-12-31\",\n                \"end_tim\" : \"11:50:00\",\n                \"monday_cde\" : \"M\",\n                \"wednesday_cde\" : \"W\",\n                \"friday_cde\" : \"F\",\n                \"loc_cde\" : \"MAIN\",\n                \"location_description\" : \"Main Campus\",\n                \"bldg_cde\" : \"ROOP\",\n                \"building_description\" : \"Roop Hall\",\n                \"room_cde\" : \"102\",\n                \"room_description\" : \"102 Classroom\",\n                \"name\":\"Morning\"\n            }\n            ]\n        },\n        {\n        \"section_appid\" : \"999777\",\n        \"yr_cde\" : \"2022\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"PFM001\",\n        \"formatted_crs_cde\" : \"pfm-001\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"20.00\",\n        \"open_seats\" : \"50\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"111222\",\n            \"yr_cde\" : \"2022\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"PFM001\",\n            \"section_appid\" : \"9517530\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Beckham\",\n            \"first_name\" : \"David\",\n            \"middle_name\" : \"Robert Joseph\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"222333\",\n            \"yr_cde\" : \"2022\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"PFM001\",\n            \"section_appid\" : \"9517530\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\",\n            \"name\":\"Morning\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"1k86sr9vx1",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish`\n\n**Headers**\nKey Name: Authorization\nValue: Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n\n{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"87974654\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CS1022\",\n    \"formatted_crs_cde\" : \"CS-102-2\",\n    \"crs_title\" : \"Introduction to Python Programming\",\n    \"catalog_text\" : \"<html><body><p>Introduction to Python Programming Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"564650\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CS1022\",\n        \"formatted_crs_cde\" : \"CS-102-2\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"0.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"132165465\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1022\",\n            \"section_appid\" : \"564650\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1022\",\n            \"section_appid\" : \"564650\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n```"
+			},
+			"response": []
+		},
+		{
+			"name": "J1 Publish API Copy 08-05-22",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"action\": \"j1-course\",\n  \"entity_action\": \"i\",\n  \"data\": {\n    \"catalog_appid\": \"66666666\",\n    \"org_cde\": \"*LOCAL\",\n    \"crs_cde\": \"TBA3217\",\n    \"formatted_crs_cde\": \"TAB-3217\",\n    \"crs_title\": \"Test Business Analytics\",\n    \"catalog_text\": \"Test Business Analytics is related to Test Business Analytics and Data science but it has a higher demand in the market now. For implementing Artificial Intelligence in the business processes, knowing the Test Business Analytics techniques is a must. Companies are now looking for manpower trained in Test Business Analytics technologies. A career in it can be rewarding in future and you can go for Test Business Analytics courses after your 12th\",\n    \"sections\": [\n      {\n        \"section_appid\": \"145485\",\n        \"yr_cde\": \"2022\",\n        \"trm_cde\": \"UF\",\n        \"crs_cde\": \"TBA3217\",\n        \"formatted_crs_cde\": \"TAB-3217\",\n        \"first_begin_dte\": \"2022-08-26\",\n        \"last_end_dte\": \"2022-10-20\",\n        \"final_enrollment_dte\": \"2022-09-01\",\n        \"course_fees\": \"10.00\",\n        \"open_seats\": \"50\",\n        \"execution_site\": \"ONLN\",\n        \"credit_hrs\": \"50.00\",\n        \"crs_clock_hrs\": \"0.00\",\n        \"instructors\": [],\n        \"schedules\" : []\n      }\n    ]\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -62,7 +113,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"order_id\": 76,\n   \"event_type\":\"enrollment\",\n   \"payload\":{\n      \"enrollments\":[\n         {\n            \"enrollment_id\": 143,\n            \"status\":\"success\",\n            \"school_student_id\":\"10000143\"\n         }\n      ]\n   }\n}",
+					"raw": "{\n    \"order_id\": 123,\n    \"event_type\":\"enrollment\",\n    \"payload\":{\n            \"enrollments\":[\n                {\n                    \"enrollment_id\": 189,\n                    \"status\":\"success\",\n                    \"school_student_id\":\"10000188\"\n                }\n            ]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"

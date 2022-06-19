@@ -133,7 +133,7 @@
 			]
 		},
 		{
-			"name": "Course Publish API",
+			"name": "Course Publish API Payload",
 			"event": [
 				{
 					"listen": "test",
@@ -403,7 +403,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"store_slug\":\"hir\",\n    \"success_url\": \"https://www.hir.edu/checkout/success\",\n    \"failure_url\": \"https://www.hir.edu/checkout/failure\",\n    \"students\":[\n        {\n            \"first_name\":\"Abudus\",\n            \"last_name\":\"Salam\",\n            \"primary_email\":\"Salam@gmail.com\",\n            \"student_id\":\"9999###\",\n            \"products\":[\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S4\"\n                },\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S3\"\n                }\n            ]\n        }\n    ]\n}",
+					"raw": "{\n    \"store_slug\":\"hir\",\n    \"success_url\": \"https://www.hir.edu/checkout/success\",\n    \"failure_url\": \"https://www.hir.edu/checkout/failure\",\n    \"students\":[\n        {\n            \"first_name\": \"Abul\",\n            \"last_name\": \"Khair\",\n            \"date_of_birth\": \"1995-07-25\",\n            \"primary_email\": \"Khairabul@mail.com\",\n            \"products\":[\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S4\"\n                },\n                {\n                    \"product_type\":\"section\",\n                    \"id\":\"Course-A10__Course-A10-S3\"\n                }\n            ]\n        }\n    ]\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -477,7 +477,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"action\":\"record\",\n    \"type\":\"student\",\n    \"data\":{\n        \"first_name\":\"\",\n        \"last_name\":\"Abul Khair\",\n        \"primary_email\":\"jul@mail.com\",\n        \"date_of_birth\":\"1995-07-25\",\n        \"primary_contact_number\":\"\"\n    }\n}",
+					"raw": "{\n    \"action\":\"record\",\n    \"type\":\"student\",\n    \"data\":{\n        \"first_name\":\"Abul\",\n        \"last_name\":\"Khair\",\n        \"primary_email\":\"Khairabul@mail.com\",\n        \"date_of_birth\":\"1995-07-25\",\n        \"primary_contact_number\":\"\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -868,7 +868,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/job-status/625fdde9d33e514fa8ba6ec6",
+					"raw": "https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/job-status/628220ca80a98d08f6532280",
 					"protocol": "https",
 					"host": [
 						"j3fz4814s2",
@@ -879,7 +879,7 @@
 					],
 					"path": [
 						"job-status",
-						"625fdde9d33e514fa8ba6ec6"
+						"628220ca80a98d08f6532280"
 					]
 				},
 				"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n{\n    \"action\": \"record\",\n    \"records\":[\n        {\n            \"type\":\"course\",\n            \"parent\":\"\",\n            \"data\":{\n                \"external_id\": \"TCM-104\",\n                \"code\": \"TC-MATH-104\",\n                \"title\": \"Test Course Introductory Math 104\",\n                \"slug\": \"test-course-introductory-math-104\",\n                \"description\":\"test description\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S2\",\n                \"code\": \"TCM-104-E2\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"120.00\",\n                \"num_seats\": 25,\n                \"available_seats\": 18,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"section\",\n            \"parent\":\"TCM-104\",\n            \"data\":{\n                \"external_id\": \"TCM-104-S1\",\n                \"code\": \"TCM-104-E1\",\n                \"start_date\": \"2021-12-24T00:00:00\",\n                \"end_date\": \"2021-12-25T00:00:00\",\n                \"fee\": \"220.00\",\n                \"num_seats\": 35,\n                \"available_seats\": 20,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2021-12-24T00:00:00\"\n            }\n        },\n        {\n            \"type\":\"instructor\",\n            \"parent\":\"TCM-104-S2\",\n            \"data\":{\n                \"external_id\": \"10001-01-I0104\",\n                \"name\": \"David Gomez\",\n                \"profile_urls\": {\"url\":\"https://linkedin.com/david-math\"}\n            }\n        }\n    ]\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n\n```"

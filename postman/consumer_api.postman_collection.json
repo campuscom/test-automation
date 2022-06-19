@@ -451,39 +451,33 @@
 							"formdata": [
 								{
 									"key": "store_payment_gateway_id",
-									"value": "0061d140-6001-4a8d-a58d-82a4dfa481b2",
-									"type": "text",
-									"disabled": true
+									"value": "a6d79158-29f6-42e3-bc77-f5661f272282",
+									"type": "text"
 								},
 								{
 									"key": "zip_code",
 									"value": "01430",
-									"type": "text",
-									"disabled": true
+									"type": "text"
 								},
 								{
 									"key": "country",
 									"value": "US",
-									"type": "text",
-									"disabled": true
+									"type": "text"
 								},
 								{
 									"key": "product_ids",
-									"value": "[\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\"]",
-									"type": "text",
-									"disabled": true
+									"value": "[\"35799a53-0fe6-4460-908c-eac647982f3f\"]",
+									"type": "text"
 								},
 								{
 									"key": "nonce",
-									"value": "eyJjb2RlIjoiNTBfMl8wNjAwMDUzRUE5Qjc4MTMwOTdBQTMyNzU2NzYwMkI2RDVBNzE5QUU2OUM0QTVDNjNCNUI2RDg3ODUxQjIwQkE5NkFEQkU3RkUzQTA1MTRBQjE0Q0ZDM0NBODk4NEYyNTkxOTk0QUU5IiwidG9rZW4iOiI5NjQzNTM2MTk2NDEyODYwNDA0NjAxIiwidiI6IjEuMSJ9",
-									"type": "text",
-									"disabled": true
+									"value": "{{GetNonce}}",
+									"type": "text"
 								},
 								{
 									"key": "purchaser_info",
-									"value": "{\"first_name\":\"Abu\",\"last_name\":\"Zafor\",\"primary_email\":\"maruf@sgcsoft.net\"}",
-									"type": "text",
-									"disabled": true
+									"value": "{\n   \"first_name\": \"Student\",\n   \"last_name\":\"1007\",\n   \"primary_email\":\"1007@sgcsoft.net\",\n   \"extra_info\":{\n      \n   }\n}",
+									"type": "text"
 								},
 								{
 									"key": "registration_details",
@@ -493,15 +487,13 @@
 								},
 								{
 									"key": "agreement_details",
-									"value": "{\"10c74ac4-6f1b-4a1f-ac8f-dbcdc4634a05\":false,\"d3844b59-413a-4f01-b87a-79e2365b942d\":false}",
-									"type": "text",
-									"disabled": true
+									"value": "{\"d3844b59-413a-4f01-b87a-79e2365b942d\":true}",
+									"type": "text"
 								},
 								{
 									"key": "student_details",
-									"value": "[{\"product_id\":\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\"first_name\":\"Abu\",\"last_name\":\"Zafor\",\"email\":\"maruf@sgcsoft.net\",\"extra_info\":{\"6d98cf5f-a325-47c3-984d-9222a03bb7f2\":\"ffdbc127-4c13-475c-9f7e-f353741ec2dc.png\",\"15d50612-b0dd-4d50-8ab9-9b8d85895f16\":\"\",\"baeb6291-8724-4351-afb1-a79628719b36\":\"237cb3f5-5539-44ef-a391-d3239cebf9ca.png\",\"6e8aca94-f5b6-4363-ad01-c58d54e1f4b7\":\"\",\"b8fdeb57-56a8-42b6-b730-5886716a526d\":true,\"cc804e6f-5df8-4772-a22e-eeaaa2b05ac6\":\"Canada\",\"f49d9bd8-191c-45f2-8c9d-57598abaaeb4\":\"\"}}]",
-									"type": "text",
-									"disabled": true
+									"value": "[\n   {\n      \"product_id\":\"35799a53-0fe6-4460-908c-eac647982f3f\",\n      \"first_name\":\"Student\",\n      \"last_name\":\"1007\",\n      \"email\":\"1007@sgcsoft.net\",\n      \"extra_info\":{\n         \n      }\n   }\n]",
+									"type": "text"
 								},
 								{
 									"key": "cart_details",
@@ -517,19 +509,19 @@
 								},
 								{
 									"key": "store_slug",
-									"value": "hir",
+									"value": "jenzabar-university",
 									"type": "text"
 								},
 								{
 									"key": "cart_details",
-									"value": "[{\"product_id\":\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\"quantity\":1,\"is_related\":false,\"related_to\":\"\",\"student_email\":\"\"},{\"product_id\":\"48f41127-2928-400f-9dee-589537666024\",\"quantity\":1,\"is_related\":true,\"related_to\":\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\"student_email\":\"\"},{\"product_id\":\"d19edd54-625c-497b-b828-d7481bb8e918\",\"quantity\":1,\"is_related\":true,\"related_to\":\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\"student_email\":\"\"},{\"product_id\":\"a3a666fd-1ef7-4e5d-9175-de5a0ad58b7d\",\"quantity\":1,\"is_related\":true,\"related_to\":\"82ea9b86-a9c9-4166-9b2e-5746aa10af03\",\"student_email\":\"maruf@sgcsoft.net\"}]",
-									"type": "text",
-									"disabled": true
+									"value": "[\n   {\n      \"product_id\":\"35799a53-0fe6-4460-908c-eac647982f3f\",\n      \"quantity\":1,\n      \"is_related\":false,\n      \"related_to\":\"\",\n      \"student_email\":\"\"\n   }\n]",
+									"type": "text"
 								},
 								{
 									"key": "tid",
 									"value": "63dc438287dce94804ed079750b3a8bb",
-									"type": "text"
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
@@ -807,6 +799,23 @@
 				},
 				{
 					"name": "GetNonce",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"const response = pm.response.json();",
+									"const nonce = response.opaqueData.dataValue;",
+									"pm.globals.set(\"GetNonce\", nonce);",
+									"console.log(nonce)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"method": "POST",
 						"header": [],

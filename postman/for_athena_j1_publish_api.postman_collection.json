@@ -6,6 +6,57 @@
 	},
 	"item": [
 		{
+			"name": "Jenzabar University Course Publish API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Key oo0nZCUO.BsGdoWjYYXqKJUUsV5C64Hmogk2YNppt",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"d\",\n  \"data\" : {\n    \"catalog_appid\" : \"585\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"PREQ 201\",\n    \"formatted_crs_cde\" : \"PREQ-201\",\n    \"crs_title\" : \"PREREQUISITE COURSE 201\",\n    \"catalog_text\" : \"<html><body><p>This is the PREQ 201 course. </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"14498\",\n        \"yr_cde\" : \"2022\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"PREQ 201\",\n        \"formatted_crs_cde\" : \"PREQ-201\",\n        \"first_begin_dte\" : \"2023-01-01\",\n        \"last_end_dte\" : \"2023-05-31\",\n        \"course_fees\" : \"10.00\",\n        \"open_seats\" : \"100\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"534544\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"PREQ 201\",\n            \"section_appid\" : \"14498\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Carter\",\n            \"first_name\" : \"James\",\n            \"middle_name\" : \"Earl\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2985543\",\n            \"yr_cde\" : \"2022\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"PREQ 201\",\n            \"section_appid\" : \"14498\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\",\n            \"name\":\"NORTH\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://u0kj96wbj9.execute-api.us-west-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"u0kj96wbj9",
+						"execute-api",
+						"us-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish`\n\n**Headers**\nKey Name: Authorization\nValue: Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n\n{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"87974654\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CS1022\",\n    \"formatted_crs_cde\" : \"CS-102-2\",\n    \"crs_title\" : \"Introduction to Python Programming\",\n    \"catalog_text\" : \"<html><body><p>Introduction to Python Programming Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"564650\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CS1022\",\n        \"formatted_crs_cde\" : \"CS-102-2\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"0.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"132165465\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1022\",\n            \"section_appid\" : \"564650\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1022\",\n            \"section_appid\" : \"564650\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n```"
+			},
+			"response": []
+		},
+		{
 			"name": "J1 Publish API",
 			"request": {
 				"method": "POST",
@@ -18,7 +69,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"99990001\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CRSA 001\",\n    \"formatted_crs_cde\" : \"CRSA-001\",\n    \"crs_title\" : \"Course A1 from Campus Team\",\n    \"catalog_text\" : \"<html><body><p>Course A1 from Campus Team Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"534543\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CRSA 001\",\n        \"formatted_crs_cde\" : \"CRSA-001\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"00.00\",\n        \"open_seats\" : \"50\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"534543\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA 001\",\n            \"section_appid\" : \"534543\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2985543\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA 001\",\n            \"section_appid\" : \"534543\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+					"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"99990002\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CRSA002\",\n    \"formatted_crs_cde\" : \"CRSA-002\",\n    \"crs_title\" : \"Introduction to Business\",\n    \"catalog_text\" : \"<html><body><p>Introduction to Business Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"534544\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CRSA002\",\n        \"formatted_crs_cde\" : \"CRSA-002\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"00.00\",\n        \"open_seats\" : \"50\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"534544\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA002\",\n            \"section_appid\" : \"534544\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2985543\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA002\",\n            \"section_appid\" : \"534544\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -50,13 +101,13 @@
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT",
+						"value": "Api-Key oo0nZCUO.BsGdoWjYYXqKJUUsV5C64Hmogk2YNppt",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"order_id\": 63,\n   \"event_type\":\"enrollment\",\n   \"payload\":{\n      \"enrollments\":[\n         {\n            \"enrollment_id\": 82,\n            \"status\":\"success\",\n            \"school_student_id\":\"1561561\"\n         }\n      ]\n   }\n}",
+					"raw": "{\n   \"order_id\": 16,\n   \"event_type\":\"enrollment\",\n   \"payload\":{\n      \"enrollments\":[\n         {\n            \"enrollment_id\": 16,\n            \"status\":\"success\",\n            \"school_student_id\":\"1561516\"\n         }\n      ]\n   }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -64,12 +115,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/j1-push",
+					"raw": "https://u0kj96wbj9.execute-api.us-west-2.amazonaws.com/j1-push",
 					"protocol": "https",
 					"host": [
-						"1k86sr9vx1",
+						"u0kj96wbj9",
 						"execute-api",
-						"us-east-1",
+						"us-west-2",
 						"amazonaws",
 						"com"
 					],

@@ -1,0 +1,396 @@
+{
+	"info": {
+		"_postman_id": "5c0fd035-2152-486a-bf6d-2125682e1c2f",
+		"name": "PartnerAPI J1 Staging",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "Get Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"stagingToken\", jsonData.access);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"a123a123\",\r\n  \"otp\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "https://api.admin.staging.campus4i.com/api/token/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"admin",
+								"staging",
+								"campus4i",
+								"com"
+							],
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						},
+						"description": "**You need to Log in as Admin to get access token**\n\n**URL** : `/api/token/`\n\n**Method** : `POST`\n\n**Data Payload** :\n\n```json\n{\n\"username\"\t: \"admin\",\n\"password\" : \"a123a123\",\n\"otp\": \"123456\"\n}\n\n```\n\n**Response** :\n\n```json\n{\n\t{\n  \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYxMzQ0OTI5MSwianRpIjoiMTY0ZDA1NzJhZTI0NGQzMmFmNGRlODE4MmVlNDk4YzkiLCJ1c2VyX2lkIjoiY2E5NGEyZGYtYzkyOS00NjBkLWJkMWEtMTA3OTAzODBkNWQ2IiwiZmlyc3RfbmFtZSI6Ik1haW4iLCJsYXN0X25hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AY2FtcHVzLmNvbSIsInJvbGUiOiJQbGF0Zm9ybUFkbWluIn0.Fkv2rGv81DLNwSUvQCJMJfAnu2o_IoZWSDa4DTa9vVM\",\n  \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjEzNDQ5MjkxLCJqdGkiOiI5ZTUzMjA0OTBjZGY0MmEyOTNlOTRlMzliYTFlNTU4MCIsInVzZXJfaWQiOiJjYTk0YTJkZi1jOTI5LTQ2MGQtYmQxYS0xMDc5MDM4MGQ1ZDYiLCJmaXJzdF9uYW1lIjoiTWFpbiIsImxhc3RfbmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBjYW1wdXMuY29tIiwicm9sZSI6IlBsYXRmb3JtQWRtaW4ifQ.zoEnccW6uPu4uWMEGEqWEZCCJ_OgXYVcXgPq4lPef6o\",\n  \"role\": {\n    \"name\": \"PlatformAdmin\",\n    \"id\": \"601575d4-5227-4cfe-90ab-fb26a32291a2\"\n  },\n  \"permissions\": {\n    \"Product\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Reservation\": [\n      \"list\",\n      \"create\",\n      \"retrieve\",\n      \"destroy\"\n    ],\n    \"Cart\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"CartItem\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"Order\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"OrderStatusHistory\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"OrderItem\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"PaymentGateway\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Payment\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"PaymentTransaction\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"PaymentGatewayConfig\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"StorePaymentGateway\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Enrollment\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"EnrollmentStatusHistory\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfileSavedCareer\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfileCareerQuiz\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"Profile\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"IdentityProvider\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"ProfileLink\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfileCommunicationMedium\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfilePreference\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfileStore\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"CourseProvider\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Course\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"Section\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"StoreCourse\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"Store\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"StoreFeaturedCareer\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"StoreIdentityProvider\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"CustomUser\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Role\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ]\n  },\n  \"context\": {},\n  \"mfa_enabled\": false\n}\n```"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jenzabar University",
+			"item": [
+				{
+					"name": "J1 Publish API test 15/05/2022",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\",  () => {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"i\",\n  \"data\" : {\n    \"catalog_appid\" : \"99990002\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CRSA002\",\n    \"formatted_crs_cde\" : \"CRSA-002\",\n    \"crs_title\" : \"Introduction to Business\",\n    \"catalog_text\" : \"<html><body><p>Introduction to Business Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"534544\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CRSA002\",\n        \"formatted_crs_cde\" : \"CRSA-002\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"10.00\",\n        \"open_seats\" : \"50\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"534544\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA002\",\n            \"section_appid\" : \"534544\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2985543\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CRSA002\",\n            \"section_appid\" : \"534544\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish",
+							"protocol": "https",
+							"host": [
+								"1k86sr9vx1",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"publish"
+							]
+						},
+						"description": "Create profile\n**URL :** `https://j3fz4814s2.execute-api.us-east-2.amazonaws.com/publish`\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"442\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"MATH 113\",\n    \"formatted_crs_cde\" : \"MATH-113\",\n    \"crs_title\" : \"Elements of Statistics\",\n    \"catalog_text\":\"<?xml version=\\\"1.0\\\" encoding=\\\"UTF-8\\\" ?>\\n<!DOCTYPE html\\n          PUBLIC \\\"-//W3C//DTD XHTML 1.0 Transitional//EN\\\"\\n          \\\"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\\\">\\n<html xmlns=\\\"http://www.w3.org/1999/xhtml\\\">\\n<head>\\n<meta http-equiv=\\\"Content-Type\\\" content=\\\"text/html; charset=utf-8\\\" />\\n<meta content=\\\"TX15_HTM 15.0.300.503\\\" name=\\\"GENERATOR\\\" />\\n<title></title>\\n</head>\\n<body style=\\\"font-family:'Arial';font-size:12pt;text-align:left;\\\">\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course is typically offered in Fall, Spring, Summer I and Summer II.</p>\\n<p style=\\\"margin-top:6pt;margin-bottom:6pt;\\\">This course provides a firm foundation for the study of tatistics in other fields. Although no one field is emphasized to the exclusion of others, applications are drawn from psychology, political science, exercise science, and other areas. NOTE: This course can be used to satisfy the university Core Quantitative Reasoning B (QB) requirement. Although it may be usable towards graduation as a major requirement or university elective, it cannot be used to satisfy any of the university GenEd requirements. See your advisor for further information. </p>\\n</body>\\n</html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"14133\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"MATH 113\",\n        \"formatted_crs_cde\" : \"MATH-113\",\n        \"first_begin_dte\" : \"2021-08-30\",\n        \"last_end_dte\" : \"2021-12-31\",\n        \"final_enrollment_dte\" : \"2021-12-31\",\n        \"course_fees\" : \"0.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"5959\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"MATH 113\",\n            \"section_appid\" : \"14133\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Baker\",\n            \"first_name\" : \"Isaac\",\n            \"middle_name\" : \"A\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"MATH 113\",\n            \"section_appid\" : \"14133\",\n            \"begin_dte\" : \"2021-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2021-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Token",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"var jsonData = pm.response.json();\r",
+									"pm.environment.set(\"stagingToken\", jsonData.access);\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"admin\",\r\n  \"password\": \"a123a123\",\r\n  \"otp\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "https://api.admin.staging.campus4i.com/api/token/",
+							"protocol": "https",
+							"host": [
+								"api",
+								"admin",
+								"staging",
+								"campus4i",
+								"com"
+							],
+							"path": [
+								"api",
+								"token",
+								""
+							]
+						},
+						"description": "**You need to Log in as Admin to get access token**\n\n**URL** : `/api/token/`\n\n**Method** : `POST`\n\n**Data Payload** :\n\n```json\n{\n\"username\"\t: \"admin\",\n\"password\" : \"a123a123\",\n\"otp\": \"123456\"\n}\n\n```\n\n**Response** :\n\n```json\n{\n\t{\n  \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYxMzQ0OTI5MSwianRpIjoiMTY0ZDA1NzJhZTI0NGQzMmFmNGRlODE4MmVlNDk4YzkiLCJ1c2VyX2lkIjoiY2E5NGEyZGYtYzkyOS00NjBkLWJkMWEtMTA3OTAzODBkNWQ2IiwiZmlyc3RfbmFtZSI6Ik1haW4iLCJsYXN0X25hbWUiOiJBZG1pbiIsImVtYWlsIjoiYWRtaW5AY2FtcHVzLmNvbSIsInJvbGUiOiJQbGF0Zm9ybUFkbWluIn0.Fkv2rGv81DLNwSUvQCJMJfAnu2o_IoZWSDa4DTa9vVM\",\n  \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjEzNDQ5MjkxLCJqdGkiOiI5ZTUzMjA0OTBjZGY0MmEyOTNlOTRlMzliYTFlNTU4MCIsInVzZXJfaWQiOiJjYTk0YTJkZi1jOTI5LTQ2MGQtYmQxYS0xMDc5MDM4MGQ1ZDYiLCJmaXJzdF9uYW1lIjoiTWFpbiIsImxhc3RfbmFtZSI6IkFkbWluIiwiZW1haWwiOiJhZG1pbkBjYW1wdXMuY29tIiwicm9sZSI6IlBsYXRmb3JtQWRtaW4ifQ.zoEnccW6uPu4uWMEGEqWEZCCJ_OgXYVcXgPq4lPef6o\",\n  \"role\": {\n    \"name\": \"PlatformAdmin\",\n    \"id\": \"601575d4-5227-4cfe-90ab-fb26a32291a2\"\n  },\n  \"permissions\": {\n    \"Product\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Reservation\": [\n      \"list\",\n      \"create\",\n      \"retrieve\",\n      \"destroy\"\n    ],\n    \"Cart\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"CartItem\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"Order\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"OrderStatusHistory\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"OrderItem\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"PaymentGateway\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Payment\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"PaymentTransaction\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"PaymentGatewayConfig\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"StorePaymentGateway\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Enrollment\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"EnrollmentStatusHistory\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfileSavedCareer\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfileCareerQuiz\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"Profile\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"IdentityProvider\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"ProfileLink\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfileCommunicationMedium\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfilePreference\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"ProfileStore\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"CourseProvider\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Course\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"Section\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"StoreCourse\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"Store\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"StoreFeaturedCareer\": [\n      \"list\",\n      \"retrieve\"\n    ],\n    \"StoreIdentityProvider\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"CustomUser\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ],\n    \"Role\": [\n      \"list\",\n      \"create\",\n      \"retrieve\"\n    ]\n  },\n  \"context\": {},\n  \"mfa_enabled\": false\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"const response = pm.response.json();\r",
+									"const id = response.data[0].id;\r",
+									"pm.globals.set(\"jenzabarUniversityIndividualCourseDetails\", id);\r",
+									"console.log(id)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{stagingToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://api.admin.staging.campus4i.com/courses/?course_provider__name=Jenzabar University",
+							"protocol": "https",
+							"host": [
+								"api",
+								"admin",
+								"staging",
+								"campus4i",
+								"com"
+							],
+							"path": [
+								"courses",
+								""
+							],
+							"query": [
+								{
+									"key": "course_provider__name",
+									"value": "Jenzabar University"
+								}
+							]
+						},
+						"description": "Show Course List for currently logged in Account Admin\n\n**URL** : `/courses/`\n\n**Method** : `GET`\n\n**Response** :\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/courses/\",\n    \"date_time\": \"2021-06-24T04:12:45.949025Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 228,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"e41acd1f-cef9-45f4-8c41-651615e646e1\",\n            \"course_provider\": \"cad53a7e-d178-49d6-8630-7f7113b6acfc\",\n            \"title\": \"Dolores tempore est\",\n            \"content_ready\": false,\n            \"slug\": \"neque\",\n            \"content_db_reference\": \"60c0933372b1ddbc51a82f32\",\n            \"course_image_uri\": null,\n            \"external_image_url\": null,\n            \"provider\": {\n                \"id\": \"cad53a7e-d178-49d6-8630-7f7113b6acfc\",\n                \"name\": \"Asher Hartman\",\n                \"code\": \"Dolore mollitia aliq\",\n                \"course_provider_logo_uri\": null,\n                \"content_db_reference\": \"606014a1de4c027ad0073d92\"\n            }\n        },\n        {\n            \"id\": \"b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n            \"course_provider\": \"cad53a7e-d178-49d6-8630-7f7113b6acfc\",\n            \"title\": \"Automate Your Testing\",\n            \"content_ready\": true,\n            \"slug\": \"automate-your-testing\",\n            \"content_db_reference\": \"607e9125947a078ef80088f1\",\n            \"course_image_uri\": \"https://static.dev.campus.com/uploads/d6f94d19-8092-4f1d-921a-87267b7c6bb3.jpeg\",\n            \"external_image_url\": null,\n            \"provider\": {\n                \"id\": \"cad53a7e-d178-49d6-8630-7f7113b6acfc\",\n                \"name\": \"Asher Hartman\",\n                \"code\": \"Dolore mollitia aliq\",\n                \"course_provider_logo_uri\": null,\n                \"content_db_reference\": \"606014a1de4c027ad0073d92\"\n            }\n        },\n        {\n            \"id\": \"b2d97d72-067f-47e6-a426-4e2ae451c005\",\n            \"course_provider\": \"cad53a7e-d178-49d6-8630-7f7113b6acfc\",\n            \"title\": \"Test Course\",\n            \"content_ready\": true,\n            \"slug\": \"test-course\",\n            \"content_db_reference\": \"607e4769ebe908754b2c0390\",\n            \"course_image_uri\": null,\n            \"external_image_url\": null,\n            \"provider\": {\n                \"id\": \"cad53a7e-d178-49d6-8630-7f7113b6acfc\",\n                \"name\": \"Asher Hartman\",\n                \"code\": \"Dolore mollitia aliq\",\n                \"course_provider_logo_uri\": null,\n                \"content_db_reference\": \"606014a1de4c027ad0073d92\"\n            }\n        },\n        {\n            \"id\": \"c82d1ed1-cf13-4713-8eef-4571dd6ab4f2\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"title\": \"Ipsa sunt molestia\",\n            \"content_ready\": true,\n            \"slug\": \"ullam\",\n            \"content_db_reference\": \"607bc386ad005b38ff8e77e4\",\n            \"course_image_uri\": \"https://static.dev.campus.com/uploads/7ae3a5b1-9ab3-4893-9f6c-83afffe7d7b1.jpeg\",\n            \"external_image_url\": null,\n            \"provider\": {\n                \"id\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n                \"name\": \"Mind Edge\",\n                \"code\": \"MINDEDGE\",\n                \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/cc947c82-073c-49c1-9d25-8be63af5afb5.png\",\n                \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n            }\n        },\n        {\n            \"id\": \"91251a10-aeea-4721-8bab-6a2a659bf9c7\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"title\": \"Automation Testing\",\n            \"content_ready\": true,\n            \"slug\": \"automation-testing\",\n            \"content_db_reference\": \"6077ccb7d2aa3270e6047f2f\",\n            \"course_image_uri\": \"https://static.dev.campus.com/uploads/1af8e1e7-194e-4528-9bc4-a27260b7a7a8.png\",\n            \"external_image_url\": null,\n            \"provider\": {\n                \"id\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n                \"name\": \"Mind Edge\",\n                \"code\": \"MINDEDGE\",\n                \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/cc947c82-073c-49c1-9d25-8be63af5afb5.png\",\n                \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n            }\n        },\n        {\n            \"id\": \"eb9accbf-4637-4414-bb23-7f4d5ff6f7f0\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"title\": \"Work-Life Balance for Women in Business\",\n            \"content_ready\": true,\n            \"slug\": \"work-life-balance-for-women-in-business\",\n            \"content_db_reference\": \"5ea0073587f7b325df67ca8e\",\n            \"course_image_uri\": \"https://cdn-d.mindedgeonline.com/1602/custom_icons/Work_Life_Balance_for_Women_in_Business_HRC_1602.jpg\",\n            \"external_image_url\": \"https://cdn-d.mindedgeonline.com/1602/custom_icons/Work_Life_Balance_for_Women_in_Business_HRC_1602.jpg\",\n            \"provider\": {\n                \"id\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n                \"name\": \"Mind Edge\",\n                \"code\": \"MINDEDGE\",\n                \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/cc947c82-073c-49c1-9d25-8be63af5afb5.png\",\n                \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n            }\n        },\n        {\n            \"id\": \"26961d8e-28a9-40f7-9df0-41a535d9baac\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"title\": \"Networking and Mentorship for Women in Business\",\n            \"content_ready\": true,\n            \"slug\": \"networking-and-mentorship-for-women-in-business\",\n            \"content_db_reference\": \"5ea0073587f7b325df67ca84\",\n            \"course_image_uri\": \"https://cdn-d.mindedgeonline.com/1603/custom_icons/Networking_and_Mentorship_for_Women_in_Business_HRC_1603.png\",\n            \"external_image_url\": \"https://cdn-d.mindedgeonline.com/1603/custom_icons/Networking_and_Mentorship_for_Women_in_Business_HRC_1603.png\",\n            \"provider\": {\n                \"id\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n                \"name\": \"Mind Edge\",\n                \"code\": \"MINDEDGE\",\n                \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/cc947c82-073c-49c1-9d25-8be63af5afb5.png\",\n                \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n            }\n        },\n        {\n            \"id\": \"83591c70-ce01-4476-b3a8-ec1ce4cc1f75\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"title\": \"Negotiation for Women in Business\",\n            \"content_ready\": true,\n            \"slug\": \"negotiation-for-women-in-business\",\n            \"content_db_reference\": \"5ea0073587f7b325df67ca79\",\n            \"course_image_uri\": \"https://cdn-d.mindedgeonline.com/1647/custom_icons/Negotiation_for_Women_in_Business_HRC1647.jpg\",\n            \"external_image_url\": \"https://cdn-d.mindedgeonline.com/1647/custom_icons/Negotiation_for_Women_in_Business_HRC1647.jpg\",\n            \"provider\": {\n                \"id\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n                \"name\": \"Mind Edge\",\n                \"code\": \"MINDEDGE\",\n                \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/cc947c82-073c-49c1-9d25-8be63af5afb5.png\",\n                \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n            }\n        },\n        {\n            \"id\": \"b0c341ac-703b-4781-ab9e-c32c3ce91da1\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"title\": \"Leadership and Management for Women in Business\",\n            \"content_ready\": true,\n            \"slug\": \"leadership-and-management-for-women-in-business\",\n            \"content_db_reference\": \"5ea0073587f7b325df67ca6f\",\n            \"course_image_uri\": \"https://static.dev.campus.com/uploads/0df47ae5-97a7-444d-8923-754efcaca349.jpeg\",\n            \"external_image_url\": \"https://cdn-d.mindedgeonline.com/1599/custom_icons/Leadership_and_Management_for_Women_in_Business_HRC_1.jpg\",\n            \"provider\": {\n                \"id\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n                \"name\": \"Mind Edge\",\n                \"code\": \"MINDEDGE\",\n                \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/cc947c82-073c-49c1-9d25-8be63af5afb5.png\",\n                \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n            }\n        },\n        {\n            \"id\": \"18e6f669-317c-4d93-b5f5-dfbd895af26b\",\n            \"course_provider\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n            \"title\": \"Current Issues Facing Women in Business\",\n            \"content_ready\": true,\n            \"slug\": \"current-issues-facing-women-in-business\",\n            \"content_db_reference\": \"5ea0073587f7b325df67ca65\",\n            \"course_image_uri\": \"https://static.dev.campus.com/uploads/66b908e5-761b-4c70-867d-e2a7d6214b34.jpeg\",\n            \"external_image_url\": \"https://cdn-d.mindedgeonline.com/1597/custom_icons/Current_Issues_Facing_Women_in_Business_HRC_1.jpg\",\n            \"provider\": {\n                \"id\": \"3c7f0d0c-62b3-4db2-a23a-d36ec70a6377\",\n                \"name\": \"Mind Edge\",\n                \"code\": \"MINDEDGE\",\n                \"course_provider_logo_uri\": \"https://static.dev.campus.com/uploads/cc947c82-073c-49c1-9d25-8be63af5afb5.png\",\n                \"content_db_reference\": \"5e9fdfa7d895b00d2f979d58\"\n            }\n        }\n    ]\n}\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "View Individual Course",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status 200\", function(){\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{stagingToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://api.admin.staging.campus4i.com/courses/{{jenzabarUniversityIndividualCourseDetails}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"admin",
+								"staging",
+								"campus4i",
+								"com"
+							],
+							"path": [
+								"courses",
+								"{{jenzabarUniversityIndividualCourseDetails}}"
+							]
+						},
+						"description": "Show individual course\n\n**URL** : `/courses/<course_id>`\n\n**Method** : `GET`\n\n**Responses**\n\n```json\n{\n    \"url\": \"https://api.admin.dev.campus.com/courses/b150290d-204c-49f2-be4f-eeb0ed999f1a/\",\n    \"date_time\": \"2021-06-16T04:36:48.502835Z\",\n    \"data\": {\n        \"id\": \"b150290d-204c-49f2-be4f-eeb0ed999f1a\",\n        \"provider\": {\n            \"id\": \"cad53a7e-d178-49d6-8630-7f7113b6acfc\",\n            \"name\": \"Asher Hartman\"\n        },\n        \"_is_deleted\": false,\n        \"deleted\": false,\n        \"created_at\": \"2021-04-20T08:30:29.512000Z\",\n        \"updated_at\": \"2021-06-09T10:06:25.432000Z\",\n        \"deleted_at\": null,\n        \"published_at\": null,\n        \"version\": 26,\n        \"from_importer\": false,\n        \"external_id\": \"body-language-for-women-in-businesses\",\n        \"external_url\": \"http://google.com\",\n        \"external_version_id\": null,\n        \"code\": \"elit\",\n        \"title\": \"Automate Your Testing\",\n        \"slug\": \"automate-your-testing\",\n        \"description\": \"<p>Automate Your Testing</p>\",\n        \"_is_published\": true,\n        \"learning_outcome\": \"<p>a lo</p>\",\n        \"image\": {\n            \"original\": \"uploads/d6f94d19-8092-4f1d-921a-87267b7c6bb3.jpeg\"\n        },\n        \"default_image\": {},\n        \"summary\": \"Provident excepturi\",\n        \"syllabus_url\": \"syll\",\n        \"level\": \"beginner\",\n        \"inquiry_url\": \"http://google.com\",\n        \"overrides\": {},\n        \"sections\": [\n            {\n                \"code\": \"Last Section\",\n                \"external_version_id\": null,\n                \"description\": \"\",\n                \"registration_url\": \"\",\n                \"inquiry_url\": null,\n                \"details_url\": null,\n                \"start_date\": \"2021-04-01T08:57:14Z\",\n                \"end_date\": \"2022-05-01T12:00:00Z\",\n                \"num_seats\": 200,\n                \"available_seats\": 90,\n                \"is_active\": true,\n                \"execution_mode\": \"self-paced\",\n                \"registration_deadline\": \"2022-04-30T12:00:00Z\",\n                \"instructors\": [],\n                \"credit_hours\": 12.0,\n                \"ceu_hours\": 85.0,\n                \"clock_hours\": 0.0,\n                \"load_hours\": 0.0,\n                \"credit_unit\": null,\n                \"total_credits\": null,\n                \"schedules\": [],\n                \"execution_site\": null,\n                \"course_fee\": {\n                    \"amount\": 100.0,\n                    \"currency\": \"USD\"\n                },\n                \"registration_form_data\": null\n            }\n        ],\n        \"programs\": [],\n        \"required_courses\": [],\n        \"recommended_courses\": [],\n        \"subjects\": [],\n        \"keywords\": [],\n        \"careers\": [\n            \"5e70bec987f7b325dfa1be1e\",\n            \"5e70b71287f7b325df9d275e\",\n            \"5e70ad9d87f7b325df977361\"\n        ],\n        \"skills\": [\n            \"5e70ad9a87f7b325df97711d\",\n            \"5e70ad9a87f7b325df97712c\",\n            \"5e70ad9a87f7b325df977127\",\n            \"5e70ad9b87f7b325df97719f\",\n            \"5e70ad9b87f7b325df9771c2\",\n            \"5e70ad9c87f7b325df9772ee\",\n            \"5e70ae7287f7b325df97f921\",\n            \"5e70ad9a87f7b325df9770ff\"\n        ],\n        \"_cls\": \"Course\",\n        \"created_by\": null,\n        \"updated_by\": null,\n        \"deleted_by\": null,\n        \"published_by\": null,\n        \"course_image_uri\": \"https://static.dev.campus.com/uploads/d6f94d19-8092-4f1d-921a-87267b7c6bb3.jpeg\",\n        \"content_ready\": true\n    }\n}\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"    let name = \"Nafisa Test\" + Math.floor(Math.random() * 100);\r",
+									"    let room_name = \"A00\" + Math.floor(Math.random() * 10);\r",
+									"\r",
+									"    pm.environment.set(\"name\", name);\r",
+									"    pm.environment.set(\"room_name\", room_name);\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{stagingToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.admin.staging.campus4i.com/products/?limit=1000&store__name=Jenzabar University",
+							"protocol": "https",
+							"host": [
+								"api",
+								"admin",
+								"staging",
+								"campus4i",
+								"com"
+							],
+							"path": [
+								"products",
+								""
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "1000"
+								},
+								{
+									"key": "product_id",
+									"value": "a9d58d7b-b50a-4754-9241-af7c0e58fc53",
+									"disabled": true
+								},
+								{
+									"key": "include_null",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "relation_type",
+									"value": "registration",
+									"disabled": true
+								},
+								{
+									"key": "store__name",
+									"value": "Jenzabar University"
+								}
+							]
+						},
+						"description": "Create a Schedule\n\n**URL** : `/products/?limit=50`\n\n**Method** : `GET`\n\n\n**Response** :\n\n```json\n\n{\n    \"url\": \"https://api.admin.dev.campus.com/products/\",\n    \"date_time\": \"2021-12-14T03:51:48.038771Z\",\n    \"page\": {\n        \"previous_page\": null,\n        \"page\": 1,\n        \"next_page\": 2,\n        \"total\": 78,\n        \"limit\": 10\n    },\n    \"data\": [\n        {\n            \"id\": \"df777fc8-5cd7-4a10-8a89-ee90552d7f41\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM01\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M01\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 15,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 15,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"150.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 102\n        },\n        {\n            \"id\": \"e4c1e642-652f-4064-bb83-f938620cdd48\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM10\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M10\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 20,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 20,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"200.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 101\n        },\n        {\n            \"id\": \"aeae332f-1d1a-49af-987f-245db22ea945\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM00\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M00\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 20,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 20,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"120.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 100\n        },\n        {\n            \"id\": \"e7ca706a-f377-4adb-87ad-ced8765aa9b2\",\n            \"store\": {\n                \"id\": \"f1074f48-9a63-40eb-8f96-5a00c28e7c92\",\n                \"created_at\": \"2021-12-12T09:46:58.798772Z\",\n                \"updated_at\": \"2021-12-12T10:14:38.661253Z\",\n                \"active_status\": true,\n                \"name\": \"Jenzabar SONIS\",\n                \"url_slug\": \"jenzabar-sonis\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/781f071d-068e-483c-970a-2d8b06d7d881.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/jenzabar-sonis.20211212t101438.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM00\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course M00\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 15,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 15,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"150.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 99\n        },\n        {\n            \"id\": \"f7a8fdb8-8510-46ba-979f-e3b9f6c01907\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"created_at\": \"2021-11-22T08:45:23.486953Z\",\n                \"updated_at\": \"2021-11-23T10:33:27.854488Z\",\n                \"active_status\": true,\n                \"name\": \"Higher Reach\",\n                \"url_slug\": \"hir\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/4538540d-0968-4054-b867-0fadd57eb5a4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/hir.20211123t103327.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"220.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 98\n        },\n        {\n            \"id\": \"57a82ed8-21eb-44be-822f-496bcf05b30d\",\n            \"store\": {\n                \"id\": \"9b367c17-55c4-4554-a30b-d93245c56338\",\n                \"created_at\": \"2021-12-01T03:43:17.132755Z\",\n                \"updated_at\": \"2021-12-01T06:21:40.091871Z\",\n                \"active_status\": true,\n                \"name\": \"Roxbury Community College\",\n                \"url_slug\": \"rcc\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/939072ec-65a1-411f-8ba1-cb204037a5c4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/rcc.20211201t062140.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"220.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 97\n        },\n        {\n            \"id\": \"29c32357-8f43-4848-9c62-b3409c2dbcef\",\n            \"store\": {\n                \"id\": \"d7522fdf-e591-4184-8c94-573a8e955e83\",\n                \"created_at\": \"2021-11-22T08:45:23.486953Z\",\n                \"updated_at\": \"2021-11-23T10:33:27.854488Z\",\n                \"active_status\": true,\n                \"name\": \"Higher Reach\",\n                \"url_slug\": \"hir\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/4538540d-0968-4054-b867-0fadd57eb5a4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/hir.20211123t103327.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"120.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 96\n        },\n        {\n            \"id\": \"935e58be-40fd-480e-a915-fe8f1d5ca9dd\",\n            \"store\": {\n                \"id\": \"9b367c17-55c4-4554-a30b-d93245c56338\",\n                \"created_at\": \"2021-12-01T03:43:17.132755Z\",\n                \"updated_at\": \"2021-12-01T06:21:40.091871Z\",\n                \"active_status\": true,\n                \"name\": \"Roxbury Community College\",\n                \"url_slug\": \"rcc\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/939072ec-65a1-411f-8ba1-cb204037a5c4.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/rcc.20211201t062140.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TCM-104\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Course Introductory Math 104\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": null,\n            \"quantity_sold\": 0,\n            \"available_quantity\": null,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"120.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 95\n        },\n        {\n            \"id\": \"5a75fd5b-50c6-4404-88f1-aa26700be2d9\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"created_at\": \"2021-10-21T06:14:23.296297Z\",\n                \"updated_at\": \"2021-11-22T10:31:42.364952Z\",\n                \"active_status\": true,\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/cd270ef0-38a8-4d39-8f5c-95b2ba14cb36.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/j1.20211122t103142.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TECM01\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Enrollment Course M01\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 18,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 18,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"180.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 94\n        },\n        {\n            \"id\": \"88bb973d-8f53-449d-8046-85e0727df036\",\n            \"store\": {\n                \"id\": \"1fbae74d-3c10-488c-ae17-70a081be1652\",\n                \"created_at\": \"2021-10-21T06:14:23.296297Z\",\n                \"updated_at\": \"2021-11-22T10:31:42.364952Z\",\n                \"active_status\": true,\n                \"name\": \"J1\",\n                \"url_slug\": \"j1\",\n                \"is_active\": false,\n                \"store_logo_uri\": \"https://static.dev.campus.com/uploads/cd270ef0-38a8-4d39-8f5c-95b2ba14cb36.png\",\n                \"gtm_id\": null,\n                \"template\": \"https://static.dev.campus.com/uploads/templates/j1.20211122t103142.js\",\n                \"tax_enabled\": false\n            },\n            \"external_id\": \"TECM01\",\n            \"product_type\": \"section\",\n            \"title\": \"Test Enrollment Course M01\",\n            \"content\": {},\n            \"image\": null,\n            \"limit_applicable\": false,\n            \"total_quantity\": 20,\n            \"quantity_sold\": 0,\n            \"available_quantity\": 20,\n            \"tax_code\": \"ST080031\",\n            \"fee\": \"220.00\",\n            \"currency_code\": \"usd\",\n            \"ref_id\": 93\n        }\n    ]\n}\n\n\n```"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

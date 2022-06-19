@@ -44,6 +44,44 @@
 			"response": []
 		},
 		{
+			"name": "BVU Course Publish API Copy 24/04",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Api-Key 6lSRPIXX.eS0dpmwK7CWzO5lN2I8SouPoNBkF50RX",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"action\":\"j1-course\",\n   \"entity_action\":\"i\",\n   \"data\":{\n      \"catalog_appid\":\"4458\",\n      \"org_cde\":\"*LOCAL\",\n      \"crs_cde\":\"CS 101 4\",\n      \"formatted_crs_cde\":\"CS-101-4\",\n      \"crs_title\":\"Introduction to CS 101\",\n      \"catalog_text\":\"<html><body><p>Introduction to CS 101 </p></body></html>\",\n      \"sections\":[\n         {\n            \"section_appid\":\"14149\",\n            \"yr_cde\":\"2021\",\n            \"trm_cde\":\"10\",\n            \"crs_cde\":\"CS 101 4\",\n            \"formatted_crs_cde\":\"CS-101-4\",\n            \"first_begin_dte\":\"2021-08-30\",\n            \"last_end_dte\":\"2021-12-31\",\n            \"final_enrollment_dte\":\"2021-12-31\",\n            \"course_fees\":\"50.00\",\n            \"open_seats\":\"94\",\n            \"execution_site\":\"NORTH\",\n            \"credit_hrs\":\"10.00\",\n            \"crs_clock_hrs\":\"0.00\",\n            \"instructors\":[\n               {\n                  \"section_instructor_appid\":\"5962\",\n                  \"yr_cde\":\"2021\",\n                  \"trm_cde\":\"10\",\n                  \"crs_cde\":\"CS 101 4\",\n                  \"section_appid\":\"14149\",\n                  \"instructor_id_num\":\"1379\",\n                  \"last_name\":\"Baker\",\n                  \"first_name\":\"Isaac\",\n                  \"middle_name\":\"A\"\n               }\n            ],\n            \"schedules\":[\n               {\n                  \"section_schedule_appid\":\"2984\",\n                  \"yr_cde\":\"2021\",\n                  \"trm_cde\":\"10\",\n                  \"crs_cde\":\"CS 101 4\",\n                  \"section_appid\":\"14149\",\n                  \"name\":\"North\",\n                  \"begin_dte\":\"2021-08-30\",\n                  \"begin_tim\":\"11:00:00\",\n                  \"end_dte\":\"2021-12-31\",\n                  \"end_tim\":\"11:50:00\",\n                  \"monday_cde\":\"M\",\n                  \"wednesday_cde\":\"W\",\n                  \"friday_cde\":\"F\",\n                  \"loc_cde\":\"MAIN\",\n                  \"location_description\":\"Main Campus\",\n                  \"bldg_cde\":\"ROOP\",\n                  \"building_description\":\"Roop Hall\",\n                  \"room_cde\":\"102\",\n                  \"room_description\":\"102 Classroom\"\n               }\n            ]\n         }\n      ]\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://u0kj96wbj9.execute-api.us-west-2.amazonaws.com/publish",
+					"protocol": "https",
+					"host": [
+						"u0kj96wbj9",
+						"execute-api",
+						"us-west-2",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"publish"
+					]
+				},
+				"description": "Create profile\n**URL :** `https://1k86sr9vx1.execute-api.us-east-1.amazonaws.com/publish`\n\n**Headers**\nKey Name: Authorization\nValue: Api-Key RKJU2wo6.aQ7qJoYGPSum43P1PKdtzZS2Sly6twZT\n\n**Method :** `POST`\n\n**Payload :** \n\n```json\n\n\n{\n  \"action\" : \"j1-course\",\n  \"entity_action\" : \"I\",\n  \"data\" : {\n    \"catalog_appid\" : \"87974654\",\n    \"org_cde\" : \"*LOCAL\",\n    \"crs_cde\" : \"CS1022\",\n    \"formatted_crs_cde\" : \"CS-102-2\",\n    \"crs_title\" : \"Introduction to Python Programming\",\n    \"catalog_text\" : \"<html><body><p>Introduction to Python Programming Description... </p></body></html>\",\n    \"sections\" : [\n      {\n        \"section_appid\" : \"564650\",\n        \"yr_cde\" : \"2021\",\n        \"trm_cde\" : \"10\",\n        \"crs_cde\" : \"CS1022\",\n        \"formatted_crs_cde\" : \"CS-102-2\",\n        \"first_begin_dte\" : \"2022-08-30\",\n        \"last_end_dte\" : \"2022-12-31\",\n        \"final_enrollment_dte\" : \"2022-12-15\",\n        \"course_fees\" : \"0.00\",\n        \"open_seats\" : \"94\",\n        \"execution_site\" : \"NORTH\",\n        \"credit_hrs\" : \"3.00\",\n        \"crs_clock_hrs\" : \"0.00\",\n        \"instructors\" : [\n          {\n            \"section_instructor_appid\" : \"132165465\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1022\",\n            \"section_appid\" : \"564650\",\n            \"instructor_id_num\" : \"1379\",\n            \"last_name\" : \"Saifullah Ansari\",\n            \"first_name\" : \"Khaled\",\n            \"middle_name\" : \"Munna\"\n          }\n        ],\n        \"schedules\" : [\n          {\n            \"section_schedule_appid\" : \"2982\",\n            \"yr_cde\" : \"2021\",\n            \"trm_cde\" : \"10\",\n            \"crs_cde\" : \"CS1022\",\n            \"section_appid\" : \"564650\",\n            \"begin_dte\" : \"2022-08-30\",\n            \"begin_tim\" : \"11:00:00\",\n            \"end_dte\" : \"2022-12-31\",\n            \"end_tim\" : \"11:50:00\",\n            \"monday_cde\" : \"M\",\n            \"wednesday_cde\" : \"W\",\n            \"friday_cde\" : \"F\",\n            \"loc_cde\" : \"MAIN\",\n            \"location_description\" : \"Main Campus\",\n            \"bldg_cde\" : \"ROOP\",\n            \"building_description\" : \"Roop Hall\",\n            \"room_cde\" : \"102\",\n            \"room_description\" : \"102 Classroom\"\n          }\n        ]\n      }\n    ]\n  }\n}\n\n\n```\n\n**Response :** \n\n```json\n\n{\n    \"message\": \"action performed successfully\"\n}\n```"
+			},
+			"response": []
+		},
+		{
 			"name": "BVU Enrollment API",
 			"request": {
 				"method": "POST",
